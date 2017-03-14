@@ -55,7 +55,10 @@ class BaiduBaikePlant(object):
     def filterByFileName(self, fileName):
         return False
 
-    def loadAll
+    # load all document:
+    #    extract ContentIndex for each document
+    #    generate ContentPool object and put into the ContentPool
+    def loadAll():
 
 class BaiduBaikeDisease(object):
 
