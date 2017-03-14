@@ -1,0 +1,80 @@
+{
+    "Tasks": [
+        {
+            "Name": "Welcome",
+            "Out": [
+                "Info",
+                "Diagnostic",
+                "Treatment"
+            ]
+        },
+        {
+            "Name" : "Diagnostic",
+            "Out": [
+                "Symptom-Description"
+            ]
+        },
+        {
+            "Name" : "Info",
+            "Out" : [
+                "PlantInfo",
+                "DiseaseInfo"
+            ]
+        },
+        {
+            "Name" : "PlantInfo",
+            "Dependent" : [
+            ],
+            "Action" : {
+                "content-api" : ""
+            }
+        },
+        {
+            "Name" : "DiseaseInfo",
+            "Dependent" : [
+            ],
+            "Action" : {
+                "content-api" : ""
+            }
+        },
+        {
+            "Name" : "Symptom-Description",
+            "Dependent" : [
+            ],
+            "Out": [
+                "Symptom-Image",
+                "Diagnostic-Final"
+            ]
+        },
+        {
+            "Name" : "Symptom-Image",
+            "Dependent" : [
+            ],
+            "Out": [
+            ]
+        },
+        {
+            "Name" : "Diagnostic-Final",
+            "Action" : {
+                "content-api" : ""
+            }
+        },
+        {
+            "Name" : "Treatment",
+            "Dependent" : [
+            ],
+            "Action" : {
+                "content-api" : ""
+            }
+        }
+    ],
+    "WhiteBoard": [
+        "plantName",
+        "diseaseName",
+        "symptom-texture",
+        "symptom-position",
+        "symptom-color",
+        "symptom-spot",
+        "symptom"
+    ]
+}
