@@ -37,7 +37,6 @@ class Handle(object):
     def POST(self):
         try:
             webData = web.data()
-            print type(webData)
             util.lstr("Handle Post webdata is: ")
             util.lstr(webData)
             recMsg = receive.parse_xml(webData)

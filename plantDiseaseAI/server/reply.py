@@ -2,11 +2,14 @@
 # filename: reply.py
 import time
 
+
 class Msg(object):
     def __init__(self):
         pass
+
     def send(self):
         return "success"
+
 
 class TextMsg(Msg):
     def __init__(self, toUserName, fromUserName, content):
@@ -27,7 +30,8 @@ class TextMsg(Msg):
         </xml>
         """
         return XmlForm.format(**self.__dict)
-    
+
+
 class ImageMsg(Msg):
     def __init__(self, toUserName, fromUserName, mediaId):
         self.__dict = dict()
@@ -35,6 +39,7 @@ class ImageMsg(Msg):
         self.__dict['FromUserName'] = fromUserName
         self.__dict['CreateTime'] = int(time.time())
         self.__dict['MediaId'] = mediaId
+
     def send(self):
         XmlForm = """
         <xml>
