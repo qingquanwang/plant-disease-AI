@@ -5,6 +5,7 @@ import reply
 import receive
 import web
 from media import Media
+import user
 
 import util
 
@@ -39,12 +40,23 @@ class Handle(object):
             webData = web.data()
             util.lstr("Handle Post webdata is: ")
             util.lstr(webData)
+            # print(type(webData))  # str
             recMsg = receive.parse_xml(webData)
             if isinstance(recMsg, receive.Msg):
                 toUser = recMsg.FromUserName
                 fromUser = recMsg.ToUserName
+                usr = user.UserProfile(recMsg.FromUserName)
                 if recMsg.MsgType == 'text':
-                    content = '用户: ' + recMsg.FromUserName + ' 发送了问题: ' + recMsg.Content
+                    info = 'empty'
+                    # 设置 cookie
+                    # cookie = web.cookies(count='-1')
+                    # info = 'cookie.count = {}'.format(cookie.count)
+                    # int_count = int(cookie.count) + 1
+                    # web.setcookie('count', str(int_count), 3600)
+                    # end 设置 cookie
+                    info = '之前的问题是: ' + usr.get_info('question')
+                    usr.set_info('question', recMsg.Content)
+                    content = '用户: ' + recMsg.FromUserName + ' 发送了问题: ' + recMsg.Content + ' info: ' + info
                     replyMsg = reply.TextMsg(toUser, fromUser, content)
                     return replyMsg.send()
                 if recMsg.MsgType == 'image':

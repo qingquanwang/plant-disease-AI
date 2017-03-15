@@ -10,3 +10,11 @@ def lstr(msg):
 
 def luni(msg):
     lstr(msg.encode('utf-8'))
+
+
+def save_to_file(fileName, fileContents):
+    filePath = os.path.dirname(fileName)
+    if not os.path.exists(filePath):
+        os.makedirs(filePath)
+    with open(fileName, 'w') as f:
+        f.write(fileContents)

@@ -14,7 +14,14 @@ app = web.application(urls, globals())
 
 class index:
     def GET(self):
-        return "Hello, worldd!"
+        info = 'empty'
+        # 测试cookie
+        # cookie = web.cookies(count='-1')
+        # info = 'cookie.count = {}'.format(cookie.count)
+        # int_count = int(cookie.count) + 1
+        # web.setcookie('count', str(int_count), 3600)
+
+        return "Hello, world! info = {}".format(info)
 
 
 class stop:
