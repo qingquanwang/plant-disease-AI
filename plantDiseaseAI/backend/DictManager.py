@@ -5,5 +5,6 @@ import copy
 import hanzi
 
 class DictManager(object):
-    def __init__(self, data_root):
-        
+    def __init__(self):
+    def load_dict(self, dict_file):
+    def compile_dict(self, dict_root):
