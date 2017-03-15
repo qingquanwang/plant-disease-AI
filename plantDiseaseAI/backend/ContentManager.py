@@ -50,7 +50,10 @@ class BaiduBaikePlant(object):
     def __init__(self, docRoot, ca):
         self._docRoot = docRoot
         self._ca = ca
-        
+        self._plants = []
+        self._startId = 0
+        self._idPrefix = 'BBP'
+        self._docType = '/plants'
 
     def filterByFileName(self, fileName):
         return False
@@ -58,10 +61,75 @@ class BaiduBaikePlant(object):
     # load all document:
     #    extract ContentIndex for each document
     #    generate ContentPool object and put into the ContentPool
-    def loadAll():
+    def process(self, pool):
+        for fileName in os.listdir(self._docRoot):
+            self.process_single_file(os.path.join(self._docRoot, fileName), pool)
+    
+    def process_single_file(self, fileName, pool):
+        #1. check name
+        if self.filterByFileName(fileName):
+            sys.stderr.write("Filtered By FileName: " + fileName + '\n')
+            return
+        #2. load file => generate document
+        with open(fileName, 'r') as fd:
+            obj = json.load(fd, encoding = 'utf-8')
+            docId = self._idPrefix + '-' + str(self._startId)
+            self._startId = self._startId + 1
+            doc = ContentDoc(docId, self._docType, fileName, json.dumps(obj, encoding='utf-8'))
+            #3. generate Plant object and generate index for the doc
+            p = Plant(obj['name'])
+            self._plants.append(p)
+            idx = ContentIndex('/plantName', p._plantName, 1.0)
+            pool.insertDoc(idx, doc)
+            return
 
 class BaiduBaikeDisease(object):
+    # docRoot: content/baidu/baike-diseases
+    def __init__(self, docRoot, ca):
+        self._docRoot = docRoot
+        self._ca = ca
+        self._diseases = []
+        self._startId = 0
+        self._idPrefix = 'BBD'
+        self._docType = '/diseases'
 
+    def filterByFileName(self, fileName):
+        filename = filename.decode('utf-8')
+        toks = filename.split('.')
+        if len(toks) != 2:
+            return True
+        fn = toks[0]
+        if toks[1] != 'json':
+            return True
+        if not fn.endswith((u'病')):
+            return True
+        #remove poem title
+        if (u'·') in fn:
+            return True
+        if len(fn) <= 3:
+            return True
+        return False
+
+    def process(self, pool):
+    def is_symptom(self, key):
+        symptom_intents = [u'病症', u'病状', u'发病', u'症状']
+        for s in symptom_intents:
+            if s in key:
+                return True
+        return False
+    def process_single_file(self, fileName, pool):
+        if self.filterByFileName(fileName):
+            sys.stderr.write("Filtered By FileName: " + fileName + '\n')
+            return
+        with open(fileName, 'r') as fd:
+            obj = json.load(fd, encoding = 'utf-8')
+            docId = self._idPrefix + '-' + str(self._startId)
+            self._startId = self._startId + 1
+            doc = ContentDoc(docId, self._docType, fileName, json.dumps(obj, encoding='utf-8'))
+            for key in obj['h2']:
+                if not self.is_symptom(key):
+                    continue
+                
 
 
 class ContentManager(object):
