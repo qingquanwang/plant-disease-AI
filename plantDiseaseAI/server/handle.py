@@ -6,6 +6,8 @@ import receive
 import web
 from media import Media
 
+import util
+
 
 class Handle(object):
     def GET(self):
@@ -35,7 +37,9 @@ class Handle(object):
     def POST(self):
         try:
             webData = web.data()
-            print "Handle Post webdata is ", webData  # 后台打日志
+            print type(webData)
+            util.lstr("Handle Post webdata is: ")
+            util.lstr(webData)
             recMsg = receive.parse_xml(webData)
             if isinstance(recMsg, receive.Msg):
                 toUser = recMsg.FromUserName
@@ -64,7 +68,7 @@ class Handle(object):
                 else:
                     return reply.Msg().send()
             else:
-                print "暂且不处理"
+                util.lstr("暂且不处理")
                 return reply.Msg().send()
         except Exception, Argment:
             return Argment

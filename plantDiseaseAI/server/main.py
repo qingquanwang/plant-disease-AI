@@ -6,15 +6,21 @@ from handle import Handle
 
 urls = (
     '/wx', 'Handle',
-    '/', 'index'
+    '/', 'index',
+    '/stop', 'stop',
 )
+app = web.application(urls, globals())
 
 
 class index:
     def GET(self):
-        return "Hello, world!"
+        return "Hello, worldd!"
+
+
+class stop:
+    def GET(self):
+        app.stop()
 
 
 if __name__ == '__main__':
-    app = web.application(urls, globals())
     app.run()
