@@ -4,6 +4,7 @@ import hashlib
 import reply
 import receive
 import web
+import traceback
 from media import Media
 import user
 
@@ -54,9 +55,9 @@ class Handle(object):
                     # int_count = int(cookie.count) + 1
                     # web.setcookie('count', str(int_count), 3600)
                     # end 设置 cookie
-                    info = '之前的问题是: ' + usr.get_info('question')
-                    usr.set_info('question', recMsg.Content)
-                    content = '用户: ' + recMsg.FromUserName + ' 发送了问题: ' + recMsg.Content + ' info: ' + info
+                    info = '之前的问题是: ' + ','.join(usr.get_info(user.jkey_quetions))
+                    usr.set_info(user.jkey_quetions, recMsg.Content)
+                    content = '收到问题: ' + recMsg.Content + ' info: ' + info
                     replyMsg = reply.TextMsg(toUser, fromUser, content)
                     return replyMsg.send()
                 if recMsg.MsgType == 'image':
@@ -82,4 +83,6 @@ class Handle(object):
                 util.lstr("暂且不处理")
                 return reply.Msg().send()
         except Exception, Argment:
+            util.lstr('========Exception=======')
+            util.lstr(traceback.format_exc())
             return Argment

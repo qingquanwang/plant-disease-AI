@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # filename: main.py
 import web
+import traceback
 from handle import Handle
 
 
@@ -20,7 +21,6 @@ class index:
         # info = 'cookie.count = {}'.format(cookie.count)
         # int_count = int(cookie.count) + 1
         # web.setcookie('count', str(int_count), 3600)
-
         return "Hello, world! info = {}".format(info)
 
 
