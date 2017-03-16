@@ -6,12 +6,19 @@ import simplejson as json
 
 delimiter = u'|'
 separator = u'\t'
-print_pattern = u'({}, {}) \t {}'
+print_pattern = u'{}, {}, {}'
+
+
+def pstr(msg):
+    print(msg.encode('utf-8'))
 
 
 def node_to_list(node, hypothesis, prefix=u''):
+    if isinstance(node, int):
+        node = unicode(node)
     if isinstance(node, unicode):
-        print(print_pattern.format(prefix, node, hypothesis))
+        node = node.replace(u',', u'COMMA')
+        pstr(print_pattern.format(prefix, node, hypothesis))
         return
     elif isinstance(node, list):
         if len(node) == 0:
@@ -25,7 +32,7 @@ def node_to_list(node, hypothesis, prefix=u''):
             new_prefix = prefix + delimiter + key
             node_to_list(node[key], hypothesis, new_prefix)
     else:
-        print(u'unexpected type: {}'.format(type(node)))
+        pstr(u'unexpected type: {}'.format(type(node)))
 
 
 def extract_node(fpath, key_of_interest):
@@ -41,7 +48,7 @@ def extract_node(fpath, key_of_interest):
             node = json_obj[key][key_of_interest]
             node_to_list(node, key)
         else:
-            print(u'{} key of interest not found'.format(key))
+            pstr(u'{} key of interest not found'.format(key))
             exit()
 
 
