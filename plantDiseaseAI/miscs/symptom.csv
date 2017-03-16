@@ -1,0 +1,483 @@
+|forms|spot|color, 紫红色, 月季枝枯病
+|forms|spot|color, 浅绿色, 月季枝枯病
+|forms|spot|color, 白色, 月季枝枯病
+|forms|spot|location, 茎, 月季枝枯病
+|forms|texture|location, 茎, 月季枝枯病
+|forms|texture|change|pre, 微小突起, 月季枝枯病
+|forms|texture|change|pos, 裂缝, 月季枝枯病
+|forms|texture|change|pos, 黑色泡子堆, 月季枝枯病
+|forms|texture|change|pos, 下陷, 月季枝枯病
+|forms|texture|change|pos, 枯萎, 月季枝枯病
+|harm plants, 茎, 月季枝枯病
+|forms|taste, 腐臭味, 玉米茎腐病
+|forms|texture|location, 茎, 玉米茎腐病
+|forms|texture|change|pos, 水渍状淡褐色病变, 玉米茎腐病
+|forms|texture|change|pos, 变软下陷, 玉米茎腐病
+|forms|texture|change|pos, 黄褐色腐臭菌液, 玉米茎腐病
+|forms|texture|change|pos, 水渍状腐烂, 玉米茎腐病
+|forms|texture|location, 根, 玉米茎腐病
+|forms|texture|change|pos, 剥离, 玉米茎腐病
+|forms|texture|change|pos, 畸形, 玉米茎腐病
+|harm plants, 茎, 玉米茎腐病
+|harm plants, 根, 玉米茎腐病
+|forms|spot|color, 黑色, 苹果黑星病
+|forms|spot|color, 褐色, 苹果黑星病
+|forms|spot|shape, 圆, 苹果黑星病
+|forms|spot|shape, 放射状, 苹果黑星病
+|forms|spot|location, 叶, 苹果黑星病
+|forms|texture|location, 叶, 苹果黑星病
+|forms|texture|change|pre, 绿褐色霉层, 苹果黑星病
+|forms|texture|change|pos, 枯萎, 苹果黑星病
+|forms|texture|change|pos, 易脱落, 苹果黑星病
+|forms|texture|change|pos, 黑霉, 苹果黑星病
+|harm plants, 叶, 苹果黑星病
+|forms|spot|color, 褐色, 灰霉病
+|forms|spot|color, 灰白色, 灰霉病
+|forms|spot|shape, 纹, 灰霉病
+|forms|spot|shape, V形, 灰霉病
+|forms|spot|location, 叶, 灰霉病
+|forms|texture|location, 果面, 灰霉病
+|forms|texture|change|pre, 灰霉层, 灰霉病
+|forms|texture|change|pos, 水腐, 灰霉病
+|harm plants, 花, 灰霉病
+|harm plants, 茎, 灰霉病
+|harm plants, 叶, 灰霉病
+|harm plants, 果, 灰霉病
+|forms|spot|color, 黄褐色, 病毒病
+|forms|spot|color, 红褐色, 病毒病
+|forms|spot|shape, 不规则形, 病毒病
+|forms|spot|location, 果面, 病毒病
+|forms|texture|location, 叶, 病毒病
+|forms|texture|change|pre, 退绿, 病毒病
+|forms|texture|change|pre, spot驳, 病毒病
+|forms|texture|change|pos, 畸形, 病毒病
+|forms|texture|change|pos, 皱缩, 病毒病
+|forms|texture|change|pos, 生长缓慢, 病毒病
+|forms|texture|change|pos, 矮化, 病毒病
+|forms|texture|location, 果, 病毒病
+|forms|texture|change|pos, 易脱落, 病毒病
+|forms|texture|change|pos, 凹凸不平, 病毒病
+|forms|texture|change|pos, 僵化, 病毒病
+|forms|texture|change|pos, 坏死, 病毒病
+|forms|texture|change|pos, 穿孔, 病毒病
+|forms|texture|change|pos, 病spot, 病毒病
+|forms|texture|change|pos, 绿色环, 病毒病
+|harm plants, 叶, 病毒病
+|forms|texture|location, 叶, 苹果小叶病
+|forms|texture|change|pos, 边缘上卷, 苹果小叶病
+|forms|texture|change|pos, 脆硬, 苹果小叶病
+|forms|texture|change|pos, 柳叶状, 苹果小叶病
+|forms|texture|change|pos, 小叶, 苹果小叶病
+|forms|texture|location, 花, 苹果小叶病
+|forms|texture|change|pos, 少, 苹果小叶病
+|forms|texture|location, 果, 苹果小叶病
+|forms|texture|change|pos, 畸形, 苹果小叶病
+|harm plants, 叶, 苹果小叶病
+|harm plants, 花, 苹果小叶病
+|harm plants, 果, 苹果小叶病
+|forms|taste, 稍甜, 水心病
+|forms|taste, 酒精味, 水心病
+|forms|spot|color, 褐色, 水心病
+|forms|spot|shape, 水渍状, 水心病
+|forms|spot|location, 果肉, 水心病
+|forms|spot|location, 果心, 水心病
+|harm plants, 果心, 水心病
+|harm plants, 果面, 水心病
+|harm plants, 果肉, 水心病
+|forms|spot|color, 红晕, 褐纹病
+|forms|spot|color, 褐色, 褐纹病
+|forms|spot|shape, 圆, 褐纹病
+|forms|spot|shape, 同心纹, 褐纹病
+|forms|spot|shape, 不规则, 褐纹病
+|forms|spot|location, 叶, 褐纹病
+|forms|spot|size|max, 2, 褐纹病
+|forms|spot|size|min, 1, 褐纹病
+|forms|spot|color, 黑色发凉, 褐纹病
+|forms|spot|color, 灰褐色, 褐纹病
+|forms|spot|shape, 圆, 褐纹病
+|forms|spot|shape, 结痂状, 褐纹病
+|forms|spot|location, 果面, 褐纹病
+|forms|texture|location, 叶片正面, 褐纹病
+|forms|texture|location, 叶片反面, 褐纹病
+|forms|texture|change|pre, 墨绿色霉状, 褐纹病
+|forms|texture|change|pos, 生长缓慢, 褐纹病
+|forms|texture|change|pos, 扭曲, 褐纹病
+|forms|texture|change|pos, 皱缩, 褐纹病
+|forms|texture|location, 果面, 褐纹病
+|forms|texture|change|pos, 龟裂, 褐纹病
+|forms|texture|change|pos, 病spot剥离, 褐纹病
+|forms|texture|change|pos, 干腐状, 褐纹病
+|forms|texture|change|pos, 木栓化, 褐纹病
+|harm plants, 果实, 褐纹病
+|harm plants, 叶, 褐纹病
+|forms|spot|color, 黄色, 月季皱叶病
+|forms|spot|location, 叶, 月季皱叶病
+|forms|texture|location, 叶, 月季皱叶病
+|forms|texture|location, 花瓣, 月季皱叶病
+|forms|texture|change|pre, 皱缩, 月季皱叶病
+|forms|texture|change|pos, 花瓣叶状, 月季皱叶病
+|forms|texture|change|pos, 花蕊变绿, 月季皱叶病
+|forms|texture|change|pos, 黑褐色死spot, 月季皱叶病
+|harm plants, 叶, 月季皱叶病
+|forms|spot|color, 青灰色, 玉米大斑病
+|forms|spot|color, 褐色, 玉米大斑病
+|forms|spot|shape, 水渍状, 玉米大斑病
+|forms|spot|location, 叶片, 玉米大斑病
+|forms|texture|location, 叶, 玉米大斑病
+|forms|texture|change|pre, 病spot, 玉米大斑病
+|forms|texture|change|pos, 变黄, 玉米大斑病
+|forms|texture|change|pos, 枯萎, 玉米大斑病
+|forms|texture|change|pos, 灰黑色霉层, 玉米大斑病
+|harm plants, 叶, 玉米大斑病
+|forms|spot|color, 褐色, 炭疽病
+|forms|spot|color, 黑色, 炭疽病
+|forms|spot|shape, 圆, 炭疽病
+|forms|spot|shape, 不规则形, 炭疽病
+|forms|spot|location, 果面, 炭疽病
+|forms|spot|location, 果心, 炭疽病
+|forms|spot|size|max, 2, 炭疽病
+|forms|spot|size|min, 1, 炭疽病
+|forms|texture|location, 果面, 炭疽病
+|forms|texture|change|pre, 下陷, 炭疽病
+|forms|texture|change|pre, 腐烂, 炭疽病
+|forms|texture|change|pos, 同心纹, 炭疽病
+|forms|texture|change|pos, 腐烂, 炭疽病
+|forms|texture|change|pos, 龟裂, 炭疽病
+|forms|texture|change|pos, 褐色, 炭疽病
+|forms|texture|change|pos, 脱落, 炭疽病
+|harm plants, 枝条, 炭疽病
+|harm plants, 果台, 炭疽病
+|forms|spot|color, 红褐色, 玉米干腐病
+|forms|spot|color, 黑色, 玉米干腐病
+|forms|spot|color, 灰白色, 玉米干腐病
+|forms|spot|color, 长条spot, 玉米干腐病
+|forms|spot|location, 茎秆, 玉米干腐病
+|forms|texture|location, 茎秆, 玉米干腐病
+|forms|texture|change|pre, 白色菌丝, 玉米干腐病
+|forms|texture|change|pos, 小黑点, 玉米干腐病
+|forms|texture|change|pos, 易折断, 玉米干腐病
+|forms|texture|location, 果穗, 玉米干腐病
+|forms|texture|change|pre, 僵化, 玉米干腐病
+|forms|texture|change|pre, 变轻, 玉米干腐病
+|forms|texture|change|pre, 早熟, 玉米干腐病
+|forms|texture|change|pos, 皱缩, 玉米干腐病
+|forms|texture|change|pos, 灰白色菌体, 玉米干腐病
+|forms|texture|change|pos, 变黑, 玉米干腐病
+|forms|texture|change|pos, 突起, 玉米干腐病
+|harm plants, 茎秆, 玉米干腐病
+|harm plants, 果穗, 玉米干腐病
+|forms|texture|location, 根, 根腐病
+|forms|texture|change|pre, 无症状, 根腐病
+|forms|texture|change|pre, 吸收能力减弱, 根腐病
+|forms|texture|change|pos, 腐烂, 根腐病
+|forms|texture|change|pos, 变褐, 根腐病
+|forms|texture|location, 叶, 根腐病
+|forms|texture|change|pre, 发黄, 根腐病
+|forms|texture|change|pos, 萎蔫, 根腐病
+|forms|texture|change|pos, 枯萎, 根腐病
+|harm plants, 根, 根腐病
+|harm plants, 叶, 根腐病
+|forms|spot|color, 黄色, 玉米圆斑病
+|forms|spot|color, 浅绿色, 玉米圆斑病
+|forms|spot|color, 褐色, 玉米圆斑病
+|forms|spot|shape, 不整形, 玉米圆斑病
+|forms|spot|shape, 枯, 玉米圆斑病
+|forms|spot|shape, 椭圆形, 玉米圆斑病
+|forms|spot|shape, 轮纹, 玉米圆斑病
+|forms|spot|shape, 条状, 玉米圆斑病
+|forms|spot|shape, 线型, 玉米圆斑病
+|forms|spot|location, 叶片, 玉米圆斑病
+|forms|spot|size|max, 15, 玉米圆斑病
+|forms|spot|size|min, 5, 玉米圆斑病
+|forms|texture|location, 果穗, 玉米圆斑病
+|forms|texture|change|pre, 尖端黑腐, 玉米圆斑病
+|forms|texture|change|pos, 黑色霉层, 玉米圆斑病
+|forms|texture|change|pos, 干腐状, 玉米圆斑病
+|harm plants, 果穗, 玉米圆斑病
+|harm plants, 叶, 玉米圆斑病
+|forms|texture|location, 雄穗, 玉米丝黑穗病
+|forms|texture|change|pre, 矮化, 玉米丝黑穗病
+|forms|texture|change|pos, 黑色瘤状, 玉米丝黑穗病
+|forms|texture|location, 雌穗, 玉米丝黑穗病
+|forms|texture|change|pos, 基部变大, 玉米丝黑穗病
+|forms|texture|change|pos, 管状长刺, 玉米丝黑穗病
+|forms|texture|change|pos, 畸形, 玉米丝黑穗病
+|forms|texture|location, 叶, 玉米丝黑穗病
+|forms|texture|change|pos, 暗绿, 玉米丝黑穗病
+|forms|texture|change|pos, 条状spot, 玉米丝黑穗病
+|forms|texture|change|pos, 幼叶卷曲, 玉米丝黑穗病
+|harm plants, 果穗, 玉米丝黑穗病
+|forms|taste, 酸腐气味, 苹果轮纹病
+|forms|spot|color, 暗褐色, 苹果轮纹病
+|forms|spot|shape, 水渍状, 苹果轮纹病
+|forms|spot|shape, 溃疡, 苹果轮纹病
+|forms|spot|shape, 圆形, 苹果轮纹病
+|forms|spot|location, 枝干, 苹果轮纹病
+|forms|spot|size|max, 2, 苹果轮纹病
+|forms|spot|size|min, 1, 苹果轮纹病
+|forms|spot|color, 深浅相间, 苹果轮纹病
+|forms|spot|shape, 圆形, 苹果轮纹病
+|forms|spot|shape, 轮纹状, 苹果轮纹病
+|forms|spot|location, 果面, 苹果轮纹病
+|forms|texture|location, 果肉, 苹果轮纹病
+|forms|texture|change|pos, 淡色水渍圈, 苹果轮纹病
+|forms|texture|change|pos, 界限不清晰, 苹果轮纹病
+|forms|texture|change|pos, 褐色粘液, 苹果轮纹病
+|harm plants, 叶, 苹果轮纹病
+|harm plants, 果, 苹果轮纹病
+|forms|spot|color, 四周黄色, 苹果褐spot病
+|forms|spot|color, 中心褐色, 苹果褐spot病
+|forms|spot|color, 灰白色, 苹果褐spot病
+|forms|spot|shape, 轮纹状, 苹果褐spot病
+|forms|spot|shape, 针芒, 苹果褐spot病
+|forms|spot|shape, 圆形, 苹果褐spot病
+|forms|spot|shape, 不规则形, 苹果褐spot病
+|forms|spot|location, 叶, 苹果褐spot病
+|forms|spot|color, 褐色, 苹果褐spot病
+|forms|spot|shape, 圆形, 苹果褐spot病
+|forms|spot|shape, 点, 苹果褐spot病
+|forms|spot|location, 果面, 苹果褐spot病
+|forms|texture|location, 果肉, 苹果褐spot病
+|forms|texture|change|pre, 凹陷, 苹果褐spot病
+|forms|texture|change|pos, 小黑点, 苹果褐spot病
+|forms|texture|change|pos, 褐色, 苹果褐spot病
+|forms|texture|change|pos, 海绵状干腐, 苹果褐spot病
+|harm plants, 叶, 苹果褐spot病
+|harm plants, 果实, 苹果褐spot病
+|forms|spot|color, 退绿, 月季花叶病
+|forms|spot|shape, 不定形, 月季花叶病
+|forms|spot|shape, 多角形纹, 月季花叶病
+|forms|spot|shape, 畸形, 月季花叶病
+|forms|spot|shape, 环形, 月季花叶病
+|forms|spot|shape, 波状, 月季花叶病
+|forms|spot|location, 叶, 月季花叶病
+|forms|texture|location, 叶, 月季花叶病
+|forms|texture|change|pos, 黄脉, 月季花叶病
+|forms|texture|change|pos, 矮化, 月季花叶病
+|harm plants, 叶, 月季花叶病
+|forms|taste, 略带酒味, 苹果虎皮病
+|forms|spot|color, 淡黄褐色, 苹果虎皮病
+|forms|spot|shape, 不规则形, 苹果虎皮病
+|forms|spot|location, 果面, 苹果虎皮病
+|forms|texture|location, 果肉, 苹果虎皮病
+|forms|texture|change|pre, 凹陷, 苹果虎皮病
+|forms|texture|change|pre, 表面平, 苹果虎皮病
+|forms|texture|change|pre, 略有起伏, 苹果虎皮病
+|forms|texture|change|pos, 褐色, 苹果虎皮病
+|forms|texture|change|pos, 肉绵, 苹果虎皮病
+|harm plants, 果, 苹果虎皮病
+|forms|texture|location, 维管束, 青枯病
+|forms|texture|change|pre, 青, 青枯病
+|forms|texture|change|pre, 枯, 青枯病
+|forms|texture|change|pos, 褐色, 青枯病
+|forms|texture|change|pos, 白色浑浊污汁, 青枯病
+|forms|texture|change|pos, 枯萎, 青枯病
+|harm plants, 花, 青枯病
+|harm plants, 茎, 青枯病
+|harm plants, 叶, 青枯病
+|harm plants, 果, 青枯病
+|forms|texture|location, 叶片, 玉米黑粉病
+|forms|texture|location, 果穗, 玉米黑粉病
+|forms|texture|location, 茎, 玉米黑粉病
+|forms|texture|change|pre, 粉色瘤状, 玉米黑粉病
+|forms|texture|change|pos, 黑色瘤状, 玉米黑粉病
+|forms|texture|change|pos, 黑色粉末, 玉米黑粉病
+|forms|texture|change|pos, 扭曲, 玉米黑粉病
+|forms|texture|change|pos, 黑色丝状物, 玉米黑粉病
+|harm plants, 果穗, 玉米黑粉病
+|harm plants, 茎, 玉米黑粉病
+|harm plants, 叶, 玉米黑粉病
+|forms|spot|color, 黑色, 黑spot病
+|forms|spot|color, 褐色, 黑spot病
+|forms|spot|shape, 圆, 黑spot病
+|forms|spot|shape, 点, 黑spot病
+|forms|spot|shape, 边缘纤毛状, 黑spot病
+|forms|spot|location, 叶, 黑spot病
+|forms|spot|color, 黑色, 黑spot病
+|forms|spot|color, 紫色, 黑spot病
+|forms|spot|shape, 条, 黑spot病
+|forms|spot|location, 枝条, 黑spot病
+|forms|spot|location, 花梗, 黑spot病
+|forms|texture|location, 叶, 黑spot病
+|forms|texture|change|pre, 孢体, 黑spot病
+|forms|texture|change|pre, 发黄, 黑spot病
+|forms|texture|change|pos, 脱落, 黑spot病
+|forms|texture|location, 枝条COMMA花梗, 黑spot病
+|forms|texture|change|pre, 凹陷, 黑spot病
+|forms|texture|change|pos, 脱落, 黑spot病
+|harm plants, 叶子, 黑spot病
+|harm plants, 枝条, 黑spot病
+|harm plants, 花梗, 黑spot病
+|forms|spot|color, 青灰色, 玉米小斑病
+|forms|spot|color, 暗褐色, 玉米小斑病
+|forms|spot|shape, 半透明, 玉米小斑病
+|forms|spot|shape, 水渍状, 玉米小斑病
+|forms|spot|shape, 椭圆形, 玉米小斑病
+|forms|spot|shape, 同心纹, 玉米小斑病
+|forms|spot|shape, 小, 玉米小斑病
+|forms|spot|location, 叶片, 玉米小斑病
+|forms|texture|location, 叶, 玉米小斑病
+|forms|texture|change|pre, 病spot, 玉米小斑病
+|forms|texture|change|pre, 两三层同心纹, 玉米小斑病
+|forms|texture|change|pre, 边缘赤色, 玉米小斑病
+|forms|texture|change|pos, 暗黑色霉状物, 玉米小斑病
+|harm plants, 叶片, 玉米小斑病
+|harm plants, 苞叶, 玉米小斑病
+|forms|spot|color, 红褐色, 叶枯病
+|forms|spot|color, 灰褐色, 叶枯病
+|forms|spot|shape, 不规则形, 叶枯病
+|forms|spot|location, 叶, 叶枯病
+|forms|texture|location, 叶, 叶枯病
+|forms|texture|change|pre, 发黄, 叶枯病
+|forms|texture|change|pre, 带, 叶枯病
+|forms|texture|change|pos, 黑色小颗粒, 叶枯病
+|harm plants, 叶子, 叶枯病
+|forms|texture|location, 叶片, 玉米锈病
+|forms|texture|change|pre, 浅黄色长形至卵形褐色小脓疤, 玉米锈病
+|forms|texture|change|pos, 破裂, 玉米锈病
+|forms|texture|change|pos, 铁锈色粉状物, 玉米锈病
+|forms|texture|change|pos, 黑色圆形突起, 玉米锈病
+|forms|texture|change|pos, 长圆形突起, 玉米锈病
+|harm plants, 果穗, 玉米锈病
+|harm plants, 雄花, 玉米锈病
+|harm plants, 苞叶, 玉米锈病
+|forms|spot|color, 暗绿色, 晚疫病
+|forms|spot|color, 褐色, 晚疫病
+|forms|spot|shape, 水浸状, 晚疫病
+|forms|spot|shape, 不规则形, 晚疫病
+|forms|spot|location, 叶, 晚疫病
+|forms|spot|color, 褐色, 晚疫病
+|forms|spot|shape, 水浸状, 晚疫病
+|forms|spot|shape, 不规则形, 晚疫病
+|forms|spot|location, 茎, 晚疫病
+|forms|spot|size|max, 2, 晚疫病
+|forms|spot|size|min, 1, 晚疫病
+|forms|spot|color, 灰绿色, 晚疫病
+|forms|spot|color, 褐色, 晚疫病
+|forms|spot|shape, 水浸状, 晚疫病
+|forms|spot|shape, 云纹, 晚疫病
+|forms|spot|location, 果面, 晚疫病
+|forms|texture|location, 叶, 晚疫病
+|forms|texture|change|pre, 白色霉, 晚疫病
+|forms|texture|change|pre, 青白色, 晚疫病
+|forms|texture|change|pos, 枯萎, 晚疫病
+|forms|texture|change|pos, 易碎, 晚疫病
+|forms|texture|location, 茎, 晚疫病
+|forms|texture|change|pre, 褐色, 晚疫病
+|forms|texture|change|pre, 凹陷, 晚疫病
+|forms|texture|change|pos, 腐败, 晚疫病
+|forms|texture|change|pos, 易折断, 晚疫病
+|forms|texture|location, 果面, 晚疫病
+|forms|texture|change|pre, 凹陷, 晚疫病
+|forms|texture|change|pos, 腐败, 晚疫病
+|forms|texture|change|pos, 易折断, 晚疫病
+|forms|texture|change|pos, 少量白霉, 晚疫病
+|harm plants, 幼苗, 晚疫病
+|harm plants, 成株, 晚疫病
+|forms|taste, 风味很淡, 苹果缩果病
+|forms|spot|color, 褐色, 苹果缩果病
+|forms|spot|shape, 水渍状, 苹果缩果病
+|forms|spot|location, 果皮, 苹果缩果病
+|forms|texture|location, 果肉, 苹果缩果病
+|forms|texture|change|pre, 细胞脱水, 苹果缩果病
+|forms|texture|change|pos, 坏死, 苹果缩果病
+|forms|texture|change|pos, 海绵状, 苹果缩果病
+|forms|texture|change|pos, 凹陷, 苹果缩果病
+|forms|texture|change|pos, 干spot, 苹果缩果病
+|forms|texture|change|pos, 木栓化, 苹果缩果病
+|forms|texture|change|pos, 不规则瘤状突起, 苹果缩果病
+|forms|texture|change|pos, 果皮厚, 苹果缩果病
+|forms|texture|change|pos, 松软, 苹果缩果病
+|forms|texture|change|pos, 种子干瘪, 苹果缩果病
+|harm plants, 果, 苹果缩果病
+|forms|texture|location, 根, 月季根瘤病
+|forms|texture|location, 嫁接口, 月季根瘤病
+|forms|texture|change|pre, 表面粗糙, 月季根瘤病
+|forms|texture|change|pre, 柔软, 月季根瘤病
+|forms|texture|change|pre, 病瘤, 月季根瘤病
+|forms|texture|change|pos, 表皮枯死, 月季根瘤病
+|forms|texture|change|pos, 木质化, 月季根瘤病
+|forms|texture|location, 叶片, 月季根瘤病
+|forms|texture|change|pos, 白色粉状, 月季根瘤病
+|harm plants, 根, 月季根瘤病
+|harm plants, 嫁接口, 月季根瘤病
+|forms|taste, 苦, 苦痘病
+|forms|spot|color, 红褐色, 苦痘病
+|forms|spot|color, 暗紫色, 苦痘病
+|forms|spot|color, 褐色, 苦痘病
+|forms|spot|shape, 洼, 苦痘病
+|forms|spot|shape, 圆, 苦痘病
+|forms|spot|location, 果面, 苦痘病
+|forms|texture|location, 果面, 苦痘病
+|forms|texture|change|pre, spot点, 苦痘病
+|forms|texture|change|pos, 凹陷, 苦痘病
+|forms|texture|change|pos, 表皮坏死, 苦痘病
+|forms|texture|change|pos, 果肉干缩, 苦痘病
+|forms|texture|location, 叶, 苦痘病
+|forms|texture|change|pre, 发黄, 苦痘病
+|forms|texture|change|pos, 萎蔫, 苦痘病
+|forms|texture|change|pos, 枯萎, 苦痘病
+|harm plants, 果实, 苦痘病
+|forms|spot|color, 红褐色, 玉米褐斑病
+|forms|spot|color, 黄褐色, 玉米褐斑病
+|forms|spot|shape, 椭圆形, 玉米褐斑病
+|forms|spot|location, 叶片COMMA茎秆, 玉米褐斑病
+|forms|texture|location, 茎秆, 玉米褐斑病
+|forms|texture|change|pre, spot点, 玉米褐斑病
+|forms|texture|change|pos, 细胞坏死, 玉米褐斑病
+|forms|texture|change|pos, 褐色粉末, 玉米褐斑病
+|forms|texture|change|pos, 表皮破裂, 玉米褐斑病
+|harm plants, 茎, 玉米褐斑病
+|harm plants, 叶, 玉米褐斑病
+|forms|spot|color, 锈色, 白粉病
+|forms|spot|shape, 网状, 白粉病
+|forms|spot|location, 果实, 白粉病
+|forms|spot|color, 白色, 白粉病
+|forms|spot|shape, 粉状, 白粉病
+|forms|spot|location, 叶片背面, 白粉病
+|forms|spot|location, 叶片正面, 白粉病
+|forms|spot|color, 白色, 白粉病
+|forms|spot|shape, 粉状, 白粉病
+|forms|spot|location, 花萼洼, 白粉病
+|forms|spot|location, 梗洼, 白粉病
+|forms|texture|location, 果实, 白粉病
+|forms|texture|change|pre, 变硬, 白粉病
+|forms|texture|change|pos, 裂口, 白粉病
+|forms|texture|location, 叶片背面, 白粉病
+|forms|texture|location, 叶片正面, 白粉病
+|forms|texture|change|pre, 畸形, 白粉病
+|forms|texture|change|pre, 紫色, 白粉病
+|forms|texture|change|pos, 波状皱缩, 白粉病
+|forms|texture|change|pos, 凹凸不平, 白粉病
+|forms|texture|change|pos, 褐色, 白粉病
+|forms|texture|change|pos, 干枯, 白粉病
+|forms|texture|change|pos, 脱落, 白粉病
+|forms|texture|location, 萼片, 白粉病
+|forms|texture|location, 花梗, 白粉病
+|forms|texture|change|pre, 畸形, 白粉病
+|forms|texture|change|pre, 狭长, 白粉病
+|forms|texture|change|pre, 淡绿, 白粉病
+|forms|texture|change|pos, 干枯, 白粉病
+|forms|texture|change|pos, 死亡, 白粉病
+|forms|texture|location, 芽, 白粉病
+|forms|texture|change|pre, 枯萎, 白粉病
+|forms|texture|change|pre, 白粉层, 白粉病
+|forms|texture|change|pos, 褐色, 白粉病
+|forms|texture|change|pos, 暗褐色, 白粉病
+|forms|texture|change|pos, 鳞片紧密, 白粉病
+|forms|texture|location, 枝干, 白粉病
+|forms|texture|change|pre, 节间缩短, 白粉病
+|forms|texture|change|pre, 细弱, 白粉病
+|forms|texture|change|pre, 生长缓慢, 白粉病
+|forms|texture|change|pos, 褐色, 白粉病
+|forms|texture|change|pos, 枯萎, 白粉病
+|harm plants, 叶片, 白粉病
+|harm plants, 嫩茎, 白粉病
+|forms|texture|location, 叶, 苹果黄叶病
+|forms|texture|change|pre, 叶肉变黄, 苹果黄叶病
+|forms|texture|change|pre, 叶脉绿色, 苹果黄叶病
+|forms|texture|change|pre, 绿色网纹状, 苹果黄叶病
+|forms|texture|change|pos, 黄白色, 苹果黄叶病
+|forms|texture|change|pos, 枯萎, 苹果黄叶病
+|forms|texture|change|pos, 早落, 苹果黄叶病
+|harm plants, 叶, 苹果黄叶病
