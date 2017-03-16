@@ -6,6 +6,8 @@ Tools:
 1. build-content-index.py: generate inverse list of contents, Index:[type + keyword] -> list(content, relevance), Index-sensitivity
 
 2. build-dict.py: build name -> entityId(type + ID)  entityId -> list(entity_attribute:[attribute_key:string, list(attribute_value:string)])
+   usage: ./build-dict.py --data_root=./data/dict --output=./data/build/name.dic; cat data/build/name.dic | sort -t$'\t' -k2 > ./data/build/name.dic.sorted
+
 
 3. nlu-simulator.py: 
     input: state:(taskId + list(parameter: [parameter-name, list(parameter-value:string)])), question(text)
