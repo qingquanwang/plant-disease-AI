@@ -44,6 +44,23 @@ class Task(object):
         for v in obj['Dependent']:
             self._out.append(v)
 
+class State(object):
+    def __init__(self):
+        self._taskPath = []
+        self._curTask = ''
+        self._session = WhiteBoard()
+        self._status = 'WaitInteraction'
+        self._focus = ''
+
+class UserInput(object):
+    def __init__(self, inputType, inputContent):
+        self._type = inputType
+        self._input = inputContent
+
+class Action(object):
+    def __init__(self, actionType):
+        self._type = actionType
+
 class DialogManager(object):
     def __init__(self, filepath):
         self._variables = []
@@ -56,4 +73,43 @@ class DialogManager(object):
             for taskObj in taskDef['Tasks']:
                 task = Task(Obj)
                 self._tasks[task._id] = task
-    def execute_node(self, taskId, )
+
+    def execute(self, state, actions):
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
