@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from DictManager import *
+import pprint
 
+pp = pprint.PrettyPrinter(indent = 2)
 
 class Span(object):
     _start = 0
@@ -58,6 +60,7 @@ class SpanGraph(object):
                 if i+j >= length:
                     continue
                 ngram = ''.join(tokens[i:i+j+1])
+                #print "[debug] current ngram:" + ngram
                 candidates = dic.lookup(ngram)
                 if len(candidates) == 0:
                     continue
@@ -68,6 +71,13 @@ class SpanGraph(object):
                 break
         self.createGraphFromSpan(spans)
 
+    # dump sequence from list(spanId)
+    def dump_seq(self, seq):
+        res = []
+        for idx in seq:
+            span = self._spans[idx]
+            res.append('[' + span._text + ':' + span._type + ']')
+        return ''.join(res)
     # return the list of spans regardless of the conflict
     def getSpans(self, include_token = False):
         if include_token:

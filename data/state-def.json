@@ -4,9 +4,9 @@
             "Name": "Welcome",
             "Out": [
                 "Info",
-                "Diagnostic",
-                "Treatment"
-            ]
+                "Diagnostic"
+            ], 
+            "Branch": ""
         },
         {
             "Name" : "Diagnostic",
@@ -26,7 +26,7 @@
             "Dependent" : [
             ],
             "Action" : {
-                "content-api" : ""
+                "content-api" : "/plant"
             }
         },
         {
@@ -34,7 +34,7 @@
             "Dependent" : [
             ],
             "Action" : {
-                "content-api" : ""
+                "content-api" : "/disease"
             }
         },
         {
@@ -44,31 +44,28 @@
             "Out": [
                 "Symptom-Image",
                 "Diagnostic-Final"
-            ]
+            ],
+            "Branch" : ""
         },
         {
             "Name" : "Symptom-Image",
             "Dependent" : [
             ],
             "Out": [
-            ]
+                "Diagnostic-Final"
+            ],
+            "Action" : {
+            }
         },
         {
             "Name" : "Diagnostic-Final",
             "Action" : {
                 "content-api" : ""
             }
-        },
-        {
-            "Name" : "Treatment",
-            "Dependent" : [
-            ],
-            "Action" : {
-                "content-api" : ""
-            }
         }
     ],
     "WhiteBoard": [
+        "taskType",
         "plantName",
         "diseaseName",
         "symptom-texture",

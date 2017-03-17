@@ -96,6 +96,15 @@ stops = (
     '\u3002'  # Ideographic full stop
 )
 
+nlu_stops = (
+    '\uFF01'  # Fullwidth exclamation mark
+    '\uFF1F'  # Fullwidth question mark
+    '\uFF61'  # Halfwidth ideographic full stop
+    '\u3002'  # Ideographic full stop
+    '?'
+    '!'
+)
+
 #: A string containing all Chinese punctuation.
 punctuation = non_stops + stops
 
