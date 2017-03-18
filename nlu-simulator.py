@@ -23,7 +23,7 @@ if __name__ == '__main__':
                         default=None,
                         help='current stateId')
     parser.add_argument('--w', type=str,
-                        default=None,
+                        default='',
                         help='whiteboard variables')
     args = parser.parse_args()
     dic = DictManager()
