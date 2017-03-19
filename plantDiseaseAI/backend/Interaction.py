@@ -41,7 +41,7 @@ class Task(object):
         for v in obj['Out']:
             self._out.append(v)
         for v in obj['Dependent']:
-            self._out.append(v)
+            self._dep.append(v)
 
 class State(object):
     def __init__(self):
