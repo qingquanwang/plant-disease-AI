@@ -10,6 +10,8 @@ class DialogManager(object):
     def __init__(self, filepath):
         self._variables = []
         self._tasks = {}
+        # name -> module object
+        self._modules = {}
         with open(filepath, 'r') as fd:
             taskDef = json.load(fd, encoding='utf-8')
             for variable in taskDef['WhiteBoard']:
@@ -18,12 +20,8 @@ class DialogManager(object):
                 task = Task(Obj)
                 self._tasks[task._id] = task
 
-    def setNLU(self, nlu):
-        self._nlu = nlu
-    def setNLR(self, nlr):
-        self._nlr = nlr
-    def setImageU(self, imageU):
-        self._imageU = imageU
+    def addModule(self, name, module):
+        self._modules[name] = module
 
     def execute(self, state, userInput, actions):
         #1. check the current state

@@ -37,7 +37,15 @@ class Analysis(object):
             return self._graph.dump_seq(seq) + ':' + tagger_type
         else:
             return self._graph.dump_seq(seq)
-
+    def getBestSeq(self, threshold):
+        (seq, tagger_prob, tagger_type) = self._candidateSeqList[self._bestSeqIndex]
+        if self._scoreList[self._bestSeqIndex] > threshold:
+            spans = []
+            for spanId in seq:
+                spans.append(self._graph._spans[spanId])
+            return spans
+        else:
+            return None
 class NLU(object):
     def __init__(self, dic):
         self._dic = dic

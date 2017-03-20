@@ -2,11 +2,13 @@
     "Tasks": [
         {
             "Name": "Welcome",
+            "Handler" : "plantDiseaseAI.backend.handler.WelcomeHandler",
             "Out": [
                 "Info",
                 "Diagnostic"
             ], 
-            "Branch": ""
+            "nlu": "NLU",
+            "nlr": "NLR"
         },
         {
             "Name" : "Diagnostic",
@@ -68,6 +70,7 @@
         "taskType",
         "plantName",
         "diseaseName",
+        "intent",
         "symptom-texture",
         "symptom-position",
         "symptom-color",
