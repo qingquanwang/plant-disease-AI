@@ -2,6 +2,7 @@
 from plantDiseaseAI.backend.nlu import *
 from plantDiseaseAI.backend.nlr import *
 from plantDiseaseAI.backend.Interaction import *
+from PlantDiseaseAI.backend.SemanticTagging import *
 
 import pprint
 
@@ -56,35 +57,36 @@ class WelcomeHandler(BaseQAHandler):
     # Output: 'taskType', 'plantName', 'diseaseName', 'intent'
     def understanding(self, state, text):
         anaList = self._nlu.analysis(text)
-        # we only care for plantName, diseaseName, intent
-        plantName = ''
-        diseaseName = ''
-        intent = ''
-        for ana in anaList:
-        # categorize the taskType
-        if intent == '':
-        elif plantName != '':
-        elif diseaseName != '':
-        else:
-            
+        status = semantic_mainTask(anaList, state._session)
+        return status
  
     # State Transition Graph:
     #   'Run' -> 'WaitTextInput' : reply welcomeMsg
     #   'WaitTextInput' -> 'Done' : reply ackMsg
-    #   'Run' -> 'Repeat' -> 'WaitTextInput': reply repeatMsg
+    #   'WaitTextInput' -> 'Repeat' -> 'WaitTextInput': reply repeatMsg
    
     def execute(self, state, userInput, actions):
-        if state._state == 'Run':
+        if state._status == 'Run':
             welcomeAction = Action('ShowPlainText')
             welcomeAction.setText(self._nlr.use_template(
                     self._welcomeMsgTemplateId,
                     state._session._env))
             actions.append(welcomeAction)
-            state._state = 'WaitTextInput'
+            state._status = 'WaitTextInput'
             return True
-        elif state._state == 'WaitTextInput':
+        elif state._status == 'WaitTextInput':
             if userInput._type != 'Text':
                 return False
+            status = self.understanding(state, userInput._input)
+            if status == False:
+                repeatAction = Action('ShowPlainText')
+                repeatAction.setText(self._nlr.use_template(
+                    self._repeatMsgTemplateId,
+                    state._session._env))
+                actions.append(repeatAction)
+                state._status = 'WaitTextInput'
+            else:
+                state._status = 'Done'
             return True
         else
             return False

@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
-from Tagging import *
-from nlu import *
-from nlr import *
-from Interaction import *
+from PlantDiseaseAI.backend.Tagging import *
+from PlantDiseaseAI.backend.nlu import *
+from PlantDiseaseAI.backend.nlr import *
+from PlantDiseaseAI.backend.Interaction import *
+from PlantDiseaseAI.backend.handler.basicHandler import *
+
 import re
 import json
 
@@ -19,6 +21,9 @@ class DialogManager(object):
             for taskObj in taskDef['Tasks']:
                 task = Task(Obj)
                 self._tasks[task._id] = task
+
+    def loadHandler(self):
+        
 
     def addModule(self, name, module):
         self._modules[name] = module
@@ -42,22 +47,3 @@ class DialogManager(object):
         #3. state transition
         #4. return actions
 
-
-    # understand userInput, fill in state's _session
-    def underUserInput(self, state, userInput):
-        if userInput._type == 'Text':
-            text = userInput._input
-            #analysisList = self._nlu.analysis(text)
-            
-        elif userInput._type == 'Image':
-            #TODO
-            pass
-        else:
-            return None
-
-    # state transition, focus change, task transition, status update
-    def state_transition(self, state):
-        return
-    # generate action, status update
-    def generate_action(self, state, actions):
-        return

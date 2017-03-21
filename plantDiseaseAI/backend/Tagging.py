@@ -21,6 +21,22 @@ class Span(object):
         res.append(str(self._type))
         res.append(str(self._text))
         return '[' + ':'.join(res) +']'
+# Annotation on tagging sequence: 
+#   slots: slot->list[spanId]
+#   conclusion: k->v
+class Annotation(object):
+    def __init__(self):
+        self._slots = {}
+        self._conclusion = {}
+    def setConclusion(self, k, v):
+        self._conclusion[k] = v
+    def appendSlot(self, k, v):
+        if k in self._slots:
+            if v not in self._slots[k]:
+                self._slots[k].append(v)
+        else:
+            self._slots[k] = []
+            self._slots[k].append(v)
 
 # span linked graph
 class SpanGraph(object):
