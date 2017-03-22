@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 import re
 import json
+from collections import deque
+import os,sys
+import pprint
+
+pp = pprint.PrettyPrinter(indent = 2)
 
 class WhiteBoard(object):
     def __init__(self):
@@ -33,23 +38,25 @@ class WhiteBoard(object):
             k, values = kv.split(':')
             self._env[k] = values.split(',')
 
-class Task(object):
-    def __init__(self, obj):
-        self._id = obj['Name']
-        self._out = []
-        self._dep = []
-        for v in obj['Out']:
-            self._out.append(v)
-        for v in obj['Dependent']:
-            self._dep.append(v)
-
 class State(object):
     def __init__(self):
         self._taskPath = []
+        self._taskQueue = deque([])
         self._curTask = ''
         self._session = WhiteBoard()
         self._status = ''
         self._focus = ''
+    def setStartState(self, taskId):
+        self._status = 'Run'
+        self._curTask = taskId
+    def debugMsg(self):
+        print "State Info: "
+        print "\t\t Task Path:" + '--'.join(self._taskPath)
+        print "\t\t Task Queue:" + '--'.join(self._taskQueue)
+        print "\t\t Current Task:" + self._curTask
+        print "\t\t session:" + self._session.serialize().encode('utf-8')
+        print "\t\t status: " + self._status
+        print "\t\t focus: " + self._focus
 
 class UserInput(object):
     def __init__(self, inputType, inputContent):
@@ -65,4 +72,5 @@ class Action(object):
         self._text = text
     def setContentApi(self, api):
         self._contentApi = api
-
+    def debugMsg(self):
+        print 'Action Info: [' + self._type + '] ' + self._text.encode('utf-8')

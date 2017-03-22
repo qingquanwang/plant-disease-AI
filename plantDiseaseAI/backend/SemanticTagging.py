@@ -23,18 +23,18 @@ def semantic_mainTask(anaList, env):
             else:
                 continue
 
-        if plantName == '' && diseaseName == '' && intent == '':
+        if plantName == '' and diseaseName == '' and intent == '':
             return False
 
         if diseaseName != '':
-            env['diseaseName'] = diseaseName
+            env.override('diseaseName',  diseaseName)
         if plantName != '':
-            env['plantName'] = plantName
+            env.override('plantName', plantName)
         if intent != '':
-            env['intent'] = intent
+            env.append('intent', intent)
         if intent == 'Diagnostic':
-            env['taskType'] = 'Diagnostic'
+            env.override('taskType',  'Diagnostic')
         else:
-            env['taskType'] = 'Info'
+            env.override('taskType', 'Info')
         return True
 #semantic_

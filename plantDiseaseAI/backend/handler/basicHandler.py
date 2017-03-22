@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from plantDiseaseAI.backend.nlu import *
-from plantDiseaseAI.backend.nlr import *
-from plantDiseaseAI.backend.Interaction import *
-from PlantDiseaseAI.backend.SemanticTagging import *
+from nlu import *
+from nlr import *
+from Interaction import *
+from SemanticTagging import *
 
 import pprint
 
@@ -19,20 +19,37 @@ class BaseHandler(object):
     def __init__(self, params, modules):
         self._id = params['Name']
         self._out = []
-        self._dep = []
-        for v in params['Out']:
-            self._out.append(v)
-        for v in params['Dependent']:
-            self._dep.append(v)
     def accepted(self, state):
         pass
     def execute(self, state, userInput, actions):
         pass
 
+class DummyTestHandler(BaseHandler):
+    def __init__(self, params, modules):
+        super(DummyTestHandler, self).__init__(params, modules)
+    def accepted(self, state):
+        return True
+    # 'Run' -> 'WaitTextInput'
+    # 'WaitTextInput' -> 'Ack': echo the input msg
+    def execute(self, state, userInput, actions):
+        if state._status == 'Run':
+            action = Action('ShowPlainText')
+            action.setText('Dummy Task [' + self._id + ']')
+            actions.append(action)
+            state._status = 'WaitTextInput'
+            return True
+        elif state._status == 'WaitTextInput':
+            action = Action('ShowPlainText')
+            action.setText('Got it! "' + userInput._input +'"')
+            actions.append(action)
+            state._status = 'Done'
+            return True
+        else:
+            return True
 class BaseQAHandler(BaseHandler):
     # params is the spec of the handler
     def __init__(self, params, modules):
-        super(self, params, modules)
+        super(BaseQAHandler, self).__init__(params, modules)
         # set NLU module
         nluName = params['nlu']
         if nluName in modules:
@@ -48,8 +65,9 @@ class BaseQAHandler(BaseHandler):
 
 class WelcomeHandler(BaseQAHandler):
     def __init__(self, params, modules):
-        super(self, params, modules)
+        super(WelcomeHandler, self).__init__(params, modules)
         self._welcomeMsgTemplateId = params['msg']['welcomeTemplateId']
+        self._repeatMsgTemplateId = params['msg']['repeatTemplateId']
     # Welcome Handler Always Accepted
     def accepted(self, state):
         return True
@@ -75,8 +93,6 @@ class WelcomeHandler(BaseQAHandler):
             state._status = 'WaitTextInput'
             return True
         elif state._status == 'WaitTextInput':
-            if userInput._type != 'Text':
-                return False
             status = self.understanding(state, userInput._input)
             if status == False:
                 repeatAction = Action('ShowPlainText')
@@ -88,5 +104,7 @@ class WelcomeHandler(BaseQAHandler):
             else:
                 state._status = 'Done'
             return True
-        else
+        elif state._status == 'Done':
+            return True
+        else:
             return False
