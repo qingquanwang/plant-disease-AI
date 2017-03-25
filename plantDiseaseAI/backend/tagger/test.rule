@@ -1,0 +1,14 @@
+internal plant = [
+    { </plant/fruit> }
+    { </plant/crop:region="northeast"> }
+    { </plant/flowers> }
+]#plantName
+
+// plant info
+plant_info = { "what's the info of" @plant }`intent="info"`
+
+// diagnostic
+diagnostic = [
+                { {"my"}? @plant "is" ["ill" "sick"] }
+                { "why"? @plant ["has spot" "there is spot"] }
+             ]`intent=diagnostic`
