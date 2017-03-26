@@ -11,7 +11,7 @@ class Action(object):
         if annType in ['Slot', 'General']:
             self._type = annType
         else:
-            raise TypeError("unknown annotation type")
+            raise TypeError("unknown action type")
         self._k = key
         self._v = value
 
@@ -20,7 +20,7 @@ class Term(object):
     def __init__(self, count, actions):
         self._actions = []
         self._count = '\0'
-        self._annotations = []
+        self._actions = []
         if count in ['\0', '?', '+', '*']:
             self._count = count
         else:

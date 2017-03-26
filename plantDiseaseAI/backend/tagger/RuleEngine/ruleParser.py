@@ -1,94 +1,9 @@
-#!/usr/bin/python
-import sys,os
-import pprint
-sys.path.insert(0, "../..")
-
-import lex
 import yacc
 from AST import *
-import decimal
+import pprint
+import sys,os
 
 pp = pprint.PrettyPrinter(indent = 2)
-
-keywords = ('internal')
-
-tokens = (
-    'internal',
-    'SLOT',
-    'LSB',
-    'RSB',
-    'LAB',
-    'RAB',
-    'LB',
-    'RB',
-    'QM',
-    'PLUS',
-    'STAR',
-    'ASSIGN',
-    'RQ',
-    'SEMICOLON',
-    'DQ',
-    'NAME',
-    'SPANTYPE',
-    'POW',
-    'AT',
-    'STR',
-    'COMMA',
-    'COLON',
-    'NOT',
-    'OR',
-    'AND',
-    'LBRACE',
-    'RBRACE',
-    'DOT',
-    'TILDE'
-)
-
-t_SLOT = r'#'
-t_LSB = r'\['
-t_RSB = r'\]'
-t_LAB = r'<'
-t_RAB = r'>'
-t_LB = r'{'
-t_RB = r'}'
-t_QM = r'\?'
-t_PLUS = r'\+'
-t_STAR = r'\*'
-t_ASSIGN = r'='
-t_RQ = r'`'
-t_SEMICOLON = r';'
-t_DQ = r'"'
-t_SPANTYPE = r'[a-zA-Z_\/]+'
-t_POW = r'\^'
-t_AT = r'@'
-t_STR = r'".*?"'
-t_COMMA = r','
-t_COLON = r':'
-t_NOT = r'!'
-t_OR = r'\|\|'
-t_AND = r'&&'
-t_LBRACE = r'\('
-t_RBRACE = r'\)'
-t_DOT = '\.'
-t_TILDE = '~'
-t_ignore = " \t"
-
-def t_comment(t):
-    r'\/\/[^\n]*'
-    print "Debug: handling comment..."
-
-def t_newline(t):
-    r'\n+'
-    t.lexer.lineno += t.value.count("\n")
-
-def t_error(t):
-    print "Illegal character '%s'" % t.value[0].encode('utf-8')
-
-def t_NAME(t):
-    r'[a-zA-Z_][a-zA-Z0-9_]*'
-    if t.value in keywords:
-        t.type = t.value
-    return t
 
 context = ParseContext()
 
@@ -122,10 +37,12 @@ def p_expr(p):
             | counted RQ actionSeq RQ
             | counted SLOT NAME"""
     p[0] = p[1]
-    if len(p) == 4:
-        p[0]._annotations.extend(p[3])
+    if len(p) == 5:
+        p[0]._actions.extend(p[3])
+    elif len(p) == 4:
+        p[0]._actions.append(Action('Slot', p[3], AtomCover()))
     else:
-        p[0]._annotations.append(Annotation('Slot', p[3], AtomCover()))
+        pass
 
 def p_actionSeq(p):
     """actionSeq : action
@@ -162,7 +79,7 @@ def p_term(p):
             | mirroredExprs
             | alteredExprs
             | callExpr"""
-    p[0] = p[1]
+    p[0] = ExprTree(p[1])
 
 def p_orderedExprs(p):
     """orderedExprs : LB exprs RB"""
@@ -220,7 +137,7 @@ def p_exprDot(p):
 
 def p_exprToken(p):
     """exprToken : STR"""
-    print "debug: " + p[1]
+    #print "debug: " + p[1]
     p[0] = TokenValue(p[1])
 
 def p_exprSpan(p):
@@ -247,21 +164,3 @@ def p_matchExpr(p):
     else:
         p[0] = p[2]
 
-if __name__ == '__main__': 
-    filename = sys.argv[1]
-    with open(filename, 'r') as fd:
-        data = fd.read().decode('utf-8')
-        lexer = lex.lex(debug=1, optimize=0,
-                                lextab='lextab', reflags=0)
-        lexer.input(data)
-
-        for tok in iter(lexer.token, None):
-            if not tok:
-                break
-            sys.stdout.write('(%s,%r,%d,%d)\n' % (tok.type, tok.value, tok.lineno, tok.lexpos))
-
-        #parser = yacc.yacc()
-        #result = parser.parse(lexer=lexer)
-        #ast = AST(result)
-        #ast.dumpAST()
-        #pp.pprint(result)

@@ -1,0 +1,14 @@
+internal plant = [
+    { </plant/fruit> }
+    { </plant/crop:region="northeast"> }
+    { </plant/flowers> }
+]#plantName
+
+// plant info
+plant_info = { "关于" @plant {"的信息"}? }`intent="info"`
+
+// diagnostic
+diagnostic = [
+                { {"我的"}? @plant ["病了" "生病了"] }
+                { "为什么"? @plant ["有斑" "长斑"] }
+             ]`intent="diagnostic"`
