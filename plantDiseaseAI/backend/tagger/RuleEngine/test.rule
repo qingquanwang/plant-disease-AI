@@ -4,11 +4,27 @@ internal plant = [
     { </plant/flowers> }
 ]#plantName
 
+internal disease = [
+    </disease>
+]#diseaseName
+
+internal symptom = [
+    </disease/spot>
+    </disease/spot/color>
+    </disease/spot/texture>
+]#symptom
+
 // plant info
-plant_info = { "关于" @plant {"的信息"}? }`intent="info"`
+plant_info = [
+    { "关于" @plant {"的信息"}? }`intent="plantInfo"`
+    ^{ @plant @disease }`intent="diseaseInfo"`
+]
 
 // diagnostic
 diagnostic = [
                 { {"我的"}? @plant ["病了" "生病了"] }
                 { "为什么"? @plant ["有斑" "长斑"] }
+                ~{ @symptom ["怎么了" "为什么"]? }
+                ^{ @symptom @plant}
              ]`intent="diagnostic"`
+

@@ -38,9 +38,9 @@ def p_expr(p):
             | counted SLOT NAME"""
     p[0] = p[1]
     if len(p) == 5:
-        p[0]._actions.extend(p[3])
+        p[0]._root._actions.extend(p[3])
     elif len(p) == 4:
-        p[0]._actions.append(Action('Slot', p[3], AtomCover()))
+        p[0]._root._actions.append(Action('Slot', p[3], AtomCover()))
     else:
         pass
 
@@ -64,11 +64,11 @@ def p_counted(p):
     p[0] = p[1]
     if len(p) == 3:
         if p[2] == '?':
-            p[0]._count = '\0'
+            p[0]._root._count = '?'
         elif p[2] == '*':
-            p[0]._count = '*'
+            p[0]._root._count = '*'
         elif p[2] == '+':
-            p[0]._count = '+'
+            p[0]._root._count = '+'
         else:
             pass
 
@@ -128,7 +128,7 @@ def p_spanAttr(p):
     if len(p) == 2:
         p[0] = Span("", p[1], "")
     else:
-        p[0] = Span("", p[1], p[2])
+        p[0] = Span("", p[1], p[3])
 
 def p_exprDot(p):
     """exprDot : DOT

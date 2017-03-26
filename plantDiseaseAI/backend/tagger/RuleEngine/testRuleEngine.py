@@ -24,6 +24,6 @@ if __name__ == '__main__':
 
         parser = yacc.yacc()
         result = parser.parse(lexer=lexer)
-        #ast = AST(result)
-        #ast.dumpAST()
+        ast = AST(result)
+        ast.dumpAST()
         pp.pprint(result)
