@@ -25,5 +25,7 @@ if __name__ == '__main__':
         parser = yacc.yacc()
         result = parser.parse(lexer=lexer)
         ast = AST(result)
+        ast.dumpOrderedAST()
+        ast.expand()
         ast.dumpAST()
-        pp.pprint(result)
+        #pp.pprint(result)

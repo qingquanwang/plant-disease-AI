@@ -38,9 +38,9 @@ def p_expr(p):
             | counted SLOT NAME"""
     p[0] = p[1]
     if len(p) == 5:
-        p[0]._root._actions.extend(p[3])
+        p[0]._actions.extend(p[3])
     elif len(p) == 4:
-        p[0]._root._actions.append(Action('Slot', p[3], AtomCover()))
+        p[0]._actions.append(Action('Slot', p[3], AtomCover()))
     else:
         pass
 
@@ -133,16 +133,16 @@ def p_spanAttr(p):
 def p_exprDot(p):
     """exprDot : DOT
                | LAB RAB"""
-    p[0] = Atom()
+    p[0] = ExprTree(Atom())
 
 def p_exprToken(p):
     """exprToken : STR"""
     #print "debug: " + p[1]
-    p[0] = TokenValue(p[1])
+    p[0] = ExprTree(TokenValue(p[1]))
 
 def p_exprSpan(p):
     """exprSpan : LAB span RAB"""
-    p[0] = p[2]
+    p[0] = ExprTree(p[2])
 
 def p_exprOperation(p):
     """exprOperation : NOT matchExpr

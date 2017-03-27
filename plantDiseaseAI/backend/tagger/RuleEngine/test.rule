@@ -6,6 +6,7 @@ internal plant = [
 
 internal disease = [
     </disease>
+    { @plant </disease> "病"? }
 ]#diseaseName
 
 internal symptom = [
@@ -17,14 +18,18 @@ internal symptom = [
 // plant info
 plant_info = [
     { "关于" @plant {"的信息"}? }`intent="plantInfo"`
-    ^{ @plant @disease }`intent="diseaseInfo"`
+    ^{ {@plant}* @disease }`intent="diseaseInfo"`
 ]
 
 // diagnostic
 diagnostic = [
                 { {"我的"}? @plant ["病了" "生病了"] }
                 { "为什么"? @plant ["有斑" "长斑"] }
-                ~{ @symptom ["怎么了" "为什么"]? }
+                ~{ {@symptom}+ ["怎么了" "为什么"]? }
                 ^{ @symptom @plant}
              ]`intent="diagnostic"`
 
+// test call
+
+plant_call = @plant `intent="plantInfo"`
+disease_call = @disease `intent="diseaseInfo"`

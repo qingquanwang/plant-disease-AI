@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+import re
+import copy
 import os,sys
 import pprint
 
@@ -50,9 +53,9 @@ class Term(object):
     def translate_count(self):
         if self._count == '\0':
             return 'One'
-        elif self._count == '\?':
+        elif self._count == '?':
             return 'OneOrZero'
-        elif self._count == '\+':
+        elif self._count == '+':
             return 'OneOrMulti'
         else:
             return 'ZeroOrMulti'
@@ -96,6 +99,8 @@ class Call(Term):
         self._value = value
     def dump(self, indent):
         print ' ' * indent + 'Call:[' + self._name +']'
+        for act in self._actions:
+            act.dump(indent + indentInc)
 
 class ExprTree(Term):
     def __init__(self, root):
@@ -104,7 +109,10 @@ class ExprTree(Term):
     def dump(self, indent):
         #super(ExprTree,self).dump(indent)
         #print "Debug: " + str(type(self._root))
-        self._root.dump(indent)
+        print ' ' * indent + 'Expr:[count=' + self.translate_count() + ']'
+        self._root.dump(indent+indentInc)
+        for act in self._actions:
+            act.dump(indent + indentInc)
 
 class Node(object):
     def __init__(self):
@@ -175,7 +183,8 @@ class Span(Node):
 AST class graph:
 
 rule := Rule(expr)
-expr := counted := term := ExprTree(TermSeq)
+expr := counted := term := ExprTree(TermSeq) or ExprTree(Call) 
+                                or ExprTree(Span) ... or ExprTree(ExprTree(...))
 TermSeq := expr[]
 
 So usually the dump graph should be:
@@ -187,11 +196,88 @@ rule
 """
 class AST(object):
     def __init__(self, rules):
+        # ruleName -> rule
+        self._ruleMap = {}
         self._rules = []
-        self._rules.extend(rules)
-    def dumpAST(self):
+        for rule in rules:
+            self._rules.append(rule)
+            if rule._name in self._ruleMap:
+                raise NameError("Rule Name Duplicated")
+            self._ruleMap[rule._name] = rule
+
+    def dumpOrderedAST(self):
         for rule in self._rules:
             rule.dump(0)
+
+    def dumpAST(self):
+        for name, rule in self._ruleMap.items():
+            rule.dump(0)
+
+    def expand(self):
+        for name, rule in self._ruleMap.items():
+            if rule._type == 'public':
+                print "expanding call for rule: [" + name + ']'
+                self.expand_call(rule._value)
+        for name, rule in self._ruleMap.items():
+            if rule._type == 'internal':
+                del self._ruleMap[name]
+        for name, rule in self._ruleMap.items():
+            self.expand_seq(rule._value)
+
+    def expand_call(self, expr):
+        if isinstance(expr._root, Call):
+            print 'Debug: expanding Call:[' + expr._root._name + ']'
+            cur_expr = expr._root
+            ruleName = cur_expr._name
+            if ruleName in self._ruleMap:
+                expr._root = self._ruleMap[ruleName]._value._root
+
+                expr._actions.extend(self._ruleMap[ruleName]._value._actions)
+                self.expand_call(expr)
+            else:
+                raise NameError(ruleName + ' rule name not existed')
+        elif isinstance(expr._root, TermSeq):
+            cur_expr = expr._root
+            for term in cur_expr._terms:
+                self.expand_call(term)
+        elif isinstance(expr._root, ExprTree):
+            self.expand_call(expr._root)
+        else:
+            print 'Debug: ignore type for expanding call:[' + str(type(expr._root)) + ']'
+            return
+
+    def expand_seq(self, expr):
+        print 'Debug: handling seq:[' + str(type(expr._root)) + ']'
+        if isinstance(expr._root, ExprTree):
+            self.expand_seq(expr._root)
+        elif isinstance(expr._root, TermSeq):
+            curNode = expr._root
+            if curNode._type == 'unordered':
+                print 'Debug: temporary ignore unordered'
+            elif curNode._type == 'mirror':
+                curNode.dump(0)
+                pp.pprint(curNode._terms)
+                rTerm = copy.deepcopy(curNode)
+                rTerm._terms.reverse()
+                '''
+                rTerm = TermSeq('ordered', [])
+                for term in curNode._terms.reverse():
+                    pp.pprint(term)
+                rTerm._count = curNode.count
+                if curNode._actions is not None:
+                    rTerm._actions = []
+                    for act in curNode._actions:
+                        rTerm._actions.append(act)
+                '''
+                rExpr = ExprTree(rTerm)
+                newExpr = TermSeq('altered', [curNode, rTerm])
+                expr._root = newExpr
+                self.expand_seq(expr._root)
+            else:
+                for term in curNode._terms:
+                    self.expand_seq(term)
+        else:
+            print 'Debug: ignore type for expanding seq:[' + str(type(expr._root)) + ']'
 
 class ParseContext(object):
     def __init__(self):
