@@ -64,11 +64,11 @@ def p_counted(p):
     p[0] = p[1]
     if len(p) == 3:
         if p[2] == '?':
-            p[0]._root._count = '?'
+            p[0]._count = '?'
         elif p[2] == '*':
-            p[0]._root._count = '*'
+            p[0]._count = '*'
         elif p[2] == '+':
-            p[0]._root._count = '+'
+            p[0]._count = '+'
         else:
             pass
 

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import re
+from itertools import permutations
 import copy
 import os,sys
 import pprint
@@ -19,6 +20,20 @@ class Rule(object):
             out = ' ' * indent + 'Rule:[' + self._name +']'
         print out
         self._value.dump(indent + indentInc)
+    def expand_call(self, rules):
+        if self._value is None:
+            return
+        elif isinstance(self._value, Call):
+            ruleName = self._value._name
+            if ruleName in rules:
+                self._value = rules[ruleName]._value
+                self._value.expand_call()
+        else:
+            self._value.expand_call(rules)
+    def expand_seq(self):
+        if self._value is None:
+            return
+        self._value.expand_seq()
 
 class Action(object):
     def __init__(self, annType, key, value):
@@ -37,7 +52,10 @@ class Action(object):
         else:
             out = out + ',' + self._k.encode('utf-8') + ',' + 'Unknown' + ']'
         print out
-
+    def expand_call(self, rules):
+        raise TypeError('Action doesn\'t support expand_call')
+    def expand_seq(self):
+        raise TypeError('Action doesn\'t support expand_seq')
 class Term(object):
     def __init__(self, count, actions):
         self._count = '\0'
@@ -64,6 +82,10 @@ class Term(object):
         print out
         for act in self._actions:
             act.dump(indent + indentInc)
+    def expand_call(self, rules):
+        raise TypeError('Term should be not really used')
+    def expand_seq(self):
+        raise TypeError('Term should be not really used')
 
 class TermSeq(Term):
     def __init__(self, seqType, termList):
@@ -91,7 +113,43 @@ class TermSeq(Term):
             t.dump(indent + indentInc)
         for act in self._actions:
             act.dump(indent + indentInc)
+    def expand_call(self, rules):
+        for i in range(len(self._terms)):
+            term = self._terms[i]
+            if isinstance(term, Call):
+                ruleName = term._name
+                if ruleName in rules:
+                    self._terms[i] = rules[ruleName]._value
+            self._terms[i].expand_call(rules)
+    def expand_seq(self):
+        if self._type == 'mirror':
+            # TermSeq(mirrored, A) => TermSeq(altered, [TermSeq(ordered, A), TermSeq(ordered, ~A)]
+            seq1 = copy.deepcopy(self)
+            seq1._type = 'ordered'
+            
+            seq2 = copy.deepcopy(self)
+            seq2._terms.reverse()
+            seq2._type = 'ordered'
 
+            self._type = 'altered'
+            self._terms[:] = [seq1, seq2]
+
+        elif self._type == 'unordered':
+            # TermSeq(mirrored, A) => TermSeq(altered, [TermSeq(ordered, A1) ...])
+            permed = list(permutations(self._terms))
+            permed_terms = []
+            for perm in permed:
+                seq = copy.deepcopy(self)
+                seq._type = 'ordered'
+                seq._terms[:] = perm
+                permed_terms.append(seq)
+            self._type = 'altered'
+            self._terms[:] = permed_terms
+        else:
+            pass
+        # for each term , call it recursively
+        for term in self._terms:
+            term.expand_seq()
 class Call(Term):
     def __init__(self, name, value):
         super(Call, self).__init__('\0', None)
@@ -101,7 +159,10 @@ class Call(Term):
         print ' ' * indent + 'Call:[' + self._name +']'
         for act in self._actions:
             act.dump(indent + indentInc)
-
+    def expand_call(self, rules):
+        raise TypeError('How come to expand call by call itself!')
+    def expand_seq(self):
+        raise TypeError('Here Call should be all inline')
 class ExprTree(Term):
     def __init__(self, root):
         super(ExprTree, self).__init__('\0', None)
@@ -113,12 +174,23 @@ class ExprTree(Term):
         self._root.dump(indent+indentInc)
         for act in self._actions:
             act.dump(indent + indentInc)
+    def expand_call(self, rules):
+        if isinstance(self._root, Call):
+            ruleName = self._root._name
+            if ruleName in rules:
+                self._root = rules[ruleName]._value
+        self._root.expand_call(rules)
+    def expand_seq(self):
+        self._root.expand_seq()
 
-class Node(object):
+class ASTNode(object):
     def __init__(self):
         pass
-
-class UnaryOpNode(Node):
+    def expand_call(self, rules):
+        pass
+    def expand_seq(self):
+        pass
+class UnaryOpNode(ASTNode):
     def __init__(self, operation, node):
         self._node = node
         if operation in ['!']:
@@ -128,8 +200,15 @@ class UnaryOpNode(Node):
     def dump(self, indent):
         print ' ' * indent + 'NOT'
         self._node.dump(indent + indentInc)
-
-class BinaryOpNode(Node):
+    def expand_call(self, rules):
+        if isinstance(self._node, Call):
+            ruleName = self._node._name
+            if ruleName in rules:
+                self._node = rules[ruleName]._value
+        self._node.expand_call(rules)
+    def expand_seq(self):
+        self._node.expand_seq()
+class BinaryOpNode(ASTNode):
     def __init__(self, operation, node1, node2):
         if operation in ['&&', '||']:
             self._operation = operation
@@ -137,39 +216,58 @@ class BinaryOpNode(Node):
             raise TypeError("unknown binary operation")
         self._nodeLeft = node1
         self._nodeRight = node2
+
     def dump(self, indent):
         out = ' ' * indent
         if self._operation == '&&':
             out = out + 'AND'
         else:
             out = out + 'OR'
+        print out
         self._nodeLeft.dump(indent + indentInc)
         self._nodeRight.dump(indent + indentInc)
 
+    def expand_call(self, rules):
+        if isinstance(self._nodeLeft, Call):
+            ruleName = self._nodeLeft._name
+            if ruleName in rules:
+                self._nodeLeft = rules[ruleName]._value
+        if isinstance(self._nodeRight, Call):
+            ruleName = self._nodeRight._name
+            if ruleName in rules:
+                self._nodeRight = rules[ruleName]._value
+        self._nodeLeft.expand_call(rules)
+        self._nodeRight.expand_call(rules)
+
+    def expand_seq(self):
+        self._nodeLeft.expand_seq()
+        self._nodeRight.expand_seq()
 class AtomCover(object):
     def __init__(self):
         pass
     def dump(self, indent):
         print ' ' * indent + 'AtomCover'
-
-class Atom(Node):
+    def expand_call(self, rules):
+        pass
+    def expand_seq(self):
+        pass
+class Atom(ASTNode):
     def __init__(self):
         pass
     def dump(self, indent):
         print ' ' * indent + 'Atom'
-
-class TokenValue(Node):
+class TokenValue(ASTNode):
     def __init__(self, value):
         self._value = value
     def dump(self, indent):
         print ' ' * indent + 'TokenValue: [' + self._value.encode('utf-8') +']'
 
-class TokenValueDict(Node):
+class TokenValueDict(ASTNode):
     def __init__(self, values):
         for v in values:
             self._values.append(v)
 
-class Span(Node):
+class Span(ASTNode):
     def __init__(self, spanType, key, value):
         self._type = spanType
         self._key = key
@@ -217,34 +315,12 @@ class AST(object):
         for name, rule in self._ruleMap.items():
             if rule._type == 'public':
                 print "expanding call for rule: [" + name + ']'
-                self.expand_call(rule._value)
+                rule.expand_call(self._ruleMap)
         for name, rule in self._ruleMap.items():
             if rule._type == 'internal':
                 del self._ruleMap[name]
         for name, rule in self._ruleMap.items():
-            self.expand_seq(rule._value)
-
-    def expand_call(self, expr):
-        if isinstance(expr._root, Call):
-            print 'Debug: expanding Call:[' + expr._root._name + ']'
-            cur_expr = expr._root
-            ruleName = cur_expr._name
-            if ruleName in self._ruleMap:
-                expr._root = self._ruleMap[ruleName]._value._root
-
-                expr._actions.extend(self._ruleMap[ruleName]._value._actions)
-                self.expand_call(expr)
-            else:
-                raise NameError(ruleName + ' rule name not existed')
-        elif isinstance(expr._root, TermSeq):
-            cur_expr = expr._root
-            for term in cur_expr._terms:
-                self.expand_call(term)
-        elif isinstance(expr._root, ExprTree):
-            self.expand_call(expr._root)
-        else:
-            print 'Debug: ignore type for expanding call:[' + str(type(expr._root)) + ']'
-            return
+            rule._value.expand_seq()
 
     def expand_seq(self, expr):
         print 'Debug: handling seq:[' + str(type(expr._root)) + ']'

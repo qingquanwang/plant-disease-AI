@@ -1,5 +1,5 @@
 internal plant = [
-    { </plant/fruit> }
+    { </plant/fruit> && (</plant/supported> || (!</plant/blacklist>)) }
     { </plant/crop:region="northeast"> }
     { </plant/flowers> }
 ]#plantName
@@ -26,7 +26,9 @@ diagnostic = [
                 { {"我的"}? @plant ["病了" "生病了"] }
                 { "为什么"? @plant ["有斑" "长斑"] }
                 ~{ {@symptom}+ ["怎么了" "为什么"]? }
+                ~{ {"HHHH"} ["怎么了" "为什么"]? }
                 ^{ @symptom @plant}
+                ~{"aa" "bb" "cc"}
              ]`intent="diagnostic"`
 
 // test call
