@@ -1,0 +1,37 @@
+internal plant = [
+    { </plant/fruit> && (</plant/supported> || (!</plant/blacklist>)) }
+    { </plant/crop:region="northeast"> }
+    { </plant/flowers> }
+]#plantName
+
+internal disease = [
+    </disease>
+    { @plant </disease> "病"? }
+]#diseaseName
+
+internal symptom = [
+    </disease/spot>
+    </disease/spot/color>
+    </disease/spot/texture>
+]#symptom
+
+// plant info
+plant_info = [
+    { "关于" @plant {"的信息"}? }`intent="plantInfo"`
+    ^{ {@plant}* @disease }`intent="diseaseInfo"`
+]
+
+// diagnostic
+diagnostic = [
+                { {"我的"}? @plant ["病了" "生病了"] }
+                { "为什么"? @plant ["有斑" "长斑"] }
+                ~{ {@symptom}+ ["怎么了" "为什么"]? }
+                ~{ {'HHHH'} ["怎么了" "为什么"]? }
+                ^{ @symptom @plant}
+                ~{'aa' 'bb' 'cc'}
+             ]`intent="diagnostic"`
+
+// test call
+
+plant_call = @plant `intent="plantInfo"`
+disease_call = @disease `intent="diseaseInfo"`

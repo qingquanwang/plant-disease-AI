@@ -2,20 +2,28 @@
     "Tasks": [
         {
             "Name": "Welcome",
+            "Handler" : "WelcomeHandler",
             "Out": [
                 "Info",
-                "Diagnostic",
-                "Treatment"
-            ]
+                "Diagnostic"
+            ],
+            "msg": {
+                "welcomeTemplateId": "Welcome",
+                "repeatTemplateId": "Repeat"
+            },
+            "nlu" : "NLU",
+            "nlr" : "NLR"
         },
         {
             "Name" : "Diagnostic",
+            "Handler" : "DummyTestHandler",
             "Out": [
                 "Symptom-Description"
             ]
         },
         {
             "Name" : "Info",
+            "Handler" : "DummyTestHandler",
             "Out" : [
                 "PlantInfo",
                 "DiseaseInfo"
@@ -23,54 +31,57 @@
         },
         {
             "Name" : "PlantInfo",
+            "Handler" : "DummyTestHandler",
             "Dependent" : [
             ],
             "Action" : {
-                "content-api" : ""
+                "content-api" : "/plant"
             }
         },
         {
             "Name" : "DiseaseInfo",
+            "Handler" : "DummyTestHandler",
             "Dependent" : [
             ],
             "Action" : {
-                "content-api" : ""
+                "content-api" : "/disease"
             }
         },
         {
             "Name" : "Symptom-Description",
+            "Handler" : "DummyTestHandler",
             "Dependent" : [
             ],
             "Out": [
                 "Symptom-Image",
                 "Diagnostic-Final"
-            ]
+            ],
+            "Branch" : ""
         },
         {
             "Name" : "Symptom-Image",
+            "Handler" : "DummyTestHandler",
             "Dependent" : [
             ],
             "Out": [
-            ]
-        },
-        {
-            "Name" : "Diagnostic-Final",
+                "Diagnostic-Final"
+            ],
             "Action" : {
-                "content-api" : ""
             }
         },
         {
-            "Name" : "Treatment",
-            "Dependent" : [
-            ],
+            "Name" : "Diagnostic-Final",
+            "Handler" : "DummyTestHandler",
             "Action" : {
                 "content-api" : ""
             }
         }
     ],
     "WhiteBoard": [
+        "taskType",
         "plantName",
         "diseaseName",
+        "intent",
         "symptom-texture",
         "symptom-position",
         "symptom-color",

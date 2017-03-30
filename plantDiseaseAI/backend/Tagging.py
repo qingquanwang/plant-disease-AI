@@ -1,30 +1,42 @@
 # -*- coding: utf-8 -*-
 from DictManager import *
+import pprint
 
+pp = pprint.PrettyPrinter(indent = 2)
 
 class Span(object):
-    def __init__(self):
-        self._start = 0
-        self._len = 0
-        self._type = 'tok'
-        self._text = ''
+    _start = 0
+    _len = 0
+    _type = 'tok'
+    _text = ''
     def __init__(self, start, l, t, text):
         self._start = start
         self._len = l
         self._type = t
         self._text = text
-    def __init__(self, start, l, text):
-        self._start = start 
-        self._len = l
-        self._type = 'tok'
-        self._text = text
-
-# a list of spans
-class Seq(object):
+    def dump(self):
+        res = []
+        res.append(str(self._start))
+        res.append(str(self._len))
+        res.append(str(self._type))
+        res.append(str(self._text))
+        return '[' + ':'.join(res) +']'
+# Annotation on tagging sequence: 
+#   slots: slot->list[spanId]
+#   conclusion: k->v
+class Annotation(object):
     def __init__(self):
-        self._spans = []
-    def appendSpan(self, s):
-        self._spans.append(s)
+        self._slots = {}
+        self._conclusion = {}
+    def setConclusion(self, k, v):
+        self._conclusion[k] = v
+    def appendSlot(self, k, v):
+        if k in self._slots:
+            if v not in self._slots[k]:
+                self._slots[k].append(v)
+        else:
+            self._slots[k] = []
+            self._slots[k].append(v)
 
 # span linked graph
 class SpanGraph(object):
@@ -36,7 +48,7 @@ class SpanGraph(object):
         # start_pos -> list(spanId)
         self._startMap = {}
     
-    def createGraph(self, spans):
+    def createGraphFromSpan(self, spans):
         spanNum = len(spans)
         for i in range(spanNum):
             self._spans.append(spans[i])
@@ -57,23 +69,62 @@ class SpanGraph(object):
         length = len(tokens)
         spans = []
         for i in range(length):
-            dummySpan = Span(i, 1, tokens[i])
+            dummySpan = Span(i, 1, 'tok', tokens[i])
             spans.append(dummySpan)
             # process range [i, min(length-1, i+max_ngram-1)]
             for j in reversed(range(max_ngram)):
-                if i+j+1 > length:
-                    break
-                ngram = ''.join(tokens[i:i+j])
+                if i+j >= length:
+                    continue
+                ngram = ''.join(tokens[i:i+j+1])
+                #print "[debug] current ngram:" + ngram
                 candidates = dic.lookup(ngram)
                 if len(candidates) == 0:
                     continue
-                for cand in candiates:
-                    span = Span(i, j, cand._type, ngram)
+                for cand in candidates:
+                    span = Span(i, j+1, cand._type, ngram)
                     spans.append(span)
                 # only keep the longest shot for each start position
                 break
-        self.createGraph(spans)
+        self.createGraphFromSpan(spans)
 
+    # dump sequence from list(spanId)
+    def dump_seq(self, seq):
+        res = []
+        for idx in seq:
+            span = self._spans[idx]
+            res.append('[' + span._text + ':' + span._type + ']')
+        return ''.join(res)
+    # return the list of spans regardless of the conflict
     def getSpans(self, include_token = False):
+        if include_token:
+            return self._spans
+        res = []
+        for span in self._spans:
+            if span._type != 'tok':
+                res.append(span)
+        return res
 
-    def greedySeq(self, include_token = False):
+    # Always use the longest span at each position
+    def greedySeq(self, seq, pos = 0, include_token = False):
+        # Find non-trivial span first
+        if pos not in self._startMap:
+            return
+        spanIdList = self._startMap[pos]
+        longest_spanId = -1
+        max_span_len = -1
+        trivial_spanId = -1
+        for spanId in spanIdList:
+            if self._spans[spanId]._type == 'tok':
+                trivial_spanId = spanId
+            else:
+                if self._spans[spanId]._len > max_span_len:
+                    max_span_len = self._spans[spanId]._len
+                    longest_spanId = spanId
+        if max_span_len > 0:
+            seq.append(longest_spanId)
+            next_pos = self._spans[longest_spanId]._start + self._spans[longest_spanId]._len
+            return self.greedySeq(seq, next_pos, include_token)
+        else:
+            if include_token:
+                seq.append(trivial_spanId)
+            return self.greedySeq(seq, self._spans[trivial_spanId]._start + 1, include_token)

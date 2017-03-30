@@ -1,0 +1,2234 @@
+{
+    "水心病": {
+        "latin_name": [
+            "糖化病",
+            "蜜果病"
+        ],
+        "raw": "病果内部组织的细胞间隙充满细胞液而呈水渍状，病部果肉的质地较坚硬而呈半透明状。以果心及其附近较多，但也有发生于果实维管束四周和果肉的其它部位的。轻病果的外表不易识别，必须剖开后才见到病变，重病果的水渍状斑一直扩展到果面。病果由于细胞间隙充水而比重大，病组织含酸量特别是苹果酸的含量较低，并有醇的累积，味稍甜，同时略带酒味。贮藏期病组织腐败褐变。",
+        "symptoms": {
+            "harm plants": [
+                "果心",
+                "果面",
+                "果肉"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "果肉",
+                            "果心"
+                        ],
+                        "shape": [
+                            "水渍状"
+                        ],
+                        "color": [
+                            "褐色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [],
+                "taste": [
+                    "稍甜",
+                    "酒精味"
+                ]
+            }
+        },
+        "position": [
+            "西北黄土高原",
+            "秦岭高地果区"
+        ],
+        "time": [],
+        "characters": [],
+        "similar": [
+            "苹果"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=80ac460ddab44aed4d43b6b6d275ec64/caef76094b36acaf2869d3bb7cd98d1000e99cef.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=8c8d460ddab44aed4d43b6b6d275ec64/2fdda3cc7cd98d100b7c4976213fb80e7aec90c8.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=fdadf66f367adab429dd1311eabdd879/30adcbef76094b36a91b5eaaa3cc7cd98c109def.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=7739d9003912b31bd361c57be7715d1f/0df431adcbef76094f82dcd82edda3cc7dd99eef.jpg"
+        ]
+    },
+    "白粉病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "叶片",
+                "嫩茎"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "果实"
+                        ],
+                        "shape": [
+                            "网状"
+                        ],
+                        "color": [
+                            "锈色"
+                        ],
+                        "size": {}
+                    },
+                    {
+                        "location": [
+                            "叶片背面",
+                            "叶片正面"
+                        ],
+                        "shape": [
+                            "粉状"
+                        ],
+                        "color": [
+                            "白色"
+                        ],
+                        "size": {}
+                    },
+                    {
+                        "location": [
+                            "花萼洼",
+                            "梗洼"
+                        ],
+                        "shape": [
+                            "粉状"
+                        ],
+                        "color": [
+                            "白色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "果实"
+                        ],
+                        "change": [
+                            {
+                                "pre": "变硬",
+                                "pos": [
+                                    "裂口"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "location": [
+                            "叶片背面",
+                            "叶片正面"
+                        ],
+                        "change": {
+                            "pre": [
+                                "畸形",
+                                "紫色"
+                            ],
+                            "pos": [
+                                "波状皱缩",
+                                "凹凸不平",
+                                "褐色",
+                                "干枯",
+                                "脱落"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "萼片",
+                            "花梗"
+                        ],
+                        "change": {
+                            "pre": [
+                                "畸形",
+                                "狭长",
+                                "淡绿"
+                            ],
+                            "pos": [
+                                "干枯",
+                                "死亡"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "芽"
+                        ],
+                        "change": [
+                            {
+                                "pre": [
+                                    "枯萎",
+                                    "白粉层"
+                                ],
+                                "pos": [
+                                    "褐色",
+                                    "暗褐色",
+                                    "鳞片紧密"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "location": [
+                            "枝干"
+                        ],
+                        "change": [
+                            {
+                                "pre": [
+                                    "节间缩短",
+                                    "细弱",
+                                    "生长缓慢"
+                                ],
+                                "pos": [
+                                    "褐色",
+                                    "枯萎"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [
+            "苹果产区"
+        ],
+        "time": [],
+        "characters": [],
+        "similar": [
+            "苹果",
+            "梨",
+            "沙果",
+            "海棠",
+            "槟子",
+            "三定子",
+            "月季"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/crop%3D0%2C0%2C500%2C334%3Bc0%3Dbaike80%2C5%2C5%2C80%2C26/sign=73394a6ffcf2b211f061df0ef7b04908/55e736d12f2eb938f85156eed2628535e5dd6fe9.jpg",
+            "https://imgsa.baidu.com/baike/w%3D268/sign=8d9804ecfd1f4134e03702781d1e95c1/0ff41bd5ad6eddc47a5c2df439dbb6fd52663301.jpg"
+        ]
+    },
+    "炭疽病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "枝条",
+                "果台"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "果面",
+                            "果心"
+                        ],
+                        "shape": [
+                            "圆",
+                            "不规则形"
+                        ],
+                        "color": [
+                            "褐色",
+                            "黑色"
+                        ],
+                        "size": {
+                            "min": 1,
+                            "max": 2
+                        }
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "果面"
+                        ],
+                        "change": {
+                            "pre": [
+                                "下陷",
+                                "腐烂"
+                            ],
+                            "pos": [
+                                "同心纹",
+                                "腐烂",
+                                "龟裂",
+                                "褐色",
+                                "脱落"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [
+            "西北黄土高原",
+            "秦岭高地果区"
+        ],
+        "time": [
+            "夏季"
+        ],
+        "characters": [
+            "高温",
+            "多雨"
+        ],
+        "similar": [
+            "苹果",
+            "月季"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=e2967d339f16fdfacc61cebcd5e6e731/f636afc379310a55f66058ecb54543a982261065.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=39b90c3acafcc3cea0cdc161f32cbded/279759ee3d6d55fbcc52f63e6f224f4a20a4dd16.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=22f881b3013b5bb5aada28ac57babe5c/c83d70cf3bc79f3df2106428b8a1cd11728b2930.jpg"
+        ]
+    },
+    "灰霉病": {
+        "latin_name": [
+            "苦腐病",
+            "晚腐病"
+        ],
+        "symptoms": {
+            "harm plants": [
+                "花",
+                "茎",
+                "叶",
+                "果"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "shape": [
+                            "纹",
+                            "V形"
+                        ],
+                        "color": [
+                            "褐色",
+                            "灰白色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "果面"
+                        ],
+                        "change": {
+                            "pre": [
+                                "灰霉层"
+                            ],
+                            "pos": [
+                                "水腐"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [],
+        "time": [],
+        "characters": [
+            "高湿度",
+            "适温"
+        ],
+        "similar": [
+            "西红柿",
+            "花"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=97631dbe9245d688b70fbaf6c5ab167b/279759ee3d6d55fbe665a2ab6d224f4a21a4dd98.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=fe02bb12a40f4bfb98dd960662261395/d439b6003af33a879550d497c65c10385343b57a.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=90e25a620a55b31988f48a2722c0e943/342ac65c10385343c4d391429313b07eca8088b0.jpg"
+        ]
+    },
+    "青枯病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "花",
+                "茎",
+                "叶",
+                "果"
+            ],
+            "forms": {
+                "spot": [],
+                "texture": [
+                    {
+                        "location": [
+                            "维管束"
+                        ],
+                        "change": {
+                            "pre": [
+                                "青",
+                                "枯"
+                            ],
+                            "pos": [
+                                "褐色",
+                                "白色浑浊污汁",
+                                "枯萎"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [],
+        "time": [],
+        "characters": [
+            "高温",
+            "高湿度",
+            "土壤偏酸",
+            "积水",
+            "含氮量高"
+        ],
+        "similar": [
+            "西红柿",
+            "番茄",
+            "茄子",
+            "辣椒",
+            "马铃薯"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=40a14f1c720e0cf3b4fa46a96b2f997a/9358d109b3de9c8201ab1b816c81800a18d843f6.jpg"
+        ]
+    },
+    "晚疫病": {
+        "latin_name": [
+            "番茄疫病"
+        ],
+        "symptoms": {
+            "harm plants": [
+                "幼苗",
+                "成株"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "shape": [
+                            "水浸状",
+                            "不规则形"
+                        ],
+                        "color": [
+                            "暗绿色",
+                            "褐色"
+                        ],
+                        "size": {}
+                    },
+                    {
+                        "location": [
+                            "茎"
+                        ],
+                        "shape": [
+                            "水浸状",
+                            "不规则形"
+                        ],
+                        "color": [
+                            "褐色"
+                        ],
+                        "size": {
+                            "min": 1,
+                            "max": 2
+                        }
+                    },
+                    {
+                        "location": [
+                            "果面"
+                        ],
+                        "shape": [
+                            "水浸状",
+                            "云纹"
+                        ],
+                        "color": [
+                            "灰绿色",
+                            "褐色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "change": {
+                            "pre": [
+                                "白色霉",
+                                "青白色"
+                            ],
+                            "pos": [
+                                "枯萎",
+                                "易碎"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "茎"
+                        ],
+                        "change": {
+                            "pre": [
+                                "褐色",
+                                "凹陷"
+                            ],
+                            "pos": [
+                                "腐败",
+                                "易折断"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "果面"
+                        ],
+                        "change": {
+                            "pre": [
+                                "凹陷"
+                            ],
+                            "pos": [
+                                "腐败",
+                                "易折断",
+                                "少量白霉"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [],
+        "time": [],
+        "characters": [
+            "高湿度",
+            "通风不畅"
+        ],
+        "similar": [
+            "西红柿",
+            "番茄"
+        ],
+        "imgUrl": []
+    },
+    "黑spot病": {
+        "latin_name": [
+            "月季褐spot病"
+        ],
+        "symptoms": {
+            "harm plants": [
+                "叶子",
+                "枝条",
+                "花梗"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "shape": [
+                            "圆",
+                            "点",
+                            "边缘纤毛状"
+                        ],
+                        "color": [
+                            "黑色",
+                            "褐色"
+                        ],
+                        "size": {}
+                    },
+                    {
+                        "location": [
+                            "枝条",
+                            "花梗"
+                        ],
+                        "shape": [
+                            "条"
+                        ],
+                        "color": [
+                            "黑色",
+                            "紫色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "change": {
+                            "pre": [
+                                "孢体",
+                                "发黄"
+                            ],
+                            "pos": [
+                                "脱落"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "枝条,花梗"
+                        ],
+                        "change": {
+                            "pre": [
+                                "凹陷"
+                            ],
+                            "pos": [
+                                "脱落"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [
+            "南方",
+            "北方"
+        ],
+        "time": [
+            "夏初",
+            "夏末",
+            "梅雨季节",
+            "台风季节"
+        ],
+        "characters": [
+            "适温"
+        ],
+        "similar": [
+            "月季",
+            "玫瑰",
+            "蔷薇",
+            "金樱子",
+            "刺梨",
+            "黄刺玫"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=4ab34312f703918fc3dc359830544df2/f7246b600c338744c26c3b8e510fd9f9d62aa092.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=d53dd1f8251f95cab2f89ae4a87e145b/1c950a7b02087bf448e6836ff2d3572c11dfcf2a.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=72b8301da9ec8a1300175fb2966afaea/0b46f21fbe096b63d3b04aa20c338744eaf8ac92.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=4bc1f493349b033b3885f48874a75db6/a2cc7cd98d1001e9a6eafd98b80e7bec55e79757.jpg"
+        ]
+    },
+    "叶枯病": {
+        "latin_name": [
+            "枯spot病",
+            "spot枯病"
+        ],
+        "symptoms": {
+            "harm plants": [
+                "叶子"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "shape": [
+                            "不规则形"
+                        ],
+                        "color": [
+                            "红褐色",
+                            "灰褐色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "change": {
+                            "pre": [
+                                "发黄",
+                                "带"
+                            ],
+                            "pos": [
+                                "黑色小颗粒"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [],
+        "time": [
+            "7-10月份"
+        ],
+        "characters": [
+            "高温",
+            "多湿",
+            "通风不畅"
+        ],
+        "similar": [
+            "腊梅",
+            "香椿",
+            "翠菊",
+            "桂花",
+            "月季"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=4b4c80d70fb30f242197e451a9fcba26/eaf81a4c510fd9f9e7ef7edf252dd42a2934a48f.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=5144e7736059252db71a155655f2685e/960a304e251f95ca597597dfc9177f3e660952d2.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=418486593af33a878a600848a7357b5d/9e3df8dcd100baa159ac42d24710b912c9fc2ed2.jpg"
+        ]
+    },
+    "根腐病": {
+        "latin_name": [
+            "黑胫病"
+        ],
+        "symptoms": {
+            "harm plants": [
+                "根",
+                "叶"
+            ],
+            "forms": {
+                "spot": [],
+                "texture": [
+                    {
+                        "location": [
+                            "根"
+                        ],
+                        "change": {
+                            "pre": [
+                                "无症状",
+                                "吸收能力减弱"
+                            ],
+                            "pos": [
+                                "腐烂",
+                                "变褐"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "change": {
+                            "pre": [
+                                "发黄"
+                            ],
+                            "pos": [
+                                "萎蔫",
+                                "枯萎"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [],
+        "time": [
+            "3-5月份"
+        ],
+        "characters": [
+            "光照不足",
+            "土壤粘性大",
+            "通风不畅"
+        ],
+        "similar": [
+            "月季",
+            "木芙蓉",
+            "扶桑",
+            "大葱"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/w%3D268/sign=e0ff5aff7ef40ad115e4c0e56f2d1151/f31fbe096b63f62481e454c48244ebf81b4ca3b8.jpg",
+            "https://imgsa.baidu.com/baike/w%3D268/sign=069d31c88226cffc692ab8b481004a7d/1c950a7b02087bf4bb0910b8f2d3572c10dfcffe.jpg"
+        ]
+    },
+    "苦痘病": {
+        "latin_name": [
+            "苦陷病"
+        ],
+        "symptoms": {
+            "harm plants": [
+                "果实"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "果面"
+                        ],
+                        "shape": [
+                            "洼",
+                            "圆"
+                        ],
+                        "color": [
+                            "红褐色",
+                            "暗紫色",
+                            "褐色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "果面"
+                        ],
+                        "change": {
+                            "pre": [
+                                "spot点"
+                            ],
+                            "pos": [
+                                "凹陷",
+                                "表皮坏死",
+                                "果肉干缩"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "change": {
+                            "pre": [
+                                "发黄"
+                            ],
+                            "pos": [
+                                "萎蔫",
+                                "枯萎"
+                            ]
+                        }
+                    }
+                ],
+                "taste": [
+                    "苦"
+                ]
+            }
+        },
+        "position": [],
+        "time": [
+            "成熟期",
+            "贮藏期"
+        ],
+        "characters": [
+            "光照不足",
+            "土壤粘性大",
+            "通风不畅"
+        ],
+        "similar": [
+            "苹果"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/w%3D268/sign=d3987310352ac65c67056175c3f2b21d/55e736d12f2eb938724fd582d5628535e5dd6fa4.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=9ae798df31adcbef15397654cdc645b8/b7fd5266d0160924e15d0300d40735fae6cd34b4.jpg"
+        ]
+    },
+    "褐纹病": {
+        "latin_name": [
+            "苹果斑点落叶病"
+        ],
+        "symptoms": {
+            "harm plants": [
+                "果实",
+                "叶"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "shape": [
+                            "圆",
+                            "同心纹",
+                            "不规则"
+                        ],
+                        "color": [
+                            "红晕",
+                            "褐色"
+                        ],
+                        "size": {
+                            "min": 1,
+                            "max": 2
+                        }
+                    },
+                    {
+                        "location": [
+                            "果面"
+                        ],
+                        "shape": [
+                            "圆",
+                            "结痂状"
+                        ],
+                        "color": [
+                            "黑色发凉",
+                            "灰褐色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "叶片正面",
+                            "叶片反面"
+                        ],
+                        "change": {
+                            "pre": [
+                                "墨绿色霉状"
+                            ],
+                            "pos": [
+                                "生长缓慢",
+                                "扭曲",
+                                "皱缩"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "果面"
+                        ],
+                        "change": {
+                            "pre": [],
+                            "pos": [
+                                "龟裂",
+                                "病spot剥离",
+                                "干腐状",
+                                "木栓化"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [
+            "渤海湾",
+            "黄河故道"
+        ],
+        "time": [
+            "早期",
+            "5-6月中旬",
+            "9月"
+        ],
+        "characters": [
+            "湿度高",
+            "高温",
+            "闷热"
+        ],
+        "similar": [
+            "苹果"
+        ],
+        "imgUrl": []
+    },
+    "苹果黑星病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "叶"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "shape": [
+                            "圆",
+                            "放射状"
+                        ],
+                        "color": [
+                            "黑色",
+                            "褐色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "change": {
+                            "pre": [
+                                "绿褐色霉层"
+                            ],
+                            "pos": [
+                                "枯萎",
+                                "易脱落",
+                                "黑霉"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [
+            "北方"
+        ],
+        "time": [
+            "早期",
+            "5-6月中旬",
+            "9月"
+        ],
+        "characters": [
+            "土壤粘性大",
+            "土壤偏碱"
+        ],
+        "similar": [
+            "苹果"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=1856ed05ddc451dae2fb04b9d7943903/0df3d7ca7bcb0a46f19cfe626b63f6246b60af2a.jpg"
+        ]
+    },
+    "苹果褐spot病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "叶",
+                "果实"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "shape": [
+                            "轮纹状",
+                            "针芒",
+                            "圆形",
+                            "不规则形"
+                        ],
+                        "color": [
+                            "四周黄色",
+                            "中心褐色",
+                            "灰白色"
+                        ],
+                        "size": {}
+                    },
+                    {
+                        "location": [
+                            "果面"
+                        ],
+                        "shape": [
+                            "圆形",
+                            "点"
+                        ],
+                        "color": [
+                            "褐色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "果肉"
+                        ],
+                        "change": {
+                            "pre": [
+                                "凹陷"
+                            ],
+                            "pos": [
+                                "小黑点",
+                                "褐色",
+                                "海绵状干腐"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [
+            "地势低洼"
+        ],
+        "time": [
+            "6月上旬",
+            "7-9月份"
+        ],
+        "characters": [
+            "通风不畅",
+            "排水不良"
+        ],
+        "similar": [
+            "苹果"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=be681ff0033b5bb5aada28ac57babe5c/c83d70cf3bc79f3d6e80fa6bbaa1cd11728b2903.jpg"
+        ]
+    },
+    "苹果轮纹病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "叶",
+                "果"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "枝干"
+                        ],
+                        "shape": [
+                            "水渍状",
+                            "溃疡",
+                            "圆形"
+                        ],
+                        "color": [
+                            "暗褐色"
+                        ],
+                        "size": {
+                            "min": 1,
+                            "max": 2
+                        }
+                    },
+                    {
+                        "location": [
+                            "果面"
+                        ],
+                        "shape": [
+                            "圆形",
+                            "轮纹状"
+                        ],
+                        "color": [
+                            "深浅相间"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "果肉"
+                        ],
+                        "change": {
+                            "pre": [],
+                            "pos": [
+                                "淡色水渍圈",
+                                "界限不清晰",
+                                "褐色粘液"
+                            ]
+                        }
+                    }
+                ],
+                "taste": [
+                    "酸腐气味"
+                ]
+            }
+        },
+        "position": [],
+        "time": [
+            "7月中旬",
+            "8月上旬"
+        ],
+        "characters": [
+            "通风不畅",
+            "排水不良",
+            "湿度高"
+        ],
+        "similar": [
+            "苹果"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/w%3D268/sign=49cc8cd17d1ed21b79c929e3956eddae/faedab64034f78f0396e87d079310a55b3191caf.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=55c2dfcb3b87e950561afb3e71513826/738b4710b912c8fc200c26c5fd039245d688213f.jpg"
+        ]
+    },
+    "苹果缩果病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "果"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "果皮"
+                        ],
+                        "shape": [
+                            "水渍状"
+                        ],
+                        "color": [
+                            "褐色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "果肉"
+                        ],
+                        "change": {
+                            "pre": [
+                                "细胞脱水"
+                            ],
+                            "pos": [
+                                "坏死",
+                                "海绵状",
+                                "凹陷",
+                                "干spot",
+                                "木栓化",
+                                "不规则瘤状突起",
+                                "果皮厚",
+                                "松软",
+                                "种子干瘪"
+                            ]
+                        }
+                    }
+                ],
+                "taste": [
+                    "风味很淡"
+                ]
+            }
+        },
+        "position": [],
+        "time": [
+            "幼果期"
+        ],
+        "characters": [
+            "土壤干旱",
+            "缺少硼"
+        ],
+        "similar": [
+            "苹果"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=258642e130fae6cd18b9a3336eda6441/8644ebf81a4c510f6b5441cc6559252dd52aa550.jpg"
+        ]
+    },
+    "苹果黄叶病": {
+        "latin_name": [
+            "黄化病",
+            "缺铁失绿病"
+        ],
+        "symptoms": {
+            "harm plants": [
+                "叶"
+            ],
+            "forms": {
+                "spot": [],
+                "texture": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "change": {
+                            "pre": [
+                                "叶肉变黄",
+                                "叶脉绿色",
+                                "绿色网纹状"
+                            ],
+                            "pos": [
+                                "黄白色",
+                                "枯萎",
+                                "早落"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [],
+        "time": [
+            "幼果期"
+        ],
+        "characters": [
+            "土壤碱性",
+            "土壤含盐量大",
+            "土壤粘性大"
+        ],
+        "similar": [
+            "苹果"
+        ],
+        "imgUrl": []
+    },
+    "苹果虎皮病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "果"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "果面"
+                        ],
+                        "shape": [
+                            "不规则形"
+                        ],
+                        "color": [
+                            "淡黄褐色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "果肉"
+                        ],
+                        "change": {
+                            "pre": [
+                                "凹陷",
+                                "表面平",
+                                "略有起伏"
+                            ],
+                            "pos": [
+                                "褐色",
+                                "肉绵"
+                            ]
+                        }
+                    }
+                ],
+                "taste": [
+                    "略带酒味"
+                ]
+            }
+        },
+        "position": [],
+        "time": [
+            "贮藏后期"
+        ],
+        "characters": [],
+        "similar": [
+            "苹果"
+        ],
+        "imgUrl": []
+    },
+    "苹果小叶病": {
+        "latin_name": [
+            "缺锌症"
+        ],
+        "symptoms": {
+            "harm plants": [
+                "叶",
+                "花",
+                "果"
+            ],
+            "forms": {
+                "spot": [],
+                "texture": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "change": {
+                            "pos": [
+                                "边缘上卷",
+                                "脆硬",
+                                "柳叶状",
+                                "小叶"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "花"
+                        ],
+                        "change": {
+                            "pos": [
+                                "少"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "果"
+                        ],
+                        "change": {
+                            "pos": [
+                                "畸形"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [],
+        "time": [],
+        "characters": [
+            "有机肥少",
+            "沙性土壤",
+            "碱性土壤"
+        ],
+        "similar": [
+            "苹果"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=5be487ce748b4710da22f59ea2a7a898/908fa0ec08fa513dc7d213313b6d55fbb3fbd9e1.jpg"
+        ]
+    },
+    "病毒病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "叶"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "果面"
+                        ],
+                        "shape": [
+                            "不规则形"
+                        ],
+                        "color": [
+                            "黄褐色",
+                            "红褐色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "change": {
+                            "pre": [
+                                "退绿",
+                                "spot驳"
+                            ],
+                            "pos": [
+                                "畸形",
+                                "皱缩",
+                                "生长缓慢",
+                                "矮化"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "果"
+                        ],
+                        "change": {
+                            "pos": [
+                                "易脱落",
+                                "凹凸不平",
+                                "僵化",
+                                "坏死",
+                                "穿孔",
+                                "病spot",
+                                "绿色环"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [],
+        "time": [],
+        "characters": [
+            "病毒"
+        ],
+        "similar": [
+            "番茄",
+            "西红柿",
+            "马铃薯"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=2605627c3af33a878a600848a7357b5d/bba1cd11728b47104a2e1c80c3cec3fdfc03237d.jpg"
+        ]
+    },
+    "玉米大斑病": {
+        "latin_name": [
+            "条spot病",
+            "煤纹病",
+            "枯叶病",
+            "叶spot病"
+        ],
+        "symptoms": {
+            "harm plants": [
+                "叶"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "叶片"
+                        ],
+                        "shape": [
+                            "水渍状"
+                        ],
+                        "color": [
+                            "青灰色",
+                            "褐色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "change": {
+                            "pre": [
+                                "病spot"
+                            ],
+                            "pos": [
+                                "变黄",
+                                "枯萎",
+                                "灰黑色霉层"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [],
+        "time": [
+            "春季"
+        ],
+        "characters": [
+            "低温"
+        ],
+        "similar": [
+            "玉米"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=00d6c062349b033b3885f48874a75db6/d0c8a786c9177f3eb3f5216b70cf3bc79e3d5697.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=3cc75807f8198618554ae7d62b844516/77094b36acaf2edd2c10948f8d1001e9380193f7.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=bde395b9e6cd7b89fd6132d16e4d29c2/728da9773912b31bd9b5585a8618367adbb4e1ec.jpg"
+        ]
+    },
+    "玉米小斑病": {
+        "latin_name": [
+            "玉米spot点病",
+            "叶spot病"
+        ],
+        "symptoms": {
+            "harm plants": [
+                "叶片",
+                "苞叶"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "叶片"
+                        ],
+                        "shape": [
+                            "半透明",
+                            "水渍状",
+                            "椭圆形",
+                            "同心纹",
+                            "小"
+                        ],
+                        "color": [
+                            "青灰色",
+                            "暗褐色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "change": {
+                            "pre": [
+                                "病spot",
+                                "两三层同心纹",
+                                "边缘赤色"
+                            ],
+                            "pos": [
+                                "暗黑色霉状物"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [
+            "黄河流域",
+            "长江流域",
+            "丘陵区域"
+        ],
+        "time": [
+            "春季"
+        ],
+        "characters": [
+            "适温温",
+            "湿度高"
+        ],
+        "similar": [
+            "玉米",
+            "高粱"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=245b3c7c1f30e924dba994632d610563/3c6d55fbb2fb43164e715b0e20a4462309f7d353.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=7f0bd21ac9177f3e0439f45f11a650a2/1c950a7b02087bf4a4121745f2d3572c10dfcfa4.jpg"
+        ]
+    },
+    "玉米圆斑病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "果穗",
+                "叶"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "叶片"
+                        ],
+                        "shape": [
+                            "不整形",
+                            "枯",
+                            "椭圆形",
+                            "轮纹",
+                            "条状",
+                            "线型"
+                        ],
+                        "color": [
+                            "黄色",
+                            "浅绿色",
+                            "褐色"
+                        ],
+                        "size": {
+                            "min": 5,
+                            "max": 15
+                        }
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "果穗"
+                        ],
+                        "change": {
+                            "pre": [
+                                "尖端黑腐"
+                            ],
+                            "pos": [
+                                "黑色霉层",
+                                "干腐状"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [
+            "辽宁省",
+            "吉林省",
+            "河北省"
+        ],
+        "time": [
+            "玉米吐丝至灌浆期"
+        ],
+        "characters": [],
+        "similar": [
+            "玉米"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=dc2b1b038d1001e95a311c5dd9671089/e7cd7b899e510fb370c3257dd933c895d0430c05.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=931ba7f82edda3cc1fe9b07260805264/962bd40735fae6cda3a495060fb30f2442a70f40.jpg"
+        ]
+    },
+    "玉米褐斑病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "茎",
+                "叶"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "叶片,茎秆"
+                        ],
+                        "shape": [
+                            "椭圆形"
+                        ],
+                        "color": [
+                            "红褐色",
+                            "黄褐色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "茎秆"
+                        ],
+                        "change": {
+                            "pre": [
+                                "spot点"
+                            ],
+                            "pos": [
+                                "细胞坏死",
+                                "褐色粉末",
+                                "表皮破裂"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [
+            "河北",
+            "山东",
+            "河南",
+            "安徽",
+            "江苏"
+        ],
+        "time": [
+            "7-8月份"
+        ],
+        "characters": [
+            "高温",
+            "高湿度"
+        ],
+        "similar": [
+            "玉米"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=8963d3bb828ba61ecbe3c07d205dfc6f/86d6277f9e2f0708106eff71e924b899a901f25c.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=6c62ec61dd54564ef168ec6bd2b7f7e7/a8773912b31bb051dd2f635a367adab44aede0bd.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=ebf39302f603738dca470470d272db34/10dfa9ec8a13632730222e91918fa0ec09fac741.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=d346b24c0afa513d45a7648c5c043e9e/2934349b033b5bb58b23076e34d3d539b700bcad.jpg",
+            "https://imgsa.baidu.com/baike/crop%3D0%2C28%2C640%2C422%3Bc0%3Dbaike80%2C5%2C5%2C80%2C26/sign=c8a37dce5e2c11dfca9ee5635e174ee2/730e0cf3d7ca7bcba03c7d02b7096b63f624a85c.jpg"
+        ]
+    },
+    "玉米锈病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "果穗",
+                "雄花",
+                "苞叶"
+            ],
+            "forms": {
+                "spot": [],
+                "texture": [
+                    {
+                        "location": [
+                            "叶片"
+                        ],
+                        "change": {
+                            "pre": [
+                                "浅黄色长形至卵形褐色小脓疤"
+                            ],
+                            "pos": [
+                                "破裂",
+                                "铁锈色粉状物",
+                                "黑色圆形突起",
+                                "长圆形突起"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [
+            "华南",
+            "西南"
+        ],
+        "time": [],
+        "characters": [
+            "高温",
+            "早熟品种"
+        ],
+        "similar": [
+            "玉米"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=7eeac296aeaf2eddc0fc41bbec796a8c/ae51f3deb48f8c549c0d79bf38292df5e1fe7f47.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=c66ac807db33c895b2739029b07a1895/d52a2834349b033b92fb434a17ce36d3d539bd2b.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=c7aae0995aafa40f28cbc68fca0d682a/8601a18b87d6277f2a75659328381f30e924fc32.jpg"
+        ]
+    },
+    "玉米黑粉病": {
+        "latin_name": [
+            "瘤黑粉病",
+            "玉米瘤黑病"
+        ],
+        "symptoms": {
+            "harm plants": [
+                "果穗",
+                "茎",
+                "叶"
+            ],
+            "forms": {
+                "spot": [],
+                "texture": [
+                    {
+                        "location": [
+                            "叶片",
+                            "果穗",
+                            "茎"
+                        ],
+                        "change": {
+                            "pre": [
+                                "粉色瘤状"
+                            ],
+                            "pos": [
+                                "黑色瘤状",
+                                "黑色粉末",
+                                "扭曲",
+                                "黑色丝状物"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [],
+        "time": [
+            "pre干旱pos多雨的过度时期"
+        ],
+        "characters": [],
+        "similar": [
+            "玉米"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=13e2250f2cdda3cc1fe9b07260805264/962bd40735fae6cd235d17f10db30f2443a70fb0.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=cc8adb85d539b60059c307e588395e4f/d000baa1cd11728b9e545444c8fcc3cec3fd2c5f.jpg"
+        ]
+    },
+    "玉米丝黑穗病": {
+        "latin_name": [
+            "乌米",
+            "哑玉米"
+        ],
+        "symptoms": {
+            "harm plants": [
+                "果穗"
+            ],
+            "forms": {
+                "spot": [],
+                "texture": [
+                    {
+                        "location": [
+                            "雄穗"
+                        ],
+                        "change": {
+                            "pre": [
+                                "矮化"
+                            ],
+                            "pos": [
+                                "黑色瘤状"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "雌穗"
+                        ],
+                        "change": {
+                            "pre": [],
+                            "pos": [
+                                "基部变大",
+                                "管状长刺",
+                                "畸形"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "change": {
+                            "pre": [],
+                            "pos": [
+                                "暗绿",
+                                "条状spot",
+                                "幼叶卷曲"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [
+            "华北",
+            "东北",
+            "华中",
+            "西南",
+            "华南和西北"
+        ],
+        "time": [
+            "穗期"
+        ],
+        "characters": [],
+        "similar": [
+            "玉米"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=75e60a604b4a20a425133495f13bf347/8cb1cb1349540923eba4310c9658d109b2de49f6.jpg"
+        ]
+    },
+    "玉米茎腐病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "茎",
+                "根"
+            ],
+            "forms": {
+                "spot": [],
+                "texture": [
+                    {
+                        "location": [
+                            "茎"
+                        ],
+                        "change": {
+                            "pre": [],
+                            "pos": [
+                                "水渍状淡褐色病变",
+                                "变软下陷",
+                                "黄褐色腐臭菌液",
+                                "水渍状腐烂"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "根"
+                        ],
+                        "change": {
+                            "pre": [],
+                            "pos": [
+                                "剥离",
+                                "畸形"
+                            ]
+                        }
+                    }
+                ],
+                "taste": [
+                    "腐臭味"
+                ]
+            }
+        },
+        "position": [],
+        "time": [
+            "乳熟pos至蜡熟期"
+        ],
+        "characters": [
+            "高温",
+            "高湿度"
+        ],
+        "similar": [
+            "玉米"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=56ca56b8232dd42a4b0409f9625230d0/a686c9177f3e670948dd462e3dc79f3df9dc5505.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=6333187ef8dcd100d991f07313e22c75/5366d0160924ab18cfdf534435fae6cd7a890bf3.jpg"
+        ]
+    },
+    "玉米干腐病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "茎秆",
+                "果穗"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "茎秆"
+                        ],
+                        "shape": [],
+                        "color": [
+                            "红褐色",
+                            "黑色",
+                            "灰白色",
+                            "长条spot"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "茎秆"
+                        ],
+                        "change": {
+                            "pre": [
+                                "白色菌丝"
+                            ],
+                            "pos": [
+                                "小黑点",
+                                "易折断"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "果穗"
+                        ],
+                        "change": {
+                            "pre": [
+                                "僵化",
+                                "变轻",
+                                "早熟"
+                            ],
+                            "pos": [
+                                "皱缩",
+                                "灰白色菌体",
+                                "变黑",
+                                "突起"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [],
+        "time": [
+            "雌穗吐丝"
+        ],
+        "characters": [
+            "高温",
+            "干旱"
+        ],
+        "similar": [
+            "玉米"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=26c48f7162d0f703f2bf9d8e69933a58/f11f3a292df5e0fe35f250675c6034a85fdf72ea.jpg"
+        ]
+    },
+    "月季根瘤病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "根",
+                "嫁接口"
+            ],
+            "forms": {
+                "spot": [],
+                "texture": [
+                    {
+                        "location": [
+                            "根",
+                            "嫁接口"
+                        ],
+                        "change": {
+                            "pre": [
+                                "表面粗糙",
+                                "柔软",
+                                "病瘤"
+                            ],
+                            "pos": [
+                                "表皮枯死",
+                                "木质化"
+                            ]
+                        }
+                    },
+                    {
+                        "location": [
+                            "叶片"
+                        ],
+                        "change": {
+                            "pre": [],
+                            "pos": [
+                                "白色粉状"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [],
+        "time": [],
+        "characters": [
+            "春季",
+            "秋季"
+        ],
+        "similar": [
+            "月季"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=2fea5ef7b03533fae1bb9b7cc9ba967a/267f9e2f0708283829020bedb999a9014c08f138.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=d11647057dd98d1062d904634056d36b/d50735fae6cd7b89619aeb7a0e2442a7d8330e51.jpg"
+        ]
+    },
+    "月季枝枯病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "茎"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "茎"
+                        ],
+                        "shape": [],
+                        "color": [
+                            "紫红色",
+                            "浅绿色",
+                            "白色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "茎"
+                        ],
+                        "change": {
+                            "pre": [
+                                "微小突起"
+                            ],
+                            "pos": [
+                                "裂缝",
+                                "黑色泡子堆",
+                                "下陷",
+                                "枯萎"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [],
+        "time": [
+            "夏季"
+        ],
+        "characters": [
+            "湿度大"
+        ],
+        "similar": [
+            "月季"
+        ],
+        "imgUrl": [
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=7cd9e147f703738dca470470d272db34/5882b2b7d0a20cf4f475603877094b36adaf9974.jpg",
+            "https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=460ffb3037d12f2eda08a6322eabbe07/c995d143ad4bd1134e132dd55bafa40f4afb057e.jpg"
+        ]
+    },
+    "月季皱叶病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "叶"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "shape": [],
+                        "color": [
+                            "黄色"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "叶",
+                            "花瓣"
+                        ],
+                        "change": {
+                            "pre": [
+                                "皱缩"
+                            ],
+                            "pos": [
+                                "花瓣叶状",
+                                "花蕊变绿",
+                                "黑褐色死spot"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [],
+        "time": [],
+        "characters": [],
+        "similar": [
+            "月季"
+        ],
+        "imgUrl": []
+    },
+    "月季花叶病": {
+        "latin_name": [],
+        "symptoms": {
+            "harm plants": [
+                "叶"
+            ],
+            "forms": {
+                "spot": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "shape": [
+                            "不定形",
+                            "多角形纹",
+                            "畸形",
+                            "环形",
+                            "波状"
+                        ],
+                        "color": [
+                            "退绿"
+                        ],
+                        "size": {}
+                    }
+                ],
+                "texture": [
+                    {
+                        "location": [
+                            "叶"
+                        ],
+                        "change": {
+                            "pre": [],
+                            "pos": [
+                                "黄脉",
+                                "矮化"
+                            ]
+                        }
+                    }
+                ],
+                "taste": []
+            }
+        },
+        "position": [],
+        "time": [
+            "5-11月"
+        ],
+        "characters": [],
+        "similar": [
+            "月季"
+        ],
+        "imgUrl": []
+    }
+}
