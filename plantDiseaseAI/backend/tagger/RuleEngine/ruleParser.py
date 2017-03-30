@@ -136,10 +136,18 @@ def p_exprDot(p):
     p[0] = ExprTree(Atom())
 
 def p_exprToken(p):
-    """exprToken : STR"""
-    #print "debug: " + p[1]
-    p[0] = ExprTree(TokenValue(p[1]))
-
+    """exprToken : STR
+                 | ATOMTOK"""
+    if p[1].startswith('"'):
+        toks = list(p[1].strip('"'))
+        if len(toks) == 1:
+            p[0] = ExprTree(TokenValue(p[1].strip('"')))
+        else:
+            p[0] = TermSeq('ordered', [])
+            for t in toks:
+                p[0]._terms.append(TokenValue(t))
+    else:
+        p[0] = ExprTree(TokenValue(p[1].strip('\'')))
 def p_exprSpan(p):
     """exprSpan : LAB span RAB"""
     p[0] = ExprTree(p[2])

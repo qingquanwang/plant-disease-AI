@@ -130,6 +130,7 @@ class Graph(object):
                         toNode = Node()
                         self.addNode(toNode)
                     self.buildSubGraph(fromNode, toNode, expr._terms[i], actions)
+                    fromNode = toNode
             else:
                 for term in expr._terms:
                     self.buildSubGraph(newStart, newEnd, term, actions)
@@ -181,7 +182,30 @@ class Graph(object):
             raise TypeError('unknown Node for building Predicate: [' + str(type(node)) +']')
 
     def dumpPredicate(self, pred, fd):
-        fd.write(str(type(pred)))
+        if isinstance(pred, TokenValuePredicate):
+            fd.write(pred._val.strip('"').encode('utf-8'))
+        elif isinstance(pred, AtomPredicate):
+            fd.write("<atom>")
+        elif isinstance(pred, AtomCoverPredicate):
+            fd.write("<atomcover>")
+        elif isinstance(pred, SpanPredicate):
+            fd.write('<' + pred._type + '>')
+        elif isinstance(pred, NotPredicate):
+            fd.write('NOT(')
+            self.dumpPredicate(pred._pred,fd)
+            fd.write(')')
+        elif isinstance(pred, AndPredicate):
+            fd.write('AND(')
+            self.dumpPredicate(pred._pred1,fd)
+            self.dumpPredicate(pred._pred2,fd)
+            fd.write(')')
+        elif isinstance(pred, OrPredicate):
+            fd.write('OR(')
+            self.dumpPredicate(pred._pred1,fd)
+            self.dumpPredicate(pred._pred2,fd)
+            fd.write(')')
+        else:
+            raise TypeError('unknown predicate:' + str(type(pred)) + ' type for dumping')
 
     def dumpNodeEdge(self, start, edge, printActions, fd):
         fd.write('n' + str(start._id) + '->' + 'n' + str(edge._dest._id))

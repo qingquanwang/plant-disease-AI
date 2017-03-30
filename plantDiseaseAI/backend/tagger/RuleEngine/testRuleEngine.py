@@ -31,9 +31,9 @@ if __name__ == '__main__':
         ast.dumpOrderedAST()
         ast.expand()
         ast.dumpAST()
-        '''
+        
         #pp.pprint(result)
         graph = Graph()
         graph.buildGraph(ast)
         graph.dump(graphFile)
-        '''
+        

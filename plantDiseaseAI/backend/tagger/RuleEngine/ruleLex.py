@@ -31,7 +31,8 @@ tokens = (
     'LBRACE',
     'RBRACE',
     'DOT',
-    'TILDE'
+    'TILDE',
+    'ATOMTOK'
 )
 
 t_SLOT = r'#'
@@ -61,6 +62,7 @@ t_LBRACE = r'\('
 t_RBRACE = r'\)'
 t_DOT = '\.'
 t_TILDE = '~'
+t_ATOMTOK = r'\'.*?\''
 t_ignore = " \t"
 
 def t_comment(t):
