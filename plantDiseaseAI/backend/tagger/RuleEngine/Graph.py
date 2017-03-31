@@ -15,6 +15,11 @@ class Node(object):
         self._postActions = []
         self._prevActions = []
         self._id = 0
+    def endNode(self):
+        if len(self._rules) > 0:
+            return True
+        else:
+            return False
 
 class Edge(object):
     def __init__(self, node):
