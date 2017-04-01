@@ -6,7 +6,7 @@ pp = pprint.prettyprinter(indent = 2)
 
 def Sequence(object):
     def __init__(self):
-        self._spanIds = []
+        self._spans = []
         self._annotation = {}
         self._source = ''
         self._prob = 0.0

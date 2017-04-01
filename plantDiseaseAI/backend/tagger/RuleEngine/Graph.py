@@ -212,13 +212,25 @@ class Graph(object):
         else:
             raise TypeError('unknown predicate:' + str(type(pred)) + ' type for dumping')
 
+    def dumpActions(self, action, fd):
+        astAct = action._astAction
+        if astAct._type == 'Slot':
+            fd.write('slot:' + astAct._k)
+        elif astAct._type == 'General':
+            fd.write(astAct._k + '=' + astAct._v)
+        else:
+            raise TypeError("unknown action type")
     def dumpNodeEdge(self, start, edge, printActions, fd):
         fd.write('n' + str(start._id) + '->' + 'n' + str(edge._dest._id))
         fd.write(' [label="')
         if edge._predicate is None:
-            fd.write('edge')
+            fd.write('e')
         else:
             self.dumpPredicate(edge._predicate, fd)
+        if printActions:
+             for action in edge._actions:
+                 fd.write('\\nact(' + str(action._actId) +',' + str(action._seqId) +') ')
+                 self.dumpActions(action, fd)
         fd.write('"];\n')
     def dumpNode(self, node, printEdges, printActions, fd):
         if printEdges:

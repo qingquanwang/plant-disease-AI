@@ -9,6 +9,7 @@ class Span(object):
     _len = 0
     _type = 'tok'
     _text = ''
+    _attrs = {}
     def __init__(self, start, l, t, text):
         self._start = start
         self._len = l

@@ -54,7 +54,7 @@ def p_actionSeq(p):
 
 def p_action(p):
     """action : NAME ASSIGN STR"""
-    p[0] = Action('General', p[1], p[3])
+    p[0] = Action('General', p[1], p[3].strip('"'))
 
 def p_counted(p):
     """counted : term

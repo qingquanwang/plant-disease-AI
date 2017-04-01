@@ -11,21 +11,24 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
                 description='nlu simulator', usage='''
                 ./nlu-simulator.py -d dicFile
-                                   -s state-definition -i stateId -w "k1:v1,v2|k2:v3,v4"
+                                   -r ruleFile
+                                   -t greedy,ruleTagger
+                                   -p zhBookPreprocessor"
                 ''', formatter_class = argparse.RawTextHelpFormatter)
     parser.add_argument('--d', type=str,
                         default='./data/build/name.dic',
                         help='dictionary file path')
-    parser.add_argument('--s', type=str,
-                        default='./data/state-def.json',
-                        help='state definition file path')
-    parser.add_argument('--i', type=str,
+    parser.add_argument('--r', type=str,
+                        default='./data/test/test.rule',
+                        help='rule file path')
+    parser.add_argument('--t', type=str,
+                        default='greedy',
+                        help='taggers')
+    parser.add_argument('--p', type=str,
                         default=None,
-                        help='current stateId')
-    parser.add_argument('--w', type=str,
-                        default='',
-                        help='whiteboard variables')
+                        help='zhBookPreprocessor')
     args = parser.parse_args()
+    '''
     dic = DictManager()
     dic.load_dict(args.d)
     nlu = NLU(dic)
@@ -37,3 +40,4 @@ if __name__ == '__main__':
         for ana in anaList:
             res.append(ana.dumpBestSeq())
         print rawText.encode('utf-8') + '\t' + ('|'.join(res)).encode('utf-8')
+    '''
