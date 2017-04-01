@@ -3,12 +3,12 @@ import pprint
 
 pp = pprint.prettyPrinter(indent = 2)
 
-def Token(object):
+class Token(object):
     def __init__(self, text, t):
         self._text = text
         self._type = t
 
-def Preprocessor(object):
+class Preprocessor(object):
     def __init__(self):
         pass
 
