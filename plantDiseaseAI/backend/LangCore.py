@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import pprint
 
-pp = pprint.prettyPrinter(indent = 2)
+pp = pprint.PrettyPrinter(indent = 2)
 
 class Token(object):
     def __init__(self, text, t):
