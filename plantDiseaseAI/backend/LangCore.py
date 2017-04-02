@@ -5,8 +5,13 @@ pp = pprint.PrettyPrinter(indent = 2)
 
 class Token(object):
     def __init__(self, text, t):
+        if isinstance(text, unicode):
+            text = text.encode(encoding='utf-8')
         self._text = text
         self._type = t
+
+    def __repr__(self):
+        return 'Token({}, {})'.format(self._text, self._type)
 
 class Preprocessor(object):
     def __init__(self):
