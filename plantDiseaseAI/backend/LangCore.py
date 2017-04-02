@@ -13,6 +13,9 @@ class Token(object):
     def __repr__(self):
         return 'Token({}, {})'.format(self._text, self._type)
 
+    def __str__(self):
+        return '({}, {})'.format(self._text, self._type)
+
 class Preprocessor(object):
     def __init__(self):
         pass

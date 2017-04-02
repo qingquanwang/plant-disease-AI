@@ -32,45 +32,45 @@ class ZhBookPreprocessor(Preprocessor):
         except ValueError:
             print("Digit value too large %s" % t.value)
             t.value = 0
-        print "parsed digit %s" % repr(t.value)
+        # print "parsed digit %s" % repr(t.value)
         return t
 
     def t_ZhWord(self, t):
-        ur'[\u4e00-\u9fff]+'
-        print(u'parsed ZH word %s' % t.value)
+        ur'[\u3007\u4e00-\u9fff]+'
+        # print(u'parsed ZH word %s' % t.value)
         return t
 
     def t_EnWord(self, t):
         ur'[a-zA-Z]+([-_][a-zA-Z]*)*'
-        print(u'parsed En word %s' % t.value)
+        # print(u'parsed En word %s' % t.value)
         return t
 
     def t_SplitPunct(self, t):
         ur'[,，。.]'
-        print(u'parsed SplitPunct word %s' % t.value)
+        # print(u'parsed SplitPunct word %s' % t.value)
         return t
 
     def t_UnsplitPunct(self, t):
         ur'[、]'
-        print(u'parsed UnsplitPunct word %s' % t.value)
+        # print(u'parsed UnsplitPunct word %s' % t.value)
         return t
 
     def t_WordsQuot(self, t):
         ur'[\"“](.+?)[\"”]'
-        print(u'parsed WordsQuot word %s' % t.value)
+        # print(u'parsed WordsQuot word %s' % t.value)
         return t
 
     def t_BookQuo(self, t):
         ur'《(.+?)》'
-        print(u'parsed BookQuo word %s' % t.value)
+        # print(u'parsed BookQuo word %s' % t.value)
         return t
 
     def t_Reference(self, t):
         ur'[\[【]([0-9]+?)[\]】]'
-        print(u'parsed Reference word %s' % t.value)
+        # print(u'parsed Reference word %s' % t.value)
         return t
 
-    t_ignore = " \t"
+    t_ignore = u" \t　"
 
     def t_newline(self, t):
         ur'\n+'
