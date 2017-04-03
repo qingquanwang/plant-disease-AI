@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 import pprint
-
+import json
 pp = pprint.PrettyPrinter(indent = 2)
 
 class Token(object):
-    def __init__(self, text):
+    def __init__(self, text, t):
         self._text = text
         self._type = t
         self._lang = 'zh'
@@ -40,8 +40,8 @@ class Span(object):
         res = []
         res.append(str(self._start))
         res.append(str(self._len))
-        res.append(str(self._type))
-        res.append(str(self._text))
+        res.append(self._type)
+        res.append(self._text)
         return '[' + ':'.join(res) +']'
 
 class Sequence(object):
@@ -51,7 +51,8 @@ class Sequence(object):
         self._annotation = {}
         self._source = ''
         self._prob = 0.0
-
+    def serializeAnn(self):
+        return json.dumps(self._annotation)
 # Annotation on tagging sequence: 
 #   slots: slot->list[spanId]
 #   conclusion: k->v

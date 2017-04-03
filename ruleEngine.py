@@ -23,6 +23,7 @@ def investigation_rule(filename):
         data = fd.read().decode('utf-8')
         lexer = lex.lex(debug=1, optimize=0, lextab='lextab', reflags=0)
         lexer.input(data)
+
         parser = yacc.yacc()
         result = parser.parse(lexer=lexer)
         ast = AST(result)
@@ -39,6 +40,8 @@ def investigation_rule(filename):
 def tagToks(toks, tagger, dic):
     inputGraph = SpanGraph()
     inputGraph.constructGraph(dic, toks)
+    for span in inputGraph._spans:
+        print 'Debug:' + span.dump().encode('utf-8')
     seqs = []
     tagger.tag(inputGraph, seqs)
     seq_res = []
@@ -47,7 +50,7 @@ def tagToks(toks, tagger, dic):
         for idx in seq._spans:
             span = inputGraph._spans[idx]
             res.append('[' + span._text + '|' + span._type + ']')
-        seq_res.append(''.join(res))
+        seq_res.append(''.join(res) + '\002' + seq.serializeAnn())
     print '\001'.join(seq_res).encode('utf-8')
 
 def processToks(toks, split, tagger, dic):
