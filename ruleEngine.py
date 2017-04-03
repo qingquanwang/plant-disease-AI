@@ -6,6 +6,8 @@ import os,sys
 from plantDiseaseAI.backend.preprocessor import *
 from plantDiseaseAI.backend.tagger import *
 from plantDiseaseAI.backend.Tagging import *
+import plantDiseaseAI.backend.yacc as yacc
+import plantDiseaseAI.backend.lex as lex
 
 pp = pprint.PrettyPrinter(indent=2)
 
@@ -97,11 +99,10 @@ if __name__ == '__main__':
 
     ruleFile = args.r
 
-    if (args.v) {
+    if args.v:
         # investigation mode
-        investigate_rule(ruleFile)
-        return
-    }
+        investigation_rule(ruleFile)
+        sys.exit(0)
 
     # create preprocessor
     preprocessor = createPreprocessor(args.p)

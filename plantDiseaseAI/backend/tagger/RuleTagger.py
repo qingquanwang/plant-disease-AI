@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from plantDiseaseAI.backend.tagger.ruleEngine import *
+from plantDiseaseAI.backend.tagger.RuleEngine import *
 from plantDiseaseAI.backend.LangCore import *
 import pprint
 
-pp = pprint.prettyprinter(indent = 2)
+pp = pprint.PrettyPrinter(indent = 2)
 
 class TraverseContext(object):
     def __init__(self, spanGraph):
@@ -57,9 +57,10 @@ class RuleTagger(Tagger):
                     else:
                         seq._annotation['slots'] = {}
                         seq._annotation['slots'][act._astAction._k] = [spanId]
-                else act._astAction._type == 'General':
+                elif act._astAction._type == 'General':
                     seq._annotation[act._astAction._k] = act._astAction._v
-
+                else:
+                    raise TypeError('unknown action type:[' + act._astAction._type + ']')
     def walk(self, pos, node, ctx):
         ctx._matched = False
         # check dead states

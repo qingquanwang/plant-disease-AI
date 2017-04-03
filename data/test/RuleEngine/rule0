@@ -1,0 +1,22 @@
+internal Date = [
+   {<DIGIT> "年"}? { <DIGIT> "月" <DIGIT> "日" }
+   { "今日" "今天" }
+   { "明日" "明天" }
+]#date
+
+internal city = {
+    </place/city>
+}#city
+
+internal airport = [
+    { @city ["机场" "飞机场"] }
+    { @city <place/airport> ["机场" "飞机场"]? }
+]#airport
+
+flight = [
+   { { {"从"}? {[@city @airport]}#from "到" {[@city @airport]}#to} { {"的"}? </domain/ticket/Flight>}? }
+]`domain="flight"`
+
+weather = [
+    ^{{ @city } ^{ {@DATE}? {"的"}? {"天气"} }}
+]`domain="weather";intent="lookfor"`
