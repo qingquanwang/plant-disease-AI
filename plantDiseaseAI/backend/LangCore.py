@@ -5,8 +5,6 @@ pp = pprint.PrettyPrinter(indent = 2)
 
 class Token(object):
     def __init__(self, text, t):
-        if isinstance(text, unicode):
-            text = text.encode(encoding='utf-8')
         self._text = text
         self._type = t
 
