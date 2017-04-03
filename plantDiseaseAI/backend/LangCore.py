@@ -23,6 +23,7 @@ class Preprocessor(object):
 
 class Span(object):
     _start = 0
+    # Note that, _len is the number of taken tokens, not really the length of text
     _len = 0
     _type = 'tok'
     _text = ''
@@ -40,14 +41,32 @@ class Span(object):
         res.append(str(self._text))
         return '[' + ':'.join(res) +']'
 
-def Sequence(object):
+class Sequence(object):
     def __init__(self):
+        # spanId collection in order
         self._spans = []
         self._annotation = {}
         self._source = ''
         self._prob = 0.0
 
-def Tagger(object):
+# Annotation on tagging sequence: 
+#   slots: slot->list[spanId]
+#   conclusion: k->v
+class Annotation(object):
+    def __init__(self):
+        self._slots = {}
+        self._conclusion = {}
+    def setConclusion(self, k, v):
+        self._conclusion[k] = v
+    def appendSlot(self, k, v):
+        if k in self._slots:
+            if v not in self._slots[k]:
+                self._slots[k].append(v)
+        else:
+            self._slots[k] = []
+            self._slots[k].append(v)
+
+class Tagger(object):
     def __init__(self):
         pass
     # seqList = [ Sequence ]

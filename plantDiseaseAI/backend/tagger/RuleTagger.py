@@ -5,7 +5,7 @@ import pprint
 
 pp = pprint.prettyprinter(indent = 2)
 
-def TraverseContext(object):
+class TraverseContext(object):
     def __init__(self, spanGraph):
         self._path = []
         self._continued = False
@@ -20,7 +20,7 @@ def TraverseContext(object):
         else:
             return False
 
-def ruleTagger(Tagger):
+class ruleTagger(Tagger):
     def __init__(self):
         self._graph = None
 

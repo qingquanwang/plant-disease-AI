@@ -1,43 +1,9 @@
 # -*- coding: utf-8 -*-
-from DictManager import *
+from plantDiseaseAI.backend.DictManager import *
+from plantDiseaseAI.backend.LangCore import *
 import pprint
 
 pp = pprint.PrettyPrinter(indent = 2)
-
-class Span(object):
-    _start = 0
-    _len = 0
-    _type = 'tok'
-    _text = ''
-    _attrs = {}
-    def __init__(self, start, l, t, text):
-        self._start = start
-        self._len = l
-        self._type = t
-        self._text = text
-    def dump(self):
-        res = []
-        res.append(str(self._start))
-        res.append(str(self._len))
-        res.append(str(self._type))
-        res.append(str(self._text))
-        return '[' + ':'.join(res) +']'
-# Annotation on tagging sequence: 
-#   slots: slot->list[spanId]
-#   conclusion: k->v
-class Annotation(object):
-    def __init__(self):
-        self._slots = {}
-        self._conclusion = {}
-    def setConclusion(self, k, v):
-        self._conclusion[k] = v
-    def appendSlot(self, k, v):
-        if k in self._slots:
-            if v not in self._slots[k]:
-                self._slots[k].append(v)
-        else:
-            self._slots[k] = []
-            self._slots[k].append(v)
 
 # span linked graph
 class SpanGraph(object):
@@ -77,6 +43,56 @@ class SpanGraph(object):
                 if i+j >= length:
                     continue
                 ngram = ''.join(tokens[i:i+j+1])
+                #print "[debug] current ngram:" + ngram
+                candidates = dic.lookup(ngram)
+                if len(candidates) == 0:
+                    continue
+                for cand in candidates:
+                    span = Span(i, j+1, cand._type, ngram)
+                    spans.append(span)
+                # only keep the longest shot for each start position
+                break
+        self.createGraphFromSpan(spans)
+
+    def filteredTokens(self, tokens, filtered_tokens):
+        filtered_tokens[:] = []
+        for tok in tokens:
+            if tok._type == 'tok':
+                filtered_tokens.append(tok)
+            elif tok._type.startswith('/'):
+                filtered_tokens.append(tok)
+            else:
+                # filtered
+                pass
+    
+    def generateNgram(self, i, j, tokens):
+        # tokens[i:i+j+1]
+        toks = []
+        for l in range(j+1):
+            if tokens[i+l]._type != 'tok':
+                return ''
+            else:
+                toks.append(tokens[i+l]._text)
+        return ''.join(toks)
+
+    def constructGraph(self, dic, tokens, max_ngram = 5):
+        # use tok list generated from preprocessor to construct graph
+        filtered_tokens = []
+        self.filteredTokens(tokens, filtered_tokens)
+        length = len(filtered_tokens)
+        spans = []
+        for i in range(length):
+            dummySpan = Span(i, 1, filtered_tokens[i]._type, filtered_tokens[i]._text)
+            spans.append(dummySpan)
+            
+            # process range [i, min(length-1, i+max_ngram-1)]
+            for j in reversed(range(max_ngram)):
+                if i+j >= length:
+                    continue
+                #ngram = ''.join(tokens[i:i+j+1])
+                ngram = self.generateNgram(i, j, filtered_tokens)
+                if ngram == '':
+                    continue
                 #print "[debug] current ngram:" + ngram
                 candidates = dic.lookup(ngram)
                 if len(candidates) == 0:
