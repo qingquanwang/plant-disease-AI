@@ -44,6 +44,7 @@ class ZhBookPreprocessor(Preprocessor):
 
     def t_EnWord(self, t):
         ur'[a-zA-Z]+([-_][a-zA-Z]*)*'
+        t.value = t.value.lower()
         # print(u'parsed En word %s' % t.value)
         return t
 
@@ -59,6 +60,7 @@ class ZhBookPreprocessor(Preprocessor):
 
     def t_WordsQuot(self, t):
         ur'[\"“](.+?)[\"”]'
+        t.value = t.value[1:-1]
         # print(u'parsed WordsQuot word %s' % t.value)
         return t
 
@@ -79,7 +81,7 @@ class ZhBookPreprocessor(Preprocessor):
         t.lexer.lineno += t.value.count("\n")
 
     def t_error(self, t):
-        #print("Illegal character '%s'" % t.value[0])
+        # print("Illegal character '%s'" % t.value[0])
         t.lexer.skip(1)
 
     def __init__(self):
@@ -96,6 +98,7 @@ class ZhBookPreprocessor(Preprocessor):
             return 'punct'
         else:
             return '/' + tokType
+
     def preprocess(self, rawText, toks):
         self._lexer.input(rawText)
 
