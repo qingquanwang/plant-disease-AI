@@ -65,6 +65,7 @@ class SpanGraph(object):
                 # filtered
                 pass
     
+    # en en will be collapsed
     def generateNgram(self, i, j, tokens):
         # tokens[i:i+j+1]
         toks = []

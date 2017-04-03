@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from ruleEngine import *
-from Tagger import *
+from plantDiseaseAI.backend.tagger.ruleEngine import *
+from plantDiseaseAI.backend.LangCore import *
 import pprint
 
 pp = pprint.prettyprinter(indent = 2)
@@ -20,7 +20,7 @@ class TraverseContext(object):
         else:
             return False
 
-class ruleTagger(Tagger):
+class RuleTagger(Tagger):
     def __init__(self):
         self._graph = None
 

@@ -1,4 +1,4 @@
-import lex
+import plantDiseaseAI.backend.lex
 
 keywords = ('internal')
 

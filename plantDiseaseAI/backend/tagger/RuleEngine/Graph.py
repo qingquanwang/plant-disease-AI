@@ -4,7 +4,7 @@ from itertools import permutations
 import copy
 import os,sys
 import pprint
-from AST import *
+from plantDiseaseAI.backend.tagger.RuleEngine.AST import *
 
 pp = pprint.PrettyPrinter(indent = 2)
 

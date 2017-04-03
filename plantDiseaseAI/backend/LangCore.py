@@ -4,9 +4,13 @@ import pprint
 pp = pprint.PrettyPrinter(indent = 2)
 
 class Token(object):
-    def __init__(self, text, t):
+    def __init__(self, text):
         self._text = text
         self._type = t
+        self._lang = 'zh'
+    # 'en' 'zh' for tok, other span is 'other'
+    def setLang(self, lang):
+        self._lang = lang
 
     def __repr__(self):
         return 'Token({}, {})'.format(self._text, self._type)
@@ -22,17 +26,16 @@ class Preprocessor(object):
         pass
 
 class Span(object):
-    _start = 0
-    # Note that, _len is the number of taken tokens, not really the length of text
-    _len = 0
-    _type = 'tok'
-    _text = ''
-    _attrs = {}
     def __init__(self, start, l, t, text):
         self._start = start
+        # Note that, _len is the number of taken tokens, not really the length of text
         self._len = l
         self._type = t
         self._text = text
+        self._lang = 'other'
+        self._attrs = {}
+    def setLang(self, lang):
+        self._lang = lang
     def dump(self):
         res = []
         res.append(str(self._start))

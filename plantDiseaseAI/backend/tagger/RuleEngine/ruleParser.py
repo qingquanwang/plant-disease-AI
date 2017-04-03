@@ -1,5 +1,5 @@
-import yacc
-from AST import *
+import plantDiseaseAI.backend.yacc
+from plantDiseaseAI.backend.tagger.RuleEngine.AST import *
 import pprint
 import sys,os
 
