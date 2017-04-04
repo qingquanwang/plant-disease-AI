@@ -2,7 +2,7 @@
 import argparse
 import pprint
 from plantDiseaseAI.backend.nlr import *
-from plantDiseaseAI.backend.Dialog import *
+from plantDiseaseAI.backend.Interaction import *
 import os, sys
 
 pp = pprint.PrettyPrinter(indent = 2)
@@ -13,7 +13,7 @@ if __name__ == '__main__':
                 ./nlr-simulator.py -t template_file -w "k1:v1,v2|k2:v3,v4" templateId
                 ''', formatter_class = argparse.RawTextHelpFormatter)
     parser.add_argument('--t', type=str,
-                        default='./data/reply-template',
+                        default='./data/test/reply-template',
                         help='reply template file path')
     parser.add_argument('templateId', type=str, nargs='?',
                         help='template id')

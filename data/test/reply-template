@@ -1,0 +1,9 @@
+Welcome	您可以说“天气查询”或者“机票预定/查询”
+Repeat	对不起，您说的我没有听懂
+Tips-Flight	对不起，您说的我没有听懂。您可以说“从北京到上海的机票”
+Tips-Weather	对不起，您说的我没有听懂。您可以说“沈阳今日天气”
+ask-Flight-from	您的出发地是哪里？
+ask-Flight-to	您到哪里？
+ask-Flight-date	您计划查询哪天的航班？
+ask-weather-city	您的城市是哪里？
+ask-weather-date	您想查询哪天的天气？

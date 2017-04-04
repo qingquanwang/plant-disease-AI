@@ -1,0 +1,55 @@
+{
+    "Tasks": [
+        {
+            "Name": "Welcome",
+            "Handler" : "TestAppWelcomeHandler",
+            "Out": [
+                "Weather",
+                "Flight"
+            ],
+            "msg": {
+                "welcomeTemplateId": "Welcome",
+                "repeatTemplateId": "Repeat"
+            },
+            "nlu" : "NLU",
+            "nlr" : "NLR"
+        },
+        {
+            "Name" : "Weather",
+            "Handler" : "WeatherHandler",
+            "Dependent" : [
+                "Weather/place",
+                "Weather/date:optional"
+            ],
+            "msg" : {
+                "tipsTemplateId" : "Tips-Weather"
+            },
+            "Action": {
+                "content-api" : "/weather"
+            }
+        },
+        {
+            "Name" : "Flight",
+            "Handler" : "FlightHandler",
+            "Dependent" : [
+                "Flight/from",
+                "Flight/to",
+                "Flight/date:optional"
+            ],
+            "msg" : {
+                "tipsTemplateId" : "Tips-Flight"
+            },
+            "Action" : {
+                "content-api" : "/flight"
+            }
+        }
+    ],
+    "WhiteBoard": [
+            "Domain",
+            "Weather/place",
+            "Weather/date",
+            "Flight/from",
+            "Flight/to",
+            "Flight/time"
+    ]
+}

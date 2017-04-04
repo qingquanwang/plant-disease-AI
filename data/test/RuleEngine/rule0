@@ -15,8 +15,14 @@ internal airport = [
 
 flight = [
    { { {"从"}? {[@city @airport]}#from "到" {[@city @airport]}#to} { {"的"}? </domain/ticket/Flight>}? }
+   { @date { {"从"}? {[@city @airport]}#from "到" {[@city @airport]}#to} { {"的"}? </domain/ticket/Flight>}? }
+   { { {"从"}? {[@city @airport]}#from "到" {[@city @airport]}#to} { @date {"的"}? </domain/ticket/Flight>}? }
 ]`domain="flight"`
 
 weather = [
-    ^{ {@city }? ^{ {@date}? {"的"}? { </domain/weather> } }}
+    ^{ { {@city}#where }? ^{ {@date}? {"的"}? { </domain/weather> } }}
 ]`domain="weather";intent="lookfor"`
+
+date_confirm = [
+    @date
+]`confirm="date"`
