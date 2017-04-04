@@ -58,14 +58,14 @@ def processToks(toks, split, tagger, dic):
     for tok in toks:
         if tok._type == 'splitter':
             if split == True:
-                tagToks(toks, tagger, dic)
+                tagToks(res, tagger, dic)
                 res[:] = []
             else:
                 res.append(tok)
         else:
             res.append(tok)
     if len(res) > 0:
-        tagToks(toks, tagger, dic)
+        tagToks(res, tagger, dic)
 
 if __name__ == '__main__':
     

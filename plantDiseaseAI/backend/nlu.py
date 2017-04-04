@@ -10,94 +10,82 @@ pp = pprint.PrettyPrinter(indent = 2)
 
 # NLU result of each query or short text
 class Analysis(object):
-    def __init__(self, query, graph):
-        self._text = query
+    def __init__(self, graph, seqs):
         self._graph = graph
-        self._bestSeqIndex = -1
-        # seq list
-        self._candidateSeqList = []
-        self._scoreList = []
-    def appendCandidate(self, seq, tagger_prob, tagger_type, annotation=None):
-        self._candidateSeqList.append((seq, tagger_prob, tagger_type, annotation))
+        self._seqs = seqs
     def dedupRank(self):
-        #TO DO: dedup and scoring
-        # pick up the best seq
-        max_score = -1.0
-        for (seq, tagger_prob, tagger_type, annotation) in self._candidateSeqList:
-            if tagger_type == 'GreedyTagger':
-                self._scoreList.append(0.6)
+        dedupedSeq = []
+        sigHash = {}
+        for seq in self._seqs:
+            sig = seq.getSignature()
+            if sig not in sigHash:
+                dedupedSeq.append(seq)
+                sigHash[sig] = len(dedupedSeq) - 1
             else:
-                self._scoreList.append(0.1)
-        for i in range(len(self._scoreList)):
-            if self._scoreList[i] > max_score:
-                max_score = self._scoreList[i]
-                self._bestSeqIndex = i
-        return
+                if seq._prob > dedupedSeq[sigHash[sig]]._prob:
+                    dedupedSeq[sigHash[sig]] = seq
+        sorted(dedupedSeq, key = lambda seq : seq._prob, reverse=True)
+        self._seqs = dedupedSeq
+
     def dumpBestSeq(self, dump_tagger=False):
-        (seq, tagger_prob, tagger_type, annotation) = self._candidateSeqList[self._bestSeqIndex]
-        if dump_tagger:
-            return self._graph.dump_seq(seq) + ':' + tagger_type
+        if len(self._seqs) > 0:
+            if dump_tagger:
+                return self._seqs[0].dump(self._graph) + '\002' + self._seqs[0]._source
+            else:
+                return self._seqs[0].dump(self._graph)
         else:
-            return self._graph.dump_seq(seq)
+            return ''
+
     def getBestSeq(self, threshold):
-        if self._bestSeqIndex < 0:
-            return (None, None)
-        (seq, tagger_prob, tagger_type, annotation) = self._candidateSeqList[self._bestSeqIndex]
-        if self._scoreList[self._bestSeqIndex] > threshold:
-            spans = []
-            for spanId in seq:
-                spans.append(self._graph._spans[spanId])
-            return (spans, annotation)
+        if len(self._seqs) > 0:
+            if self._seqs[0]._prob > threshold:
+                return self._seqs[0]
+            else:
+                return None
         else:
-            return (None, None)
+            return None
+
 class NLU(object):
     def __init__(self, dic):
         self._dic = dic
-        self._preprocessor = None
+        self._preprocessor = ZhBookPreprocessor()
         self._taggers = []
     def setPreprocessor(self, preprocessorName):
         if preprocessorName == 'zhBook':
-            return ZhBookPreprocessor()
+            self._preprocessor = ZhBookPreprocessor()
         else:
             raise NameError('unknown preprocessor: ' + preprocessorName)
 
-    def appendTagger(self, taggerName):
-        if taggerName == 'greedy':
-            tagger = GreedyTagger()
-            self._taggers.append(tagger)
-        elif taggerName == 'ruleEngine':
-            tagger = RuleTagger()
-            self._taggers.append(tagger)
-        else:
-            raise NameError('unknown tagger: ' + taggerName)
+    def appendTagger(self, tagger):
+        self._taggers.append(tagger)
 
     # tokens are input after preprocessing
     def tagTokens(self, toks):
-
-    # text is input before preprocessing
-    def tagText(self, rawText, split == True):
-
-    def analysis(self, rawText):
-
-        phrases = []
-        self.text_preprocess(phrases, rawText)
-        anaList = []
-        for text in phrases:
-            ana = self.analysis_single_text(text)
-            if ana._bestSeqIndex >= 0:
-                anaList.append(ana)
-        return anaList
-    def analysis_single_text(self, text):
-        #print "[debug]:" + text.encode('utf-8')
-        #1. dic tagging -> graph
-        graph = SpanGraph()
-        graph.createGraph(self._dic, text)
-        ana = Analysis(text, graph)
-        #2. native greedy tagger
-        native_seq = []
-        graph.greedySeq(native_seq, 0, True)
-        ana.appendCandidate(native_seq, 0.6, 'GreedyTagger', None) 
-        #TODO: 3. seq candidates generation with different Taggers(CRF/RNN/Autometa/Reduce)
-        # 4. Dedup and rerank
+        inputGraph = SpanGraph()
+        inputGraph.constructGraph(self._dic, toks)
+        #for span in inputGraph._spans:
+        #    print 'Debug:' + span.dump().encode('utf-8')
+        seqs = []
+        for tagger in self._taggers:
+            tagger.tag(inputGraph, seqs)
+        ana = Analysis(inputGraph, seqs)
         ana.dedupRank()
         return ana
+
+    # text is input before preprocessing
+    def tagText(self, anaList, rawText, split = True):
+        toks = []
+        self._preprocessor.preprocess(rawText, toks)
+        bufferedToks = []
+        
+        for tok in toks:
+            if tok._type == 'splitter':
+                if split == True:
+                    anaList.append(self.tagTokens(bufferedToks))
+                    bufferedToks[:] = []
+                else:
+                    bufferedToks.append(tok)
+            else:
+                bufferedToks.append(tok)
+        if len(bufferedToks) > 0:
+            anaList.append(self.tagTokens(bufferedToks))

@@ -13,5 +13,5 @@ class GreedyTagger(Tagger):
         seq = Sequence()
         seq._source = 'GreedyTagger'
         seq._prob = 0.6
-        spanGraph.greedySeq(seq._spans, 0, False)
+        spanGraph.greedySeq(seq._spans, 0, True)
         seqList.append(seq)

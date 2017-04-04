@@ -82,7 +82,7 @@ class RuleTagger(Tagger):
             # generate sequence
             seq = Sequence()
             seq._source = 'RuleTagger'
-            seq._prob = '0.9' #hardcode
+            seq._prob = 0.9 #hardcode
             for (spanId, edge) in ctx._path:
                 if spanId != None:
                     seq._spans.append(spanId)

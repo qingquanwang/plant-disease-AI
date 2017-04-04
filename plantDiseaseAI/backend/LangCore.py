@@ -13,10 +13,10 @@ class Token(object):
         self._lang = lang
 
     def __repr__(self):
-        return 'Token({}, {})'.format(self._text, self._type)
+        return 'Token({}, {})'.format(self._text.encode('utf-8'), self._type)
 
     def __str__(self):
-        return '({}, {})'.format(self._text, self._type)
+        return '({}, {})'.format(self._text.encode('utf-8'), self._type)
 
 class Preprocessor(object):
     def __init__(self):
@@ -53,6 +53,17 @@ class Sequence(object):
         self._prob = 0.0
     def serializeAnn(self):
         return json.dumps(self._annotation)
+    def getSignature(self):
+        sig = []
+        for spanId in self._spans:
+            sig.append(str(spanId))
+        return '-'.join(sig)
+    def dump(self, inputGraph):
+        res = []
+        for idx in self._spans:
+            span = inputGraph._spans[idx]
+            res.append('[' + span._text + '|' + span._type + ']')
+        return ''.join(res) + '\002' + self.serializeAnn()
 # Annotation on tagging sequence: 
 #   slots: slot->list[spanId]
 #   conclusion: k->v
