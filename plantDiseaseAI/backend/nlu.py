@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-from Tagging import *
-import hanzi
+from plantDiseaseAI.backend.LangCore import *
+from plantDiseaseAI.backend.Tagging import *
+from plantDiseaseAI.backend.preprocessor import *
+from plantDiseaseAI.backend.tagger import *
 import re
 import pprint
 
@@ -51,23 +53,32 @@ class Analysis(object):
 class NLU(object):
     def __init__(self, dic):
         self._dic = dic
+        self._preprocessor = None
         self._taggers = []
-    def text_preprocess(self, phrases, rawText):
-        sentList = re.split('[' + hanzi.nlu_stops +']+', rawText.strip())
-        for sentIdx in range(len(sentList)):
-            sent = sentList[sentIdx]
-            if sent == '':
-                continue
-            #print "[debug]: " + sent.encode('utf-8')
-            subsentList = re.split('[' + hanzi.phrase_delim + ']+', sent.strip())
-            for ssIdx in range(len(subsentList)):
-                ss = subsentList[ssIdx]
-                ss_rewrite =  re.sub(r'\[\d*-?\d*\]','',ss)
-                ss_rewrite =  re.sub(r'\s','',ss_rewrite)
-                if ss_rewrite != '':
-                    phrases.append(ss_rewrite)
+    def setPreprocessor(self, preprocessorName):
+        if preprocessorName == 'zhBook':
+            return ZhBookPreprocessor()
+        else:
+            raise NameError('unknown preprocessor: ' + preprocessorName)
+
+    def appendTagger(self, taggerName):
+        if taggerName == 'greedy':
+            tagger = GreedyTagger()
+            self._taggers.append(tagger)
+        elif taggerName == 'ruleEngine':
+            tagger = RuleTagger()
+            self._taggers.append(tagger)
+        else:
+            raise NameError('unknown tagger: ' + taggerName)
+
+    # tokens are input after preprocessing
+    def tagTokens(self, toks):
+
+    # text is input before preprocessing
+    def tagText(self, rawText, split == True):
 
     def analysis(self, rawText):
+
         phrases = []
         self.text_preprocess(phrases, rawText)
         anaList = []

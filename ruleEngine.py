@@ -40,8 +40,8 @@ def investigation_rule(filename):
 def tagToks(toks, tagger, dic):
     inputGraph = SpanGraph()
     inputGraph.constructGraph(dic, toks)
-    for span in inputGraph._spans:
-        print 'Debug:' + span.dump().encode('utf-8')
+    #for span in inputGraph._spans:
+    #    print 'Debug:' + span.dump().encode('utf-8')
     seqs = []
     tagger.tag(inputGraph, seqs)
     seq_res = []

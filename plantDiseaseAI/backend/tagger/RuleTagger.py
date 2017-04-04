@@ -16,7 +16,7 @@ class TraverseContext(object):
         self._deadStates = {}
         self._hitSequence = []
 
-        pp.pprint(self._inputGraph._startMap)
+        #pp.pprint(self._inputGraph._startMap)
 
     def isEnd(self, pos):
         if pos in self._inputGraph._startMap:
@@ -31,7 +31,7 @@ class RuleTagger(Tagger):
     def loadRules(self, ruleFile):
         with open(ruleFile, 'r') as fd:
             data = fd.read().decode('utf-8')
-            lexer = lex.lex(debug=1, optimize=0,
+            lexer = lex.lex(debug=0, optimize=0,
                                 lextab='lextab', reflags=0)
             lexer.input(data)
             '''
@@ -68,16 +68,16 @@ class RuleTagger(Tagger):
                 else:
                     raise TypeError('unknown action type:[' + act._astAction._type + ']')
     def walk(self, pos, node, ctx):
-        print 'walk on: [pos:' + str(pos) +'] [node:' + str(node._id) + ']'
+        #print 'walk on: [pos:' + str(pos) +'] [node:' + str(node._id) + ']'
         ctx._matched = False
         # check dead states
         state_sig = str(node._id) + '-' + str(pos)
         if state_sig in ctx._deadStates:
-            print 'Debug: deadState[' + state_sig + ']' 
+            #print 'Debug: deadState[' + state_sig + ']' 
             return
         # match a final state
         if (node.endNode() == True) and ctx.isEnd(pos):
-            print 'Debug: Matched a final state'
+            #print 'Debug: Matched a final state'
             ctx._matched = True
             # generate sequence
             seq = Sequence()

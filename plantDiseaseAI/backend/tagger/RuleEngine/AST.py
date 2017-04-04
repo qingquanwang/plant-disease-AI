@@ -314,7 +314,7 @@ class AST(object):
     def expand(self):
         for name, rule in self._ruleMap.items():
             if rule._type == 'public':
-                print "expanding call for rule: [" + name + ']'
+                #print "expanding call for rule: [" + name + ']'
                 rule.expand_call(self._ruleMap)
         for name, rule in self._ruleMap.items():
             if rule._type == 'internal':
