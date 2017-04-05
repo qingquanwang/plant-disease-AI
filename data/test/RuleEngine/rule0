@@ -1,17 +1,15 @@
-internal date = [
+internal date = { [
    { {</DIGIT>#year "年"}? { </DIGIT>#month "月" </DIGIT>#day "日" } }
    { ["今日" "今天"]#today }
    { ["明日" "明天"]#tomorrow }
-]#date
+]#date }`confirm="date"`
 
-internal city = {
-    </place/city>
-}#city
+city = { {</place/city>}#city }`confirm="city"`
 
-internal airport = [
+airport = { [
     { @city ["机场" "飞机场"] }
     { @city </place/airport> ["机场" "飞机场"]? }
-]#airport
+]#airport }`confirm="airport"`
 
 flight = [
    { { {"从"}? {[@city @airport]}#from "到" {[@city @airport]}#to} { {"的"}? </domain/ticket/Flight>}? }
@@ -22,7 +20,3 @@ flight = [
 weather = [
     ^{ { {@city}#where }? ^{ {@date}? {"的"}? { </domain/weather> } }}
 ]`domain="weather";intent="lookfor"`
-
-date_confirm = [
-    @date
-]`confirm="date"`

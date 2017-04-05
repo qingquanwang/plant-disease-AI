@@ -62,6 +62,10 @@ class UserInput(object):
     def __init__(self, inputType, inputContent):
         self._type = inputType
         self._input = inputContent
+        # keep the analysis result during task transition
+        self._ctx = {}
+    def setContext(self, k, v):
+        self._ctx[k] = v
 
 class Action(object):
     def __init__(self, actionType):

@@ -14,9 +14,11 @@ class WelcomeHandler(BaseQAHandler):
         return True
 
     # Output: [Domain]
-    def understanding(self, state, text):
+    def understanding(self, state, userInput):
+        text = userInput._input
         env = state._session._env
         anaList = self._nlu.tagText(text, True)
+        userInput.setContext('cur_nlu_result', anaList)
         for ana in anaList:
             bestSeq = ana.getBestSeq(0.5)
             if 'domain' in bestSeq._annotation:
@@ -60,11 +62,12 @@ class WelcomeHandler(BaseQAHandler):
         else:
             return False
 
-class WeatherHandler(BaseQAHandler):
+class ConfirmHandler(BaseQAHandler):
     def __init__(self, params, modules):
         super(WeatherHandler, self).__init__(params, modules)
-        self._tipsMsgTemplateId = params['msg']['tipsTemplateId']
-    # Welcome Handler Always Accepted
+        self._questionTemplateId = params['msg']['questionTemplateId']
+        self._repeatTemplateId = params['msg']['repeatTemplateId']
+    
     def accepted(self, state):
         env = state._session
         if env['domain'] == 'weather':
@@ -72,8 +75,9 @@ class WeatherHandler(BaseQAHandler):
         else:
             return False
 
-    # Output: [Domain]
-    def understanding(self, state, text):
+    # Output: []
+    def understanding(self, state, userInput):
+        
         env = state._session._env
         focus = state._focus
         if focus == '':
@@ -92,7 +96,7 @@ class WeatherHandler(BaseQAHandler):
     #   'WaitTextInput' -> 'Done': there is no more focus, return content-action
 
     def execute(self, state, userInput, actions):
-
+        # 1) check needs running
         if state._status == 'Run':
             (status, focus) = self.understanding(state, userInput._input)
             if status and focus == '':
@@ -133,4 +137,24 @@ class WeatherHandler(BaseQAHandler):
             return False
 
 class FlightHandler(BaseQAHandler):
+    def __init__(self, params, modules):
+        super(WeatherHandler, self).__init__(params, modules)
+        self._tipsMsgTemplateId = params['msg']['tipsTemplateId']
+    # Welcome Handler Always Accepted
+    def accepted(self, state):
+        return False
+        env = state._session
+        if env['domain'] == 'flight':
+            return True
+        else:
+            return False
 
+    # State Transition Graph:
+    #   'Run' -> 'Done': understand all, return content-action
+    #   'Run' -> 'WaitTextInput' : understand part of dependents, shift focus, return ask-focus
+    #   'WaitTextInput' -> 'WaitTextInput' : understand the confirm-focus, shift focus, return ask-focus
+    #   'WaitTextInput' -> 'WaitTextInput': reply tipsMsg
+    #   'WaitTextInput' -> 'Done': there is no more focus, return content-action
+
+    def execute(self, state, userInput, actions):
+        return False

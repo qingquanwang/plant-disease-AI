@@ -17,30 +17,36 @@
         {
             "Name" : "Weather",
             "Handler" : "WeatherHandler",
-            "Dependent" : [
-                "Weather/place",
-                "Weather/date:optional"
-            ],
             "msg" : {
                 "tipsTemplateId" : "Tips-Weather"
             },
+            "Out": [
+                "ConfirmCity"
+            ],
             "Action": {
                 "content-api" : "/weather"
             }
         },
         {
-            "Name" : "Flight",
-            "Handler" : "FlightHandler",
-            "Dependent" : [
-                "Flight/from",
-                "Flight/to",
-                "Flight/date:optional"
-            ],
+            "Name" : "ConfirmCity",
+            "Handler" : "ConfirmHandler",
             "msg" : {
-                "tipsTemplateId" : "Tips-Flight"
+                "questionTemplateId": "ask-weather-city",
+                "repeatTemplateId" : "Repeat"
             },
-            "Action" : {
-                "content-api" : "/flight"
+            "Out" : [
+                "WeatherContent"
+            ],
+            "confirm": "city",
+            "semanticAssign" : "city:Weather/place"
+        },
+        {
+            "Name" : "WeatherContent",
+            "Handler" : "ContentHandler",
+            "path" : "/weather",
+            "params" : {
+                "place" : "Weather/place",
+                "date" : "Weather/date"
             }
         }
     ],
