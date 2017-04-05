@@ -14,6 +14,8 @@ def parse_xml(web_data):
         return ImageMsg(xmlData)
     elif msg_type == 'voice':
         return VoiceMsg(xmlData)
+    elif msg_type == 'event':
+        return EventMsg(xmlData)
 
 
 class Msg(object):
@@ -23,18 +25,19 @@ class Msg(object):
         self.FromUserName = xmlData.find('FromUserName').text
         self.CreateTime = xmlData.find('CreateTime').text
         self.MsgType = xmlData.find('MsgType').text
-        self.MsgId = xmlData.find('MsgId').text
 
 
 class TextMsg(Msg):
     def __init__(self, xmlData):
         Msg.__init__(self, xmlData)
+        self.MsgId = xmlData.find('MsgId').text
         self.Content = xmlData.find('Content').text.encode("utf-8")
 
 
 class ImageMsg(Msg):
     def __init__(self, xmlData):
         Msg.__init__(self, xmlData)
+        self.MsgId = xmlData.find('MsgId').text
         self.PicUrl = xmlData.find('PicUrl').text
         self.MediaId = xmlData.find('MediaId').text
 
@@ -42,5 +45,12 @@ class ImageMsg(Msg):
 class VoiceMsg(Msg):
     def __init__(self, xmlData):
         Msg.__init__(self, xmlData)
+        self.MsgId = xmlData.find('MsgId').text
         self.Recognition = xmlData.find('Recognition').text.encode("utf-8")
         self.MediaId = xmlData.find('MediaId').text
+
+
+class EventMsg(Msg):
+    def __init__(self, xmlData):
+        Msg.__init__(self, xmlData)
+        self.Content = xmlData.find('Event').text
