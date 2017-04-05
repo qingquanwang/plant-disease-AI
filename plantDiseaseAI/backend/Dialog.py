@@ -4,6 +4,7 @@ from plantDiseaseAI.backend.nlu import *
 from plantDiseaseAI.backend.nlr import *
 from plantDiseaseAI.backend.Interaction import *
 from plantDiseaseAI.backend.handler.basicHandler import *
+from plantDiseaseAI.backend.handler.PlantDiseaseApp import *
 
 import re
 import json

@@ -49,15 +49,6 @@ class BaseQAHandler(BaseHandler):
     # params is the spec of the handler
     def __init__(self, params, modules):
         super(BaseQAHandler, self).__init__(params, modules)
-        # load dep
-        if 'Dependent' in params:
-            self._deps = []
-            for dep in params['Dependent']:
-                fs = dep.split(':')
-                if len(fs) == 1:
-                    self._deps
-                else:
-                    #optional
         # set NLU module
         nluName = params['nlu']
         if nluName in modules:

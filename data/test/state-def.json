@@ -4,8 +4,7 @@
             "Name": "Welcome",
             "Handler" : "TestAppWelcomeHandler",
             "Out": [
-                "Weather",
-                "Flight"
+                "Weather"
             ],
             "msg": {
                 "welcomeTemplateId": "Welcome",

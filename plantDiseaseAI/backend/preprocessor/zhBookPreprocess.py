@@ -100,6 +100,7 @@ class ZhBookPreprocessor(Preprocessor):
             return '/' + tokType
 
     def preprocess(self, rawText, toks):
+        #print "XXX:" + rawText + ' ' + type(rawText)
         self._lexer.input(rawText)
 
         # Tokenize

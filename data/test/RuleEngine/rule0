@@ -4,7 +4,7 @@ internal date = { [
    { ["明日" "明天"]#tomorrow }
 ]#date }`confirm="date"`
 
-city = { {</place/city>}#city }`confirm="city"`
+city = { {</place/city>}#city }
 
 airport = { [
     { @city ["机场" "飞机场"] }

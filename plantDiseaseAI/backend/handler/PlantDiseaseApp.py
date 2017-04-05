@@ -15,10 +15,14 @@ class WelcomeHandler(BaseQAHandler):
 
     # Output: 'taskType', 'plantName', 'diseaseName', 'intent'
     def understanding(self, state, text):
-        anaList = self._nlu.analysis(text)
+        anaList = []
+        self._nlu.tagText(anaList, text, True)
         ##TODO
         ####status = semantic_mainTask(anaList, state._session)
-        return status
+        env = state._session._env
+        env['taskType'] = 'plant'
+        env['plantName'] = 'apple'
+        return True
  
     # State Transition Graph:
     #   'Run' -> 'WaitTextInput' : reply welcomeMsg
