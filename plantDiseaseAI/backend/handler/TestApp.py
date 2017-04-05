@@ -67,26 +67,31 @@ class ConfirmHandler(BaseQAHandler):
         super(WeatherHandler, self).__init__(params, modules)
         self._questionTemplateId = params['msg']['questionTemplateId']
         self._repeatTemplateId = params['msg']['repeatTemplateId']
+        (self._confirmEntity, self._envName) = params['msg']['semanticAssign'].split(':')
     
+    # check needs running
     def accepted(self, state):
         env = state._session
         if env['domain'] == 'weather':
-            return True
+            if self._envName in env and env[self._envName] != '':
+                #no need running
+                return False
+            else:
+                return True
         else:
+            #illegal running
             return False
 
-    # Output: []
+    # Output: [self._envName]
+    # TODO
     def understanding(self, state, userInput):
-        
         env = state._session._env
-        focus = state._focus
-        if focus == '':
-            return True
 
         anaList = self._nlu.tagText(text, True)
         
         for ana in anaList:
             bestSeq = ana.getBestSeq(0.5)
+            
 
     # State Transition Graph:
     #   'Run' -> 'Done': understand all, return content-action
@@ -96,7 +101,6 @@ class ConfirmHandler(BaseQAHandler):
     #   'WaitTextInput' -> 'Done': there is no more focus, return content-action
 
     def execute(self, state, userInput, actions):
-        # 1) check needs running
         if state._status == 'Run':
             (status, focus) = self.understanding(state, userInput._input)
             if status and focus == '':
@@ -135,26 +139,3 @@ class ConfirmHandler(BaseQAHandler):
             return True
         else:
             return False
-
-class FlightHandler(BaseQAHandler):
-    def __init__(self, params, modules):
-        super(WeatherHandler, self).__init__(params, modules)
-        self._tipsMsgTemplateId = params['msg']['tipsTemplateId']
-    # Welcome Handler Always Accepted
-    def accepted(self, state):
-        return False
-        env = state._session
-        if env['domain'] == 'flight':
-            return True
-        else:
-            return False
-
-    # State Transition Graph:
-    #   'Run' -> 'Done': understand all, return content-action
-    #   'Run' -> 'WaitTextInput' : understand part of dependents, shift focus, return ask-focus
-    #   'WaitTextInput' -> 'WaitTextInput' : understand the confirm-focus, shift focus, return ask-focus
-    #   'WaitTextInput' -> 'WaitTextInput': reply tipsMsg
-    #   'WaitTextInput' -> 'Done': there is no more focus, return content-action
-
-    def execute(self, state, userInput, actions):
-        return False
