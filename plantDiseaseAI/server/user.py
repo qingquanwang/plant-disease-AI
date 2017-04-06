@@ -2,12 +2,14 @@
 # -*- coding: utf-8 -*-
 
 import os
+from os.path import realpath, join, dirname
 import simplejson as json
 import util
 import fire
 from collections import deque
 
-json_path = './user_profile/'
+print("realpath(__file__) = " + realpath(__file__))
+json_path = join(dirname(realpath(__file__)), './user_profile/')
 file_ext = '.json'
 max_history_length = 5
 
@@ -18,7 +20,7 @@ jkey_quetions = 'questions'
 class UserInfo(object):
 
     def __init__(self, openid):
-        fpath = os.path.join(json_path, openid + file_ext)
+        fpath = join(json_path, openid + file_ext)
         if os.path.isfile(fpath):
             util.lstr('老用户openid: {}'.format(openid))
             with open(fpath) as f:

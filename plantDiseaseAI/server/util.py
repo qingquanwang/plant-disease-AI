@@ -3,7 +3,7 @@ import os
 
 
 def lstr(msg):
-    file_path = os.path.join('../../../../webpy_logs/', 'log.txt')
+    file_path = os.path.join('../../webpy_logs/', 'log.txt')
     with open(file_path, 'a') as log_file:
         log_file.write(msg + '\n')
 

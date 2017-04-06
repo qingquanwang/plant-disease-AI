@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 # filename: handle.py
+import sys
+from os.path import abspath, join, dirname
 import hashlib
 import reply
 import receive
@@ -9,6 +11,15 @@ from media import Media
 import user
 
 import util
+
+sys.path.insert(0, join(abspath(dirname('__file__')), 'plantDiseaseAI/backend'))
+sys.path.insert(0, join(abspath(dirname('__file__')), 'plantDiseaseAI/backend/handler'))
+
+from DictManager import *
+from nlu import *
+from nlr import *
+from Dialog import *
+from Interaction import *
 
 
 class Handle(object):
@@ -38,6 +49,10 @@ class Handle(object):
 
     def POST(self):
         try:
+            dic = DictManager()
+            dic.load_dict('./data/test/name.dic')
+            nlu = NLU(dic)
+            nlu.setPreprocessor('zhBook')
             webData = web.data()
             util.lstr("Handle Post webdata is: ")
             util.lstr(webData)
