@@ -64,6 +64,15 @@ class State(object):
         print "\t\t session:" + self._session.serialize().encode('utf-8')
         print "\t\t status: " + self._status
         print "\t\t focus: " + self._focus
+    def to_str(self):
+        json_obj = {}
+        json_obj['_taskPath'] = self._taskPath
+        json_obj['_taskQueue'] = list(self._taskQueue)
+        json_obj['_curTask'] = self._curTask
+        json_obj['_session'] = self._session._env
+        json_obj['_status'] = self._status
+        json_obj['_focus'] = self._focus
+        return json.dumps(json_obj)
 
 class UserInput(object):
     def __init__(self, inputType, inputContent):

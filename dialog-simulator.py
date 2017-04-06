@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 import argparse
 import pprint
 import os,sys
@@ -28,6 +29,7 @@ if __name__ == '__main__':
                 description='dialog simulator', usage='''
                 ./dialog-simulator.py -d dicFile -t template_file
                         -s state-definition -i currentTask -w "k1:v1,v2|k2"v3,v4"
+                问天气: python dialog-simulator.py --s data/state-def-wx.json --d data/test/name.dic
                 ''', formatter_class = argparse.RawTextHelpFormatter)
     parser.add_argument('--d', type=str,
                         default='./data/build/name.dic',
