@@ -20,7 +20,6 @@ jkey_quetions = 'questions'
 class UserInfo(object):
     def __init__(self, openid):
         fpath = join(json_path, openid + file_ext)
-        print('fpath = ' + fpath)
         if os.path.isfile(fpath):
             util.lstr('老用户openid: {}'.format(openid))
             with open(fpath) as f:
@@ -29,7 +28,6 @@ class UserInfo(object):
                 self.json_obj[jkey_quetions] = deque(questions, maxlen=max_history_length)
                 images = list(img for img in self.json_obj[jkey_images])
                 self.json_obj[jkey_images] = deque(images, maxlen=max_history_length)
-                print(self.json_obj)
         else:
             util.lstr('新用户openid: {}'.format(openid))
             self.json_obj = {}
@@ -51,9 +49,7 @@ class UserInfo(object):
     def save(self):
         self.json_obj[jkey_quetions] = list(self.json_obj[jkey_quetions])
         self.json_obj[jkey_images] = list(self.json_obj[jkey_images])
-        print(self.json_obj)
         json_str = json.dumps(self.json_obj, ensure_ascii=False, indent=4, sort_keys=True)
-        print(json_str)
         util.save_to_file(self.fpath, json_str.encode('utf-8'))
 
     def delete(self):
