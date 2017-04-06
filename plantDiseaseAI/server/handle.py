@@ -28,6 +28,21 @@ class Handle(object):
             ret = actions[0]._text.encode('utf-8')
         return ret
 
+    def HandleUserMsg(self, usr, recMsg, dialog, toUser, fromUser):
+        state = State()
+        state.from_str(usr.get_info('state'))
+        state.debugMsg()
+        userInput = UserInput('Text', recMsg.Content)
+        actions = []
+        dialog.execute(state, userInput, actions)
+        state.debugMsg()
+        usr.set_info('state', state.to_str())
+        content = self.DoAction(actions)
+        replyMsg = reply.TextMsg(toUser, fromUser, content)
+        if state._status == 'END':
+            usr.reset()
+        return replyMsg.send()
+
     def GET(self):
         try:
             data = web.input()
@@ -81,22 +96,7 @@ class Handle(object):
                 fromUser = recMsg.ToUserName
                 usr = user.UserProfile(recMsg.FromUserName)
                 if recMsg.MsgType == 'text':
-                    # info = u'之前的问题是: ' + ','.join(usr.get_info(user.jkey_quetions))
-                    usr.set_info(user.jkey_quetions, recMsg.Content)
-                    state = State()
-                    state.from_str(usr.get_info('state'))
-                    state.debugMsg()
-                    userInput = UserInput('Text', recMsg.Content)
-                    actions = []
-                    dialog.execute(state, userInput, actions)
-                    state.debugMsg()
-                    usr.set_info('state', state.to_str())
-                    # content = u'收到问题: ' + recMsg.Content + u' info: ' + info
-                    content = self.DoAction(actions)
-                    replyMsg = reply.TextMsg(toUser, fromUser, content)
-                    if state._status == 'END':
-                        usr.clear()
-                    return replyMsg.send()
+                    return self.HandleUserMsg(usr, recMsg, dialog, toUser, fromUser)
                 elif recMsg.MsgType == 'image':
                     # 保存图片
                     myMedia = Media()
@@ -115,9 +115,12 @@ class Handle(object):
                     replyMsg = reply.TextMsg(toUser, fromUser, content)
                     return replyMsg.send()
                 elif recMsg.MsgType == 'event':
-                    content = 'welcome! 用户: ' + recMsg.FromUserName
-                    replyMsg = reply.TextMsg(toUser, fromUser, content)
-                    return replyMsg.send()
+                    print(u'event received, recMsg.Content = ' + recMsg.Content)
+                    if recMsg.Content == u'unsubscribe':
+                        usr.delete()
+                        reply.Msg().send()
+                    elif recMsg.Content == u'subscribe':
+                        return self.HandleUserMsg(usr, recMsg, dialog, toUser, fromUser)
                 else:
                     return reply.Msg().send()
             else:

@@ -20,6 +20,7 @@ jkey_quetions = 'questions'
 class UserInfo(object):
     def __init__(self, openid):
         fpath = join(json_path, openid + file_ext)
+        print('fpath = ' + fpath)
         if os.path.isfile(fpath):
             util.lstr('老用户openid: {}'.format(openid))
             with open(fpath) as f:
@@ -38,11 +39,12 @@ class UserInfo(object):
 
         self.fpath = fpath
 
-    def reset_state(self):
+    def reset_state(self, status='Run'):
         session = WhiteBoard()
         session.deserialize('')
         state = State()
         state.setStartState('Welcome')
+        state._status = status
         state._session = session
         self.json_obj['state'] = state.to_str()
 
@@ -77,7 +79,11 @@ class UserProfile(object):
     def get_info(self, key):
         return self._data.json_obj[key]
 
-    def clear(self):
+    def reset(self):
+        self._data.reset_state('WaitTextInput')
+        self._data.save()
+
+    def delete(self):
         self._data.delete()
 
 
