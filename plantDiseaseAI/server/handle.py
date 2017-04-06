@@ -60,7 +60,7 @@ class Handle(object):
                     content = '收到问题: ' + recMsg.Content + ' info: ' + info
                     replyMsg = reply.TextMsg(toUser, fromUser, content)
                     return replyMsg.send()
-                if recMsg.MsgType == 'image':
+                elif recMsg.MsgType == 'image':
                     # 保存图片
                     myMedia = Media()
                     imageUrl = recMsg.PicUrl
@@ -73,8 +73,12 @@ class Handle(object):
                     # mediaId = recMsg.MediaId
                     # replyMsg = reply.ImageMsg(toUser, fromUser, mediaId)
                     # return replyMsg.send()
-                if recMsg.MsgType == 'voice':
+                elif recMsg.MsgType == 'voice':
                     content = '用户: ' + recMsg.FromUserName + ' 发送了语音，转化为文字为: ' + recMsg.Recognition
+                    replyMsg = reply.TextMsg(toUser, fromUser, content)
+                    return replyMsg.send()
+                elif recMsg.MsgType == 'event':
+                    content = 'welcome! 用户: ' + recMsg.FromUserName
                     replyMsg = reply.TextMsg(toUser, fromUser, content)
                     return replyMsg.send()
                 else:
