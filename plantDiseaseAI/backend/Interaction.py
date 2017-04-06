@@ -73,6 +73,15 @@ class State(object):
         json_obj['_status'] = self._status
         json_obj['_focus'] = self._focus
         return json.dumps(json_obj)
+    def from_str(self, json_str):
+        json_obj = json.loads(json_str)
+        self._taskPath = json_obj['_taskPath']
+        self._taskQueue = deque(json_obj['_taskQueue'])
+        self._curTask = json_obj['_curTask']
+        self._session = WhiteBoard()
+        self._session._env = json_obj['_session']
+        self._status = json_obj['_status']
+        self._focus = json_obj['_focus']
 
 class UserInput(object):
     def __init__(self, inputType, inputContent):

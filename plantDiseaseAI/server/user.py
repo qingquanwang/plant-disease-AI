@@ -7,8 +7,8 @@ import simplejson as json
 import util
 import fire
 from collections import deque
+from plantDiseaseAI.backend.Interaction import *
 
-print("realpath(__file__) = " + realpath(__file__))
 json_path = join(dirname(realpath(__file__)), './user_profile/')
 file_ext = '.json'
 max_history_length = 5
@@ -18,30 +18,40 @@ jkey_quetions = 'questions'
 
 
 class UserInfo(object):
-
     def __init__(self, openid):
         fpath = join(json_path, openid + file_ext)
         if os.path.isfile(fpath):
             util.lstr('老用户openid: {}'.format(openid))
             with open(fpath) as f:
                 self.json_obj = json.load(f)
-                # 强制转成str
-                questions = list(q.encode('utf-8') for q in self.json_obj[jkey_quetions])
+                questions = list(q for q in self.json_obj[jkey_quetions])
                 self.json_obj[jkey_quetions] = deque(questions, maxlen=max_history_length)
-                images = list(img.encode('utf-8') for img in self.json_obj[jkey_images])
+                images = list(img for img in self.json_obj[jkey_images])
                 self.json_obj[jkey_images] = deque(images, maxlen=max_history_length)
+                print(self.json_obj)
         else:
             util.lstr('新用户openid: {}'.format(openid))
             self.json_obj = {}
             self.json_obj[jkey_images] = deque([], maxlen=max_history_length)
             self.json_obj[jkey_quetions] = deque([], maxlen=max_history_length)
+            self.reset_state()
+
         self.fpath = fpath
+
+    def reset_state(self):
+        session = WhiteBoard()
+        session.deserialize('')
+        state = State()
+        state.setStartState('Welcome')
+        state._session = session
+        self.json_obj['state'] = state.to_str()
 
     def save(self):
         self.json_obj[jkey_quetions] = list(self.json_obj[jkey_quetions])
         self.json_obj[jkey_images] = list(self.json_obj[jkey_images])
+        print(self.json_obj)
         json_str = json.dumps(self.json_obj, ensure_ascii=False, indent=4, sort_keys=True)
-        util.luni(json_str)
+        print(json_str)
         util.save_to_file(self.fpath, json_str.encode('utf-8'))
 
     def delete(self):

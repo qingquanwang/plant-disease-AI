@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 # filename: handle.py
-import sys
-from os.path import abspath, join, dirname
 import hashlib
 import reply
 import receive
@@ -9,12 +7,7 @@ import web
 import traceback
 from media import Media
 import user
-
 import util
-
-sys.path.insert(0, join(abspath(dirname('__file__')), 'plantDiseaseAI/backend'))
-sys.path.insert(0, join(abspath(dirname('__file__')), 'plantDiseaseAI/backend/handler'))
-
 from DictManager import *
 from nlu import *
 from nlr import *
@@ -23,6 +16,18 @@ from Interaction import *
 
 
 class Handle(object):
+
+    def DoAction(self, actions):
+        ret = ''
+        if len(actions) != 1:
+            ret = 'too many actions'
+        elif actions[0]._type != 'ShowPlainText':
+            ret = 'unexpected action'
+        else:
+            actions[0].debugMsg()
+            ret = actions[0]._text.encode('utf-8')
+        return ret
+
     def GET(self):
         try:
             data = web.input()
@@ -53,6 +58,19 @@ class Handle(object):
             dic.load_dict('./data/test/name.dic')
             nlu = NLU(dic)
             nlu.setPreprocessor('zhBook')
+            nlu.appendTagger(GreedyTagger())
+            tagger = RuleTagger()
+            ruleFile = './data/test/RuleEngine/rule0'
+            tagger.loadRules(ruleFile)
+            nlu.appendTagger(tagger)
+
+            nlr = NLR()
+            nlr.load_template('./data/reply-template')
+            dialog = DialogManager()
+            dialog.addModule("NLU", nlu)
+            dialog.addModule("NLR", nlr)
+            dialog.loadHandler('./data/state-def-wx.json')
+
             webData = web.data()
             util.lstr("Handle Post webdata is: ")
             util.lstr(webData)
@@ -63,17 +81,21 @@ class Handle(object):
                 fromUser = recMsg.ToUserName
                 usr = user.UserProfile(recMsg.FromUserName)
                 if recMsg.MsgType == 'text':
-                    info = 'empty'
-                    # 设置 cookie
-                    # cookie = web.cookies(count='-1')
-                    # info = 'cookie.count = {}'.format(cookie.count)
-                    # int_count = int(cookie.count) + 1
-                    # web.setcookie('count', str(int_count), 3600)
-                    # end 设置 cookie
-                    info = '之前的问题是: ' + ','.join(usr.get_info(user.jkey_quetions))
+                    # info = u'之前的问题是: ' + ','.join(usr.get_info(user.jkey_quetions))
                     usr.set_info(user.jkey_quetions, recMsg.Content)
-                    content = '收到问题: ' + recMsg.Content + ' info: ' + info
+                    state = State()
+                    state.from_str(usr.get_info('state'))
+                    state.debugMsg()
+                    userInput = UserInput('Text', recMsg.Content)
+                    actions = []
+                    dialog.execute(state, userInput, actions)
+                    state.debugMsg()
+                    usr.set_info('state', state.to_str())
+                    # content = u'收到问题: ' + recMsg.Content + u' info: ' + info
+                    content = self.DoAction(actions)
                     replyMsg = reply.TextMsg(toUser, fromUser, content)
+                    if state._status == 'END':
+                        usr.clear()
                     return replyMsg.send()
                 elif recMsg.MsgType == 'image':
                     # 保存图片

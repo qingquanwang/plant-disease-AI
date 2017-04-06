@@ -31,7 +31,7 @@ class TextMsg(Msg):
     def __init__(self, xmlData):
         Msg.__init__(self, xmlData)
         self.MsgId = xmlData.find('MsgId').text
-        self.Content = xmlData.find('Content').text.encode("utf-8")
+        self.Content = xmlData.find('Content').text  # unicode
 
 
 class ImageMsg(Msg):
@@ -46,7 +46,7 @@ class VoiceMsg(Msg):
     def __init__(self, xmlData):
         Msg.__init__(self, xmlData)
         self.MsgId = xmlData.find('MsgId').text
-        self.Recognition = xmlData.find('Recognition').text.encode("utf-8")
+        self.Recognition = xmlData.find('Recognition').text
         self.MediaId = xmlData.find('MediaId').text
 
 
