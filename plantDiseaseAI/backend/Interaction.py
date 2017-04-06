@@ -46,6 +46,13 @@ class State(object):
         self._session = WhiteBoard()
         self._status = ''
         self._focus = ''
+    @property
+    def status(self):
+        return self._status
+    @status.setter
+    def status(self, value):
+        print('status <- {} previous: {}'.format(value, self._status))
+        self._status = value
     def setStartState(self, taskId):
         self._status = 'Run'
         self._curTask = taskId

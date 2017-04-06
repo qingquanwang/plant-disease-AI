@@ -3,3 +3,5 @@ plantDiseaseAI/server/static/
 plantDiseaseAI/server/sessions/
 plantDiseaseAI/server/user_profile/
 msm.py
+parser.out
+parsetab.py

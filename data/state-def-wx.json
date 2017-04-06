@@ -1,0 +1,75 @@
+{
+    "Tasks": [
+        {
+            "Name": "Welcome",
+            "Handler" : "WXHandler",
+            "Out": [
+                "Weather"
+            ],
+            "msg": {
+                "welcomeTemplateId": "Wx",
+                "repeatTemplateId": "WxRepeat"
+            },
+            "nlu" : "NLU",
+            "nlr" : "NLR"
+        },
+        {
+            "Name" : "Weather",
+            "Handler" : "WeatherHandler",
+            "msg": {
+                "welcomeTemplateId": "Weather"
+            },
+            "nlu" : "NLU",
+            "nlr" : "NLR",
+            "Out": [
+                "GetDate",
+                "GetPlace",
+                "DisplayWeather"
+            ]
+        },
+        {
+            "Name" : "GetDate",
+            "Handler" : "GetHandler",
+            "msg": {
+                "MsgTemplateId": "GetDate"
+            },
+            "misc":{
+                "required": "date"
+            },
+            "nlu" : "NLU",
+            "nlr" : "NLR"
+        },
+        {
+            "Name" : "GetPlace",
+            "Handler" : "GetHandler",
+            "msg": {
+                "MsgTemplateId": "GetPlace"
+            },
+            "misc":{
+                "required": "where"
+            },
+            "nlu" : "NLU",
+            "nlr" : "NLR"
+        },
+        {
+            "Name" : "DisplayWeather",
+            "Handler" : "DisplayWeatherHandler",
+            "msg": {
+                "MsgTemplateId": "DisplayWeather"
+            },
+            "nlu" : "NLU",
+            "nlr" : "NLR"
+        }
+    ],
+    "WhiteBoard": [
+        "taskType",
+        "plantName",
+        "diseaseName",
+        "intent",
+        "symptom-texture",
+        "symptom-position",
+        "symptom-color",
+        "symptom-spot",
+        "symptom"
+    ]
+}

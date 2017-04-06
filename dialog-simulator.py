@@ -49,6 +49,12 @@ if __name__ == '__main__':
     dic = DictManager()
     dic.load_dict(args.d)
     nlu = NLU(dic)
+    nlu.appendTagger(GreedyTagger())
+    tagger = RuleTagger()
+    ruleFile = './data/test/RuleEngine/rule0'
+    tagger.loadRules(ruleFile)
+    nlu.appendTagger(tagger)
+
     nlr = NLR()
     nlr.load_template(args.t)
     dialog = DialogManager()
@@ -62,17 +68,17 @@ if __name__ == '__main__':
     state.setStartState(args.i)
     state._session = session
 
-    
+
     userInput = None
     actions = []
     state.debugMsg()
 
     dialog.execute(state, userInput, actions)
     doActions(actions)
-    
+
     # Interaction
     while True:
-        line = sys.stdin.readline()
+        line = raw_input('usr > ')
         text = line.strip('\n').decode('utf-8')
         userInput = UserInput('Text', text)
         actions = []
