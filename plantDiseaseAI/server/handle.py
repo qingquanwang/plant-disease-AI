@@ -24,7 +24,7 @@ class Handle(object):
         elif actions[0]._type != 'ShowPlainText':
             ret = 'unexpected action'
         else:
-            actions[0].debugMsg()
+            # actions[0].debugMsg()
             ret = actions[0]._text.encode('utf-8')
         return ret
 
