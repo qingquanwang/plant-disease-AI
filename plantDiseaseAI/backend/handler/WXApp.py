@@ -8,6 +8,69 @@ from plantDiseaseAI.backend.Interaction import *
 from plantDiseaseAI.backend.handler.basicHandler import *
 
 
+class ChoiceHandler(BaseQAHandler):
+    def __init__(self, params, modules):
+        super(ChoiceHandler, self).__init__(params, modules)
+        self._template = params['Template']
+        self._name = params['Name']
+        self._params = params
+    def accepted(self, state):
+        env = state._session._env
+        if 'domain' in env['nlu'] and self._name == env['nlu']['domain']:
+            return True
+        else:
+            return False
+    def execute(self, state, userInput, actions):
+        with open(self._template, 'r') as f:
+            template = json.load(f)
+            # print(json_obj
+        env = state._session._env
+        if 'history' not in env:
+            env['history'] = []
+        print (env)
+        nextQID = self._params['StartQID']
+        curQID = env['curQID'] if 'curQID' in env else self._params['StartQID']
+        # find nextQID and set answer history
+        if state._status == 'WaitTextInput':
+            if userInput._input == self._params['ResetKey']:
+                # 重置
+                del env['history'][:]
+            elif userInput._input == self._params['UnDoKey']:
+                # 返回上一题
+                if env['history'] and len(env['history']) > 0:
+                    nextQID = env['history'].pop()
+            else:
+                # 功能按键之外的输入
+                if curQID in template:
+                    if userInput._input in template[curQID]['choices']:
+                        # 回答有效 记录到答题历史
+                        nextQID = template[curQID]['choices'][userInput._input]['goto']
+                        env['history'].append(curQID)
+                    else:  # 回答无效
+                        nextQID = curQID
+        else:
+            # 初次答题
+            state._status = 'WaitTextInput'
+        # 显示题目及选项
+        print('nextQID = ' + nextQID)
+        env['curQID'] = nextQID
+        reply = ''
+        if 'choices' in template[nextQID]:
+            # 显示选项
+            reply += template[nextQID]['qst'] + ': \n'
+            # print(template[nextQID]['choices'])
+            for k, v in template[nextQID]['choices'].iteritems():
+                reply += k + '. ' + v['display'] + '\n'
+        else:
+            # 答题结束
+            reply += template[nextQID]['qst'] + ': \n'
+            env['history'].append(curQID)
+            state._status = 'Done'
+        action = Action('ShowPlainText')
+        action.setText(reply)
+        actions.append(action)
+        return True
+
 class DisplayWeatherHandler(BaseQAHandler):
     def __init__(self, params, modules):
         super(DisplayWeatherHandler, self).__init__(params, modules)
@@ -26,7 +89,6 @@ class DisplayWeatherHandler(BaseQAHandler):
         actions.append(action)
         state._status = 'Done'
         return True
-
 
 class GetHandler(BaseQAHandler):
     def __init__(self, params, modules):
@@ -82,7 +144,11 @@ class WeatherHandler(BaseQAHandler):
         super(WeatherHandler, self).__init__(params, modules)
         self._welcomeMsgTemplateId = params['msg']['welcomeTemplateId']
     def accepted(self, state):
-        return True
+        env = state._session._env
+        if 'domain' in env['nlu'] and 'weather' == env['nlu']['domain']:
+            return True
+        else:
+            return False
     def understanding(self, state, text):
         anaList = []
         self._nlu.tagText(anaList, text, True)
@@ -128,6 +194,7 @@ class WXHandler(BaseQAHandler):
         super(WXHandler, self).__init__(params, modules)
         self._welcomeMsgTemplateId = params['msg']['welcomeTemplateId']
         self._repeatMsgTemplateId = params['msg']['repeatTemplateId']
+        self._params = params
     # Welcome Handler Always Accepted
     def accepted(self, state):
         return True
@@ -143,7 +210,7 @@ class WXHandler(BaseQAHandler):
             if searchObj:
                 # print "searchObj.group() : ", searchObj.group()
                 jsonObj = json.loads(searchObj.group())
-                if 'domain' in jsonObj and jsonObj['domain'] in ['weather', 'flight']:
+                if 'domain' in jsonObj and jsonObj['domain'] in self._params['Out']:
                     env = state._session._env
                     env['nlu'] = defaultdict(lambda:{}, jsonObj)
                     return True

@@ -4,7 +4,8 @@
             "Name": "Welcome",
             "Handler" : "WXHandler",
             "Out": [
-                "Weather"
+                "weather",
+                "choice"
             ],
             "msg": {
                 "welcomeTemplateId": "Wx",
@@ -14,7 +15,17 @@
             "nlr" : "NLR"
         },
         {
-            "Name" : "Weather",
+            "Name" : "choice",
+            "Handler" : "ChoiceHandler",
+            "Template": "./data/binhai.json",
+            "StartQID": "1",
+            "UnDoKey": "#",
+            "ResetKey": "*",
+            "nlu" : "NLU",
+            "nlr" : "NLR"
+        },
+        {
+            "Name" : "weather",
             "Handler" : "WeatherHandler",
             "msg": {
                 "welcomeTemplateId": "Weather"

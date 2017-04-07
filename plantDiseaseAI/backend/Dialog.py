@@ -50,23 +50,30 @@ class DialogManager(object):
 
         loop = True
         while loop:
-            res = self._tasks[state._curTask]._handler.execute(state, temp_input, actions)
-            if len(actions) > 0:
-                loop = False
-            if res == False:
-                state._status = 'FAILED'
-                return False
-            if state._status == 'Done':
-                state._taskPath.append(state._curTask)
-                # move to next task
-                for t in self._tasks[state._curTask]._out:
-                    if t not in state._taskPath:
-                        state._taskQueue.append(t)
-                if len(state._taskQueue) == 0:
-                    state._status = 'END'
-                    loop = False
-                    break
+            # print(state._curTask + '.accepted() = ' + str(self._tasks[state._curTask]._handler.accepted(state)))
+            if not self._tasks[state._curTask]._handler.accepted(state):
+                # 跳过该task，Out也不加入处理队列
                 state._curTask = state._taskQueue.popleft()
                 state._status = 'Run'
                 temp_input = userInput
+            else:
+                res = self._tasks[state._curTask]._handler.execute(state, temp_input, actions)
+                if len(actions) > 0:
+                    loop = False
+                if res == False:
+                    state._status = 'FAILED'
+                    return False
+                if state._status == 'Done':
+                    state._taskPath.append(state._curTask)
+                    # move to next task
+                    for t in self._tasks[state._curTask]._out:
+                        if t not in state._taskPath:
+                            state._taskQueue.append(t)
+                    if len(state._taskQueue) == 0:
+                        state._status = 'END'
+                        loop = False
+                        break
+                    state._curTask = state._taskQueue.popleft()
+                    state._status = 'Run'
+                    temp_input = userInput
         return True

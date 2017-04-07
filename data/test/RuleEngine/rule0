@@ -20,3 +20,8 @@ flight = [
 weather = [
     ^{ { {@city}#where }? ^{ {@date}? {"的"}? { </domain/weather> } }}
 ]`domain="weather";intent="lookfor"`
+
+choice = [
+    {"滨海新区"}
+    {"啊"}
+]`domain="choice"`
