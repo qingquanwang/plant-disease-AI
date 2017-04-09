@@ -2,9 +2,14 @@ internal date = { [
    { {</DIGIT>#year "年"}? { </DIGIT>#month "月" </DIGIT>#day "日" } }
    { ["今日" "今天"]#today }
    { ["明日" "明天"]#tomorrow }
-]#date }`confirm="date"`
+]#date }
 
-city = { {</place/city>}#city }
+internal city = { {</place/city>}#city }
+
+confirm_place = [
+    { @city } `confirm="city"`
+    { @airport } `confirm="airport"`
+]
 
 airport = { [
     { @city ["机场" "飞机场"] }

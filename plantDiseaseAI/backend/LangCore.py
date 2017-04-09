@@ -87,3 +87,46 @@ class Tagger(object):
     # seqList = [ Sequence ]
     def tag(self, spanGraph, seqList):
         pass
+
+# NLU result of each query or short text
+class Analysis(object):
+    def __init__(self, graph, seqs):
+        self._graph = graph
+        self._seqs = seqs
+    def dedupRank(self):
+        dedupedSeq = []
+        sigHash = {}
+        for seq in self._seqs:
+            sig = seq.getSignature()
+            if sig not in sigHash:
+                dedupedSeq.append(seq)
+                sigHash[sig] = len(dedupedSeq) - 1
+            else:
+                if seq._prob > dedupedSeq[sigHash[sig]]._prob:
+                    dedupedSeq[sigHash[sig]] = seq
+        sorted(dedupedSeq, key = lambda seq : seq._prob, reverse=True)
+        self._seqs = dedupedSeq
+
+    def dumpBestSeq(self, dump_tagger=False):
+        if len(self._seqs) > 0:
+            if dump_tagger:
+                return self._seqs[0].dump(self._graph) + '\002' + self._seqs[0]._source
+            else:
+                return self._seqs[0].dump(self._graph)
+        else:
+            return ''
+
+    def getBestSeq(self, threshold):
+        if len(self._seqs) > 0:
+            if self._seqs[0]._prob > threshold:
+                return self._seqs[0]
+            else:
+                return None
+        else:
+            return None
+
+class SemanticExtracter(object):
+    def __init__(self):
+        pass
+    def extract(self, anaList, semantics):
+        pass
