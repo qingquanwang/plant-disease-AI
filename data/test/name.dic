@@ -13,6 +13,7 @@ bc	/cls2	ID-bc
 定票	/domain/ticket	domain-ticket
 火车票	/domain/ticket/Train	domain-ticket-train
 机票	/domain/ticket/Flight	domain-ticket-flight
+飞机票	/domain/ticket/Flight	domain-ticket-flight
 火车	/domain/transportation/train	domain-transportation-train
 列车	/domain/transportation/train	domain-transportation-train
 飞机	/domain/transportation/flight	domain-transportation-flight

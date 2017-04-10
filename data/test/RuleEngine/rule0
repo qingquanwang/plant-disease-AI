@@ -1,30 +1,39 @@
-internal date = { [
-   { {</DIGIT>#year "年"}? { </DIGIT>#month "月" </DIGIT>#day "日" } }
-   { ["今日" "今天"]#today }
-   { ["明日" "明天"]#tomorrow }
-]#date }
+internal date = [
+   { {</DIGIT>#year "年"}? { </DIGIT>#month "月" </DIGIT>#day "日" } }`dateType="ymd"`
+   { ["今日" "今天"]}`dateType="today"`
+   { ["明日" "明天"]}`dateType="tomorrow"`
+]#date
 
 internal city = { {</place/city>}#city }
 
-confirm_place = [
-    { @city } `confirm="city"`
-    { @airport } `confirm="airport"`
-]
-
-airport = { [
+internal airport = [
     { @city ["机场" "飞机场"] }
     { @city </place/airport> ["机场" "飞机场"]? }
-]#airport }`confirm="airport"`
+]#airport 
 
-flight = [
+
+
+
+Place = [
+    {@city#placeName}`placeType="city"`
+    {@airport#placeName}`placeType="airport"`
+]`domain="place"`
+
+Date = [
+    { @date }
+]`domain="date"`
+
+Flight = [
    { { {"从"}? {[@city @airport]}#from "到" {[@city @airport]}#to} { {"的"}? </domain/ticket/Flight>}? }
    { @date { {"从"}? {[@city @airport]}#from "到" {[@city @airport]}#to} { {"的"}? </domain/ticket/Flight>}? }
    { { {"从"}? {[@city @airport]}#from "到" {[@city @airport]}#to} { @date {"的"}? </domain/ticket/Flight>}? }
 ]`domain="flight"`
 
-weather = [
+Weather = [
     ^{ { {@city}#where }? ^{ {@date}? {"的"}? { </domain/weather> } }}
 ]`domain="weather";intent="lookfor"`
+
+
 
 choice = [
     {"滨海新区"}

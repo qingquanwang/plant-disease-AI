@@ -125,7 +125,7 @@ class Analysis(object):
         else:
             return None
 
-class SemanticExtracter(object):
+class Semantic(object):
     def __init__(self):
         pass
     def extract(self, anaList, semantics):

@@ -1,0 +1,93 @@
+{
+    "Weather": [
+        {
+            "Name": "WeatherRule0",
+            "topK": "3",
+            "threshold": "0.5",
+            "sources": "",
+            "conditionType": "annotation",
+            "extractionType": "annotation",
+            "conditions": [
+                "${domain}==weather"
+            ],
+            "extractions": [
+                "domain=${domain}:required:override",
+                "Weather.place=${slots.where}:optional:override",
+                "Weather.date=${slots.date}:optional:override",
+                "Weather.indent=${intent}:optional:override"
+            ]
+        },
+        {
+            "Name": "WeatherRule1",
+            "topK": "3",
+            "threshold": "0.5",
+            "sources": "",
+            "conditionType": "sequence",
+            "extractionType": "sequence",
+            "conditions": [
+                "</domain/weather>:ordered"
+            ],
+            "extractions": [
+                "domain=weather:required:override",
+                "Weather.place=</place/city>.text:optional:appended"
+            ]
+        }
+    ],
+    "Flight": [
+        {
+            "Name": "FlightRule0",
+            "topK": "3",
+            "threshold": "0.5",
+            "sources": "",
+            "conditionType": "annotation",
+            "extractionType": "annotation",
+            "conditions": [
+                "${domain}==flight"
+            ],
+            "extractions": [
+                "domain=${domain}:required:override",
+                "Flight.from=${slots.from}:optional:override",
+                "Flight.to=${slots.to}:optional:override",
+                "Flight.date=${slots.date}:optional:override",
+                "Flight.indent=${intent}:optional:override"
+            ]
+        }
+    ],
+    "Place" : [
+        {
+            "Name": "PlaceRule0",
+            "topK": "1",
+            "threshold": "0.5",
+            "sources": "RuleTagger",
+            "conditionType" : "annotation",
+            "extractionType" : "annotation",
+            "conditions" : [
+                "${domain}==place"
+            ],
+            "extractions" : [
+                "Place.type=${placeType}:required:override",
+                "Place.name=${slots.placeName}:required:override"
+            ]
+        }
+    ],
+    "Date" : [
+        {
+            "Name": "DateRule0",
+            "topK": "1",
+            "threshold": "0.5",
+            "sources": "RuleTagger",
+            "conditionType" : "annotation",
+            "extractionType" : "annotation",
+            "conditions" : [
+                "${domain}==date"
+            ],
+            "extractions" : [
+                "Date.type=${dateType}:required:override",
+                "Date.mon=${slots.month}:optional:override",
+                "Date.day=${slots.day}:optional:override",
+                "Date.year=${slots.year}:optional:override",
+                "Date.dow=${slots.dow}:optional:override"
+            ]
+        }
+    ]
+}
