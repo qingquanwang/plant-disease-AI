@@ -30,7 +30,7 @@ Flight = [
 ]`domain="flight"`
 
 Weather = [
-    ^{ { {@city}#where }? ^{ {@date}? {"的"}? { </domain/weather> } }}
+    ^{ {.*} { {@city}#where }? ^{ {@date}? {"的"}? { </domain/weather> } }}
 ]`domain="weather";intent="lookfor"`
 
 
