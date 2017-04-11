@@ -8,11 +8,12 @@ import traceback
 from media import Media
 import user
 import util
-from DictManager import *
-from nlu import *
-from nlr import *
-from Dialog import *
-from Interaction import *
+
+from plantDiseaseAI.backend.DictManager import *
+from plantDiseaseAI.backend.nlu import *
+from plantDiseaseAI.backend.nlr import *
+from plantDiseaseAI.backend.Dialog import *
+from plantDiseaseAI.backend.Interaction import *
 
 
 class Handle(object):
@@ -70,21 +71,21 @@ class Handle(object):
     def POST(self):
         try:
             dic = DictManager()
-            dic.load_dict('./data/test/name.dic')
+            dic.load_dict('../../data/test/name.dic')
             nlu = NLU(dic)
             nlu.setPreprocessor('zhBook')
             nlu.appendTagger(GreedyTagger())
             tagger = RuleTagger()
-            ruleFile = './data/test/RuleEngine/rule0'
+            ruleFile = '../../data/test/RuleEngine/rule0'
             tagger.loadRules(ruleFile)
             nlu.appendTagger(tagger)
 
             nlr = NLR()
-            nlr.load_template('./data/reply-template')
+            nlr.load_template('../../data/reply-template')
             dialog = DialogManager()
             dialog.addModule("NLU", nlu)
             dialog.addModule("NLR", nlr)
-            dialog.loadHandler('./data/state-def-wx.json')
+            dialog.loadHandler('../../data/state-def-wx.json')
 
             webData = web.data()
             util.lstr("Handle Post webdata is: ")

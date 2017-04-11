@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
 # filename: main.py
+import sys
+from os.path import realpath, join, dirname
+print(join(dirname(realpath(__file__)), '../../'))
+sys.path.insert(0, join(dirname(realpath(__file__)), '../../'))
+
+
 import web
 import traceback
 from handle import Handle

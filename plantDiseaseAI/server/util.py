@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 import os
+from os.path import realpath, dirname
 
 
 def lstr(msg):
-    file_path = os.path.join('../../webpy_logs/', 'log.txt')
+    file_path = os.path.join(dirname(realpath(__file__)), '../../../../webpy_logs/log.txt')
     with open(file_path, 'a') as log_file:
         log_file.write(msg + '\n')
 
