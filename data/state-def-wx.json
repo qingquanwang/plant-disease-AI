@@ -2,7 +2,7 @@
     "Tasks": [
         {
             "Name": "Welcome",
-            "Handler" : "WXHandler",
+            "Handler" : "SelectDomainHandler",
             "Out": [
                 "weather",
                 "choice"
@@ -26,10 +26,11 @@
         },
         {
             "Name" : "weather",
-            "Handler" : "WeatherHandler",
+            "Handler" : "OverallHandler",
             "msg": {
-                "welcomeTemplateId": "Weather"
+                "tipTemplateId": "Weather"
             },
+            "properties": ["place", "date"],
             "nlu" : "NLU",
             "nlr" : "NLR",
             "Out": [
@@ -44,9 +45,7 @@
             "msg": {
                 "MsgTemplateId": "GetDate"
             },
-            "misc":{
-                "required": "date"
-            },
+            "required": "date",
             "nlu" : "NLU",
             "nlr" : "NLR"
         },
@@ -56,9 +55,7 @@
             "msg": {
                 "MsgTemplateId": "GetPlace"
             },
-            "misc":{
-                "required": "where"
-            },
+            "required": "place",
             "nlu" : "NLU",
             "nlr" : "NLR"
         },

@@ -12,9 +12,9 @@
             ],
             "extractions": [
                 "domain=${domain}:required:override",
-                "Weather.place=${slots.where}:optional:override",
-                "Weather.date=${slots.date}:optional:override",
-                "Weather.indent=${intent}:optional:override"
+                "weather.place=${slots.where}:optional:override",
+                "weather.date=${slots.date}:optional:override",
+                "weather.indent=${intent}:optional:override"
             ]
         },
         {
@@ -29,7 +29,7 @@
             ],
             "extractions": [
                 "domain=weather:required:override",
-                "Weather.place=</place/city>.text:optional:appended"
+                "weather.place=</place/city>.text:optional:appended"
             ]
         }
     ],
@@ -65,8 +65,8 @@
                 "${domain}==place"
             ],
             "extractions" : [
-                "Place.type=${placeType}:required:override",
-                "Place.name=${slots.placeName}:required:override"
+                "place.type=${placeType}:required:override",
+                "place.name=${slots.placeName}:required:override"
             ]
         }
     ],
@@ -82,11 +82,27 @@
                 "${domain}==date"
             ],
             "extractions" : [
-                "Date.type=${dateType}:required:override",
-                "Date.mon=${slots.month}:optional:override",
-                "Date.day=${slots.day}:optional:override",
-                "Date.year=${slots.year}:optional:override",
-                "Date.dow=${slots.dow}:optional:override"
+                "date.type=${dateType}:required:override",
+                "date.mon=${slots.month}:optional:override",
+                "date.day=${slots.day}:optional:override",
+                "date.year=${slots.year}:optional:override",
+                "date.dow=${slots.dow}:optional:override"
+            ]
+        }
+    ],
+    "Choice": [
+        {
+            "Name": "ChoiceRule0",
+            "topK": "3",
+            "threshold": "0.5",
+            "sources": "",
+            "conditionType": "annotation",
+            "extractionType": "annotation",
+            "conditions": [
+                "${domain}==choice"
+            ],
+            "extractions": [
+                "domain=${domain}:required:override"
             ]
         }
     ]

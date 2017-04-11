@@ -8,7 +8,7 @@ import pprint
 pp = pprint.PrettyPrinter(indent = 2)
 
 # A basic Handler should be able to handle the interface of
-#    the understanding 
+#    the understanding
 #    the ACK reply
 #    ask the question of state
 #    handle the branch logic
@@ -18,8 +18,25 @@ class BaseHandler(object):
     def __init__(self, params, modules):
         self._id = params['Name']
         self._out = []
+        self._params = params
     def accepted(self, state):
         pass
+    def has_property(self, state, property):
+        env = state._session._env
+        domain = env['domain']
+        if property in env[domain]:
+            print('required property: {} already found, skip'.format(property))
+            return True
+        return False
+    def has_domain(self, state, domain=None):
+        env = state._session._env
+        key = self._id
+        if domain is not None:
+            key = domain
+        if key == env['domain']:
+            return True
+        else:
+            return False
     def execute(self, state, userInput, actions):
         pass
 
@@ -61,5 +78,10 @@ class BaseQAHandler(BaseHandler):
             self._nlr = modules[nlrName]
         else:
             self._nlr = None
-        
+        # set SEMANTIC modle
+        semantic_name = 'SEMANTIC'
+        if 'semantic' in params:
+            semantic_name = params['semantic']
+        self._semantic = modules[semantic_name]
+
 

@@ -15,11 +15,7 @@ class ChoiceHandler(BaseQAHandler):
         self._name = params['Name']
         self._params = params
     def accepted(self, state):
-        env = state._session._env
-        if 'domain' in env['nlu'] and self._name == env['nlu']['domain']:
-            return True
-        else:
-            return False
+        return self.has_domain(state)
     def execute(self, state, userInput, actions):
         with open(self._template, 'r') as f:
             template = json.load(f)
@@ -80,11 +76,9 @@ class DisplayWeatherHandler(BaseQAHandler):
     def execute(self, state, userInput, actions):
         env = state._session._env
         action = Action('ShowPlainText')
-        date = ''.join(env['nlu']['slots']['date'])
-        where = ''.join(env['nlu']['slots']['where'])
-        print(u'{}{}{}'.format(date, where, u'晴 1~16度'))
+        print(env)
         reply = self._nlr.use_template(self._msgTemplateId, state._session._env)
-        reply = reply.format(date, where, u'晴 1~16度')
+        reply = reply.format(u'date', u'where', u'晴 1~16度')
         action.setText(reply)
         actions.append(action)
         state._status = 'Done'
@@ -93,31 +87,32 @@ class DisplayWeatherHandler(BaseQAHandler):
 class GetHandler(BaseQAHandler):
     def __init__(self, params, modules):
         super(GetHandler, self).__init__(params, modules)
-        self._required = params['misc']['required']
+        self._required = params['required']
         self._msgTemplateId = params['msg']['MsgTemplateId']
     def accepted(self, state):
-        return True
+        if self.has_property(state, self._required):
+            env = state._session._env
+            domain = env['domain']
+            if self.understanding(state, env[domain][self._required]):
+                return False
+            else:
+                return True
+        else:
+            return True
     def understanding(self, state, text):
         anaList = []
+        blocks = {}
         self._nlu.tagText(anaList, text, True)
-        for ana in anaList:
-            analysis = ana.dumpBestSeq(True)
-            print(analysis.encode('utf-8'))
-            searchObj = re.search(r'{(.*)}', analysis.encode('utf-8'))
-            if searchObj:
-                jsonObj = json.loads(searchObj.group())
-                if 'slots' in jsonObj:
-                    print('slots in jsonObj')
-                    env = state._session._env
-                    env['nlu']['slots'].update(jsonObj['slots'])
-                    return True
-        return False
+        self._semantic.extract(anaList, blocks, '')
+        blockStr = json.dumps(blocks, encoding='utf-8')
+        print('blockStr = ' + blockStr)
+        if self._required in blocks:
+            state._session._env.update(blocks)
+            return True
+        else:
+            return False
     def execute(self, state, userInput, actions):
         env = state._session._env
-        if self._required in env['nlu']['slots']:
-            print('required value: {} already found, skip'.format(self._required))
-            state._status = 'Done'
-            return True
         if state._status == 'Run':
             action = Action('ShowPlainText')
             action.setText(self._nlr.use_template(self._msgTemplateId, state._session._env))
@@ -127,8 +122,6 @@ class GetHandler(BaseQAHandler):
         elif state._status == 'WaitTextInput':
             status = self.understanding(state, userInput._input)
             if status == False:
-                print('understanding failed')
-            if self._required not in env['nlu']['slots']:
                 action = Action('ShowPlainText')
                 action.setText(self._nlr.use_template(self._msgTemplateId, state._session._env))
                 actions.append(action)
@@ -139,39 +132,31 @@ class GetHandler(BaseQAHandler):
         else:
             return True
 
-class WeatherHandler(BaseQAHandler):
+class OverallHandler(BaseQAHandler):
+    '''
+    确定domain后，根据用户的输入决定是否要显示tips，主要引导用户尽可能跳过之后一个个的GetHandler
+    '''
     def __init__(self, params, modules):
-        super(WeatherHandler, self).__init__(params, modules)
-        self._welcomeMsgTemplateId = params['msg']['welcomeTemplateId']
+        super(OverallHandler, self).__init__(params, modules)
+        self._tipTemplateId = params['msg']['tipTemplateId']
     def accepted(self, state):
-        env = state._session._env
-        if 'domain' in env['nlu'] and 'weather' == env['nlu']['domain']:
-            return True
-        else:
-            return False
+        return self.has_domain(state)
     def understanding(self, state, text):
         anaList = []
+        blocks = {}
         self._nlu.tagText(anaList, text, True)
-        for ana in anaList:
-            analysis = ana.dumpBestSeq(True)
-            print(analysis.encode('utf-8'))
-            searchObj = re.search(r'{(.*)}', analysis.encode('utf-8'))
-            if searchObj:
-                jsonObj = json.loads(searchObj.group())
-                if 'slots' in jsonObj:
-                    print('slots in jsonObj')
-                    env = state._session._env
-                    env['nlu']['slots'].update(jsonObj['slots'])
-                    return True
-        return False
+        self._semantic.extract(anaList, blocks, '')
+        blockStr = json.dumps(blocks, encoding='utf-8')
+        print('blockStr = ' + blockStr)
+        state._session._env.update(blocks)
+        return True
     def execute(self, state, userInput, actions):
         env = state._session._env
-        print(env['nlu'])
         if state._status == 'Run':
-            if 'where' not in env['nlu']['slots'] and 'date' not in env['nlu']['slots']:
+            if len(set(self._params['properties']).intersection(env[self._id])) == 0:
                 action = Action('ShowPlainText')
                 action.setText(self._nlr.use_template(
-                    self._welcomeMsgTemplateId,
+                    self._tipTemplateId,
                     state._session._env))
                 actions.append(action)
                 state._status = 'WaitTextInput'
@@ -188,13 +173,14 @@ class WeatherHandler(BaseQAHandler):
         else:
             return True
 
-class WXHandler(BaseQAHandler):
-
+class SelectDomainHandler(BaseQAHandler):
+    '''
+    作为起始Handler，引导用户确定domain
+    '''
     def __init__(self, params, modules):
-        super(WXHandler, self).__init__(params, modules)
+        super(SelectDomainHandler, self).__init__(params, modules)
         self._welcomeMsgTemplateId = params['msg']['welcomeTemplateId']
         self._repeatMsgTemplateId = params['msg']['repeatTemplateId']
-        self._params = params
     # Welcome Handler Always Accepted
     def accepted(self, state):
         return True
@@ -202,18 +188,15 @@ class WXHandler(BaseQAHandler):
     # Output: 'taskType', 'plantName', 'diseaseName', 'intent'
     def understanding(self, state, text):
         anaList = []
+        blocks = {}
         self._nlu.tagText(anaList, text, True)
-        for ana in anaList:
-            analysis = ana.dumpBestSeq(True)
-            print(analysis.encode('utf-8'))
-            searchObj = re.search(r'{(.*)}', analysis.encode('utf-8'))
-            if searchObj:
-                # print "searchObj.group() : ", searchObj.group()
-                jsonObj = json.loads(searchObj.group())
-                if 'domain' in jsonObj and jsonObj['domain'] in self._params['Out']:
-                    env = state._session._env
-                    env['nlu'] = defaultdict(lambda:{}, jsonObj)
-                    return True
+        self._semantic.extract(anaList, blocks, '')
+        blockStr = json.dumps(blocks, encoding='utf-8')
+        print('blockStr = ' + blockStr)
+        if 'domain' in blocks and blocks['domain'] in self._params['Out']:
+            state._session._env = defaultdict(lambda:{}, blocks)
+            state._session._env.update(blocks)
+            return True
         return False
 
     def execute(self, state, userInput, actions):

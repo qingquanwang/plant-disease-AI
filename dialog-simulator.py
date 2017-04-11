@@ -13,6 +13,7 @@ from plantDiseaseAI.backend.nlu import *
 from plantDiseaseAI.backend.nlr import *
 from plantDiseaseAI.backend.Dialog import *
 from plantDiseaseAI.backend.Interaction import *
+from plantDiseaseAI.backend.semantic import *
 
 pp = pprint.PrettyPrinter(indent = 2)
 
@@ -46,6 +47,9 @@ if __name__ == '__main__':
     parser.add_argument('--w', type=str,
                         default='',
                         help='whiteboard variables')
+    parser.add_argument('--ss', type=str,
+                        default='./data/test/Semantics/wx-test-semantics.json',
+                        help='semantics file')
 
     args = parser.parse_args()
     dic = DictManager()
@@ -59,9 +63,14 @@ if __name__ == '__main__':
 
     nlr = NLR()
     nlr.load_template(args.t)
+
+    semantic = SemanticBase()
+    semantic.loadSemanticRules(args.ss)
+
     dialog = DialogManager()
     dialog.addModule("NLU", nlu)
     dialog.addModule("NLR", nlr)
+    dialog.addModule("SEMANTIC", semantic)
     dialog.loadHandler(args.s)
 
     session = WhiteBoard()
