@@ -25,6 +25,10 @@ class Task(object):
         self._handler = eval(obj['Handler'])(obj, modules)
 
 class DialogManager(object):
+
+    KEY_QUIT = 'quit'
+    KEY_DEBUG = 'debug'
+
     def __init__(self):
         self._variables = []
         self._tasks = {}
@@ -43,9 +47,31 @@ class DialogManager(object):
     def addModule(self, name, module):
         self._modules[name] = module
 
+    def checkInput(self, state, userInput, actions):
+        # 处理全局功能按键
+        if state._status == 'WaitTextInput':
+            if userInput._input == DialogManager.KEY_QUIT:
+                state.reset()
+                state.setStartState('Welcome')
+                state._session = WhiteBoard()
+                print('quit')
+                welcomeAction = Action('ShowPlainText')
+                welcomeAction.setText(u'返回成功')
+                actions.append(welcomeAction)
+                state._status = 'WaitTextInput'
+                state.debugMsg()
+                return True
+            elif userInput._input == DialogManager.KEY_DEBUG:
+                print(state._session._env)
+                return True
+        return False
+
     def execute(self, state, userInput, actions):
         temp_input = userInput
         if state._status == 'END':
+            return True
+
+        if self.checkInput(state, userInput, actions):
             return True
 
         loop = True

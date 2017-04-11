@@ -40,6 +40,8 @@ class WhiteBoard(object):
 
 class State(object):
     def __init__(self):
+        self.reset()
+    def reset(self):
         self._taskPath = []
         self._taskQueue = deque([])
         self._curTask = ''
@@ -57,7 +59,7 @@ class State(object):
         self._status = 'Run'
         self._curTask = taskId
     def debugMsg(self):
-        print "State Info: "
+        print "State Info: id = " + str(id(self))
         print "\t\t Task Path:" + '--'.join(self._taskPath)
         print "\t\t Task Queue:" + '--'.join(self._taskQueue)
         print "\t\t Current Task:" + self._curTask

@@ -83,5 +83,5 @@ class BaseQAHandler(BaseHandler):
         if 'semantic' in params:
             semantic_name = params['semantic']
         self._semantic = modules[semantic_name]
-
-
+    def execute(self, state, userInput, actions):
+        pass
