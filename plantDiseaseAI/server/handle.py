@@ -14,6 +14,7 @@ from plantDiseaseAI.backend.nlu import *
 from plantDiseaseAI.backend.nlr import *
 from plantDiseaseAI.backend.Dialog import *
 from plantDiseaseAI.backend.Interaction import *
+from plantDiseaseAI.backend.semantic import *
 
 
 class Handle(object):
@@ -82,9 +83,14 @@ class Handle(object):
 
             nlr = NLR()
             nlr.load_template('../../data/reply-template')
+
+            semantic = SemanticBase()
+            semantic.loadSemanticRules('../../data/test/Semantics/wx-test-semantics.json')
+
             dialog = DialogManager()
             dialog.addModule("NLU", nlu)
             dialog.addModule("NLR", nlr)
+            dialog.addModule("SEMANTIC", semantic)
             dialog.loadHandler('../../data/state-def-wx.json')
 
             webData = web.data()

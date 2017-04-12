@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import re
+from os.path import realpath, join, dirname
 import json
 from collections import defaultdict
 from plantDiseaseAI.backend.nlu import *
@@ -11,7 +11,7 @@ from plantDiseaseAI.backend.handler.basicHandler import *
 class ChoiceHandler(BaseQAHandler):
     def __init__(self, params, modules):
         super(ChoiceHandler, self).__init__(params, modules)
-        self._template = params['Template']
+        self._template = join(dirname(realpath(__file__)), '../../../' + params['Template'])
         self._name = params['Name']
         self._params = params
     def accepted(self, state):
