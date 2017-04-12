@@ -19,9 +19,40 @@ from plantDiseaseAI.backend.semantic import *
 
 class Handle(object):
 
+    dialog = None
+
+    def __init__(self):
+        if Handle.dialog is None:
+            dic = DictManager()
+            dic.load_dict('../../data/test/name.dic')
+            nlu = NLU(dic)
+            nlu.setPreprocessor('zhBook')
+            nlu.appendTagger(GreedyTagger())
+            tagger = RuleTagger()
+            ruleFile = '../../data/test/RuleEngine/rule0'
+            tagger.loadRules(ruleFile)
+            nlu.appendTagger(tagger)
+
+            nlr = NLR()
+            nlr.load_template('../../data/reply-template')
+
+            semantic = SemanticBase()
+            semantic.loadSemanticRules('../../data/test/Semantics/wx-test-semantics.json')
+
+            dialog = DialogManager()
+            dialog.addModule("NLU", nlu)
+            dialog.addModule("NLR", nlr)
+            dialog.addModule("SEMANTIC", semantic)
+            dialog.loadHandler('../../data/state-def-wx.json')
+            Handle.dialog = dialog
+        else:
+            print('dialog already inited')
+
     def DoAction(self, actions):
         ret = ''
-        if len(actions) != 1:
+        if not actions:
+            ret = 'no action'
+        elif len(actions) > 1:
             ret = 'too many actions'
         elif actions[0]._type != 'ShowPlainText':
             ret = 'unexpected action'
@@ -71,28 +102,6 @@ class Handle(object):
 
     def POST(self):
         try:
-            dic = DictManager()
-            dic.load_dict('../../data/test/name.dic')
-            nlu = NLU(dic)
-            nlu.setPreprocessor('zhBook')
-            nlu.appendTagger(GreedyTagger())
-            tagger = RuleTagger()
-            ruleFile = '../../data/test/RuleEngine/rule0'
-            tagger.loadRules(ruleFile)
-            nlu.appendTagger(tagger)
-
-            nlr = NLR()
-            nlr.load_template('../../data/reply-template')
-
-            semantic = SemanticBase()
-            semantic.loadSemanticRules('../../data/test/Semantics/wx-test-semantics.json')
-
-            dialog = DialogManager()
-            dialog.addModule("NLU", nlu)
-            dialog.addModule("NLR", nlr)
-            dialog.addModule("SEMANTIC", semantic)
-            dialog.loadHandler('../../data/state-def-wx.json')
-
             webData = web.data()
             util.lstr("Handle Post webdata is: ")
             util.lstr(webData)
@@ -103,7 +112,7 @@ class Handle(object):
                 fromUser = recMsg.ToUserName
                 usr = user.UserProfile(recMsg.FromUserName)
                 if recMsg.MsgType == 'text':
-                    return self.HandleUserMsg(usr, recMsg, dialog, toUser, fromUser)
+                    return self.HandleUserMsg(usr, recMsg, Handle.dialog, toUser, fromUser)
                 elif recMsg.MsgType == 'image':
                     # 保存图片
                     myMedia = Media()
@@ -127,7 +136,7 @@ class Handle(object):
                         usr.delete()
                         reply.Msg().send()
                     elif recMsg.Content == u'subscribe':
-                        return self.HandleUserMsg(usr, recMsg, dialog, toUser, fromUser)
+                        return self.HandleUserMsg(usr, recMsg, Handle.dialog, toUser, fromUser)
                 else:
                     return reply.Msg().send()
             else:
