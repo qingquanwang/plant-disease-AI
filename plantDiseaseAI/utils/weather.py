@@ -47,7 +47,7 @@ def parse_weather(json_str):
     result = []
     for daily in json_obj['HeWeather5'][0]['daily_forecast']:
         result.append(WEATHER_RESULT_FORMAT.format(daily['date'], daily['tmp']['max'], daily['tmp']['min']))
-    return u','.join(result)
+    return u'|||'.join(result)
 
 
 if __name__ == '__main__':

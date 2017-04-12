@@ -2,11 +2,12 @@
 from os.path import realpath, join, dirname
 import json
 from collections import defaultdict
+import datetime
 from plantDiseaseAI.backend.nlu import *
 from plantDiseaseAI.backend.nlr import *
 from plantDiseaseAI.backend.Interaction import *
 from plantDiseaseAI.backend.handler.basicHandler import *
-
+from plantDiseaseAI.utils.weather import *
 
 class ChoiceHandler(BaseQAHandler):
     def __init__(self, params, modules):
@@ -75,11 +76,20 @@ class DisplayWeatherHandler(BaseQAHandler):
         return True
     def execute(self, state, userInput, actions):
         env = state._session._env
-        action = Action('ShowPlainText')
         print(env)
-        reply = self._nlr.use_template(self._msgTemplateId, state._session._env)
-        reply = reply.format(u'date', u'where', u'晴 1~16度')
-        action.setText(reply)
+        city_id = env['place']['id']
+        m_date = env['date']['time']
+        reply = get_weather(city_id)
+        infos = reply.split('|||')
+        result = u'未找到天气数据'
+        for info in infos:
+            if m_date in info:
+                result = info
+                break
+        action = Action('ShowPlainText')
+        # reply = self._nlr.use_template(self._msgTemplateId, state._session._env)
+        # reply = reply.format(u'date', u'where', u'晴 1~16度')
+        action.setText(result)
         actions.append(action)
         state._status = 'Done'
         return True
@@ -99,6 +109,9 @@ class GetHandler(BaseQAHandler):
                 return True
         else:
             return True
+    def customize_hook(self, state, userInput, actions):
+        state._status = 'Done'
+        return
     def understanding(self, state, text):
         anaList = []
         blocks = {}
@@ -127,7 +140,7 @@ class GetHandler(BaseQAHandler):
                 actions.append(action)
                 state._status = 'WaitTextInput'
             else:
-                state._status = 'Done'
+                self.customize_hook(state, userInput, actions)
             return True
         else:
             return True
@@ -224,3 +237,74 @@ class SelectDomainHandler(BaseQAHandler):
             return True
         else:
             return False
+
+class GetPlaceHandler(GetHandler):
+    def __init__(self, params, modules):
+        super(GetPlaceHandler, self).__init__(params, modules)
+        print('GetPlaceHandler init')
+    def accepted(self, state):
+        if not super(GetPlaceHandler, self).accepted(state):
+            return not self.is_valid(state)
+        return True
+    def understanding(self, state, text):
+        return super(GetPlaceHandler, self).understanding(state, text)
+    def execute(self, state, userInput, actions):
+        return super(GetPlaceHandler, self).execute(state, userInput, actions)
+    def is_valid(self, state):
+        env = state._session._env
+        current_place = env[self._required]['name']
+        result = get_city(current_place.encode('utf-8'))
+        print(result)
+        if isinstance(result, list) and len(result) == 1:
+            env = state._session._env
+            env[self._required]['id'] = result[0]['basic']['id']
+            return True
+        return False
+    def customize_hook(self, state, userInput, actions):
+        if self.is_valid(state):
+            state._status = 'Done'
+        else:
+            action = Action('ShowPlainText')
+            action.setText(u'{}不在可查询范围里'.format(current_place))
+            actions.append(action)
+        return
+
+class GetDateHandler(GetHandler):
+    def __init__(self, params, modules):
+        super(GetDateHandler, self).__init__(params, modules)
+    def accepted(self, state):
+        if not super(GetDateHandler, self).accepted(state):
+            return not self.is_valid(state)
+        return True
+    def understanding(self, state, text):
+        return super(GetDateHandler, self).understanding(state, text)
+    def execute(self, state, userInput, actions):
+        return super(GetDateHandler, self).execute(state, userInput, actions)
+    def is_valid(self, state):
+        env = state._session._env
+        date_obj = env[self._required]
+        if 'ymd' == date_obj['type']:
+            if 'year' not in date_obj:
+                date_obj['year'] = datetime.date.today().year
+            m_date = datetime.datetime(int(date_obj['year']), int(date_obj['mon']), int(date_obj['day'])).date()
+        elif 'today' == date_obj['type']:
+            m_date = datetime.date.today()
+        elif 'tomorrow' == date_obj['type']:
+            m_date = datetime.date.today() + datetime.timedelta(days=1)
+        print(m_date)
+        base = datetime.date.today()
+        valid_dates = [base + datetime.timedelta(days=x) for x in range(0, 3)]
+        if m_date in valid_dates:
+            env = state._session._env
+            env[self._required]['time'] = m_date.strftime('%Y-%m-%d')
+            return True
+        else:
+            return False
+    def customize_hook(self, state, userInput, actions):
+        if self.is_valid(state):
+            state._status = 'Done'
+        else:
+            action = Action('ShowPlainText')
+            action.setText(u'只支持查询今天、明天、后天的天气')
+            actions.append(action)
+        return
