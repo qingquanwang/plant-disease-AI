@@ -86,7 +86,7 @@ class DisplayWeatherHandler(BaseQAHandler):
             if m_date in info:
                 result = info
                 break
-        action = Action('ShowPlainText')
+        action = Action('ShowNewsText')
         # reply = self._nlr.use_template(self._msgTemplateId, state._session._env)
         # reply = reply.format(u'date', u'where', u'晴 1~16度')
         action.setText(result)

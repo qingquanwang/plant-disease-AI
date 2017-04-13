@@ -48,18 +48,23 @@ class Handle(object):
         else:
             print('dialog already inited')
 
-    def DoAction(self, actions):
+    def DoAction(self, actions, toUser, fromUser):
         ret = ''
         if not actions:
             ret = 'no action'
         elif len(actions) > 1:
             ret = 'too many actions'
-        elif actions[0]._type != 'ShowPlainText':
-            ret = 'unexpected action'
         else:
             # actions[0].debugMsg()
-            ret = actions[0]._text.encode('utf-8')
-        return ret
+            if actions[0]._type == 'ShowPlainText':
+                ret = actions[0]._text.encode('utf-8')
+            elif actions[0]._type == 'ShowNewsText':
+                articles = []
+                articles.append(reply.Article('这可能是苹果白粉病', '', 'http://www.xiaogu-tech.com/img/wx/cogik-rect.png', 'http://www.baidu.com/'))
+                articles.append(reply.Article('晴\n21℃/8℃', '', 'http://i.tq121.com.cn/i/mobile/images/d00.png', 'http://www.baidu.com/'))
+                replyMsg = reply.NewsMsg(toUser, fromUser, 2, articles)
+                return replyMsg
+        return reply.TextMsg(toUser, fromUser, ret)
 
     def HandleUserMsg(self, usr, recMsg, dialog, toUser, fromUser):
         state = State()
@@ -70,8 +75,7 @@ class Handle(object):
         dialog.execute(state, userInput, actions)
         state.debugMsg()
         usr.set_info('state', state.to_str())
-        content = self.DoAction(actions)
-        replyMsg = reply.TextMsg(toUser, fromUser, content)
+        replyMsg = self.DoAction(actions, toUser, fromUser)
         if state._status == 'END':
             usr.reset()
         return replyMsg.send()
