@@ -79,9 +79,11 @@ class WeatherManager(object):
             wi.date = today + datetime.timedelta(days=day_delta)
             imgs = day_li.select('div img')
             wi.img_day = imgs[0].get('src')
-            wi.img_night = imgs[1].get('src')
+            if len(imgs) > 1:
+                wi.img_night = imgs[1].get('src')
             wi.temp_low = day_li.select('span.temperature')[0].string.replace('/', '')
-            wi.temp_high = day_li.select('span.temperature')[1].string.replace('/', '')
+            if len(day_li.select('span.temperature')) > 1:
+                wi.temp_high = day_li.select('span.temperature')[1].string.replace('/', '')
             # print(wi)
             day_delta += 1
             weather_info_15d.append(wi)
@@ -97,7 +99,9 @@ class WeatherManager(object):
             wi = weather_info_15d[index]
             wi.txt = day_li.select('p.wea')[0].string
             wind_spans = day_li.select('p.win span')
-            wi.wind_dir = wind_spans[0].get('title') + u'转' + wind_spans[1].get('title')
+            wi.wind_dir = wind_spans[0].get('title')
+            if len(wind_spans) > 1:
+                wi.wind_dir += u'转' + wind_spans[1].get('title')
             wi.wind_str = day_li.select('p.win i')[0].string
             print(wi)
             index += 1

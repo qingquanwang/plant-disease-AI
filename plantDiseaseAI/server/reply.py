@@ -35,12 +35,13 @@ class TextMsg(Msg):
 class Article(object):
     def __init__(self, title, desc, picurl, url):
         self.__dict = dict()
-        self.__dict['Title'] = title
-        self.__dict['Description'] = desc
-        self.__dict['PicUrl'] = picurl
-        self.__dict['Url'] = url
+        self.__dict['Title'] = title.encode('utf-8')
+        self.__dict['Description'] = desc.encode('utf-8')
+        self.__dict['PicUrl'] = picurl.encode('utf-8')
+        self.__dict['Url'] = url.encode('utf-8')
 
     def send(self):
+        print(self.__dict)
         XmlForm = """
         <item>
         <Title><![CDATA[{Title}]]></Title>
@@ -49,7 +50,6 @@ class Article(object):
         <Url><![CDATA[{Url}]]></Url>
         </item>
         """
-        print(XmlForm.format(**self.__dict))
         return XmlForm.format(**self.__dict)
 
 

@@ -86,22 +86,27 @@ class DisplayWeatherHandler(BaseQAHandler):
         item0 = {}
         item0['title'] = '查询' + env['place']['name'].encode('utf-8') + '天气 powered by Cogik'
         item0['desc'] = ''
-        item0['img'] = 'http://www.xiaogu-tech.com/img/wx/cogik-rect.png'
-        item0['click'] = 'http://www.xiaogu-tech.com/'
+        item0['picurl'] = 'http://www.xiaogu-tech.com/img/wx/cogik-rect.png'
+        item0['url'] = 'http://www.xiaogu-tech.com/'
         result.append(item0)
         for wi in weather_info_15d:
             if wi.date.strftime('%Y-%m-%d') == m_date:
                 item1 = {}
                 temp = wi.date.strftime('%Y-%m-%d') + '\t' + date_to_weekday(wi.date) + '\n'
-                temp += wi.temp_high.encode('utf-8') + '/' + wi.temp_low.encode('utf-8') + '\n'
+                if wi.temp_high:
+                    temp += wi.temp_high.encode('utf-8') + '/' + wi.temp_low.encode('utf-8') + '\n'
+                else:
+                    temp += wi.temp_low.encode('utf-8') + '\n'
                 temp += wi.wind_dir.encode('utf-8') + '\t' + wi.wind_str.encode('utf-8') + '\n'
                 item1['title'] = temp
                 item1['desc'] = ''
-                item1['img'] = wi.img_day
-                item1['click'] = 'http://www.xiaogu-tech.com/'
+                item1['picurl'] = wi.img_day
+                item1['url'] = 'http://www.xiaogu-tech.com/'
                 result.append(item1)
                 break
-        json_str = json.dumps(result)
+        json_str = json.dumps(result, ensure_ascii=False)
+        print('msm')
+        print(type(json_str))
         print(json_str)
         # infos = reply.split('|||')
         # result = u'未找到天气数据'
