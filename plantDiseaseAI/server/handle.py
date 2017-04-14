@@ -8,6 +8,7 @@ import traceback
 from media import Media
 import user
 import util
+import json
 
 from plantDiseaseAI.backend.DictManager import *
 from plantDiseaseAI.backend.nlu import *
@@ -60,8 +61,18 @@ class Handle(object):
                 ret = actions[0]._text.encode('utf-8')
             elif actions[0]._type == 'ShowNewsText':
                 articles = []
-                articles.append(reply.Article('这可能是苹果白粉病', '', 'http://www.xiaogu-tech.com/img/wx/cogik-rect.png', 'http://www.baidu.com/'))
-                articles.append(reply.Article('晴\n21℃/8℃', '', 'http://i.tq121.com.cn/i/mobile/images/d00.png', 'http://www.baidu.com/'))
+                objs = json.loads(actions[0]._text)
+                print(objs)
+                for obj in objs:
+                articles.append(reply.Article(obj[0], obj[1], obj[2], obj[3]))
+                # articles.append(reply.Article(
+                #     '这可能是苹果白粉病', '',
+                #     'http://www.xiaogu-tech.com/img/wx/cogik-rect.png',
+                #     'http://www.baidu.com/'))
+                # articles.append(reply.Article(
+                #     '晴\n21℃/8℃', '',
+                #     'http://i.tq121.com.cn/i/mobile/images/d00.png',
+                #     'http://www.baidu.com/'))
                 replyMsg = reply.NewsMsg(toUser, fromUser, 2, articles)
                 return replyMsg
         return reply.TextMsg(toUser, fromUser, ret)

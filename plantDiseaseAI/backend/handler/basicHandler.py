@@ -62,6 +62,7 @@ class DummyTestHandler(BaseHandler):
             return True
         else:
             return True
+
 class BaseQAHandler(BaseHandler):
     # params is the spec of the handler
     def __init__(self, params, modules):

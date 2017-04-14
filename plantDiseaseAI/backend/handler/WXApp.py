@@ -7,7 +7,7 @@ from plantDiseaseAI.backend.nlu import *
 from plantDiseaseAI.backend.nlr import *
 from plantDiseaseAI.backend.Interaction import *
 from plantDiseaseAI.backend.handler.basicHandler import *
-from plantDiseaseAI.utils.weather import *
+from plantDiseaseAI.utils.weather_china import *
 
 class ChoiceHandler(BaseQAHandler):
     def __init__(self, params, modules):
@@ -79,17 +79,39 @@ class DisplayWeatherHandler(BaseQAHandler):
         print(env)
         city_id = env['place']['id']
         m_date = env['date']['time']
-        reply = get_weather(city_id)
-        infos = reply.split('|||')
-        result = u'未找到天气数据'
-        for info in infos:
-            if m_date in info:
-                result = info
+        mgr = WeatherManager()
+        weather_info_15d = mgr.get_weather(city_id)
+        result = []
+        item0 = {}
+        item0['title'] = 'Cogik Weather'
+        item0['desc'] = ''
+        item0['img'] = 'http://www.xiaogu-tech.com/img/wx/cogik-rect.png'
+        item0['click'] = 'http://www.xiaogu-tech.com/'
+        result.append(item0)
+        for wi in weather_info_15d:
+            if wi.date.strftime('%Y-%m-%d') == m_date:
+                item1 = {}
+                temp = wi.date.strftime('%Y-%m-%d') + '\n'
+                temp += wi.temp_high.encode('utf-8') + '/' + wi.temp_low.encode('utf-8') + '\n'
+                temp += wi.wind_dir.encode('utf-8') + wi.wind_str.encode('utf-8')) + '\n'
+                item1['title'] = temp
+                item1['desc'] = ''
+                item1['img'] = wi.img_day
+                item1['click'] = 'http://www.xiaogu-tech.com/'
+                result.append(item1)
                 break
+        json_str = json.dumps(result)
+        print(json_str)
+        # infos = reply.split('|||')
+        # result = u'未找到天气数据'
+        # for info in infos:
+        #     if m_date in info:
+        #         result = info
+        #         break
         action = Action('ShowNewsText')
         # reply = self._nlr.use_template(self._msgTemplateId, state._session._env)
         # reply = reply.format(u'date', u'where', u'晴 1~16度')
-        action.setText(result)
+        action.setText(json_str)
         actions.append(action)
         state._status = 'Done'
         return True
@@ -253,11 +275,12 @@ class GetPlaceHandler(GetHandler):
     def is_valid(self, state):
         env = state._session._env
         current_place = env[self._required]['name']
-        result = get_city(current_place.encode('utf-8'))
+        mgr = WeatherManager()
+        result = mgr.get_city(current_place.encode('utf-8'))
         print(result)
-        if isinstance(result, list) and len(result) == 1:
+        if result not None:
             env = state._session._env
-            env[self._required]['id'] = result[0]['basic']['id']
+            env[self._required]['id'] = result
             return True
         return False
     def customize_hook(self, state, userInput, actions):
@@ -293,7 +316,7 @@ class GetDateHandler(GetHandler):
             m_date = datetime.date.today() + datetime.timedelta(days=1)
         print(m_date)
         base = datetime.date.today()
-        valid_dates = [base + datetime.timedelta(days=x) for x in range(0, 3)]
+        valid_dates = [base + datetime.timedelta(days=x) for x in range(0, 15)]
         if m_date in valid_dates:
             env = state._session._env
             env[self._required]['time'] = m_date.strftime('%Y-%m-%d')
@@ -305,6 +328,6 @@ class GetDateHandler(GetHandler):
             state._status = 'Done'
         else:
             action = Action('ShowPlainText')
-            action.setText(u'只支持查询今天、明天、后天的天气')
+            action.setText(u'只支持查询15天内的天气')
             actions.append(action)
         return
