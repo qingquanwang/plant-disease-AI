@@ -84,7 +84,7 @@ class DisplayWeatherHandler(BaseQAHandler):
         weather_info_15d = mgr.get_weather(city_id)
         result = []
         item0 = {}
-        item0['title'] = 'Cogik Weather'
+        item0['title'] = '查询' + env['place']['name'].encode('utf-8') + '天气 powered by Cogik'
         item0['desc'] = ''
         item0['img'] = 'http://www.xiaogu-tech.com/img/wx/cogik-rect.png'
         item0['click'] = 'http://www.xiaogu-tech.com/'
