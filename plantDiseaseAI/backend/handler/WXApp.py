@@ -8,6 +8,7 @@ from plantDiseaseAI.backend.nlr import *
 from plantDiseaseAI.backend.Interaction import *
 from plantDiseaseAI.backend.handler.basicHandler import *
 from plantDiseaseAI.utils.weather_china import *
+from plantDiseaseAI.utils.common import *
 
 class ChoiceHandler(BaseQAHandler):
     def __init__(self, params, modules):
@@ -91,9 +92,9 @@ class DisplayWeatherHandler(BaseQAHandler):
         for wi in weather_info_15d:
             if wi.date.strftime('%Y-%m-%d') == m_date:
                 item1 = {}
-                temp = wi.date.strftime('%Y-%m-%d') + '\n'
+                temp = wi.date.strftime('%Y-%m-%d') + '\t' + date_to_weekday(wi.date) + '\n'
                 temp += wi.temp_high.encode('utf-8') + '/' + wi.temp_low.encode('utf-8') + '\n'
-                temp += wi.wind_dir.encode('utf-8') + wi.wind_str.encode('utf-8')) + '\n'
+                temp += wi.wind_dir.encode('utf-8') + '\t' + wi.wind_str.encode('utf-8') + '\n'
                 item1['title'] = temp
                 item1['desc'] = ''
                 item1['img'] = wi.img_day
@@ -263,7 +264,6 @@ class SelectDomainHandler(BaseQAHandler):
 class GetPlaceHandler(GetHandler):
     def __init__(self, params, modules):
         super(GetPlaceHandler, self).__init__(params, modules)
-        print('GetPlaceHandler init')
     def accepted(self, state):
         if not super(GetPlaceHandler, self).accepted(state):
             return not self.is_valid(state)
@@ -278,7 +278,7 @@ class GetPlaceHandler(GetHandler):
         mgr = WeatherManager()
         result = mgr.get_city(current_place.encode('utf-8'))
         print(result)
-        if result not None:
+        if result is not None:
             env = state._session._env
             env[self._required]['id'] = result
             return True

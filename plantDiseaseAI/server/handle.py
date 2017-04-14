@@ -64,7 +64,7 @@ class Handle(object):
                 objs = json.loads(actions[0]._text)
                 print(objs)
                 for obj in objs:
-                articles.append(reply.Article(obj[0], obj[1], obj[2], obj[3]))
+                    articles.append(reply.Article(obj['title'].encode('utf-8'), obj['desc'].encode('utf-8'), obj['img'], obj['click']))
                 # articles.append(reply.Article(
                 #     '这可能是苹果白粉病', '',
                 #     'http://www.xiaogu-tech.com/img/wx/cogik-rect.png',

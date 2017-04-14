@@ -117,6 +117,7 @@ class WeatherManager(object):
             print(wi)
             index += 1
 
+        return weather_info_15d
 
 
 if __name__ == '__main__':
