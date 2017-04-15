@@ -50,6 +50,8 @@ if __name__ == '__main__':
     parser.add_argument('--ss', type=str,
                         default='./data/test/Semantics/wx-test-semantics.json',
                         help='semantics file')
+    parser.add_argument('--ii', type=str,
+                        help='test dialog file')
 
     args = parser.parse_args()
     dic = DictManager()
@@ -84,12 +86,30 @@ if __name__ == '__main__':
     actions = []
     state.debugMsg()
 
+    # 读取预先定义的输入文件
+    predefined_inputs = []
+    if args.ii:
+        with open(args.ii, 'r') as f:
+            for line in f:
+                line = line.strip()
+                predefined_inputs.append(line)
+    if predefined_inputs:
+        print('读取预先定义的输入')
+        print('='*10)
+        for m_input in predefined_inputs:
+            print(m_input)
+        print('='*10)
+
     dialog.execute(state, userInput, actions)
     doActions(actions)
 
     # Interaction
     while True:
-        line = raw_input('usr > ')
+        if predefined_inputs:
+            line = predefined_inputs.pop(0)
+            print('predefined > ' + line)
+        else:
+            line = raw_input('usr > ')
         text = line.strip('\n').decode('utf-8')
         userInput = UserInput('Text', text)
         actions = []
