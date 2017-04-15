@@ -105,9 +105,6 @@ class DisplayWeatherHandler(BaseQAHandler):
                 result.append(item1)
                 break
         json_str = json.dumps(result, ensure_ascii=False)
-        print('msm')
-        print(type(json_str))
-        print(json_str)
         # infos = reply.split('|||')
         # result = u'未找到天气数据'
         # for info in infos:
@@ -117,7 +114,7 @@ class DisplayWeatherHandler(BaseQAHandler):
         action = Action('ShowNewsText')
         # reply = self._nlr.use_template(self._msgTemplateId, state._session._env)
         # reply = reply.format(u'date', u'where', u'晴 1~16度')
-        action.setText(json_str)
+        action.setText(json_str.decode('utf-8'))
         actions.append(action)
         state._status = 'Done'
         return True
