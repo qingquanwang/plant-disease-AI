@@ -6,6 +6,7 @@ from plantDiseaseAI.backend.Interaction import *
 from plantDiseaseAI.backend.handler.basicHandler import *
 from plantDiseaseAI.backend.handler.PlantDiseaseApp import *
 from plantDiseaseAI.backend.handler.WXApp import *
+from plantDiseaseAI.backend.handler.BHApp import *
 
 import re
 import json

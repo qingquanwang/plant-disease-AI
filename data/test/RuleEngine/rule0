@@ -9,7 +9,7 @@ internal city = { {</place/city>}#city }
 internal airport = [
     { @city ["机场" "飞机场"] }
     { {</place/province>}? </place/airport> ["机场" "飞机场"]? }
-]#airport 
+]#airport
 
 
 
@@ -35,7 +35,7 @@ Weather = [
 
 
 
-choice = [
-    {"滨海新区"}
-    {"啊"}
-]`domain="choice"`
+binhai = [
+    {"滨海"}
+    {'bh'}
+]`domain="binhai"`

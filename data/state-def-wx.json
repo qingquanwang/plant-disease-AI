@@ -5,11 +5,20 @@
             "Handler" : "SelectDomainHandler",
             "Out": [
                 "weather",
-                "choice"
+                "binhai"
             ],
             "msg": {
                 "welcomeTemplateId": "Wx",
                 "repeatTemplateId": "WxRepeat"
+            },
+            "nlu" : "NLU",
+            "nlr" : "NLR"
+        },
+        {
+            "Name" : "binhai",
+            "Handler" : "DisplayBHHandler",
+            "msg": {
+                "tipsTemplateId": "Binhai"
             },
             "nlu" : "NLU",
             "nlr" : "NLR"

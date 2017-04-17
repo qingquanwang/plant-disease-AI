@@ -105,5 +105,21 @@
                 "domain=${domain}:required:override"
             ]
         }
+    ],
+    "Binhai": [
+        {
+            "Name": "BinhaiRule0",
+            "topK": "3",
+            "threshold": "0.5",
+            "sources": "",
+            "conditionType": "annotation",
+            "extractionType": "annotation",
+            "conditions": [
+                "${domain}==binhai"
+            ],
+            "extractions": [
+                "domain=${domain}:required:override"
+            ]
+        }
     ]
 }
