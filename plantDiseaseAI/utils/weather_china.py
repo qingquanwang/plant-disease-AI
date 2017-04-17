@@ -89,10 +89,11 @@ class WeatherManager(object):
             weather_info_15d.append(wi)
 
         # 获取7天的天气描述、风力
+        print('获取7天的天气描述、风力')
         r = requests.get(WEATHER_URL_2.format(city))
         source = r.text.encode(r.encoding)
         soup = BeautifulSoup(source, 'lxml')
-        tags = soup.select('div#7d li.skyid')
+        tags = soup.select_one('div#7d ul').select('li')
         today = datetime.date.today()
         index = 0
         for day_li in tags:
@@ -107,6 +108,7 @@ class WeatherManager(object):
             index += 1
 
         # 获取8-15天的天气描述、风力
+        print('获取8-15天的天气描述、风力')
         r = requests.get(WEATHER_URL_3.format(city))
         source = r.text.encode(r.encoding)
         soup = BeautifulSoup(source, 'lxml')
@@ -126,6 +128,6 @@ class WeatherManager(object):
 
 if __name__ == '__main__':
     mgr = WeatherManager()
-    city_id = mgr.get_city('沈阳')
+    city_id = mgr.get_city('无锡')
     print(city_id)
     print mgr.get_weather(city_id)
