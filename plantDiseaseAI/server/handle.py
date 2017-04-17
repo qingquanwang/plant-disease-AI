@@ -64,7 +64,7 @@ class Handle(object):
                 objs = json.loads(actions[0]._text)
                 for obj in objs:
                     articles.append(reply.Article(**obj))
-                replyMsg = reply.NewsMsg(toUser, fromUser, 2, articles)
+                replyMsg = reply.NewsMsg(toUser, fromUser, len(articles), articles)
                 return replyMsg
         return reply.TextMsg(toUser, fromUser, ret)
 
