@@ -75,11 +75,39 @@ class DisplayWeatherHandler(BaseQAHandler):
         self._msgTemplateId = params['msg']['MsgTemplateId']
     def accepted(self, state):
         return True
+    def get_date(self, env):
+        m_date = datetime.date.today()
+        if 'date' in env['weather']:
+            input_time = env['weather']['date']
+            # try to get
+            anaList = []
+            blocks = {}
+            self._nlu.tagText(anaList, input_time, True)
+            self._semantic.extract(anaList, blocks, '')
+            blockStr = json.dumps(blocks, encoding='utf-8')
+            print('blockStr = ' + blockStr)
+            if 'date' in blocks:
+                date_obj = blocks['date']
+                if 'ymd' == date_obj['type']:
+                    if 'year' not in date_obj:
+                        date_obj['year'] = datetime.date.today().year
+                    m_date = datetime.datetime(int(date_obj['year']), int(date_obj['mon']), int(date_obj['day'])).date()
+                elif 'today' == date_obj['type']:
+                    m_date = datetime.date.today()
+                elif 'tomorrow' == date_obj['type']:
+                    m_date = datetime.date.today() + datetime.timedelta(days=1)
+                print(m_date)
+                base = datetime.date.today()
+                valid_dates = [base + datetime.timedelta(days=x) for x in range(0, 15)]
+                if m_date not in valid_dates:
+                    m_date = datetime.date.today()
+        return m_date.strftime('%Y-%m-%d')
     def execute(self, state, userInput, actions):
         env = state._session._env
         print(env)
         city_id = env['place']['id']
-        m_date = env['date']['time']
+        # m_date = env['date']['time']
+        m_date = self.get_date(env)
         mgr = WeatherManager()
         weather_info_15d = mgr.get_weather(city_id)
         result = []

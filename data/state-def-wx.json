@@ -27,7 +27,6 @@
             "Out": [
                 "GetFlightFrom",
                 "GetFlightTo",
-                "GetFlightDate",
                 "DisplayFlight"
             ]
         },
@@ -101,7 +100,6 @@
             "nlu" : "NLU",
             "nlr" : "NLR",
             "Out": [
-                "GetDate",
                 "GetPlace",
                 "DisplayWeather"
             ]
