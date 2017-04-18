@@ -92,6 +92,7 @@ class RuleTagger(Tagger):
         else:
             matched = False
             for edge in node._edges:
+                #pp.pprint(edge._predicate)
                 if ctx._continued == False:
                     break
                 if edge._predicate == None:
@@ -102,7 +103,7 @@ class RuleTagger(Tagger):
                 else:
                     if pos not in ctx._inputGraph._startMap:
                         matched = False
-                        break
+                        continue
                     # Find the overlap of edges
                     spanEdges = ctx._inputGraph._startMap[pos]
                     for spanId in spanEdges:
