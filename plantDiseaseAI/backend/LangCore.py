@@ -104,8 +104,15 @@ class Analysis(object):
             else:
                 if seq._prob > dedupedSeq[sigHash[sig]]._prob:
                     dedupedSeq[sigHash[sig]] = seq
-        sorted(dedupedSeq, key = lambda seq : seq._prob, reverse=True)
-        self._seqs = dedupedSeq
+
+        self._seqs = sorted(dedupedSeq, key = lambda seq : seq._prob, reverse=True)
+
+
+    def dumpAllSeq(self):
+        res = []
+        for seq in self._seqs:
+            res.append(seq.dump(self._graph) + '\002' + seq._source + '\002' + str(seq._prob))
+        return '\003'.join(res)
 
     def dumpBestSeq(self, dump_tagger=False):
         if len(self._seqs) > 0:

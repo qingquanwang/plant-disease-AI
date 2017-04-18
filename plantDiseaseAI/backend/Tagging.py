@@ -70,7 +70,7 @@ class SpanGraph(object):
         # tokens[i:i+j+1]
         toks = []
         for l in range(j+1):
-            if tokens[i+l]._type != 'tok':
+            if tokens[i+l]._type in ['splitter', 'punct']:
                 return ''
             else:
                 toks.append(tokens[i+l]._text)
