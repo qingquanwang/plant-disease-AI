@@ -5,7 +5,8 @@
             "Handler" : "SelectDomainHandler",
             "Out": [
                 "weather",
-                "binhai"
+                "binhai",
+                "flight"
             ],
             "msg": {
                 "welcomeTemplateId": "Wx",
@@ -14,6 +15,63 @@
             "nlu" : "NLU",
             "nlr" : "NLR"
         },
+        {
+            "Name" : "flight",
+            "Handler" : "OverallHandler",
+            "msg": {
+                "tipTemplateId": "Flight"
+            },
+            "properties": ["from","to","date"],
+            "nlu" : "NLU",
+            "nlr" : "NLR",
+            "Out": [
+                "GetFlightFrom",
+                "GetFlightTo",
+                "GetFlightDate",
+                "DisplayFlight"
+            ]
+        },
+            {
+                "Name" : "GetFlightDate",
+                "Handler" : "GetFlightDateHandler",
+                "msg": {
+                    "MsgTemplateId": "GetDateFlight"
+                },
+                "required": "date",
+                "nlu" : "NLU",
+                "nlr" : "NLR"
+            },
+            {
+                "Name" : "GetFlightFrom",
+                "Handler" : "GetFlightPlaceHandler",
+                "msg": {
+                    "MsgTemplateId": "GetFrom"
+                },
+                "required": "from",
+                "semantics": "place",
+                "nlu" : "NLU",
+                "nlr" : "NLR"
+            },
+            {
+                "Name" : "GetFlightTo",
+                "Handler" : "GetFlightPlaceHandler",
+                "msg": {
+                    "MsgTemplateId": "GetTo"
+                },
+                "required": "to",
+                "semantics": "place",
+                "nlu" : "NLU",
+                "nlr" : "NLR"
+            },
+            {
+                "Name" : "DisplayFlight",
+                "Handler" : "DisplayFlightHandler",
+                "msg": {
+                    "MsgTemplateId": "DisplayFlight"
+                },
+                "nlu" : "NLU",
+                "nlr" : "NLR"
+            },
         {
             "Name" : "binhai",
             "Handler" : "DisplayBHHandler",

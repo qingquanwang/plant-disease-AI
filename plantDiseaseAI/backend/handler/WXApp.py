@@ -123,6 +123,11 @@ class GetHandler(BaseQAHandler):
     def __init__(self, params, modules):
         super(GetHandler, self).__init__(params, modules)
         self._required = params['required']
+        # 用于required和semantics不同的情况，例如机票中的from, to的semantic都是place
+        if 'semantics' in params:
+            self._semantic_required = params['semantics']
+        else:
+            self._semantic_required = self._required
         self._msgTemplateId = params['msg']['MsgTemplateId']
     def accepted(self, state):
         if self.has_property(state, self._required):
@@ -144,7 +149,8 @@ class GetHandler(BaseQAHandler):
         self._semantic.extract(anaList, blocks, '')
         blockStr = json.dumps(blocks, encoding='utf-8')
         print('blockStr = ' + blockStr)
-        if self._required in blocks:
+        if self._semantic_required in blocks:
+            blocks[self._required] = blocks.pop(self._semantic_required)
             state._session._env.update(blocks)
             return True
         else:
@@ -290,7 +296,7 @@ class GetPlaceHandler(GetHandler):
             state._status = 'Done'
         else:
             action = Action('ShowPlainText')
-            action.setText(u'{}不在可查询范围里'.format(current_place))
+            action.setText(u'{}不在可查询范围里'.format(userInput._input))
             actions.append(action)
         return
 

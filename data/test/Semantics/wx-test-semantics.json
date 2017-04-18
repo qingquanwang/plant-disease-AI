@@ -46,10 +46,10 @@
             ],
             "extractions": [
                 "domain=${domain}:required:override",
-                "Flight.from=${slots.from}:optional:override",
-                "Flight.to=${slots.to}:optional:override",
-                "Flight.date=${slots.date}:optional:override",
-                "Flight.indent=${intent}:optional:override"
+                "flight.from=${slots.from}:optional:override",
+                "flight.to=${slots.to}:optional:override",
+                "flight.date=${slots.date}:optional:override",
+                "flight.indent=${intent}:optional:override"
             ]
         }
     ],

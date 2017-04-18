@@ -8,3 +8,7 @@ GetDate	请问要查询什么时候的天气
 GetPlace	请问要查询哪里的天气
 DisplayWeather	{}{}的天气是{}
 Binhai	您可以输入任何社保相关的问题
+Flight	您可以查询：“今天上海到沈阳的航班”
+GetDateFlight	请问要查询什么时候的航班
+GetFrom	请问要查询从哪里出发的航班
+GetTo	请问要查询去往哪里的航班
