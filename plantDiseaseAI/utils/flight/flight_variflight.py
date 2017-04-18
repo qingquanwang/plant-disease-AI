@@ -50,6 +50,9 @@ class FlightManager(object):
         if city in FlightManager.airport_list:
             return FlightManager.airport_list[city]['airportCode']
         else:
+            for key, info in FlightManager.airport_list.iteritems():
+                if city in key:
+                    return info['airportCode']
             return FlightManager.UNKNOWN_CITY
 
     def get_flight(self, from_airport, to_airport, when):

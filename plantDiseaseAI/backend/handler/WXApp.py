@@ -144,7 +144,7 @@ class DisplayWeatherHandler(BaseQAHandler):
         # reply = reply.format(u'date', u'where', u'晴 1~16度')
         action.setText(json_str.decode('utf-8'))
         actions.append(action)
-        state._status = 'Done'
+        state._status = 'END'
         return True
 
 class GetHandler(BaseQAHandler):

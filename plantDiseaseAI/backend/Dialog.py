@@ -81,9 +81,14 @@ class DialogManager(object):
             # print(state._curTask + '.accepted() = ' + str(self._tasks[state._curTask]._handler.accepted(state)))
             if not self._tasks[state._curTask]._handler.accepted(state):
                 # 跳过该task，Out也不加入处理队列
-                state._curTask = state._taskQueue.popleft()
-                state._status = 'Run'
-                temp_input = userInput
+                if state._taskQueue:
+                    state._curTask = state._taskQueue.popleft()
+                    state._status = 'Run'
+                    temp_input = userInput
+                else:
+                    state._status = 'END'
+                    loop = False
+                    break
             else:
                 res = self._tasks[state._curTask]._handler.execute(state, temp_input, actions)
                 if len(actions) > 0:
@@ -104,4 +109,7 @@ class DialogManager(object):
                     state._curTask = state._taskQueue.popleft()
                     state._status = 'Run'
                     temp_input = userInput
+                elif state._status == 'END':
+                    loop = False
+                    break
         return True
