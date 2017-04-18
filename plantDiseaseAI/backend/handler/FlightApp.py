@@ -100,7 +100,7 @@ class DisplayFlightHandler(BaseQAHandler):
         index = 1
         for fi in flight_list:
             item1 = {}
-            temp = '{} {}  {}  {}  {}'.format(fi.carrier, fi.code, fi.departure_plan, fi.arrival, fi.status)
+            temp = '{} {}\n{}  {}\n{}'.format(fi.carrier, fi.code, fi.departure_plan, fi.arrival_plan, fi.status)
             item1['title'] = temp
             item1['desc'] = ''
             item1['picurl'] = fi.img
