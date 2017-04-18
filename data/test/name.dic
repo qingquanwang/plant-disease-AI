@@ -6,6 +6,7 @@
 德宏芒市	/place/airport	place-airport-67
 清远	/place/city	place-city-231
 福建	/place/province	/place/province-3
+北京首都	/place/airport	place-airport-27
 莆田	/place/city	place-city-290
 佛山	/place/city	place-city-36
 南通兴东	/place/airport	place-airport-33
@@ -181,7 +182,12 @@
 二连浩特	/place/city	place-city-29
 榆林榆阳	/place/airport	place-airport-85
 中山	/place/city	place-city-14
-北京首都	/place/airport	place-airport-27
+2018	/year	year-2018
+2015	/year	year-2015
+2014	/year	year-2014
+2017	/year	year-2017
+2016	/year	year-2016
+2013	/year	year-2013
 三沙	/place/city	place-city-5
 大同东王庄	/place/airport	place-airport-47
 机票	/domain/flight	domain-flight-0
@@ -245,6 +251,7 @@
 腾冲驼峰	/place/airport	place-airport-116
 永新	/place/city	place-city-200
 常德	/place/city	place-city-122
+落户政策	/gov/inquire	gov-inquire-luohu
 汕头外砂	/place/airport	place-airport-90
 许昌	/place/city	place-city-302
 宜都	/place/city	place-city-110

@@ -40,3 +40,9 @@ binhai = [
     {"滨海"}
     {'bh'}
 ]`domain="binhai"`
+
+gov = [
+    ^{ [</place/province> </place/city>]?  </gov/inquire> }
+]`domain="gov"`
+
+year = { </year> {"年"}? }`domain="year"`

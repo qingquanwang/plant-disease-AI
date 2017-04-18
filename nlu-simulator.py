@@ -68,6 +68,7 @@ if __name__ == '__main__':
             #if ana is None:
             #    continue
             analysis = ana.dumpBestSeq(True)
+            #analysis = ana.dumpAllSeq()
             #print analysis.encode('utf-8')
             res.append(analysis)
         print rawText.encode('utf-8') + '\t' + blockStr + '\t' + ('\001'.join(res)).encode('utf-8')

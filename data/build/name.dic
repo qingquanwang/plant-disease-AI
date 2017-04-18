@@ -262,7 +262,6 @@
 没精神	/symptom/texture	没精神
 热情果	/plant	热情果
 末利	/plant	末利
-药	/intent	intent-药
 叶鞘	/position/leaf	叶鞘
 瘤肿病	/disease	/disease-90
 高瓜	/plant	高瓜
@@ -550,6 +549,7 @@
 地踏菜等	/plant	地踏菜等
 没骨花	/plant	没骨花
 红斑病	/disease	/disease-115
+什么药	/intent	intent-medicine
 白桃	/plant	白桃
 发病期	/stage	发病期
 树兰	/plant	树兰
@@ -888,7 +888,6 @@
 角斑病	/disease	/disease-160
 芍药	/plant	芍药
 香艳梨	/plant	香艳梨
-病	/intent	intent-病
 蔫掉	/symptom/texture	蔫
 中国沼竹	/plant	中国沼竹
 蝴蝶花	/plant	蝴蝶花
@@ -1482,6 +1481,7 @@
 洛阳花	/plant	洛阳花
 狗椒	/plant	狗椒
 叶边	/position/leaf	叶边
+什么病	/intent	intent-diagnostic
 火鹤	/plant	火鹤
 彩椒	/plant	彩椒
 僧笠蕈	/plant	僧笠蕈
