@@ -20,7 +20,7 @@ class DisplayBHHandler(BaseQAHandler):
             state._status = 'WaitTextInput'
             return True
         elif state._status == 'WaitTextInput':
-            state._status = 'Done'
+            state._status = 'END'
             result = []
             mgr = BHManager()
             urls = [

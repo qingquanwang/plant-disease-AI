@@ -140,5 +140,5 @@ class DisplayFlightHandler(BaseQAHandler):
         action = Action('ShowNewsText')
         action.setText(json_str.decode('utf-8'))
         actions.append(action)
-        state._status = 'Done'
+        state._status = 'END'
         return True
