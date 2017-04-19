@@ -8,13 +8,13 @@ pp = pprint.PrettyPrinter(indent=2)
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
                description='build dict', usage='''
-               ./build-dict.py --data_root=./data/dict --output=./data/build/name.dic
+               ./build-dict.py --data_root=./data/test/dict --output=./data/test/name.dic
                ''', formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument('--data_root', type=str, 
-                         default='./data/dict',
+                         default='./data/test/dict',
                          help='directory root of dict')
     parser.add_argument('--output', type=str,
-                         default='./data/build/name.dic',
+                         default='./data/test/name.dic',
                          help='output path of dict')
     args = parser.parse_args()
     dic = DictManager()

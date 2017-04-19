@@ -58,11 +58,14 @@ class Sequence(object):
         for spanId in self._spans:
             sig.append(str(spanId))
         return '-'.join(sig)
-    def dump(self, inputGraph):
+    def dump(self, inputGraph, removeTok = False):
         res = []
         for idx in self._spans:
             span = inputGraph._spans[idx]
-            res.append('[' + span._text + '|' + span._type + ']')
+            if removeTok and span._type == 'tok':
+                continue
+            else:
+                res.append('[' + span._text + '|' + span._type + ']')
         return ''.join(res) + '\002' + self.serializeAnn()
 # Annotation on tagging sequence: 
 #   slots: slot->list[spanId]
@@ -114,12 +117,12 @@ class Analysis(object):
             res.append(seq.dump(self._graph) + '\002' + seq._source + '\002' + str(seq._prob))
         return '\003'.join(res)
 
-    def dumpBestSeq(self, dump_tagger=False):
+    def dumpBestSeq(self, dump_tagger=False, removeTok=False):
         if len(self._seqs) > 0:
             if dump_tagger:
-                return self._seqs[0].dump(self._graph) + '\002' + self._seqs[0]._source
+                return self._seqs[0].dump(self._graph, removeTok) + '\002' + self._seqs[0]._source
             else:
-                return self._seqs[0].dump(self._graph)
+                return self._seqs[0].dump(self._graph, removeTok)
         else:
             return ''
 
