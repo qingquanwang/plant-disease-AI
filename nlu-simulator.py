@@ -34,7 +34,7 @@ if __name__ == '__main__':
                         help='semantics file')
     args = parser.parse_args()
 
-    
+
     dic = DictManager()
     dic.load_dict(args.d)
 
@@ -67,7 +67,7 @@ if __name__ == '__main__':
             #pp.pprint(ana)
             #if ana is None:
             #    continue
-            analysis = ana.dumpBestSeq(True)
+            analysis = ana.dumpBestSeq(True, True)
             #analysis = ana.dumpAllSeq()
             #print analysis.encode('utf-8')
             res.append(analysis)

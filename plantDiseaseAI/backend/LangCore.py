@@ -65,9 +65,10 @@ class Sequence(object):
             if removeTok and span._type == 'tok':
                 continue
             else:
-                res.append('[' + span._text + '|' + span._type + ']')
+                # res.append('[' + span._text + '|' + span._type + ']')
+                res.append('[' + span._text +']')
         return ''.join(res) + '\002' + self.serializeAnn()
-# Annotation on tagging sequence: 
+# Annotation on tagging sequence:
 #   slots: slot->list[spanId]
 #   conclusion: k->v
 class Annotation(object):

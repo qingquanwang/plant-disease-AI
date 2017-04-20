@@ -1,4 +1,5 @@
 单位职工	gov-role-employee
+职工	gov-role-employee
 4050	gov-role-4050
 员工	gov-role-employee
 单位	gov-role-employer
@@ -13,3 +14,7 @@
 离职	gov-role-lizhi
 无业	gov-role-wuye
 无业人员	gov-role-wuye
+外地人员
+直系亲属
+本人
+配偶
