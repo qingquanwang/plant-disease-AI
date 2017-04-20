@@ -67,6 +67,7 @@ class ZhBookPreprocessor(Preprocessor):
     def t_BookQuo(self, t):
         ur'《(.+?)》'
         # print(u'parsed BookQuo word %s' % t.value)
+        t.value = t.value[1:-1]
         return t
 
     def t_Reference(self, t):

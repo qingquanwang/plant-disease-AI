@@ -38,7 +38,7 @@ if __name__ == '__main__':
                         help='semantics file')
     args = parser.parse_args()
 
-    
+
     dic = DictManager()
     dic.load_dict(args.d)
 

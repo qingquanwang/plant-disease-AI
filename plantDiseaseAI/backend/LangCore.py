@@ -67,7 +67,7 @@ class Sequence(object):
             else:
                 res.append('[' + span._text + '|' + span._type + ']')
         return ''.join(res) + '\002' + self.serializeAnn()
-# Annotation on tagging sequence: 
+# Annotation on tagging sequence:
 #   slots: slot->list[spanId]
 #   conclusion: k->v
 class Annotation(object):
