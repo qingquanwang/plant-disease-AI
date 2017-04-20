@@ -84,6 +84,12 @@ class Annotation(object):
             self._slots[k] = []
             self._slots[k].append(v)
 
+class Rewriter(object):
+    def __init__(self):
+        pass
+    def rewrite(self, spanGraph):
+        pass
+
 class Tagger(object):
     def __init__(self):
         pass

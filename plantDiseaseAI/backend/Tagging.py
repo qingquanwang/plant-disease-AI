@@ -9,7 +9,7 @@ pp = pprint.PrettyPrinter(indent = 2)
 class SpanGraph(object):
     def __init__(self):
         # spanId -> list(child span id)
-        self._next = {}
+        #self._next = {}
         # spanId -> span
         self._spans = []
         # start_pos -> list(spanId)
@@ -24,13 +24,14 @@ class SpanGraph(object):
                self._startMap[start] = []
             self._startMap[start].append(i)
 
+        '''
         for i in range(spanNum):
             child_start = start + self._spans[i]._len
             if child_start in self._startMap:
                 for child in self._startMap[child_start]:
                     self._next.append(child)
-
-    def createGraph(self, dic, text, max_ngram = 5):
+        '''
+    def createGraph(self, dic, text, max_ngram = 10):
         # break text into tokens
         tokens = list(text)
         length = len(tokens)
@@ -76,7 +77,7 @@ class SpanGraph(object):
                 toks.append(tokens[i+l]._text)
         return ''.join(toks)
 
-    def constructGraph(self, dic, tokens, max_ngram = 5):
+    def constructGraph(self, dic, tokens, max_ngram = 10):
         # use tok list generated from preprocessor to construct graph
         filtered_tokens = []
         self.filteredTokens(tokens, filtered_tokens)

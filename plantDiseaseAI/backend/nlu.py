@@ -3,6 +3,7 @@ from plantDiseaseAI.backend.LangCore import *
 from plantDiseaseAI.backend.Tagging import *
 from plantDiseaseAI.backend.preprocessor import *
 from plantDiseaseAI.backend.tagger import *
+from plantDiseaseAI.backend.rewriter import *
 import re
 import pprint
 
@@ -12,6 +13,7 @@ class NLU(object):
     def __init__(self, dic):
         self._dic = dic
         self._preprocessor = ZhBookPreprocessor()
+        self._rewriters = []
         self._taggers = []
     def setPreprocessor(self, preprocessorName):
         if preprocessorName == 'zhBook':
@@ -19,13 +21,23 @@ class NLU(object):
         else:
             raise NameError('unknown preprocessor: ' + preprocessorName)
 
+    def appendRewriter(self, rewriter):
+        self._rewriters.append(rewriter)
+
     def appendTagger(self, tagger):
         self._taggers.append(tagger)
 
     # tokens are input after preprocessing
     def tagTokens(self, toks):
-        inputGraph = SpanGraph()
-        inputGraph.constructGraph(self._dic, toks)
+        graph = SpanGraph()
+        graph.constructGraph(self._dic, toks)
+        
+        for rewriter in self._rewriters:
+            tmp_graph = rewriter.rewrite(graph)
+            graph = tmp_graph
+
+        inputGraph = graph
+
         #for span in inputGraph._spans:
         #    print 'Debug:' + span.dump().encode('utf-8')
         seqs = []

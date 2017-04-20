@@ -14,6 +14,7 @@ if __name__ == '__main__':
                 ./nlu-simulator.py --d dicFile
                                    --r ruleFile
                                    --t greedy,ruleTagger
+                                   --w removeTok
                                    --p zhBookPreprocessor
                                    --s semanticsFile"
                 ''', formatter_class = argparse.RawTextHelpFormatter)
@@ -26,6 +27,9 @@ if __name__ == '__main__':
     parser.add_argument('--t', type=str,
                         default='greedy,ruleTagger',
                         help='taggers')
+    parser.add_argument('--w', type=str,
+                        default='',
+                        help='rewriters')
     parser.add_argument('--p', type=str,
                         default='zhBook',
                         help='zhBook')
@@ -51,7 +55,14 @@ if __name__ == '__main__':
             nlu.appendTagger(tagger)
         else:
             raise NameError('unknown tagger: ' + taggerName)
-
+    
+    if args.w != '':
+        for rewriterName in args.w.split(','):
+            if rewriterName == 'removeTok':
+                rewriter = RemoveTokRewriter()
+                nlu.appendRewriter(rewriter)
+            else:
+                raise NameError('unknown rewriter: ' + rewriterName)
     semantic = SemanticBase()
     semantic.loadSemanticRules(args.s)
 
@@ -67,7 +78,7 @@ if __name__ == '__main__':
             #pp.pprint(ana)
             #if ana is None:
             #    continue
-            analysis = ana.dumpBestSeq(True)
+            analysis = ana.dumpBestSeq(True, True)
             #analysis = ana.dumpAllSeq()
             #print analysis.encode('utf-8')
             res.append(analysis)
