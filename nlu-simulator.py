@@ -78,7 +78,7 @@ if __name__ == '__main__':
             #pp.pprint(ana)
             #if ana is None:
             #    continue
-            analysis = ana.dumpBestSeq(True, True)
+            analysis = ana.dumpBestSeq(True)
             #analysis = ana.dumpAllSeq()
             #print analysis.encode('utf-8')
             res.append(analysis)
