@@ -17,7 +17,8 @@ if __name__ == '__main__':
     graph = SpanGraph()
     #text = u'abcdef'
     #text = u'a ab,def。cde"sdfsadfasdd" 3.0'
-    text = u'天津传说中的网上办事大厅怎么走'
+    #text = u'天津传说中的网上办事大厅怎么走'
+    text = u'2014天津失业保险条例'
     tokens = []
     preprocessor = ZhBookPreprocessor()
     preprocessor.preprocess(text, tokens)

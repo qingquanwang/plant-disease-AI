@@ -15,7 +15,7 @@ if __name__ == '__main__':
                                    --r ruleFile
                                    --t greedy,ruleTagger
                                    --w removeTok
-                                   --p zhBookPreprocessor
+                                   --p [zhBook|govTitle]
                                    --s semanticsFile"
                 ''', formatter_class = argparse.RawTextHelpFormatter)
     parser.add_argument('--d', type=str,

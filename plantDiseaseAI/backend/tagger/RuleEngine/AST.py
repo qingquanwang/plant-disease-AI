@@ -160,7 +160,7 @@ class Call(Term):
         for act in self._actions:
             act.dump(indent + indentInc)
     def expand_call(self, rules):
-        raise TypeError('How come to expand call by call itself!')
+        raise TypeError('[' + self._name + '] How come to expand call by call itself!')
     def expand_seq(self):
         raise TypeError('Here Call should be all inline')
 class ExprTree(Term):

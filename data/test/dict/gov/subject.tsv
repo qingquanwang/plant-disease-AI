@@ -3,9 +3,11 @@
 社保卡	gov-subject-shebao
 落户	gov-subject-luohu
 积分落户	gov-subject-luohu
+积分入户	gov-subject-luohu
 记分落户	gov-subject-luohu
 养老保险	gov-subject-insurance-yanglao
 医疗保险	gov-subject-insurance-yiliao
+大病保险	gov-subject-insurance-yiliao
 生育保险	gov-subject-insurance-shengyu
 工伤保险	gov-subject-insurance-gongshang
 失业保险	gov-subject-insurance-shiye

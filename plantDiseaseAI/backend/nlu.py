@@ -18,6 +18,8 @@ class NLU(object):
     def setPreprocessor(self, preprocessorName):
         if preprocessorName == 'zhBook':
             self._preprocessor = ZhBookPreprocessor()
+        elif preprocessorName == 'govTitle':
+            self._preprocessor = ZhGovTitlePreprocessor()
         else:
             raise NameError('unknown preprocessor: ' + preprocessorName)
 
