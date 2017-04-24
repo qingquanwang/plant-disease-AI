@@ -194,6 +194,7 @@ class SemanticSeqExtracter(SemanticExtracter):
         self._extractions = []
     #special key of span is 'text', we assign the plain text
     def appendExtraction(self, spanAttr, valueName, option = 'required', store = 'override'):
+        #print 'appendExtraction: ' + spanAttr
         if spanAttr.startswith('<'):
             (span, key) = spanAttr.split('.')
             span = span.strip('<')
@@ -208,7 +209,7 @@ class SemanticSeqExtracter(SemanticExtracter):
 
         assignValue = None
         for spanId in seq._spans:
-            if spanType == inputGraph._spans[spanId]:
+            if spanType == inputGraph._spans[spanId]._type:
                 if key == 'text':
                     assignValue = inputGraph._spans[spanId]._text
                 else:
@@ -219,14 +220,12 @@ class SemanticSeqExtracter(SemanticExtracter):
         return assignValue
 
     def assignValue(self, dic, valueName, assignValue, store):
-        vLevel = valueName.split('.')
         curObj = dic
         vLevel = valueName.split('.')
         levelNum = len(vLevel)
         for i in range(levelNum):
             k = vLevel[i]
             if k in curObj:
-                curObj = curObj[k]
                 if i == (levelNum - 1):
                     if store == 'override':
                         curObj[k] = assignValue
@@ -238,13 +237,18 @@ class SemanticSeqExtracter(SemanticExtracter):
                         curObj[k] = assignValue
                     else:
                         curObj[k] = [assignValue]
+                    break
                 else:
                     curObj[k] = {}
+            #pp.pprint(curObj)
+            curObj = curObj[k]
     def extract(self, dic, seq, inputGraph):
         for extraction in self._extractions:
             (spanType, key, valueName, option, store) = extraction
+            #print 'extracting :' + str(spanType) + ' ' + str(key) + ' ' + str(valueName)
             assignValue = self.getAssignValue(seq, inputGraph, spanType, key)
             if (assignValue is None) and (option == 'required'):
+                #print 'required variable is none'
                 return False
             elif assignValue is None:
                 continue

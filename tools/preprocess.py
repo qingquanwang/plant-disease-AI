@@ -1,8 +1,10 @@
 #!/usr/bin/python
 import argparse
 import pprint
+import os,sys
+from os.path import realpath, join, dirname
+sys.path.insert(0, join(dirname(realpath(__file__)), '../'))
 from plantDiseaseAI.backend.preprocessor import *
-import os, sys
 
 pp = pprint.PrettyPrinter(indent = 2)
 

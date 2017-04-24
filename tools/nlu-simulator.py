@@ -1,10 +1,12 @@
 #!/usr/bin/python
 import argparse
 import pprint
+import os,sys
+from os.path import realpath, join, dirname
+sys.path.insert(0, join(dirname(realpath(__file__)), '../'))
 from plantDiseaseAI.backend.DictManager import *
 from plantDiseaseAI.backend.nlu import *
 from plantDiseaseAI.backend.semantic import *
-import os, sys
 
 pp = pprint.PrettyPrinter(indent = 2)
 
@@ -16,7 +18,7 @@ if __name__ == '__main__':
                                    --t greedy,ruleTagger
                                    --w removeTok
                                    --p [zhBook|govTitle]
-                                   --s semanticsFile"
+                                   --s semanticsFile
                 ''', formatter_class = argparse.RawTextHelpFormatter)
     parser.add_argument('--d', type=str,
                         default='./data/test/name.dic',

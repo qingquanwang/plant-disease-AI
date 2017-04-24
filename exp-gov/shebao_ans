@@ -1,0 +1,106 @@
+2014年度天津单位职工社保缴费基数标准	{}	[2014年度|/year][天津|/place/city][单位职工|/gov/role][社保|/gov/subject][缴费|/gov/service][基数|/gov/service][标准|/gov/service]{}GreedyTagger
+2014年度天津社保缴费基数最低和最高标准	{}	[2014年度|/year][天津|/place/city][社保|/gov/subject][缴费|/gov/service][基数|/gov/service][最低和最高标准|/gov/service]{}GreedyTagger
+2015天津社保基数	{}	[2015|/DIGIT][天津|/place/city][社保|/gov/subject][基数|/gov/service]{}GreedyTagger
+2016天津社保缴费比例及基数标准（含五险一金）	{}	[2016|/DIGIT][天津|/place/city][社保|/gov/subject][缴费|/gov/service][比例|/gov/service][基数|/gov/service][标准|/gov/service][五险一金|/gov/subject]{}GreedyTagger
+4050社保补贴有多少?享受4050社保补贴的条件	{}	[4050|/DIGIT][社保|/gov/subject][补贴|/gov/service]{}GreedyTagger[4050|/DIGIT][社保|/gov/subject][补贴|/gov/service][条件|/gov/service]{}GreedyTagger
+五险一金如何使用？社保报销有范围多少	{}	[五险一金|/gov/subject][如何使用|/gov/service]{}GreedyTagger[社保|/gov/subject][报销|/gov/service][范围|/gov/service]{}GreedyTagger
+住院医疗保险和社保中的基本医疗住院保险有什么区别?	{}	[医疗保险|/gov/subject][社保|/gov/subject]{}GreedyTagger
+关于天津市新社保卡功能、使用及 最新医保政策制度的通知	{}	[天津市|/place/province][社保卡|/gov/subject][功能|/gov/service][使用|/gov/service][政策制度|/gov/service]{}GreedyTagger
+关于天津社保卡相关的问题	{}	[天津|/place/city][社保卡|/gov/subject][相关的问题|/gov/service]{}GreedyTagger
+办理天津社保卡必备条件及所需材料	{}	[办理|/gov/service][天津|/place/city][社保卡|/gov/subject][必备条件|/gov/service][所需材料|/gov/service]{}GreedyTagger
+办理社保卡	{}	[办理|/gov/service][社保卡|/gov/subject]{}GreedyTagger
+单位没给员工买社保 可要求失业保险待遇损失补偿	{}	[单位没给员工买|/gov/condition][社保|/gov/subject][失业保险|/gov/subject]{}GreedyTagger
+天津2013年社保缴费基数	{}	[天津|/place/city][2013年|/year][社保|/gov/subject][缴费|/gov/service][基数|/gov/service]{}GreedyTagger
+天津儿童社保卡怎么办理	{}	[天津|/place/city][社保卡|/gov/subject][办理|/gov/service]{}GreedyTagger
+天津养老保险查询个人账户 天津社保查询	{}	[天津|/place/city][养老保险|/gov/subject][查询|/intent][天津|/place/city][社保|/gov/subject][查询|/intent]{}GreedyTagger
+天津农业银行社保卡在哪里激活呢	{}	[天津|/place/city][农业银行|/org/bank][社保卡|/gov/subject][激活|/gov/service]{}GreedyTagger
+天津医保卡丢失了可以换办社保卡吗？	{}	[天津|/place/city][医保卡丢失|/gov/condition][社保卡|/gov/subject]{}GreedyTagger
+天津各区社保局地址电话一览表	{}	[天津|/place/city][社保局|/org/gov][地址电话一览表|/gov/service]{}GreedyTagger
+天津哪些银行可以办理社保卡(各个银行网点汇总)	{}	[天津|/place/city][银行|/org/bank][办理|/gov/service][社保卡|/gov/subject][银行网点|/gov/service]{}GreedyTagger
+天津:外地人连续缴纳2年社保可参加摇号购车	{}	[天津|/place/city][外地人|/gov/role][连续缴纳|/gov/condition][2年社保|/gov/condition][摇号购车|/gov/subject]{}GreedyTagger
+天津大学生创业社保补贴申请指南	{}	[天津|/place/city][大学生创业|/gov/condition][社保|/gov/subject][补贴|/gov/service][申请指南|/gov/service]{}GreedyTagger
+天津市2013年社保缴费基数	{}	[天津市|/place/province][2013年|/year][社保|/gov/subject][缴费|/gov/service][基数|/gov/service]{}GreedyTagger
+天津市人力社保局关于印发天津市高校毕业生自主创业房租补贴申领办法的通知	{}	[天津市|/place/province][社保局|/org/gov][天津市|/place/province][自主创业房租补贴|/gov/service][申领|/gov/service]{}GreedyTagger
+天津市人力社保部门详解生育险垫付医药费报销流程	{}	[天津市|/place/province][人力社保部门|/org/gov][生育险|/gov/subject][垫付|/gov/service][报销流程|/gov/service]{}GreedyTagger
+天津市农民工参加社保	{}	[天津市|/place/province][社保|/gov/subject]{}GreedyTagger
+天津市办理社保卡流程 天津市办理社保卡地点	{}	[天津市|/place/province][办理|/gov/service][社保卡|/gov/subject][天津市|/place/province][办理|/gov/service][社保卡|/gov/subject]{}GreedyTagger
+天津市各区县社保管理中心地址及联系电话	{}	[天津市|/place/province][社保管理中心|/org/gov][地址|/gov/service][联系电话|/gov/service]{}GreedyTagger
+天津市居住证积分办理指南——市人力社保局	{}	[天津市|/place/province][居住证积分|/gov/subject][办理指南|/gov/service][社保局|/org/gov]{}GreedyTagger
+天津市居住证积分管理实施细则（市人力社保局）	{}	[天津市|/place/province][居住证积分|/gov/subject][管理实施细则|/gov/service][社保局|/org/gov]{}GreedyTagger
+天津市民社保卡会被盗刷 领到社保卡及时改密码	{}	[天津市|/place/province][社保卡会被盗刷|/gov/condition][社保卡|/gov/subject][改密码|/gov/service]{}GreedyTagger
+天津市社保卡如何办理	{}	[天津市|/place/province][社保卡|/gov/subject][如何办理|/gov/service]{}GreedyTagger
+天津市社保卡如何办理？必备条件及所需材料	{}	[天津市|/place/province][社保卡|/gov/subject][如何办理|/gov/service]{}GreedyTagger[必备条件|/gov/service][所需材料|/gov/service]{}GreedyTagger
+天津市社保卡如何办理 必备条件及所需材料介绍	{}	[天津市|/place/province][社保卡|/gov/subject][如何办理|/gov/service][必备条件|/gov/service][所需材料|/gov/service]{}GreedyTagger
+天津市社保卡如何办理申领与换发？	{}	[天津市|/place/province][社保卡|/gov/subject][如何办理|/gov/service][申领|/gov/service][换发|/gov/service]{}GreedyTagger
+天津市社保机构一览表	{}	[天津市|/place/province][社保|/gov/subject]{}GreedyTagger
+天津市社保机构联系方式	{}	[天津市|/place/province][社保|/gov/subject][联系方式|/gov/service]{}GreedyTagger
+天津建设银行社保卡激活网点地址一览	{}	[天津|/place/city][建设银行|/org/bank][社保卡|/gov/subject][激活网点|/gov/service][地址一览|/gov/service]{}GreedyTagger
+天津户口社保不满一年可以领取生育津贴吗?	{}	[天津户口|/gov/condition][社保|/gov/subject][不满一年|/gov/condition][领取|/gov/service][生育津贴|/gov/subject]{}GreedyTagger
+天津新生儿社保卡办理流程	{}	[天津|/place/city][新生儿|/gov/role][社保卡|/gov/subject][办理流程|/gov/service]{}GreedyTagger
+天津新生儿社保卡的办理和缴费	{}	[天津|/place/city][新生儿|/gov/role][社保卡|/gov/subject][办理|/gov/service][缴费|/gov/service]{}GreedyTagger
+天津新社保卡怎么用？	{}	[天津|/place/city][社保卡|/gov/subject][怎么用|/gov/question]{}GreedyTagger
+天津新社保卡有哪些新的功能?	{}	[天津|/place/city][社保卡|/gov/subject][新的功能|/gov/service]{}GreedyTagger
+天津渤海银行社保卡激活网点一览	{}	[天津|/place/city][渤海银行|/org/bank][社保卡|/gov/subject][激活网点|/gov/service]{}GreedyTagger
+天津申领社保卡信息比对失败怎么办？	{}	[天津|/place/city][申领|/gov/service][社保卡|/gov/subject][信息比对失败|/gov/condition]{}GreedyTagger
+天津社保中心联系电话	{}	[天津|/place/city][社保中心|/org/gov][联系电话|/gov/service]{}GreedyTagger
+天津社保中心详解工伤认定热点	{}	[天津|/place/city][社保中心|/org/gov][工伤认定|/gov/service]{}GreedyTagger
+天津社保交费期间未办社保卡是否能报销	{}	[天津|/place/city][社保|/gov/subject][未办社保卡|/gov/condition][报销|/gov/service]{}GreedyTagger
+天津社保卡丢失即时办卡可换照片吗	{}	[天津|/place/city][社保卡丢失|/gov/condition][换照片|/gov/service]{}GreedyTagger
+天津社保卡中信、民生、招商银行制卡发卡网点一览	{}	[天津|/place/city][社保卡|/gov/subject][招商银行|/org/bank][发卡网点一览|/gov/service]{}GreedyTagger
+天津社保卡（中信、民生、招商银行）办理和激活网点	{}	[天津|/place/city][社保卡|/gov/subject][招商银行|/org/bank][办理|/gov/service][激活网点|/gov/service]{}GreedyTagger
+天津社保卡中国建设银行制卡发卡网点一览	{}	[天津|/place/city][社保卡|/gov/subject][建设银行|/org/bank][发卡网点一览|/gov/service]{}GreedyTagger
+天津社保卡中国银行办理网点一览	{}	[天津|/place/city][社保卡|/gov/subject][中国银行|/org/bank][办理网点一览|/gov/service]{}GreedyTagger
+天津社保卡使用指南	{}	[天津|/place/city][社保卡|/gov/subject][使用指南|/gov/service]{}GreedyTagger
+天津社保卡初始密码	{}	[天津|/place/city][社保卡|/gov/subject][初始密码|/gov/service]{}GreedyTagger
+天津社保卡初始密码是多少	{}	[天津|/place/city][社保卡|/gov/subject][初始密码|/gov/service]{}GreedyTagger
+天津社保卡初始密码是多少?	{}	[天津|/place/city][社保卡|/gov/subject][初始密码|/gov/service]{}GreedyTagger
+天津社保卡办理指南	{}	[天津|/place/city][社保卡|/gov/subject][办理指南|/gov/service]{}GreedyTagger
+天津社保卡办理流程图示	{}	[天津|/place/city][社保卡|/gov/subject][办理流程|/gov/service]{}GreedyTagger
+天津社保卡功能	{}	[天津|/place/city][社保卡|/gov/subject][功能|/gov/service]{}GreedyTagger
+天津社保卡外省禁用 需个人垫付后社保中心报销	{}	[天津|/place/city][社保卡|/gov/subject][外省禁用|/gov/condition][个人垫付|/gov/service][社保中心|/org/gov][报销|/gov/service]{}GreedyTagger
+天津社保卡如何使用 医保流程	{}	[天津|/place/city][社保卡|/gov/subject][如何使用|/gov/service]{}GreedyTagger
+天津社保卡如何激活	{}	[天津|/place/city][社保卡|/gov/subject][激活|/gov/service]{}GreedyTagger
+天津社保卡（工商、农业银行）办理和激活网点一览	{}	[天津|/place/city][社保卡|/gov/subject][农业银行|/org/bank][办理|/gov/service][激活网点|/gov/service]{}GreedyTagger
+天津社保卡工行、农行制卡发卡网点一览	{}	[天津|/place/city][社保卡|/gov/subject][发卡网点一览|/gov/service]{}GreedyTagger
+天津社保卡常见问题及解答	{}	[天津|/place/city][社保卡|/gov/subject][问题及解答|/gov/service]{}GreedyTagger
+天津社保卡建设银行办理和激活网点一览	{}	[天津|/place/city][社保卡|/gov/subject][建设银行|/org/bank][办理|/gov/service][激活网点|/gov/service]{}GreedyTagger
+天津社保卡查询指南	{}	[天津|/place/city][社保卡|/gov/subject][查询|/intent][指南|/gov/service]{}GreedyTagger
+天津社保卡浦发、渤海银行制卡发卡网点一览	{}	[天津|/place/city][社保卡|/gov/subject][渤海银行|/org/bank][发卡网点一览|/gov/service]{}GreedyTagger
+天津社保卡（浦发、渤海银行）办理和激活网点	{}	[天津|/place/city][社保卡|/gov/subject][渤海银行|/org/bank][办理|/gov/service][激活网点|/gov/service]{}GreedyTagger
+天津社保卡激活需要什么资料呢	{}	[天津|/place/city][社保卡|/gov/subject][激活|/gov/service]{}GreedyTagger
+天津社保卡申领指南	{}	[天津|/place/city][社保卡|/gov/subject][申领|/gov/service][指南|/gov/service]{}GreedyTagger
+天津社保卡的使用激活及挂失	{}	[天津|/place/city][社保卡|/gov/subject][使用|/gov/service][激活|/gov/service][挂失|/gov/service]{}GreedyTagger
+天津社保卡补办指南	{}	[天津|/place/city][社保卡|/gov/subject][补办|/gov/service][指南|/gov/service]{}GreedyTagger
+天津社保卡补办期间如何就医？	{}	[天津|/place/city][社保卡|/gov/subject][补办|/gov/service]{}GreedyTagger
+天津社保参保人员变更办理指南	{}	[天津|/place/city][社保|/gov/subject][变更|/gov/service][办理指南|/gov/service]{}GreedyTagger
+天津社保参保指南	{}	[天津|/place/city][社保|/gov/subject][指南|/gov/service]{}GreedyTagger
+天津社保多渠道缴费相关问题及解答	{}	[天津|/place/city][社保|/gov/subject][缴费|/gov/service][问题及解答|/gov/service]{}GreedyTagger
+天津社保密码忘了怎么办	{}	[天津|/place/city][社保|/gov/subject][密码忘了|/gov/condition]{}GreedyTagger
+天津社保局_天津社保局网站、电话、地址、天津社会劳动保障网	{}	[天津|/place/city][社保局|/org/gov][天津|/place/city][社保局|/org/gov][电话|/gov/service][地址|/gov/service][天津|/place/city][社会劳动保障网|/gov/service]{}GreedyTagger
+天津社保断了怎么补缴	{}	[天津|/place/city][社保断了|/gov/condition][补缴|/gov/service]{}GreedyTagger
+天津社保断了补缴要多少费用	{}	[天津|/place/city][社保断了|/gov/condition][补缴|/gov/service]{}GreedyTagger
+天津社保断缴有什么影响？	{}	[天津|/place/city][社保|/gov/subject]{}GreedyTagger
+天津社保查询	{}	[天津|/place/city][社保|/gov/subject][查询|/intent]{}GreedyTagger
+天津社保查询指南	{}	[天津|/place/city][社保|/gov/subject][查询|/intent][指南|/gov/service]{}GreedyTagger
+天津社保积分怎么计算（含计算方法）	{}	[天津|/place/city][社保|/gov/subject][积分|/gov/service][计算|/gov/service][计算|/gov/service]{}GreedyTagger
+天津社保缴费指南	{}	[天津|/place/city][社保|/gov/subject][缴费|/gov/service][指南|/gov/service]{}GreedyTagger
+天津社保缴费证明办理指南	{}	[天津|/place/city][社保|/gov/subject][缴费证明|/gov/service][办理指南|/gov/service]{}GreedyTagger
+天津社保补缴指南	{}	[天津|/place/city][社保|/gov/subject][补缴|/gov/service][指南|/gov/service]{}GreedyTagger
+天津社保转移指南	{}	[天津|/place/city][社保|/gov/subject][转移|/gov/service][指南|/gov/service]{}GreedyTagger
+天津积分入户社保计算时间表（含社会保险和公积金）	{}	[天津|/place/city][积分|/gov/service][入户|/gov/condition][社保|/gov/subject][计算|/gov/service][公积金|/gov/subject]{}GreedyTagger
+天津积分入户补缴社保计分吗	{}	[天津|/place/city][积分|/gov/service][入户|/gov/condition][补缴|/gov/service][社保|/gov/subject]{}GreedyTagger
+天津自由职业者缴纳社保怎么办	{}	[天津|/place/city][缴纳|/gov/service][社保|/gov/subject]{}GreedyTagger
+宝宝的社保卡在什么情况下能使用	{}	[宝宝|/gov/role][社保卡|/gov/subject][使用|/gov/service]{}GreedyTagger
+帮办详解：社保关系办理转移的手续及步骤	{}	[社保|/gov/subject][关系|/gov/service][办理转移|/gov/service][手续|/gov/item]{}GreedyTagger
+新社保卡怎么用 天津社保卡如何正确发挥社保卡作用	{}	[社保卡|/gov/subject][怎么用|/gov/question][天津|/place/city][社保卡|/gov/subject][社保卡|/gov/subject]{}GreedyTagger
+有了社保还需重大疾病保险	{}	[社保|/gov/subject]{}GreedyTagger
+有关天津社保卡申领、使用、补办的11个问题	{}	[天津|/place/city][社保卡|/gov/subject][申领|/gov/service][使用|/gov/service][补办|/gov/service][11|/DIGIT][问题|/gov/service]{}GreedyTagger
+省社保卡丢失可拨打“12333”临时挂失	{}	[社保卡丢失|/gov/condition][12333|/WordsQuot][挂失|/gov/service]{}GreedyTagger
+《社会保险法》解读：社保费的强制征缴制	{}	[《社会保险法》|/BookQuo][解读|/gov/service][社保费|/gov/subject]{}GreedyTagger
+社保关系办理转移的手续及步骤	{}	[社保|/gov/subject][关系|/gov/service][办理转移|/gov/service][手续|/gov/item]{}GreedyTagger
+社保基础知识：什么是社会保险？	{}	[社保|/gov/subject][基础知识|/gov/service]{}GreedyTagger
+社保网上办事大厅怎么登陆？	{}	[社保|/gov/subject][网上办事大厅|/gov/service]{}GreedyTagger
+社保转入天津办理流程	{}	[社保|/gov/subject][转入|/gov/service][天津|/place/city][办理流程|/gov/service]{}GreedyTagger
+离职后如何处理天津社保	{}	[离职|/gov/role][天津|/place/city][社保|/gov/subject]{}GreedyTagger
+离退休人员出现哪几种情况社保经办机构可以暂时停发其基本养老金？	{}	[离退休|/gov/role][社保|/gov/subject][停发|/gov/service]{}GreedyTagger
+详解天津社保卡：集四大功能于一体 个人可随时申请办理	{}	[天津|/place/city][社保卡|/gov/subject][功能|/gov/service][办理|/gov/service]{}GreedyTagger

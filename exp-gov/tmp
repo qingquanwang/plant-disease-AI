@@ -1,0 +1,1333 @@
+subject=医疗保险|service=余额	number:1
+    question=怎么办	原医疗保险卡账户里还有余额怎么办?
+subject=住房公积金|role=个人|service=操作手册	number:2
+    	天津住房公积金网站个人账户查询操作手册
+    	天津住房公积金网站个人账户查询项目及操作手册
+subject=公积金|service=托管	number:1
+    	天津公积金托管
+subject=落户|role=新生儿|service=所需材料	number:1
+    	天津市新生儿落户所需材料
+subject=生育津贴|service=缴纳|condition=不满一年	number:1
+    	缴纳生育保险不满一年的享受生育津贴吗
+subject=大病保险|service=范围报销标准	number:1
+    	大病保险享受范围及报销标准
+subject=公积金|service=缴存	number:5
+    question=是多少	2016天津公积金缴存上限是多少？最高不得超过21048
+    question=是多少	2016天津公积金缴存下限是多少
+    	天津公积金缴存
+    question=条件	天津提取公积金条件放宽 连续足额缴存满3个月即可
+    	未激活公积金卡影响缴存吗
+subject=社保卡|service=银行网点	number:1
+    	天津哪些银行可以办理社保卡(各个银行网点汇总)
+subject=养老保险|condition=退休	number:1
+    question=拿多少	养老保险退休后能拿多少
+subject=养老保险|role=本人|service=缴纳	number:1
+    	天津市个人缴纳的养老保险费是归本人所有吗?
+subject=落户|role=本科学历	number:1
+    question=指南	天津本科学历人员落户指南
+subject=落户|role=集体户口子女|service=回迁	number:1
+    	集体户口子女若落户外省 将不能回迁天津
+subject=社保|service=申请指南|condition=大学生创业	number:1
+    	天津大学生创业社保补贴申请指南
+subject=住房公积金|role=个人|service=提取|condition=本市	number:1
+    item=自有住房	职工使用商业银行个人住房贷款在本市行政区域内购买自有住房的 如何提取住房公积金
+subject=住房公积金|service=开通	number:1
+    	12329住房公积金短信服务将免费开通
+subject=社保卡|service=新的功能	number:1
+    question=有哪些	天津新社保卡有哪些新的功能?
+subject=住房公积金|service=贷款	number:12
+    question=如何办理|item=二手房	二手房住房公积金贷款如何办理？
+    question=业务政策问答	住房公积金贷款业务政策问答
+    question=额度	住房公积金贷款期限及额度
+    question=额度	住房公积金贷款期限及额度（公告）
+    question=多少年	住房公积金贷款期限最长能多少年？
+    	住房公积金贷款用途
+    	住房公积金贷款资料
+    question=额度	天津住房公积金贷款期限 住房公积金贷款额度
+    question=是多少	天津住房公积金贷款额度上限是多少
+    item=一手房	天津市一手房住房公积金贷款政策
+    question=额度	天津市住房公积金贷款期限及额度
+    item=手续	首次提取住房公积金贷款需要哪些手续
+subject=住房公积金|role=个人	number:1
+    	天津市住房公积金个人信息查询
+subject=医疗保险|service=余额查询	number:1
+    	天津市基本医疗保险专用卡余额查询
+subject=工伤保险|service=缴费基数	number:1
+    	天津市工伤保险缴费基数怎么确定？
+subject=失业保险|service=缴费	number:3
+    question=指南	天津失业保险缴费指南
+    	天津市人社局：领取失业保险金人员参加医保不用缴费
+    	失业保险缴费年限
+subject=养老保险|role=职工	number:1
+    	城镇职工养老保险城乡居民养老保险 可以互转累计
+subject=住房公积金|service=查询热线12329使用指南	number:1
+    	天津住房公积金查询热线12329使用指南
+subject=落户|role=究生以上学历	number:1
+    question=指南	天津研究生以上学历人员落户指南
+subject=落户|role=离退休人员	number:1
+    question=指南	2017天津离、退休人员夫妻投靠落户指南
+subject=养老保险|role=军人|service=关系转移|condition=退役	number:1
+    question=政策解读	2015军转干政策解读：军人退役养老保险关系转移接续
+subject=生育保险|service=报销比例	number:1
+    	2017天津生育保险报销比例
+subject=公积金|service=贷款利率	number:3
+    	天津2013年公积金贷款利率
+    	天津公积金贷款利率
+    question=按揭利率	天津公积金贷款利率 天津公积金按揭利率比较
+subject=养老保险|role=职工|service=缴费	number:1
+    question=待遇	天津市职工缴费不满15年，其养老保险待遇计发方式
+subject=公积金|role=个人|service=办理指南	number:1
+    	天津公积金新增个人账户办理指南
+subject=养老保险|role=企业	number:1
+    	天津市企业拖欠或拒缴养老保险费会受到哪些处罚?
+subject=养老保险|role=个人帐户	number:2
+    question=什么是	什么是职工基本养老保险个人帐户?
+    question=规定	国家对养老保险个人帐户的建立和管理作的规定
+subject=住房公积金|service=提取|condition=退休	number:1
+    question=条件|item=非住房	天津住房公积金退休等非住房类提取条件
+subject=住房公积金|service=提取|condition=辞职	number:1
+    question=指南	关于辞职住房公积金提取指南
+subject=落户|role=应届毕业生|condition=人才绿卡	number:1
+    question=指南	天津持人才绿卡应届毕业生落户指南
+subject=公积金|service=提取|condition=户口迁出	number:1
+    question=指南	天津市民户口迁出提取公积金指南
+subject=社保卡|service=使用指南	number:1
+    	天津社保卡使用指南
+subject=住房公积金|service=缴存	number:7
+    	住房公积金归集业务之七“住房公积金网上缴存业务”
+    	住房公积金网上缴存业务
+    question=规定	天津2014住房公积金缴存政策新规定
+    question=指南	天津住房公积金网上缴存业务指南
+    	天津住房公积金网上缴存方法
+    	天津市住房公积金网上缴存业务
+    question=含义	“连续逐月缴存住房公积金满1年”的含义
+subject=公积金|service=提取|condition=本市	number:1
+    question=材料	天津本市购房提取公积金材料
+subject=社保|role=个人	number:2
+    	天津养老保险查询个人账户 天津社保查询
+    	天津养老保险查询个人账户 天津社保查询
+subject=医疗保险|role=农民工	number:2
+    question=指南	农民工购买医疗保险指南
+    	哪些人必须参加基本医疗保险，农民工可以参加吗?
+subject=生育保险	number:5
+    question=条例	关于天津晚婚晚育生育保险政策条例
+    	天津哪些医疗费用生育保险不予支付？
+    question=解答	天津城乡居民生育保险问题解答
+    question=问答	天津市生育保险政策知识问答
+    question=待遇	天津生育保险待遇申报表填写方法
+subject=落户|role=新生儿|service=办理	number:1
+    question=时间	天津新生儿落户办理什么时间
+subject=公积金|service=范围	number:1
+    question=什么是	什么是公积金缴存范围？
+subject=养老保险|service=查询指南	number:1
+    	天津养老保险查询指南
+subject=工伤保险|service=标准	number:3
+    question=待遇	工伤保险待遇一至四级标准是什么？
+    question=待遇	工伤保险待遇标准表
+    question=待遇	工伤保险待遇项目和标准有什么？
+subject=公积金|role=单位|service=缴存额度	number:1
+    	天津企业单位如何调整公积金缴存比例和缴存额度
+subject=养老保险|condition=农村	number:4
+    question=有哪些	农村社会养老保险交费有哪些方式？
+    question=特点	农村社会养老保险的制度模式主要特点是什么？
+    question=规定	参加农村社会养老保险的对象和年龄有什么规定？
+    question=规定	参加农村社会养老保险的对象和年龄规定
+subject=公积金|service=办理	number:2
+    question=条件	公积金贷款办理时限为8个工作日 解读申请条件
+    	周六日可以办理公积金吗？
+subject=养老保险|role=农民工	number:1
+    	哪些人员可以参加农民工养老保险
+subject=公积金|service=余额	number:2
+    	中国银行怎么查询公积金余额
+    question=怎么规定	天津公积金可贷额度计算中余额倍数怎么规定
+subject=公积金|service=部分提取	number:1
+    question=条件	天津公积金部分提取条件
+subject=工伤保险|service=办理	number:1
+    item=手续	详解工伤保险办理手续
+subject=社保卡|condition=丢失	number:1
+    item=医保卡	天津医保卡丢失了可以换办社保卡吗？
+subject=生育保险|service=办理指南	number:1
+    	天津生育保险参保办理指南
+subject=住房公积金|role=职工|service=提取|condition=大修	number:2
+    item=自有住房	职工使用公积金(组合)贷款建造、翻建、大修自有住房的 如何提取住房公积金
+    item=自有住房	职工未使用住房贷款建造、翻建、大修自有住房的 如何提取住房公积金
+subject=养老保险|role=职工|service=缴费补缴	number:1
+    	天津职工养老保险参保缴费施行新规 详解如何补缴
+subject=失业保险|service=调整	number:1
+    question=金额	天津失业保险金发放新标准 失业保险金领取金额作调整
+subject=公积金|service=提取|condition=单位给交	number:1
+    question=什么情况	单位给交公积金 什么情况可提取
+subject=社保卡|service=初始密码	number:3
+    	天津社保卡初始密码
+    question=是多少	天津社保卡初始密码是多少
+    question=是多少	天津社保卡初始密码是多少?
+subject=居住证积分|service=办理	number:1
+    	《天津市居住证积分（社会保险部分）认定表》开具办理
+subject=住房公积金|service=手机预约	number:1
+    	现在天津住房公积金可以用手机预约啦
+subject=社保卡|service=功能使用政策制度	number:1
+    	关于天津市新社保卡功能、使用及 最新医保政策制度的通知
+subject=社保|service=补缴|condition=断了	number:2
+    	天津社保断了怎么补缴
+    	天津社保断了补缴要多少费用
+subject=医疗保险|service=办理	number:1
+    	怎样办理医疗保险
+subject=摇号购车|role=外地人|condition=2年社保	number:1
+    	天津:外地人连续缴纳2年社保可参加摇号购车
+subject=公积金|service=缴存比例	number:3
+    	天津公积金缴存比例
+    	天津公积金缴存比例
+    	天津公积金缴存比例怎么算
+subject=落户|role=大学生|condition=在津就业	number:1
+    	全面解读天津市2015年征兵政策 大学生退役在津就业可落户
+subject=公积金|service=查询查询	number:1
+    question=注意事项	天津公积金网上查询查询注意事项
+subject=公积金|service=部分还贷	number:1
+    question=流程	天津公积金提前部分还贷流程
+subject=住房公积金|service=余额	number:1
+    	天津市公积金余额以及住房公积金查询
+subject=公积金|service=住房贷款|condition=异地	number:1
+    question=条件	公积金推异地贷款 申请住房贷款需满足7个条件
+subject=住房公积金|role=个人|service=缴纳	number:1
+    item=个人所得税	个人领取的住房公积金是否要缴纳个人所得税？
+subject=住房公积金|service=结算	number:1
+    	如何结算住房公积金？
+subject=生育保险|service=范围	number:1
+    	2015年天津生育险政策详解：生育保险支付的范围
+subject=社保|service=办理流程	number:1
+    	社保转入天津办理流程
+subject=养老保险|role=下岗分流人员|condition=重新就业后	number:1
+    question=如何参加	下岗分流人员重新就业后如何参加基本养老保险?
+subject=社保卡|service=激活网点	number:2
+    	天津渤海银行社保卡激活网点一览
+    	天津社保卡建设银行办理和激活网点一览
+subject=养老保险|service=查询	number:4
+    	天津养老保险查询
+    	天津养老保险查询重要提示
+    question=步骤	天津养老保险网上查询步骤
+    	天津市养老保险查询系统
+subject=公积金|service=查询电话	number:2
+    	天津公积金查询电话
+    question=指南	天津公积金查询电话操作指南
+subject=公积金|service=房贷	number:1
+    	教你公积金如何还房贷
+subject=个人住房公积金|service=贷款	number:2
+    	2013年天津银行个人住房公积金贷款
+    question=新政	天津市个人住房公积金贷款新政实施
+subject=公积金|service=缴存基数	number:1
+    	天津公积金缴存基数
+subject=公积金|service=贷款银行网点	number:1
+    	天津公积金贷款银行网点
+subject=养老保险|service=计算|condition=退休	number:1
+    	天津退休后养老保险金计算方法
+subject=公积金|role=单位	number:1
+    	提公积金无需单位开申请
+subject=公积金|condition=工作变动	number:1
+    question=怎么处理	天津公积金因工作变动怎么处理？
+subject=公积金|service=比例	number:1
+    	2016天津公积金缴费比例及上下限解读
+subject=社保|service=基数	number:3
+    	2015天津社保基数
+    	天津2013年社保缴费基数
+    	天津市2013年社保缴费基数
+subject=养老保险|role=职工|condition=退休	number:1
+    question=如何办理|item=手续	天津如何办理职工的养老保险退休手续
+subject=公积金|service=提取|condition=退休	number:4
+    question=材料	天津市即将退休，提取公积金需准备的材料
+    	天津离休退休公积金提取
+    	天津退休人员提取公积金所需资料
+    question=材料	天津退休人员提取公积金需要什么材料
+subject=养老金|service=领取	number:1
+    	参加城乡居民养老保险后何时可以领取养老金?
+subject=养老保险|service=补贴	number:1
+    	2015天津城乡居民养老保险缴费补贴上调30元
+subject=公积金|role=个人|service=补缴	number:1
+    question=问题	关于天津市公积金个人缴存补缴问题
+subject=失业保险|condition=单位没给员工买	number:2
+    question=待遇	单位没给员工买社保 可要求失业保险待遇损失补偿
+    question=待遇	单位没给员工买社保 可要求失业保险待遇损失补偿
+subject=公积金|service=缴费比例	number:1
+    question=是多少	2016天津公积金缴费比例是多少
+subject=落户|role=大专学历|condition=短缺专业	number:1
+    question=指南	天津短缺专业大专学历人员落户指南
+subject=养老保险|service=标准	number:1
+    	天津2015城乡居民基本养老保险缴费标准
+subject=公积金|role=外省市职工|condition=辞职	number:1
+    question=怎么办	外省市职工辞职离开天津 公积金怎么办
+subject=养老保险|service=转移	number:2
+    question=指南	天津养老保险转移指南
+    item=手续	天津市养老保险转移手续规范
+subject=公积金|service=还款	number:8
+    	4月6日起 天津12家银行的公积金贷款还款更方便了
+    question=有哪些	公积金提前还款流程有哪些 怎么提前还款最划算
+    	公积金还款两种方法介绍
+    item=手续	天津公积金提前还款手续
+    question=有限制吗	天津公积金提前还款有限制吗
+    question=流程	天津公积金提前还款流程
+    question=指南|item=凭证	天津公积金还款凭证电子打印操作指南
+    item=凭证	天津提取公积金不再需要还款凭证
+subject=公积金|service=提取所需材料	number:1
+    	天津公积金租房提取所需材料
+subject=住房公积金|service=提取|condition=买车	number:1
+    	买车可以提取天津住房公积金吗？
+subject=社保|service=查询	number:1
+    	天津社保查询
+subject=公积金|service=提取转移	number:1
+    question=问题	天津市公积金中心详解公积金提取、转移等问题
+subject=养老保险|role=单位|service=补缴	number:2
+    	天津机关单位补缴养老保险费
+    question=指南	天津用人单位补缴养老保险指南
+subject=落户|role=集体户口	number:2
+    question=指南	天津人才集体户口落户指南
+    	天津集体户口孩子落户
+subject=社保|service=缴费比例基数标准	number:1
+    	2016天津社保缴费比例及基数标准（含五险一金）
+subject=公积金|service=贷款|condition=买车	number:1
+    	天津公积金可以贷款买车吗
+subject=社保卡|role=个人|service=办理	number:1
+    	详解天津社保卡：集四大功能于一体 个人可随时申请办理
+subject=公积金|service=办理网点	number:16
+    	天津上海浦东发展银行公积金业务办理网点
+    	天津中信银行公积金业务办理网点
+    	天津中国银行公积金业务办理网点
+    	天津交通银行公积金业务办理网点
+    	天津光大银行公积金业务办理网点
+    	天津兴业银行公积金业务办理网点
+    	天津农业银行公积金业务办理网点
+    	天津北京银行公积金业务办理网点
+    	天津华夏银行公积金业务办理网点
+    	天津各大银行公积金业务办理网点汇总
+    	天津工商银行公积金业务办理网点
+    	天津招商银行公积金业务办理网点
+    	天津民生银行公积金业务办理网点
+    	天津渤海银行公积金业务办理网点
+    	天津盛京银行公积金业务办理网点
+    	天津银行公积金业务办理网点
+subject=社保卡|service=报销|condition=外省禁用	number:1
+    	天津社保卡外省禁用 需个人垫付后社保中心报销
+subject=住房公积金|service=转移转移	number:1
+    	天津住房公积金能转移吗 如何转移
+subject=个人住房公积金|service=使用	number:1
+    	个人住房公积金怎么使用?
+subject=住房公积金|role=个人|service=住房贷款|condition=异地	number:1
+    question=问题	住房城乡建设部关于住房公积金异地个人住房贷款有关操作问题的通知
+subject=医疗保险|role=个人	number:1
+    question=多少年	个人医疗保险要交多少年
+subject=公积金|role=单位|service=转移	number:1
+    	天津市职工或单位办理公积金转移的情况
+subject=医疗保险|condition=低保	number:1
+    question=报销问题	2014年天津低保的医疗保险报销问题
+subject=公积金|condition=离津	number:1
+    question=规定	天津公积金规定 离津工作不能取
+subject=失业保险|service=办理指南	number:1
+    	天津失业保险参保办理指南
+subject=工伤保险|service=办理指南	number:3
+    	天津工伤保险参保办理指南
+    	天津工伤保险认定办理指南
+    	天津工伤保险赔偿办理指南
+subject=社保卡|service=所需材料	number:2
+    question=必备条件	办理天津社保卡必备条件及所需材料
+    question=必备条件	天津市社保卡如何办理 必备条件及所需材料介绍
+subject=医疗保险|service=补办	number:2
+    	在天津如何补办医疗保险卡
+    	天津参保人如何补办医疗保险档案
+subject=住房公积金|role=离退休人员|service=提取	number:1
+    question=指南	离退休人员住房公积金提取指南
+subject=住房公积金|service=提取范围	number:1
+    	天津住房公积金提取范围
+subject=生育保险|service=报销	number:13
+    	天津城乡居民生育保险费用报销细则
+    item=手续	天津市生育保险报销手续
+    	天津市男性生育保险报销
+    	天津生育保险怎么报销
+    	天津生育保险报销地点
+    question=条件	天津生育保险报销条件
+    question=条件	天津:生育保险报销条件
+    question=流程	天津生育保险报销条件及流程方法
+    question=条件	天津生育保险报销条件及申报方法
+    question=材料	天津生育保险报销需要的材料
+    question=指南	天津生育保险最新政策及报销指南
+    	天津生育保险能报销多少费用
+    question=多少钱	生育保险能报销多少钱
+subject=社保卡|service=改密码|condition=会被盗刷	number:1
+    	天津市民社保卡会被盗刷 领到社保卡及时改密码
+subject=住房公积金|role=个人|service=提取|condition=大修	number:1
+    item=自有住房	职工使用商业银行个人住房贷款建造、翻建、大修自有住房的 如何提取住房公积金
+subject=公积金|service=首付	number:2
+    question=新政	天津公积金新政:夫妻最高贷80万 二套首付30%
+    item=首套房	天津公积金贷款政策调整 首套房首付降至20％
+subject=住房公积金|service=还款	number:4
+    	住房公积金如何还款
+    	住房公积金怎么还款
+    	天津住房公积金还款方式
+    question=流程	天津住房公积金还款流程
+subject=公积金|service=办理流程	number:4
+    	外地公积金转入到天津的办理流程
+    question=条件	天津公积金贷款提前还贷的条件及办理流程
+    item=二手房	天津市购买二手房的公积金贷款办理流程
+    	详解租房提取公积金的办理流程
+subject=住房公积金|service=缴存基数	number:2
+    	天津住房公积金缴存基数
+    	天津市住房公积金缴存基数
+subject=积分落户|service=查询	number:1
+    	天津积分落户查询
+subject=住房公积金|service=提取|condition=大修	number:2
+    item=证明文件	大修自有住房提取住房公积金需要提供哪些证明文件?
+    	天津大修住房公积金提取
+subject=社保|service=办理转移	number:2
+    question=步骤|item=手续	帮办详解：社保关系办理转移的手续及步骤
+    question=步骤|item=手续	社保关系办理转移的手续及步骤
+subject=社保卡|service=激活网点地址一览	number:1
+    	天津建设银行社保卡激活网点地址一览
+subject=社保卡|role=宝宝|service=使用	number:1
+    question=什么情况	宝宝的社保卡在什么情况下能使用
+subject=养老保险|service=电话	number:1
+    	天津养老保险怎么在网上查询 天津养老保险电话查询
+subject=生育保险|service=缴费比例缴费基数	number:1
+    	天津生育保险缴费比例与缴费基数
+subject=公积金|service=计算	number:3
+    question=额度	公积金贷款额度计算
+    question=额度	天津公积金贷款额度计算
+    question=额度	天津公积金贷款额度计算公式详解
+subject=养老保险|service=领取	number:1
+    question=指南	天津养老保险领取指南
+subject=公积金|role=单位|service=提取	number:3
+    question=时限	公积金用于完全丧失劳动能力并与所在单位终止劳动关系的提取时限
+    	天津完全丧失劳动能力并与单位终止劳动关系公积金提取
+    	天津进城务工人员因与单位解除劳动关系公积金提取
+subject=居住证积分|service=办理指南	number:1
+    	天津市居住证积分办理指南——市人力社保局
+subject=公积金|service=提取|condition=大修	number:1
+    question=时限|item=自住住房	提取公积金用于建造、翻建、大修自住住房的时限
+subject=住房公积金|service=贷款利率	number:2
+    	2013天津市住房公积金贷款利率
+    question=是多少	天津市住房公积金贷款利率是多少
+subject=养老保险|role=职工|service=缴纳	number:1
+    	为什么说企业缴纳的养老保险费应视同职工工资同等重要?
+subject=公积金|service=缴存比例调整申请表	number:1
+    	2016天津公积金缴存比例调整申请表及下载
+subject=生育津贴|service=办理流程	number:1
+    	天津生育保险与生育津贴办理流程
+subject=生育津贴|service=领取|condition=不满一年	number:1
+    	天津户口社保不满一年可以领取生育津贴吗?
+subject=社保|service=联系方式	number:1
+    	天津市社保机构联系方式
+subject=医疗保险|service=申请指南	number:1
+    	天津一次性医疗保险补助金申请指南
+subject=住房公积金|service=委托提取	number:2
+    	住房公积金委托提取
+    	天津市住房公积金委托提取
+subject=公积金|service=贷款首付	number:1
+    question=有哪些	天津公积金贷款首付有哪些要求
+subject=落户|role=新生儿	number:2
+    	天津市新生儿落户能跟谁？
+    	天津新生儿落户详细内容
+subject=公积金|service=缴存办理指南	number:1
+    	天津公积金其他缴存类办理指南
+subject=住房公积金|role=外地人员|service=提取	number:1
+    	外地人员在天津提取住房公积金方法
+subject=公积金|condition=治病	number:1
+    question=靠谱吗	取公积金治病，靠谱吗？
+subject=公积金|role=个人|service=变更	number:1
+    question=如何办理	如何办理公积金个人信息变更?
+subject=积分落户|service=电话	number:1
+    	天津积分落户各接待窗口咨询电话
+subject=公积金|condition=丢失	number:1
+    question=怎么办	天津公积金卡丢失怎么办？
+subject=公积金|service=转移提取|condition=异地	number:1
+    	公积金异地转移：转至所在城市 不能直接在津申请提取
+subject=工伤保险|service=调整	number:3
+    question=问题	天津市关于调整2014年工伤保险待遇有关问题的通知
+    question=待遇	天津市工伤保险待遇调整
+    question=待遇	天津调整工伤保险待遇
+subject=公积金|service=贷款利息	number:1
+    	天津公积金贷款利息究竟有多低
+subject=社保|condition=密码忘了	number:1
+    question=怎么办	天津社保密码忘了怎么办
+subject=社保卡|service=办理	number:2
+    	办理社保卡
+    question=流程	天津市办理社保卡流程 天津市办理社保卡地点
+subject=社保卡|service=办理指南	number:1
+    	天津社保卡办理指南
+subject=失业保险|service=申领	number:2
+    question=指南	天津失业保险金申领指南
+    question=材料|item=手续	失业保险金申领手续及申报材料
+subject=住房公积金|role=离职|service=提取	number:2
+    	天津离职后住房公积金提取办法
+    	离职后住房公积金怎么提取
+subject=养老保险|role=单位	number:6
+    	事业单位养老金双轨制 机关事业单位养老保险改革方案通过
+    question=问题	养老金并轨问题汇总 机关事业单位养老保险制度启动
+    	国务院关于机关事业单位工作人员 养老保险制度改革的决定
+    question=图解	图解：国务院关于机关事业单位工作人员养老保险制度改革的决定
+    question=如何办理	天津个人以及机关事业单位养老保险如何办理
+    question=指南	天津市机关事业单位养老保险工作指南
+subject=住房公积金|service=贷款利率调整	number:1
+    	2013年天津关于住房公积金存贷款利率调整
+subject=公积金|service=所需材料|condition=大修	number:1
+    item=自有住房	天津公积金贷款大修自有住房所需材料
+subject=医疗保险|condition=农村	number:1
+    	农村合作医疗保险
+subject=生育保险|service=报销范围	number:1
+    	生育保险报销范围
+subject=公积金|service=缴存方式	number:1
+    	天津公积金缴存方式
+subject=社保卡|service=办理流程	number:1
+    	天津社保卡办理流程图示
+subject=积分入户|service=社保计算	number:3
+    question=时间表	天津积分入户社保计算时间表（含社会保险和公积金）
+    question=时间表	天津积分入户社保计算时间表（含社会保险和公积金）
+    question=时间表	天津积分入户社保计算时间表（含社会保险和公积金）
+subject=公积金|role=个人|service=调整	number:1
+    	天津市公积金年度个人缴存调整
+subject=落户|role=高级职称|condition=人才绿卡	number:1
+    question=指南	天津持人才绿卡高级职称人员落户指南
+subject=养老保险|role=个人|service=缴纳	number:3
+    	天津个人怎么缴纳养老保险
+    	天津市个人缴纳的养老保险费可以继承吗?
+    	天津市个人缴纳的养老保险费政府如何进行管理?
+subject=落户	number:20
+    question=有效期|regulation=准迁证	2016年上半年天津居住证积分落户《准迁证》有效期到什么时候
+    question=指南	2017天津农业人口夫妻投靠落户指南
+    	天津人才引进落户政策详解
+    question=指南	天津具有高级技术职称的人员落户指南
+    	天津家长积分落户后，孩子要怎么落户
+    	天津居住证积分落户
+    question=指南	天津居住证积分落户指南
+    	天津居住证积分落户指标及分值表
+    question=条件	天津市两区三县子女投父母落户需满足的条件
+    question=指南	天津市各区县之间夫妻投靠落户指南
+    question=材料	天津市居住证积分落户申请材料清单
+    question=政策解读	《天津市推动非户籍人口在城市落户工作方案》政策解读
+    question=流程|regulation=准迁证	天津拿到积分入户准迁证后落户流程
+    	天津每年多少人落户
+    question=办法盘点	天津落户办法盘点
+    question=条件	天津落户条件
+    item=证书	天津落户证书加分说明
+    	天津非婚生子女应随父还是随母落户?
+    question=政策解读	天津《非户籍人口在城市落户工作方案》政策解读
+    question=怎么办|regulation=准迁证	拿到准迁证后要怎么办理落户天津？
+subject=工伤保险|role=职工	number:1
+    question=条件	天津市职工享受工伤保险待遇需具备的条件
+subject=养老保险|service=补缴	number:3
+    	天津六类人员补缴养老保险
+    	天津补缴养老保险的办法适合哪些人
+    	天津超龄人员可补缴养老保险费
+subject=养老保险|role=个人	number:2
+    	天津养老保险查询 天津养老保险查询个人账户
+    	怎么管理养老保险个人帐户 保险费怎么记入个人账户?
+subject=大病保险	number:1
+    question=问答	2017天津城乡居民大病保险相关政策问答
+subject=公积金|service=通存通兑	number:1
+    question=网点	天津公积金营业网点通存通兑 天津部分网点全周营业（名单）
+subject=工伤保险|service=范围	number:1
+    question=有哪些	天津市工伤保险的参保范围有哪些?
+subject=住房公积金|service=贷款|condition=异地	number:9
+    	10月8日起住房公积金推行异地贷款
+    	住房公积金全面推行异地贷款
+    	住房公积金异地贷款业务将全面推行
+    question=流程	住房公积金异地贷款已全面实施 贷款流程相应简化
+    	住房公积金异地贷款政策热点解读
+    	住房公积金异地贷款细则出台 附通知全文
+    	住房公积金异地贷款细则出台 需交书面证明
+    	公积金推异地贷款：住房公积金异地贷款业务将全面推行
+    question=指南	天津住房公积金异地贷款指南
+subject=住房公积金|service=缴存额调整	number:1
+    	2013年住房公积金缴存额调整通知
+subject=公积金|role=个人|service=提取	number:1
+    question=流程	天津个人网厅办理公积金提取流程
+subject=公积金|service=提取使用	number:1
+    	天津市公积金的提取和使用
+subject=公积金|service=转移	number:2
+    	2014天津公积金转移
+    question=如何办理|item=手续	天津公积金转移手续如何办理
+subject=住房公积金|service=补贴	number:1
+    item=租金	能使用租房补贴、住房公积金交纳公租房租金吗？
+subject=住房公积金|service=提取	number:13
+    question=业务政策问答	住房公积金提取业务政策问答
+    question=规定	住房公积金提取管理规定
+    question=额度	住房公积金提取额度
+    question=规定	住房公积金用途及申请提取规定
+    question=条件	住房公积金贷款的种类有哪些 住房公积金提取的条件
+    question=问题	关于天津市市民因重大疾病提取住房公积金的问题
+    question=问题	关于委托他人提取天津住房公积金的问题
+    question=条件	天津住房公积金提取有什么条件 怎么提取
+    question=流程	天津其他住房公积金提取流程
+    question=条件	天津市租房提取住房公积金申请条件
+    	天津租房怎样提取住房公积金
+    	天津自建住房公积金提取
+    question=金额|item=租赁住房	租赁公共租赁住房怎样提取住房公积金 如何确定提取金额
+subject=住房公积金|service=缴存比例	number:2
+    	2013年天津市住房公积金缴存比例
+    	天津住房公积金缴存比例
+subject=公积金|service=还贷	number:2
+    question=流程	天津公积金提前还贷方式和流程
+    question=流程	天津公积金提前还贷流程
+subject=住房公积金|service=积分计算	number:1
+    	天津住房公积金积分如何计算
+subject=失业保险|condition=辞职	number:1
+    	主动辞职后还能获得失业保险吗?
+subject=工伤险|role=职工	number:1
+    question=待遇	天津明确工伤险待遇 职工工伤可享15项保险待遇
+subject=落户|role=应届毕业生	number:1
+    	天津应届毕业生落户
+subject=医疗保险|service=查询	number:2
+    	天津医疗保险查询
+    	天津市医疗保险查询
+subject=养老金|role=离退休人员|service=停发	number:1
+    	离退休人员出现哪几种情况社保经办机构可以暂时停发其基本养老金？
+subject=公积金|service=调整	number:1
+    	2016年7月天津公积金调整后怎么算？个人至少少交15元
+subject=工伤保险|service=申请指南	number:1
+    	天津工伤保险供养亲属抚恤金申请指南
+subject=失业保险|service=领取标准	number:1
+    	天津失业保险金领取标准
+subject=社保卡|service=发卡网点一览	number:4
+    	天津社保卡中信、民生、招商银行制卡发卡网点一览
+    	天津社保卡中国建设银行制卡发卡网点一览
+    	天津社保卡工行、农行制卡发卡网点一览
+    	天津社保卡浦发、渤海银行制卡发卡网点一览
+subject=住房公积金|service=贷款比例	number:1
+    	天津住房公积金贷款比例
+subject=医疗保险|role=职工	number:1
+    question=规定	天津市城镇职工基本医疗保险规定
+subject=养老保险|service=缴费	number:6
+    	2015年天津城乡居民基本养老保险实施办法:自主缴费分10档
+    question=年限是多少	养老保险缴费年限是多少 如何补交养老保险
+    	天津养老保险缴费
+    question=问题	天津养老保险缴费不满15年人员养老待遇问题
+    	天津市参加城乡居民养老保险可以自己选择缴费档次吗?
+    	天津市参加城乡居民养老保险是按年还是按月缴费?
+subject=工伤保险|role=单位	number:1
+    	天津市参加工伤保险单位
+subject=养老保险|role=军人|service=关系|condition=退役	number:1
+    question=如何办理	军人退役养老保险关系接续 如何办理
+subject=落户|role=留学回国|service=办理指南	number:1
+    	天津留学回国人员落户办理指南
+subject=医疗保险|service=报销	number:2
+    	天津医疗保险报销
+    question=指南	天津市城乡居民基本医疗保险参保报销指南
+subject=公积金|service=所需材料	number:2
+    item=公有现住房	天津公积金贷款购买公有现住房所需材料
+    item=集资建造住房	天津公积金贷款购买集资建造住房所需材料
+subject=住房公积金|role=单位|service=变更登记	number:1
+    	天津市单位住房公积金变更登记
+subject=社保|service=查询指南	number:1
+    	天津社保查询指南
+subject=住房公积金|role=个人|service=缴存	number:1
+    question=问题	关于天津市个人缴存住房公积金问题
+subject=社保卡|service=换照片|condition=丢失	number:1
+    	天津社保卡丢失即时办卡可换照片吗
+subject=医疗保险|service=转移	number:1
+    	医疗保险可跨省转移接续
+subject=社保卡|service=办理网点一览	number:1
+    	天津社保卡中国银行办理网点一览
+subject=公积金|service=销户|condition=异地	number:1
+    	天津市户口异地工作不办理公积金销户
+subject=社保卡|service=使用激活挂失	number:1
+    	天津社保卡的使用激活及挂失
+subject=公积金|service=贷款	number:44
+    item=二手房	二手房公积金贷款申报资料
+    question=业务政策问答	公积金贷款业务政策问答
+    	公积金贷款别逾期 后果让你很麻烦
+    question=流程	公积金贷款流程
+    	公积金贷款的利与弊
+    	公积金贷款资料
+    	公积金贷款逾期会怎样
+    question=计算器	公积金贷款额度计算器
+    	办理公积金贷款所需资料
+    	哪些情况不能申请天津公积金贷款
+    	商贷转为公积金贷款三种方法
+    question=怎么办|item=保障性住房	天津保障性住房怎么办理公积金贷款
+    question=材料|item=一手房	天津公积金一手房贷款材料
+    question=流程|item=一手房	天津公积金一手房贷款流程
+    question=期限|item=一手房	天津公积金一手房贷款额度与期限
+    question=材料|item=二手房	天津公积金二手房贷款材料
+    question=流程|item=二手房	天津公积金二手房贷款流程
+    question=期限|item=二手房	天津公积金二手房贷款额度与期限
+    item=保障房	天津公积金保障房等其他类贷款
+    question=流程|item=二手房	天津公积金贷款买二手房具体流程
+    question=条件|item=限价房	天津公积金贷款买限价房条件
+    	天津公积金贷款办理商贷转公积金贷款需要准备的资料
+    	天津公积金贷款政策
+    question=多少年	天津公积金贷款最长能贷多少年
+    question=期限	天津公积金贷款期限
+    question=条件	天津公积金贷款条件
+    question=流程图	天津公积金贷款流程图
+    	天津公积金贷款温馨提示
+    question=材料|item=经济适用房	天津公积金贷款购买经济适用房贷款材料
+    item=集资建造住房	天津公积金贷款购买集资建造住房资料
+    question=是多少	天津公积金贷款额度是多少
+    question=额度	天津公积金贷款额度最高能贷多少
+    question=流程	天津办理公积金贷款流程
+    	天津商业贷款可转换成公积金贷款
+    	天津商业贷款转公积金贷款
+    question=注意事项	天津商业贷款转公积金贷款条件及注意事项
+    question=注意事项	天津商贷转公积金贷款的流程和相关注意事项
+    	天津市公积金贷款对象
+    question=新政	天津市公积金贷款新政解读
+    question=条件	天津市公积金贷款条件
+    question=条件	天津市公积金贷款条件及方法介绍
+    question=额度	天津市公积金贷款额度
+    	天津怎么还公积金贷款
+    	天津网友分享公积金怎么贷款最划算
+subject=住房公积金|role=职工|service=提取	number:3
+    question=如何办理|item=租赁住房	职工在市场租赁住房用于自住能否申请提取住房公积金 如何办理
+    	职工按月偿还住房贷款后何时提取住房公积金 提取资金划入哪个资金账户
+    question=如何办理|item=手续	集中封存户内职工如何办理住房公积金提取手续?
+subject=住房公积金|service=查询热线	number:1
+    question=流程图	天津12369住房公积金查询热线流程图
+subject=公积金|service=提取	number:68
+    question=新政	2014年天津公积金提取新政
+    question=有哪些	不可提取公积金条件有哪些
+    question=什么情况	公积金什么情况可提取
+    	公积金提取表格下载及样表填写说明
+    question=时限|item=自住住房	公积金用于偿还购买自住住房贷款本息的提取时限
+    	六地放宽公积金提取 别让公积金闲置银行
+    question=指南	关于天津市修房公积金提取指南
+    	关于天津市继承的公积金提取案例
+    	十大情形可提取公积金
+    	天津偿还住房贷款本息公积金提取
+    question=条件	天津公积金全额提取条件
+    	天津公积金提取
+    question=有哪些|item=一手房	天津公积金提取一手房材料有哪些
+    question=有哪些|item=二手房	天津公积金提取二手房材料有哪些
+    question=到账时间	天津公积金提取到账时间
+    question=新政	天津公积金提取新政
+    question=时间	天津公积金提取时间是什么时候
+    question=时限	天津公积金提取时限全部情况汇总
+    question=材料	天津公积金提取材料
+    question=条件	天津公积金提取条件
+    question=条件	天津公积金提取条件是什么
+    question=流程	天津公积金提取流程
+    question=网点	天津公积金提取网点-东丽管理部
+    question=网点	天津公积金提取网点-北辰管理部
+    question=网点	天津公积金提取网点-南开管理部
+    question=网点	天津公积金提取网点-塘沽管理部
+    question=网点	天津公积金提取网点-大港管理部
+    question=网点	天津公积金提取网点-宁河管理部
+    question=网点	天津公积金提取网点-宝坻管理部
+    question=网点	天津公积金提取网点-开发管理部
+    question=网点	天津公积金提取网点-汉沽管理部
+    question=网点	天津公积金提取网点-河东管理部
+    question=网点	天津公积金提取网点-河东管理部空港经办管理部
+    question=网点	天津公积金提取网点-河北管理部
+    question=网点	天津公积金提取网点-河西管理部
+    question=网点	天津公积金提取网点-油田分中心管理部
+    question=网点	天津公积金提取网点-津南管理部
+    question=网点	天津公积金提取网点-红桥管理部
+    question=网点	天津公积金提取网点-蓟县管理部
+    question=网点	天津公积金提取网点-西青管理部
+    question=网点	天津公积金提取网点-静海管理部
+    question=时限	天津公积金租房提取时限
+    question=流程	天津公积金租房提取流程
+    	天津公积金管理中心提示：公积金通存通兑周末可提取
+    question=网点	天津公积金网点 天津公积金提取地点
+    question=时限	天津公积金购房提取时限
+    question=流程	天津公积金购房提取流程
+    question=流程	天津市夫妻提取公积金流程案例详解
+    	天津市民不购房如何提取公积金
+    	天津市租房如何提取公积金
+    	天津建行公积金提取
+    question=材料	天津提取公积金材料是什么
+    	天津租房公积金如何提取
+    question=条件	天津租房公积金提取条件
+    	天津租房可提取公积金三种情况
+    	天津租房提取公积金政策热点解读
+    question=材料	天津租房提取公积金材料
+    question=条件	天津租房提取公积金条件放宽 缴存满3个月就能提取
+    	天津突发事件造成家庭生活严重困难公积金提取
+    	天津网友提取公积金经验
+    question=指南	天津购房提取公积金指南
+    	家庭突发事件可以提取公积金
+    item=复印件	提取公积金是不是一定要复印件？
+    question=流程	租房提取公积金流程
+    question=什么是	租房提取公积金的条件有哪些 什么是租房公积金
+    question=解答	网友常见公积金提取条件解答（一）
+    question=解答	网友常见公积金提取条件解答（二）
+    item=二手房	请问购买二手房提取公积金 需提供哪些资料
+subject=工伤保险|service=缴费办理指南	number:1
+    	天津工伤保险缴费办理指南
+subject=住房公积金|service=查询余额	number:1
+    	天津住房公积金查询余额
+subject=公积金|service=所需材料|condition=翻建	number:1
+    item=自有住房	天津公积金贷款建造、翻建自有住房所需材料
+subject=住房公积金|service=提取办理指南	number:1
+    	天津市住房公积金提取业务办理指南
+subject=公积金|role=职工|service=提取	number:1
+    	天津开发区职工将按全市统一政策提取公积金
+subject=社保|role=4050|service=补贴	number:1
+    question=条件	4050社保补贴有多少?享受4050社保补贴的条件
+subject=落户|role=配偶	number:1
+    question=政策解读	天津最新投靠配偶落户政策解读
+subject=公积金|service=提取|condition=连缴3个月	number:2
+    question=新政	公积金新政： 连缴3个月 可提取付房租
+    item=税票	连缴3个月可提取公积金付房租 无需提供发票税票
+subject=落户|role=收养子女	number:1
+    question=指南	天津收养子女落户指南
+subject=公积金	number:12
+    item=联名卡	交通银行公积金联名卡密码
+    	公积金新规解读
+    question=怎么办	天津公积金密码忘记怎么办
+    question=新政策	天津公积金新政策
+    question=有哪些	天津公积金用途有哪些？你所不知道的11大福利
+    item=手续	天津市公积金代办手续
+    question=新政	天津市公积金新政热点解读
+    question=新政策	天津市公积金新政策内容简介
+    question=解答	天津市公积金管理政策解答
+    question=指南	天津市居住证积分—公积金申报指南
+    item=联名卡	建设银行公积金联名卡密码
+    	建设银行银行如何查询公积金账户呢
+subject=生育保险|service=报销标准	number:3
+    	2014年男性生育保险报销标准
+    	天津生育保险报销标准
+    	天津生育保险的报销标准参考表
+subject=社保卡|service=办理激活网点	number:3
+    	天津社保卡（中信、民生、招商银行）办理和激活网点
+    	天津社保卡（工商、农业银行）办理和激活网点一览
+    	天津社保卡（浦发、渤海银行）办理和激活网点
+subject=社保费	number:2
+    regulation=社会保险法	《社会保险法》解读：社保费的强制征缴制
+    regulation=社会保险法	《社会保险法》解读：社保费的强制征缴制
+subject=公积金|service=组合贷款	number:1
+    	天津公积金组合贷款
+subject=社保|service=缴费	number:2
+    question=问题及解答	天津社保多渠道缴费相关问题及解答
+    question=指南	天津社保缴费指南
+subject=养老保险|service=关系转移办理流程	number:1
+    	天津养老保险关系转移接续办理流程
+subject=社保卡|service=申领|condition=信息比对失败	number:1
+    question=怎么办	天津申领社保卡信息比对失败怎么办？
+subject=医疗保险|condition=就业	number:1
+    	天津市零就业家庭可享受养老及医疗保险补助
+subject=社保卡|service=补办	number:3
+    question=指南	天津社保卡补办指南
+    	天津社保卡补办期间如何就医？
+    question=问题	有关天津社保卡申领、使用、补办的11个问题
+subject=住房公积金|role=职工|service=转移|condition=工作调动	number:1
+    question=哪些材料	职工工作调动办理住房公积金转移应携带哪些材料?
+subject=社保卡|role=新生儿|service=办理流程	number:1
+    	天津新生儿社保卡办理流程
+subject=公积金|role=个人|service=开户	number:1
+    	天津市公积金个人缴存新开户
+subject=公积金|role=离职|service=提取	number:1
+    	天津离职公积金提取
+subject=养老保险|service=范围	number:1
+    	天津市养老保险覆盖范围及对象
+subject=公积金|role=个人	number:1
+    	天津公积金查询个人账户
+subject=公积金|service=委托划扣还款申请指南	number:1
+    	关于公积金委托划扣还款申请指南
+subject=生育保险|service=办理流程	number:1
+    	天津生育保险办理流程（图文）
+subject=落户|role=博士后|condition=人才绿卡	number:1
+    question=指南	天津持人才绿卡博士后落户指南
+subject=住房公积金|service=初始密码	number:2
+    item=联名卡	住房公积金联名卡初始密码的说明
+    question=是多少	天津住房公积金初始密码是多少
+subject=公积金|service=代取	number:1
+    	公积金能不能代取
+subject=生育保险|service=报销流程	number:3
+    	天津生育保险报销流程
+    question=是怎样的	天津生育保险报销流程是怎样的
+    question=有哪些	天津生育保险报销流程有哪些
+subject=医疗保险|role=个人|service=范围	number:1
+    	参保职工医疗保险个人账户的支付范围
+subject=养老保险|service=办理	number:1
+    	天津超龄人员补缴养老保险开始办理通知
+subject=住房公积金	number:5
+    question=什么是	什么是住房公积金？
+    question=问答	关于天津市住房公积金的相关问答
+    question=流程详解	天津住房公积金购房流程详解
+    	天津市住房公积金客户服务(网站)系统登录界面(图)
+    	天津滨海住房公积金查询
+subject=住房公积金|service=提取|condition=异地	number:1
+    question=指南	办理异地购房住房公积金提取指南
+subject=住房公积金|role=职工|service=登记	number:1
+    	住房公积金归集业务之四“职工住房公积金变更登记”
+subject=工伤保险|role=单位|service=办理	number:1
+    	天津市用人单位办理和申报工伤保险
+subject=医疗保险|service=缴费	number:2
+    	医疗保险包括哪些项目，医疗保险需缴费多长年限?
+    	天津医疗保险缴费
+subject=工伤保险|role=职工|service=登记	number:1
+    question=指南	天津工伤保险职工登记指南
+subject=公积金|role=职工|service=提取|condition=本市	number:1
+    	外省市户籍职工辞职后离开本市的 如何提取公积金？
+subject=失业保险|role=职工|service=基数	number:1
+    question=时间	天津市单位及职工申报失业保险缴费基数和交费时间
+subject=公积金|service=提取|condition=失业	number:1
+    	失业后能不能提取公积金?
+subject=积分落户|service=办理	number:2
+    	2017天津积分落户办理相关说明
+    	天津期房能办理积分落户吗
+subject=社保|service=转移	number:1
+    question=指南	天津社保转移指南
+subject=养老保险|role=单位|service=范围	number:1
+    	哪些单位应列入机关事业单位养老保险统筹范围?
+subject=工伤保险|service=基数	number:1
+    	天津市缴纳工伤保险费的缴费基数确定
+subject=养老保险|service=关系转移办理指南	number:1
+    	天津养老保险关系转移办理指南
+subject=积分落户|role=非津户籍|service=居住证	number:1
+    	非津户籍常住人口居住证管理办法 详解积分落户
+subject=社保|service=报销范围	number:1
+    	五险一金如何使用？社保报销有范围多少
+subject=公积金|service=贷款首付比例	number:1
+    	2017天津公积金贷款首付比例
+subject=生育保险|service=领取	number:1
+    	天津外来媳妇领取生育保险方法
+subject=社保|service=网上办事大厅	number:1
+    	社保网上办事大厅怎么登陆？
+subject=医疗保险|role=新生儿|service=办理	number:1
+    	天津新生儿医疗保险 90天内可办理
+subject=住房公积金|service=提取程序	number:1
+    question=是怎样的	天津公积金提取之住房公积金提取程序是怎样的
+subject=社保|service=积分计算	number:1
+    	天津社保积分怎么计算（含计算方法）
+subject=失业保险|service=领取	number:13
+    question=时间的限制	2013年天津市失业保险金领取时间的限制
+    question=时限	2013年天津市失业保险金领取时限
+    question=金额	2014天津失业保险金领取金额
+    question=条件	天津失业保险金领取所需具备的条件
+    question=指南	天津失业保险金领取指南
+    question=条件	天津失业保险金领取条件
+    question=流程	天津失业保险金领取流程
+    question=金额	天津失业保险金领取金额
+    question=条件	天津失业保险金领取需要什么条件？
+    	天津市失业保险金如何领取？失业金最多能领24个月
+    question=条件	天津市失业保险金领取条件是什么
+    question=问答	天津领取失业保险金程序是怎样及问答
+    question=条件	领取失业保险金须具备3个条件
+subject=居住证积分|service=管理实施细则	number:1
+    	天津市居住证积分管理实施细则（市人力社保局）
+subject=住房公积金|service=调整	number:3
+    	2016年上半年天津市住房公积金缴存基数调整
+    item=手续	住房公积金提前还款手续及办理流程调整
+    	天津2016年住房公积金缴存调整政策
+subject=公积金|service=提取|condition=住房消费	number:10
+    	公积金住房消费提取之一
+    	公积金住房消费提取之七
+    	公积金住房消费提取之三
+    	公积金住房消费提取之九
+    	公积金住房消费提取之二
+    	公积金住房消费提取之五
+    	公积金住房消费提取之八
+    	公积金住房消费提取之六
+    	公积金住房消费提取之十
+    	公积金住房消费提取之四
+subject=住房公积金|service=基数	number:1
+    	天津公积金缴存比例 历年住房公积金缴存比例及缴存基数政策表
+subject=社保卡|service=如何使用	number:1
+    question=流程	天津社保卡如何使用 医保流程
+subject=养老保险|role=军人|condition=军人退役	number:2
+    	中央批准改革完善军人退役养老保险制度
+    	国务院、中央军委批准改革完善军人退役养老保险制度
+subject=医疗险	number:1
+    	有了基本医疗保险，还要买商业医疗险吗?要怎么合理搭配?
+subject=工伤保险|role=农民工	number:1
+    question=待遇	农民工工伤保险待遇
+subject=公积金|role=职工|service=提取|condition=辞职	number:2
+    	天津异地户籍职工辞职可申请提取公积金
+    	天津：异地户籍职工辞职可申请提取公积金
+subject=落户|role=留学回国|condition=人才绿卡	number:1
+    question=指南	天津持人才绿卡留学回国人员落户指南
+subject=公积金|service=变更办理	number:1
+    	天津公积金信息变更办理资料
+subject=社保卡|service=功能	number:1
+    	天津社保卡功能
+subject=社保|service=缴费证明办理指南	number:1
+    	天津社保缴费证明办理指南
+subject=医疗保险|service=关系转移	number:1
+    	关于基本医疗保险关系转移接续经办工作的温馨提示
+subject=公积金|role=直系亲属|service=提取	number:1
+    question=时限	公积金用于本人、配偶及其直系亲属因重大疾病造成家庭生活严重困难的提取时限
+subject=社保|condition=断缴	number:1
+    question=有什么影响	天津社保断缴有什么影响？
+subject=社保卡|role=新生儿|service=办理缴费	number:1
+    	天津新生儿社保卡的办理和缴费
+subject=医疗保险|service=标准	number:4
+    question=待遇	2017天津城乡居民基本医疗保险待遇标准
+    question=待遇	天津城乡居民基本医疗保险待遇标准
+    question=问题	天津市关于调整2016年度居民基本医疗保险筹资标准和保障水平有关问题的通知
+    	天津市发布医疗保险附加险筹资给付标准
+subject=住房公积金|service=归集	number:3
+    	住房公积金归集业务之九“住房公积金网站查询及业务操作”
+    regulation=住房公积金汇缴缴存	住房公积金归集业务之五“住房公积金汇缴缴存”
+    regulation=住房公积金单位卡业务	住房公积金归集业务之八“住房公积金单位卡业务”
+subject=生育险|service=垫付报销流程	number:1
+    	天津市人力社保部门详解生育险垫付医药费报销流程
+subject=公积金|service=贷款放款	number:1
+    	天津公积金贷款什么时候放款？
+subject=落户|role=外地人员|condition=买房	number:1
+    	2015年外地人员还能通过买房落户天津吗
+subject=公积金|role=特困人员|service=提取	number:1
+    	天津市疾病特困人员公积金提取通知
+subject=医疗保险|condition=异地	number:1
+    	天津市医疗保险参保人员异地就医管理办法
+subject=公积金|service=贷款还款	number:2
+    	天津公积金贷款还款方便吗
+    	天津市公积金贷款的还款方式
+subject=生育保险|service=登记	number:1
+    question=定点医院	天津124家生育保险定点医院联网办理妊娠登记
+subject=医疗保险	number:24
+    question=问答	2014年度天津市城乡居民基本医疗保险相关政策问答
+    	2015年度天津市居民基本医疗保险相关政策
+    question=新政策	2017天津医疗保险最新政策
+    question=解答	2017年度城乡居民基本医疗保险政策解答（上）
+    question=解答	2017年度城乡居民基本医疗保险政策解答（下）
+    question=什么是	什么是费用补偿型医疗保险
+    question=有哪些	关于医疗保险报销问题，医疗保险不予支付的费用有哪些
+    	医疗保险卡怎样清户?
+    question=待遇	基本医疗保险的待遇
+    	天津医疗保险参保
+    	天津医疗保险参保人意外伤害保险
+    question=流程	天津医疗保险参保详细流程
+    	天津医疗保险新规
+    question=解答	天津城乡居民医疗保险问题解答（参保缴费）
+    question=解答	天津城乡居民医疗保险问题解答（就医报销）
+    question=新政策	天津城乡居民基本医疗保险新政策解读
+    question=规定	天津市城镇居民基本医疗保险暂行规定
+    question=规定	天津市基本医疗保险规定
+    question=医院名单	天津市基本医疗保险转外就医指定医院名单
+    question=医院名单	天津市基本医疗保险转诊转院责任医院名单
+    	天津市肿瘤医院基本医疗保险患者住院须知
+    	天津社会保障卡与医疗保险卡有什么区别？
+    question=如何办理	天津补充医疗保险如何办理
+    	社会医疗保险内容
+subject=公积金|service=贷款预约	number:1
+    	天津公积金贷款网上预约入口
+subject=住房公积金|role=单位|service=缴存登记	number:1
+    	天津市单位住房公积金缴存登记
+subject=落户|role=究生以上学历|service=办理	number:1
+    	天津研究生以上学历人员落户办理资料及样例
+subject=工伤保险	number:14
+    question=什么是	什么是工伤保险？
+    question=浮动费率	关于印发《天津市工伤保险浮动费率管理暂行办法》的通知
+    	天津工伤保险经办手册（超详细!自己整理的）
+    question=解答	天津工伤保险问题解答
+    question=浮动费率	天津市完善工伤保险浮动费率
+    question=流程	天津市工伤保险医院就医流程
+    question=定点医院	天津市工伤保险定点医院名单
+    question=解答	天津市工伤保险政策解答
+    question=指南	天津市工伤保险服务指南
+    question=条例	天津市工伤保险条例
+    question=规定	天津市工伤保险若干规定
+    question=有哪些	工伤保险待遇保险项目有哪些？
+    question=特点	工伤保险待遇有什么确定原则及特点？
+    question=待遇	申请工伤保险待遇需要带什么资料？
+subject=公积金|service=销户提取	number:2
+    	公积金回答:亲人去世可办销户提取
+    question=流程图	天津公积金销户提取流程图
+subject=养老保险|role=职工|service=办理|condition=退休	number:1
+    question=指南	参加我市(天津)养老保险的城镇企业办理职工退休审批工作指南
+subject=社保|role=单位职工|service=缴费基数标准	number:1
+    	2014年度天津单位职工社保缴费基数标准
+subject=社保|service=补缴	number:2
+    question=指南	天津社保补缴指南
+    	天津积分入户补缴社保计分吗
+subject=住房公积金|service=积分	number:1
+    question=问题	天津住房公积金积分相关问题说明
+subject=医疗保险|role=职工|service=标准	number:2
+    question=待遇	2017天津城镇职工基本医疗保险待遇标准
+    question=待遇	天津城镇职工基本医疗保险待遇标准
+subject=积分落户	number:27
+    	2014天津积分落户细则：2014天津积分落户是什么意思
+    question=多少分	2015天津积分落户要多少分
+    question=入围分数	2015年天津积分落户入围分数
+    	2016天津积分落户分值表(新旧对照表)
+    question=政策解读	2016天津积分落户政策解读
+    	2016天津积分落户最低分
+    	2016天津积分落户细则
+    question=公布时间	2016年天津积分落户公布时间
+    	2017天津积分落户申请必读——政策解析
+    question=新政策	2017年天津积分落户新政策
+    question=时间安排	2017年天津积分落户时间安排
+    	天津3.05万外来人口凭积分落户
+    question=问题及解答	天津市积分落户常见问题及解答
+    question=算分	天津积分落户中职称怎么算分
+    question=问题|regulation=准迁证	天津积分落户《准迁证》常见的问题解疑
+    question=有效期|regulation=准迁证	天津积分落户准迁证有效期是多久
+    question=怎么办|regulation=准迁证	天津积分落户准迁证过期怎么办理延期（办理材料+地点）
+    	天津积分落户分值（表格）
+    item=证书	天津积分落户哪些证书可以加分？
+    question=问题	天津积分落户常见问题详解
+    	天津积分落户政策
+    item=证书	天津积分落户政策承认的证书
+    question=条件	天津积分落户条件
+    	天津积分落户申请要注意什么
+    question=问题	天津积分落户的常见问题及回答
+    	天津积分落户第二批名单
+    question=多少分	积分落户 得积多少分才够
+subject=住房公积金|service=办理网点	number:1
+    	天津住房公积金办理网点-和平管理部
+subject=社保|service=变更办理指南	number:1
+    	天津社保参保人员变更办理指南
+subject=医疗保险|service=领取	number:1
+    	医疗保险以后能领取多少
+subject=社保|service=报销|condition=未办社保卡	number:1
+    	天津社保交费期间未办社保卡是否能报销
+subject=落户|service=积分	number:1
+    question=多少分	天津市居住证如何积分 多少分落户
+subject=住房公积金|service=封存	number:3
+    	住房公积金归集业务之六“住房公积金集中封存业务”
+    	天津市住房公积金集中封存业务
+    	天津市住房公积金集中封存管理办法
+subject=失业保险|service=申领|condition=失业	number:1
+    	天津失业人员申领失业保险金程序
+subject=公积金|role=单位|service=缴存办理指南	number:1
+    	天津单位设立公积金账户缴存办理指南
+subject=生育保险|role=个人	number:2
+    question=怎么办	天津个人怎么办理生育保险
+    question=怎么办	天津个人怎么办理生育保险？
+subject=生育保险|role=职工	number:4
+    question=规定	2017天津市职工生育保险最新规定
+    question=问题	天津关于降低职工生育保险费率有关问题的通知
+    question=解答	天津城镇职工生育保险问题解答
+    	男职工生育保险有什么用？报销条件和使用方法
+subject=公积金|service=委托提取	number:1
+    question=问答	天津公积金问答:组合贷如何委托提取
+subject=养老保险|service=调整	number:1
+    question=待遇	关于调整天津市2014年征地参保人员养老保险待遇的通知
+subject=失业保险|service=办理	number:1
+    	天津市失业保险办理程序
+subject=社保卡|service=查询指南	number:1
+    	天津社保卡查询指南
+subject=住房公积金|role=职工|service=转移	number:1
+    question=如何办理	单位或职工如何办理住房公积金转移
+subject=失业保险|service=标准	number:4
+    	2016天津失业保险金发放标准（领取期限+条件+计算方法）
+    	天津失业保险金发放标准
+    	天津失业保险金有何标准
+    	天津失业保险金标准
+subject=公积金|service=缴存银行网点	number:1
+    	天津公积金缴存银行网点
+subject=积分入户|service=积分计算	number:1
+    	天津积分入户时社会保险积分如何计算
+subject=养老保险	number:30
+    question=新政策	2016年天津养老保险新政策
+    	停缴养老保险后还用缴医保吗?
+    question=特点	养老保险的作用及特点
+    question=参保方法	养老保险的参保方法
+    question=含义	养老保险的含义
+    question=种类	养老保险的种类
+    question=组成	养老保险的组成
+    question=多少年	养老保险金交多少钱以及交多少年?
+    question=有哪些	商业养老保险的关键词有哪些？
+    	城乡居民社会养老保险基金
+    question=种类	基本养老保险的种类介绍 买商业养老保险怎么样？
+    question=指南	天津养老保险参保指南
+    question=新政策	天津养老保险新政策
+    	天津城乡居民养老保险20问
+    question=指南	天津城乡居民养老保险参保指南
+    question=政策解读	天津城乡居民养老保险政策解读
+    question=解答	天津城乡居民养老保险问题解答
+    question=解答	天津城乡居民养老保险问题+解答
+    	天津市养老保险基金的管理
+    question=条件	天津市参加城乡居民养老保险的条件
+    question=多少年	天津市参加城乡居民养老保险至少需要缴满多少年?可以一次性缴齐吗?
+    question=问题	天津市城乡居民养老保险常见问题
+    item=商业保险	天津市城乡居民养老保险是商业保险吗?
+    question=解答	天津市城乡居民养老保险问题解答
+    	天津市城乡居民基本养老保险实施办法2015
+    	天津市城乡居民基本养老保险有关制度
+    	天津市基本养老保险
+    question=如何办理|item=手续	天津市如何办理参加城乡居民养老保险手续?
+    	天津建立养老保险征缴稽核机制
+    question=问题	详解天津城乡居民养老保险热点问题
+subject=医疗保险|service=缴纳	number:1
+    question=待遇	医疗保险如何缴纳，哪些情形不能享受医疗保险待遇
+subject=医疗保险|service=报销比例	number:1
+    	天津医疗保险报销比例
+subject=公积金|service=贷款调整	number:1
+    	天津公积金贷款政策调整
+subject=落户|service=办理	number:7
+    question=时间	天津2017第一期居住证积分落户办理时间
+    question=材料	天津具有高级技术职称的人员落户办理材料及样例
+    	天津居住证积分落户办理资料
+    question=指南|regulation=准迁证	天津积分入户准迁证办理落户指南
+    question=哪些材料|regulation=准迁证	天津积分入户拿到《准迁证》办理落户需要哪些材料?
+    	如何在天津办理落户
+    question=条件	如何在天津办理落户 天津落户条件
+subject=住房公积金|service=缴存额	number:1
+    	天津市关于调整2014年住房公积金缴存额的通知
+subject=公积金|service=还款余额冲贷	number:1
+    	公积金还款能余额冲贷吗？
+subject=住房公积金|service=缴费	number:1
+    	就近办理住房公积金转移 缴费会增加吗
+subject=住房公积金|service=使用	number:2
+    	住房公积金龙卡使用的几个误区
+    	天津市住房公积金客户服务热线12329或96266使用说明
+subject=生育津贴	number:1
+    question=规定	关于天津生育保险与国家生育津贴的规定
+subject=社保卡|service=激活	number:3
+    	天津农业银行社保卡在哪里激活呢
+    	天津社保卡如何激活
+    	天津社保卡激活需要什么资料呢
+subject=公积金|service=贷款所需材料	number:1
+    	天津公积金贷款购买网上交易私产住房所需材料
+subject=公积金|role=大学生|service=缴存	number:1
+    	试用期大学生是否应该缴存公积金？
+subject=生育保险|service=报销查询	number:1
+    	天津生育保险报销查询
+subject=生育险	number:1
+    	未参加社会保险孕妇无法享受丈夫的生育险
+subject=工伤保险|service=联系方式	number:1
+    	区县工伤保险行政、经办部门联系方式
+subject=公积金|service=贷款|condition=买房	number:1
+    	公积金异地贷款细则出台 专家：更多人回老家买房
+subject=落户|role=新生儿|condition=一年内	number:1
+    	天津新生儿落户：新生儿必须在一年内落户吗
+subject=社保|service=基础知识	number:2
+    question=什么是	社保基础知识：什么是社会保险？
+    question=什么是	社保基础知识：什么是社会保险？
+subject=住房公积金|service=办理流程	number:2
+    item=一手房	天津市一手房住房公积金贷款办理流程
+    	天津市住房公积金贷款办理流程图
+subject=个人住房公积金|service=贷款首付比例	number:1
+    	天津市个人住房公积金贷款首付款比例政策
+subject=工伤保险|condition=定点	number:4
+    question=医疗机构	天津工伤保险定点资格医疗机构名单
+    question=医疗机构	天津市工伤保险定点医疗机构
+    question=康复机构	天津市工伤保险定点康复机构
+    	天津市工伤保险辅助器具定点配置机构
+subject=医疗保险|service=补缴	number:1
+    	基本医疗保险覆盖哪些范围，可以补缴医疗保险欠费吗
+subject=公积金|service=提取|condition=买房	number:1
+    question=流程	天津公积金异地买房提取流程 天津公积金可以异地买房吗
+subject=公积金|service=提取银行网点	number:1
+    	天津市公积金提取银行网点
+subject=落户|role=外地户口|condition=不买房	number:1
+    	外地户口不买房怎么落户天津
+subject=社保|role=离职	number:1
+    	离职后如何处理天津社保
+subject=公积金|service=缴存登记开户	number:1
+    	天津公积金缴存登记与开户
+subject=住房公积金|service=提取管理办法	number:3
+    	天津住房公积金提取管理办法
+    	天津市住房公积金提取管理办法
+    	天津市住房公积金提取管理办法解读
+subject=住房公积金|service=提取|condition=出境定居	number:1
+    question=指南	出境定居住房公积金提取指南
+subject=公积金|service=还款利息计算	number:1
+    	天津公积金提前还款额及利息计算
+subject=住房公积金|service=查询	number:16
+    	天津东丽住房公积金查询
+    	天津住房公积金查询
+    	天津北辰住房公积金查询
+    	天津南开住房公积金查询
+    	天津和平住房公积金查询
+    	天津塘沽住房公积金查询
+    	天津宝坻住房公积金查询
+    	天津市住房公积金网站查询及业务操作
+    	天津武清住房公积金查询
+    	天津汉沽住房公积金查询
+    	天津河东住房公积金查询
+    	天津河北区住房公积金查询
+    	天津河西区住房公积金查询
+    	天津津南住房公积金查询
+    	天津红桥住房公积金查询
+    	天津西青住房公积金查询
+subject=公积金|service=提取|condition=异地	number:2
+    	天津异地购房公积金可以提取购房(网友经验)
+    	异地购房如何提取公积金（经验）
+subject=积分落户|condition=提前办	number:1
+    question=哪些材料	天津积分落户哪些材料可以提前办
+subject=住房公积金|service=销户提取	number:1
+    	天津市住房公积金销户提取
+subject=社保|service=缴纳	number:1
+    question=怎么办	天津自由职业者缴纳社保怎么办
+subject=社保卡	number:7
+    question=相关的问题	关于天津社保卡相关的问题
+    question=怎么办	天津儿童社保卡怎么办理
+    question=如何办理	天津市社保卡如何办理
+    question=如何办理	天津市社保卡如何办理？必备条件及所需材料
+    question=怎么用	天津新社保卡怎么用？
+    question=问题及解答	天津社保卡常见问题及解答
+    question=作用	新社保卡怎么用 天津社保卡如何正确发挥社保卡作用
+subject=失业保险	number:9
+    question=条例	2014天津失业保险条例
+    question=条例	2014天津市失业保险条例
+    question=条例	天津失业保险条例
+    	天津失业保险金
+    question=支出项目	天津市失业保险基金支出项目
+    question=条例	天津市失业保险条例摘要
+    	天津市失业保险金每月涨60元 最多能领24个月
+    question=组成	失业保险基金的组成
+    question=如何办理	如何办理失业保险
+subject=工伤保险|service=报销	number:1
+    question=待遇	怎么样报销工伤保险待遇？
+subject=公积金|role=配偶|service=提取	number:1
+    	关于天津市提取配偶公积金的案例
+subject=社保卡|service=申领	number:1
+    question=指南	天津社保卡申领指南
+subject=社保	number:6
+    item=医疗住院保险	住院医疗保险和社保中的基本医疗住院保险有什么区别?
+    item=重大疾病保险	有了社保还需重大疾病保险
+    item=医疗住院保险	住院医疗保险和社保中的基本医疗住院保险有什么区别?
+    question=一览表	天津市社保机构一览表
+    question=指南	天津社保参保指南
+    item=重大疾病保险	有了社保还需重大疾病保险
+subject=住房公积金|service=贷款还款	number:3
+    	住房公积金（组合）贷款还款有那些要求？
+    	住房公积金贷款如何提前还款
+    	天津住房公积金贷款的还款方式
+subject=社保卡|service=12333挂失|condition=丢失	number:1
+    	省社保卡丢失可拨打“12333”临时挂失
+subject=生育保险|service=报销办理指南	number:1
+    	天津生育保险报销办理指南
+subject=住房公积金|role=职工|service=提取|condition=本市	number:3
+    item=自有住房	职工使用公积金(组合)贷款在本市行政区域内购买自有住房的 如何提取住房公积金
+    item=自有住房	职工未使用住房贷款在本市行政区域内购买自有住房的 如何提取住房公积金
+    item=证明文件	被纳入本市城镇居民最低生活保障范围的职工支付房租提取住房公积金需要提供哪些证明文件?
+subject=公积金|role=个人|service=关系	number:1
+    	缴存基数与个人实际缴存公积金是什么关系？
+subject=住房公积金|service=领取	number:1
+    	天津住房公积金提取条件有哪些？住房公积金领取表在哪儿领？
+subject=社保卡|service=申领换发	number:1
+    question=如何办理	天津市社保卡如何办理申领与换发？
+subject=社保|service=缴费基数最低和最高标准	number:1
+    	2014年度天津社保缴费基数最低和最高标准
+subject=住房公积金|service=查询指南	number:1
+    	天津住房公积金查询指南
+subject=公积金|service=初始密码	number:1
+    	天津公积金卡初始密码是什么
+subject=公积金|service=缴存额调整	number:1
+    question=规定	2014年天津公积金缴存额调整操作规定
+subject=公积金|service=贷款|condition=异地	number:4
+    	住建部推公积金异地贷款细则
+    item=手续	公积金异地贷款细则出台了 办齐这些手续就成
+    	公积金异地贷款购房10月8日开始
+    	公积金推异地贷款
+subject=公积金|service=查询	number:2
+    question=图解	天津公积金明细查询图解
+    	天津公积金查询方法汇总
+subject=积分入户	number:1
+    question=问题及解答	天津公积金积分入户相关问题及解答
+subject=养老保险|service=变更	number:1
+    question=指南	天津养老保险变更指南
+subject=养老保险|service=缴纳	number:1
+    question=解答	天津市城乡居民养老保险缴纳常见问题解答
+subject=失业保险|service=领取|condition=失业	number:3
+    question=规定	天津市失业人员领取失业保险金的规定
+    	天津市失业保险金如何领取 失业金最多能领24个月
+    	失业人员在领取失业保险金期间 出现哪些情况会被停止领取失业保险金
+subject=住房公积金|role=单位|service=注销登记	number:1
+    	天津市单位住房公积金账户注销登记
+subject=养老金|service=调整|condition=退休	number:1
+    	2015退休养老金调整天津：可补保险办退休
+subject=住房公积金|condition=买车	number:1
+    	住房公积金能买车吗
+subject=住房公积金|role=单位|service=登记	number:3
+    	住房公积金归集业务之一“单位住房公积金缴存登记”
+    	住房公积金归集业务之三“单位住房公积金账户注销登记”
+    	住房公积金归集业务之二“单位住房公积金变更登记”
+subject=公积金|service=封存	number:1
+    question=什么是	什么是封存户 什么是公积金封存
+subject=社保|role=农民工	number:1
+    	天津市农民工参加社保
+subject=养老保险|service=计算	number:2
+    	天津养老保险金计算方法
+    	新养老保险计算方法
+subject=积分落户|role=单位	number:1
+    question=哪些材料	申请天津积分落户须向单位提交哪些材料？

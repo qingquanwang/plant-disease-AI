@@ -3,10 +3,11 @@
 import argparse
 import pprint
 import os,sys
-from os.path import abspath, join, dirname
+from os.path import abspath, realpath, join, dirname
+sys.path.insert(0, join(dirname(realpath(__file__)), '../'))
 
-sys.path.insert(0, join(abspath(dirname('__file__')), 'plantDiseaseAI/backend'))
-sys.path.insert(0, join(abspath(dirname('__file__')), 'plantDiseaseAI/backend/handler'))
+sys.path.insert(0, join(abspath(dirname('__file__')), '../plantDiseaseAI/backend'))
+sys.path.insert(0, join(abspath(dirname('__file__')), '../plantDiseaseAI/backend/handler'))
 
 from plantDiseaseAI.backend.DictManager import *
 from plantDiseaseAI.backend.nlu import *

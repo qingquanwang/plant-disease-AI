@@ -1,0 +1,463 @@
+10月8日起住房公积金推行异地贷款	{}	[10|/DIGIT][月|/time][8|/DIGIT][日|/time][住房公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service]{}GreedyTagger
+12329住房公积金短信服务将免费开通	{}	[12329|/DIGIT][住房公积金|/gov/subject][短信服务|/gov/service][开通|/gov/service]{}GreedyTagger
+2013天津市住房公积金贷款利率	{}	[2013|/DIGIT][天津市|/place/province][住房公积金|/gov/subject][贷款利率|/gov/service]{}GreedyTagger
+2013年住房公积金缴存额调整通知	{}	[2013年|/year][住房公积金|/gov/subject][缴存额|/gov/service][调整|/gov/service]{}GreedyTagger
+2013年天津关于住房公积金存贷款利率调整	{}	[2013年|/year][天津|/place/city][住房公积金|/gov/subject][贷款利率|/gov/service][调整|/gov/service]{}GreedyTagger
+2013年天津市住房公积金缴存比例	{}	[2013年|/year][天津市|/place/province][住房公积金|/gov/subject][缴存比例|/gov/service]{}GreedyTagger
+2013年天津银行个人住房公积金贷款	{}	[2013年|/year][天津银行|/org/bank][个人住房公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+2014天津公积金转移	{}	[2014|/DIGIT][天津|/place/city][公积金|/gov/subject][转移|/gov/service]{}GreedyTagger
+2014年天津公积金提取新政	{}	[2014年|/year][天津|/place/city][公积金|/gov/subject][提取|/gov/service][新政|/gov/question]{}GreedyTagger
+2014年天津公积金缴存额调整操作规定	{}	[2014年|/year][天津|/place/city][公积金|/gov/subject][缴存额|/gov/service][调整|/gov/service][规定|/gov/question]{}GreedyTagger
+2016天津公积金缴存上限是多少？最高不得超过21048	{}	[2016|/DIGIT][天津|/place/city][公积金|/gov/subject][缴存|/gov/service][上限|/gov/qualifier][是多少|/gov/question]{}GreedyTagger[最高|/gov/qualifier][21048|/DIGIT]{}GreedyTagger
+2016天津公积金缴存下限是多少	{}	[2016|/DIGIT][天津|/place/city][公积金|/gov/subject][缴存|/gov/service][下限|/gov/qualifier][是多少|/gov/question]{}GreedyTagger
+2016天津公积金缴存比例调整申请表及下载	{}	[2016|/DIGIT][天津|/place/city][公积金|/gov/subject][缴存比例|/gov/service][调整|/gov/service][申请表|/gov/service]{}GreedyTagger
+2016天津公积金缴费比例及上下限解读	{}	[2016|/DIGIT][天津|/place/city][公积金|/gov/subject][缴费|/gov/service][比例|/gov/service][下限|/gov/qualifier][解读|/gov/service]{}GreedyTagger
+2016天津公积金缴费比例是多少	{}	[2016|/DIGIT][天津|/place/city][公积金|/gov/subject][缴费|/gov/service][比例|/gov/service][是多少|/gov/question]{}GreedyTagger
+2016年7月天津公积金调整后怎么算？个人至少少交15元	{}	[2016年|/year][7|/DIGIT][月|/time][天津|/place/city][公积金|/gov/subject][调整|/gov/service]{}GreedyTagger[个人|/gov/role][15|/DIGIT]{}GreedyTagger
+2016年上半年天津市住房公积金缴存基数调整	{}	[2016年|/year][年|/time][天津市|/place/province][住房公积金|/gov/subject][缴存|/gov/service][基数|/gov/service][调整|/gov/service]{}GreedyTagger
+2017天津公积金贷款首付比例	{}	[2017|/DIGIT][天津|/place/city][公积金|/gov/subject][贷款|/gov/service][首付|/gov/service][比例|/gov/service]{}GreedyTagger
+4月6日起 天津12家银行的公积金贷款还款更方便了	{}	[4|/DIGIT][月|/time][6|/DIGIT][日|/time][天津|/place/city][12|/DIGIT][银行|/org/bank][公积金|/gov/subject][贷款|/gov/service][还款|/gov/service]{}GreedyTagger
+不可提取公积金条件有哪些	{}	[提取|/gov/service][公积金|/gov/subject][条件|/gov/question][有哪些|/gov/question]{}GreedyTagger
+个人住房公积金怎么使用?	{}	[个人住房公积金|/gov/subject][使用|/gov/service]{}GreedyTagger
+个人领取的住房公积金是否要缴纳个人所得税？	{}	[个人|/gov/role][领取|/gov/service][住房公积金|/gov/subject][缴纳|/gov/service][个人所得税|/gov/item]{}GreedyTagger
+中国银行怎么查询公积金余额	{}	[中国银行|/org/bank][查询|/intent][公积金|/gov/subject][余额|/gov/service]{}GreedyTagger
+买车可以提取天津住房公积金吗？	{}	[买车|/gov/condition][提取|/gov/service][天津|/place/city][住房公积金|/gov/subject]{}GreedyTagger
+二手房住房公积金贷款如何办理？	{}	[二手房|/gov/item][住房公积金|/gov/subject][贷款|/gov/service][如何办理|/gov/service]{}GreedyTagger
+二手房公积金贷款申报资料	{}	[二手房|/gov/item][公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+交通银行公积金联名卡密码	{}	[交通银行|/org/bank][公积金|/gov/subject][联名卡|/gov/item]{}GreedyTagger
+什么是住房公积金？	{}	[什么是|/gov/question][住房公积金|/gov/subject]{}GreedyTagger
+什么是公积金缴存范围？	{}	[什么是|/gov/question][公积金|/gov/subject][缴存|/gov/service][范围|/gov/service]{}GreedyTagger
+什么是封存户 什么是公积金封存	{}	[什么是|/gov/question][封存|/gov/service][什么是|/gov/question][公积金|/gov/subject][封存|/gov/service]{}GreedyTagger
+住建部推公积金异地贷款细则	{}	[公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service]{}GreedyTagger
+住房公积金全面推行异地贷款	{}	[住房公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service]{}GreedyTagger
+住房公积金如何还款	{}	[住房公积金|/gov/subject][还款|/gov/service]{}GreedyTagger
+住房公积金委托提取	{}	[住房公积金|/gov/subject][委托提取|/gov/service]{}GreedyTagger
+住房公积金异地贷款业务将全面推行	{}	[住房公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service]{}GreedyTagger
+住房公积金异地贷款已全面实施 贷款流程相应简化	{}	[住房公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service][贷款|/gov/service][流程|/gov/question]{}GreedyTagger
+住房公积金异地贷款政策热点解读	{}	[住房公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service][解读|/gov/service]{}GreedyTagger
+住房公积金异地贷款细则出台 附通知全文	{}	[住房公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service]{}GreedyTagger
+住房公积金异地贷款细则出台 需交书面证明	{}	[住房公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service]{}GreedyTagger
+住房公积金归集业务之一“单位住房公积金缴存登记”	{}	[住房公积金|/gov/subject][归集|/gov/service][单位住房公积金缴存登记|/WordsQuot]{}GreedyTagger
+住房公积金归集业务之七“住房公积金网上缴存业务”	{}	[住房公积金|/gov/subject][归集|/gov/service][住房公积金网上缴存业务|/WordsQuot]{}GreedyTagger
+住房公积金归集业务之三“单位住房公积金账户注销登记”	{}	[住房公积金|/gov/subject][归集|/gov/service][单位住房公积金账户注销登记|/WordsQuot]{}GreedyTagger
+住房公积金归集业务之九“住房公积金网站查询及业务操作”	{}	[住房公积金|/gov/subject][归集|/gov/service][住房公积金网站查询及业务操作|/WordsQuot]{}GreedyTagger
+住房公积金归集业务之二“单位住房公积金变更登记”	{}	[住房公积金|/gov/subject][归集|/gov/service][单位住房公积金变更登记|/WordsQuot]{}GreedyTagger
+住房公积金归集业务之五“住房公积金汇缴缴存”	{}	[住房公积金|/gov/subject][归集|/gov/service][住房公积金汇缴缴存|/WordsQuot]{}GreedyTagger
+住房公积金归集业务之八“住房公积金单位卡业务”	{}	[住房公积金|/gov/subject][归集|/gov/service][住房公积金单位卡业务|/WordsQuot]{}GreedyTagger
+住房公积金归集业务之六“住房公积金集中封存业务”	{}	[住房公积金|/gov/subject][归集|/gov/service][住房公积金集中封存业务|/WordsQuot]{}GreedyTagger
+住房公积金归集业务之四“职工住房公积金变更登记”	{}	[住房公积金|/gov/subject][归集|/gov/service][职工住房公积金变更登记|/WordsQuot]{}GreedyTagger
+住房公积金怎么还款	{}	[住房公积金|/gov/subject][还款|/gov/service]{}GreedyTagger
+住房公积金提前还款手续及办理流程调整	{}	[住房公积金|/gov/subject][还款|/gov/service][手续|/gov/item][办理流程|/gov/service][调整|/gov/service]{}GreedyTagger
+住房公积金提取业务政策问答	{}	[住房公积金|/gov/subject][提取|/gov/service][业务政策问答|/gov/question]{}GreedyTagger
+住房公积金提取管理规定	{}	[住房公积金|/gov/subject][提取|/gov/service][规定|/gov/question]{}GreedyTagger
+住房公积金提取额度	{}	[住房公积金|/gov/subject][提取|/gov/service][额度|/gov/question]{}GreedyTagger
+住房公积金用途及申请提取规定	{}	[住房公积金|/gov/subject][提取|/gov/service][规定|/gov/question]{}GreedyTagger
+住房公积金（组合）贷款还款有那些要求？	{}	[住房公积金|/gov/subject][组合贷款|/gov/service][还款|/gov/service]{}GreedyTagger
+住房公积金网上缴存业务	{}	[住房公积金|/gov/subject][缴存|/gov/service]{}GreedyTagger
+住房公积金联名卡初始密码的说明	{}	[住房公积金|/gov/subject][联名卡|/gov/item][初始密码|/gov/service]{}GreedyTagger
+住房公积金能买车吗	{}	[住房公积金|/gov/subject][买车|/gov/condition]{}GreedyTagger
+住房公积金贷款业务政策问答	{}	[住房公积金|/gov/subject][贷款|/gov/service][业务政策问答|/gov/question]{}GreedyTagger
+住房公积金贷款如何提前还款	{}	[住房公积金|/gov/subject][贷款|/gov/service][还款|/gov/service]{}GreedyTagger
+住房公积金贷款期限及额度	{}	[住房公积金|/gov/subject][贷款|/gov/service][期限|/gov/question][额度|/gov/question]{}GreedyTagger
+住房公积金贷款期限及额度（公告）	{}	[住房公积金|/gov/subject][贷款|/gov/service][期限|/gov/question][额度|/gov/question]{}GreedyTagger
+住房公积金贷款期限最长能多少年？	{}	[住房公积金|/gov/subject][贷款|/gov/service][期限|/gov/question][多少年|/gov/question]{}GreedyTagger
+住房公积金贷款用途	{}	[住房公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+住房公积金贷款的种类有哪些 住房公积金提取的条件	{}	[住房公积金|/gov/subject][贷款|/gov/service][种类|/gov/question][有哪些|/gov/question][住房公积金|/gov/subject][提取|/gov/service][条件|/gov/question]{}GreedyTagger
+住房公积金贷款资料	{}	[住房公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+住房公积金龙卡使用的几个误区	{}	[住房公积金|/gov/subject][使用|/gov/service]{}GreedyTagger
+住房城乡建设部关于住房公积金异地个人住房贷款有关操作问题的通知	{}	[住房公积金|/gov/subject][异地|/gov/condition][个人|/gov/role][住房贷款|/gov/service][问题|/gov/service]{}GreedyTagger
+公积金什么情况可提取	{}	[公积金|/gov/subject][什么情况|/gov/question][提取|/gov/service]{}GreedyTagger
+公积金住房消费提取之一	{}	[公积金|/gov/subject][住房消费|/gov/condition][提取|/gov/service]{}GreedyTagger
+公积金住房消费提取之七	{}	[公积金|/gov/subject][住房消费|/gov/condition][提取|/gov/service]{}GreedyTagger
+公积金住房消费提取之三	{}	[公积金|/gov/subject][住房消费|/gov/condition][提取|/gov/service]{}GreedyTagger
+公积金住房消费提取之九	{}	[公积金|/gov/subject][住房消费|/gov/condition][提取|/gov/service]{}GreedyTagger
+公积金住房消费提取之二	{}	[公积金|/gov/subject][住房消费|/gov/condition][提取|/gov/service]{}GreedyTagger
+公积金住房消费提取之五	{}	[公积金|/gov/subject][住房消费|/gov/condition][提取|/gov/service]{}GreedyTagger
+公积金住房消费提取之八	{}	[公积金|/gov/subject][住房消费|/gov/condition][提取|/gov/service]{}GreedyTagger
+公积金住房消费提取之六	{}	[公积金|/gov/subject][住房消费|/gov/condition][提取|/gov/service]{}GreedyTagger
+公积金住房消费提取之十	{}	[公积金|/gov/subject][住房消费|/gov/condition][提取|/gov/service]{}GreedyTagger
+公积金住房消费提取之四	{}	[公积金|/gov/subject][住房消费|/gov/condition][提取|/gov/service]{}GreedyTagger
+公积金回答:亲人去世可办销户提取	{}	[公积金|/gov/subject][销户|/gov/service][提取|/gov/service]{}GreedyTagger
+公积金异地贷款细则出台 专家：更多人回老家买房	{}	[公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service]{}GreedyTagger
+公积金异地贷款细则出台了 办齐这些手续就成	{}	[公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service][手续|/gov/item]{}GreedyTagger
+公积金异地贷款购房10月8日开始	{}	[公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service][10|/DIGIT][月|/time][8|/DIGIT][日|/time]{}GreedyTagger
+公积金异地转移：转至所在城市 不能直接在津申请提取	{}	[公积金|/gov/subject][异地|/gov/condition][转移|/gov/service][提取|/gov/service]{}GreedyTagger
+公积金推异地贷款	{}	[公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service]{}GreedyTagger
+公积金推异地贷款：住房公积金异地贷款业务将全面推行	{}	[公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service][住房公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service]{}GreedyTagger
+公积金推异地贷款 申请住房贷款需满足7个条件	{}	[公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service][住房贷款|/gov/service][7|/DIGIT][条件|/gov/question]{}GreedyTagger
+公积金提前还款流程有哪些 怎么提前还款最划算	{}	[公积金|/gov/subject][还款|/gov/service][流程|/gov/question][有哪些|/gov/question][还款|/gov/service]{}GreedyTagger
+公积金提取表格下载及样表填写说明	{}	[公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+公积金新政： 连缴3个月 可提取付房租	{}	[公积金|/gov/subject][新政|/gov/question][连缴3个月|/gov/condition][提取|/gov/service]{}GreedyTagger
+公积金新规解读	{}	[公积金|/gov/subject][解读|/gov/service]{}GreedyTagger
+公积金用于偿还购买自住住房贷款本息的提取时限	{}	[公积金|/gov/subject][偿还|/gov/service][自住住房|/gov/item][贷款|/gov/service][提取|/gov/service][时限|/gov/question]{}GreedyTagger
+公积金用于完全丧失劳动能力并与所在单位终止劳动关系的提取时限	{}	[公积金|/gov/subject][单位|/gov/role][关系|/gov/service][提取|/gov/service][时限|/gov/question]{}GreedyTagger
+公积金用于本人、配偶及其直系亲属因重大疾病造成家庭生活严重困难的提取时限	{}	[公积金|/gov/subject][本人|/gov/role][配偶|/gov/role][直系亲属|/gov/role][提取|/gov/service][时限|/gov/question]{}GreedyTagger
+公积金能不能代取	{}	[公积金|/gov/subject][代取|/gov/service]{}GreedyTagger
+公积金贷款业务政策问答	{}	[公积金|/gov/subject][贷款|/gov/service][业务政策问答|/gov/question]{}GreedyTagger
+公积金贷款别逾期 后果让你很麻烦	{}	[公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+公积金贷款办理时限为8个工作日 解读申请条件	{}	[公积金|/gov/subject][贷款|/gov/service][办理|/gov/service][时限|/gov/question][8|/DIGIT][工作日|/dow][解读|/gov/service][条件|/gov/question]{}GreedyTagger
+公积金贷款流程	{}	[公积金|/gov/subject][贷款|/gov/service][流程|/gov/question]{}GreedyTagger
+公积金贷款的利与弊	{}	[公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+公积金贷款资料	{}	[公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+公积金贷款逾期会怎样	{}	[公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+公积金贷款额度计算	{}	[公积金|/gov/subject][贷款|/gov/service][额度|/gov/question][计算|/gov/service]{}GreedyTagger
+公积金贷款额度计算器	{}	[公积金|/gov/subject][贷款|/gov/service][额度|/gov/question][计算器|/gov/question]{}GreedyTagger
+公积金还款两种方法介绍	{}	[公积金|/gov/subject][还款|/gov/service]{}GreedyTagger
+公积金还款能余额冲贷吗？	{}	[公积金|/gov/subject][还款|/gov/service][余额|/gov/service][冲贷|/gov/service]{}GreedyTagger
+六地放宽公积金提取 别让公积金闲置银行	{}	[公积金|/gov/subject][提取|/gov/service][公积金|/gov/subject][银行|/org/bank]{}GreedyTagger
+关于公积金委托划扣还款申请指南	{}	[公积金|/gov/subject][委托|/gov/service][划扣|/gov/service][还款|/gov/service][申请指南|/gov/service]{}GreedyTagger
+关于天津市个人缴存住房公积金问题	{}	[天津市|/place/province][个人|/gov/role][缴存|/gov/service][住房公积金|/gov/subject][问题|/gov/service]{}GreedyTagger
+关于天津市住房公积金的相关问答	{}	[天津市|/place/province][住房公积金|/gov/subject][问答|/gov/question]{}GreedyTagger
+关于天津市修房公积金提取指南	{}	[天津市|/place/province][公积金|/gov/subject][提取|/gov/service][指南|/gov/service]{}GreedyTagger
+关于天津市公积金个人缴存补缴问题	{}	[天津市|/place/province][公积金|/gov/subject][个人|/gov/role][缴存|/gov/service][补缴|/gov/service][问题|/gov/service]{}GreedyTagger
+关于天津市市民因重大疾病提取住房公积金的问题	{}	[天津市|/place/province][提取|/gov/service][住房公积金|/gov/subject][问题|/gov/service]{}GreedyTagger
+关于天津市提取配偶公积金的案例	{}	[天津市|/place/province][提取|/gov/service][配偶|/gov/role][公积金|/gov/subject]{}GreedyTagger
+关于天津市继承的公积金提取案例	{}	[天津市|/place/province][公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+关于委托他人提取天津住房公积金的问题	{}	[委托|/gov/service][提取|/gov/service][天津|/place/city][住房公积金|/gov/subject][问题|/gov/service]{}GreedyTagger
+关于辞职住房公积金提取指南	{}	[辞职|/gov/condition][住房公积金|/gov/subject][提取|/gov/service][指南|/gov/service]{}GreedyTagger
+出境定居住房公积金提取指南	{}	[出境定居|/gov/condition][住房公积金|/gov/subject][提取|/gov/service][指南|/gov/service]{}GreedyTagger
+办理公积金贷款所需资料	{}	[办理|/gov/service][公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+办理异地购房住房公积金提取指南	{}	[办理|/gov/service][异地|/gov/condition][住房公积金|/gov/subject][提取|/gov/service][指南|/gov/service]{}GreedyTagger
+十大情形可提取公积金	{}	[提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+单位或职工如何办理住房公积金转移	{}	[单位|/gov/role][职工|/gov/role][如何办理|/gov/service][住房公积金|/gov/subject][转移|/gov/service]{}GreedyTagger
+单位给交公积金 什么情况可提取	{}	[单位给交|/gov/condition][公积金|/gov/subject][什么情况|/gov/question][提取|/gov/service]{}GreedyTagger
+取公积金治病，靠谱吗？	{}	[公积金|/gov/subject][治病|/gov/condition][靠谱吗|/gov/question]{}GreedyTagger
+周六日可以办理公积金吗？	{}	[周六日|/dow][办理|/gov/service][公积金|/gov/subject]{}GreedyTagger
+哪些情况不能申请天津公积金贷款	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+商贷转为公积金贷款三种方法	{}	[公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+外地人员在天津提取住房公积金方法	{}	[外地人员|/gov/role][天津|/place/city][提取|/gov/service][住房公积金|/gov/subject]{}GreedyTagger
+外地公积金转入到天津的办理流程	{}	[公积金|/gov/subject][转入|/gov/service][天津|/place/city][办理流程|/gov/service]{}GreedyTagger
+外省市户籍职工辞职后离开本市的 如何提取公积金？	{}	[职工|/gov/role][辞职|/gov/condition][本市|/gov/condition][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+外省市职工辞职离开天津 公积金怎么办	{}	[外省市职工|/gov/role][辞职|/gov/condition][天津|/place/city][公积金|/gov/subject][怎么办|/gov/question]{}GreedyTagger
+大修自有住房提取住房公积金需要提供哪些证明文件?	{}	[大修|/gov/condition][自有住房|/gov/item][提取|/gov/service][住房公积金|/gov/subject][证明文件|/gov/item]{}GreedyTagger
+天津12369住房公积金查询热线流程图	{}	[天津|/place/city][12369|/DIGIT][住房公积金|/gov/subject][查询热线|/gov/service][流程图|/gov/question]{}GreedyTagger
+天津2013年公积金贷款利率	{}	[天津|/place/city][2013年|/year][公积金|/gov/subject][贷款利率|/gov/service]{}GreedyTagger
+天津2014住房公积金缴存政策新规定	{}	[天津|/place/city][2014|/DIGIT][住房公积金|/gov/subject][缴存|/gov/service][规定|/gov/question]{}GreedyTagger
+天津2016年住房公积金缴存调整政策	{}	[天津|/place/city][2016年|/year][住房公积金|/gov/subject][缴存|/gov/service][调整|/gov/service]{}GreedyTagger
+天津上海浦东发展银行公积金业务办理网点	{}	[天津|/place/city][上海浦东发展银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+天津东丽住房公积金查询	{}	[天津|/place/city][东丽|/place/district][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津个人网厅办理公积金提取流程	{}	[天津|/place/city][个人|/gov/role][办理|/gov/service][公积金|/gov/subject][提取|/gov/service][流程|/gov/question]{}GreedyTagger
+天津中信银行公积金业务办理网点	{}	[天津|/place/city][中信银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+天津中国银行公积金业务办理网点	{}	[天津|/place/city][中国银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+天津交通银行公积金业务办理网点	{}	[天津|/place/city][交通银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+天津企业单位如何调整公积金缴存比例和缴存额度	{}	[天津|/place/city][企业|/gov/role][单位|/gov/role][调整|/gov/service][公积金|/gov/subject][缴存比例|/gov/service][缴存额度|/gov/service]{}GreedyTagger
+天津住房公积金初始密码是多少	{}	[天津|/place/city][住房公积金|/gov/subject][初始密码|/gov/service][是多少|/gov/question]{}GreedyTagger
+天津住房公积金办理网点-和平管理部	{}	[天津|/place/city][住房公积金|/gov/subject][办理网点|/gov/service][和平|/place/district][管理部|/org/gov]{}GreedyTagger
+天津住房公积金异地贷款指南	{}	[天津|/place/city][住房公积金|/gov/subject][异地|/gov/condition][贷款|/gov/service][指南|/gov/service]{}GreedyTagger
+天津住房公积金提取有什么条件 怎么提取	{}	[天津|/place/city][住房公积金|/gov/subject][提取|/gov/service][条件|/gov/question][提取|/gov/service]{}GreedyTagger
+天津住房公积金提取条件有哪些？住房公积金领取表在哪儿领？	{}	[天津|/place/city][住房公积金|/gov/subject][提取|/gov/service][条件|/gov/question][有哪些|/gov/question]{}GreedyTagger[住房公积金|/gov/subject][领取|/gov/service]{}GreedyTagger
+天津住房公积金提取管理办法	{}	[天津|/place/city][住房公积金|/gov/subject][提取管理办法|/gov/service]{}GreedyTagger
+天津住房公积金提取范围	{}	[天津|/place/city][住房公积金|/gov/subject][提取范围|/gov/service]{}GreedyTagger
+天津住房公积金查询	{}	[天津|/place/city][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津住房公积金查询余额	{}	[天津|/place/city][住房公积金|/gov/subject][查询余额|/gov/service]{}GreedyTagger
+天津住房公积金查询指南	{}	[天津|/place/city][住房公积金|/gov/subject][查询指南|/gov/service]{}GreedyTagger
+天津住房公积金查询热线12329使用指南	{}	[天津|/place/city][住房公积金|/gov/subject][查询热线|/gov/service][12329|/DIGIT][使用指南|/gov/service]{}GreedyTagger
+天津住房公积金积分如何计算	{}	[天津|/place/city][住房公积金|/gov/subject][积分|/gov/service][计算|/gov/service]{}GreedyTagger
+天津住房公积金积分相关问题说明	{}	[天津|/place/city][住房公积金|/gov/subject][积分|/gov/service][问题|/gov/service]{}GreedyTagger
+天津住房公积金管理中心：2015年清明节放假通知	{}	[天津|/place/city][住房公积金管理中心|/org/gov][2015年|/year][清明节|/holiday]{}GreedyTagger
+天津住房公积金管理中心：关于增加周日营业的通告	{}	[天津|/place/city][住房公积金管理中心|/org/gov][周日|/dow]{}GreedyTagger
+天津住房公积金管理中心地址	{}	[天津|/place/city][住房公积金管理中心|/org/gov][地址|/gov/service]{}GreedyTagger
+天津住房公积金管理中心电话、地址及官网	{}	[天津|/place/city][住房公积金管理中心|/org/gov][电话|/gov/service][地址|/gov/service]{}GreedyTagger
+天津住房公积金缴存基数	{}	[天津|/place/city][住房公积金|/gov/subject][缴存|/gov/service][基数|/gov/service]{}GreedyTagger
+天津住房公积金缴存比例	{}	[天津|/place/city][住房公积金|/gov/subject][缴存比例|/gov/service]{}GreedyTagger
+天津住房公积金网上缴存业务指南	{}	[天津|/place/city][住房公积金|/gov/subject][缴存|/gov/service][指南|/gov/service]{}GreedyTagger
+天津住房公积金网上缴存方法	{}	[天津|/place/city][住房公积金|/gov/subject][缴存|/gov/service]{}GreedyTagger
+天津住房公积金网站个人账户查询操作手册	{}	[天津|/place/city][住房公积金|/gov/subject][个人|/gov/role][查询|/intent][操作手册|/gov/service]{}GreedyTagger
+天津住房公积金网站个人账户查询项目及操作手册	{}	[天津|/place/city][住房公积金|/gov/subject][个人|/gov/role][查询|/intent][操作手册|/gov/service]{}GreedyTagger
+天津住房公积金能转移吗 如何转移	{}	[天津|/place/city][住房公积金|/gov/subject][转移|/gov/service][转移|/gov/service]{}GreedyTagger
+天津住房公积金购房流程详解	{}	[天津|/place/city][住房公积金|/gov/subject][流程详解|/gov/question]{}GreedyTagger
+天津住房公积金贷款期限 住房公积金贷款额度	{}	[天津|/place/city][住房公积金|/gov/subject][贷款|/gov/service][期限|/gov/question][住房公积金|/gov/subject][贷款|/gov/service][额度|/gov/question]{}GreedyTagger
+天津住房公积金贷款比例	{}	[天津|/place/city][住房公积金|/gov/subject][贷款|/gov/service][比例|/gov/service]{}GreedyTagger
+天津住房公积金贷款的还款方式	{}	[天津|/place/city][住房公积金|/gov/subject][贷款|/gov/service][还款|/gov/service]{}GreedyTagger
+天津住房公积金贷款额度上限是多少	{}	[天津|/place/city][住房公积金|/gov/subject][贷款|/gov/service][额度|/gov/question][上限|/gov/qualifier][是多少|/gov/question]{}GreedyTagger
+天津住房公积金还款方式	{}	[天津|/place/city][住房公积金|/gov/subject][还款|/gov/service]{}GreedyTagger
+天津住房公积金还款流程	{}	[天津|/place/city][住房公积金|/gov/subject][还款|/gov/service][流程|/gov/question]{}GreedyTagger
+天津住房公积金退休等非住房类提取条件	{}	[天津|/place/city][住房公积金|/gov/subject][退休|/gov/condition][非住房|/gov/item][提取|/gov/service][条件|/gov/question]{}GreedyTagger
+天津保障性住房怎么办理公积金贷款	{}	[天津|/place/city][保障性住房|/gov/item][怎么办|/gov/question][理|tok][公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+天津偿还住房贷款本息公积金提取	{}	[天津|/place/city][偿还|/gov/service][住房贷款|/gov/service][公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津光大银行公积金业务办理网点	{}	[天津|/place/city][光大银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+天津公积金一手房贷款材料	{}	[天津|/place/city][公积金|/gov/subject][一手房|/gov/item][贷款|/gov/service]{}GreedyTagger
+天津公积金一手房贷款流程	{}	[天津|/place/city][公积金|/gov/subject][一手房|/gov/item][贷款|/gov/service][流程|/gov/question]{}GreedyTagger
+天津公积金一手房贷款额度与期限	{}	[天津|/place/city][公积金|/gov/subject][一手房|/gov/item][贷款|/gov/service][额度|/gov/question][期限|/gov/question]{}GreedyTagger
+天津公积金中心推五项措施 委托提取增五家银行	{}	[天津|/place/city][公积金中心|/org/gov][委托提取|/gov/service][银行|/org/bank]{}GreedyTagger
+天津公积金二手房贷款材料	{}	[天津|/place/city][公积金|/gov/subject][二手房|/gov/item][贷款|/gov/service]{}GreedyTagger
+天津公积金二手房贷款流程	{}	[天津|/place/city][公积金|/gov/subject][二手房|/gov/item][贷款|/gov/service][流程|/gov/question]{}GreedyTagger
+天津公积金二手房贷款额度与期限	{}	[天津|/place/city][公积金|/gov/subject][二手房|/gov/item][贷款|/gov/service][额度|/gov/question][期限|/gov/question]{}GreedyTagger
+天津公积金保障房等其他类贷款	{}	[天津|/place/city][公积金|/gov/subject][保障房|/gov/item][贷款|/gov/service]{}GreedyTagger
+天津公积金信息变更办理资料	{}	[天津|/place/city][公积金|/gov/subject][变更|/gov/service][办理|/gov/service]{}GreedyTagger
+天津公积金全额提取条件	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][条件|/gov/question]{}GreedyTagger
+天津公积金其他缴存类办理指南	{}	[天津|/place/city][公积金|/gov/subject][缴存|/gov/service][办理指南|/gov/service]{}GreedyTagger
+天津公积金卡丢失怎么办？	{}	[天津|/place/city][公积金|/gov/subject][怎么办|/gov/question]{}GreedyTagger
+天津公积金卡初始密码是什么	{}	[天津|/place/city][公积金|/gov/subject][初始密码|/gov/service]{}GreedyTagger
+天津公积金可以贷款买车吗	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][买车|/gov/condition]{}GreedyTagger
+天津公积金可贷额度计算中余额倍数怎么规定	{}	[天津|/place/city][公积金|/gov/subject][额度|/gov/question][计算|/gov/service][余额|/gov/service][怎么规定|/gov/question]{}GreedyTagger
+天津公积金因工作变动怎么处理？	{}	[天津|/place/city][公积金|/gov/subject][工作变动|/gov/condition][怎么处理|/gov/question]{}GreedyTagger
+天津公积金密码忘记怎么办	{}	[天津|/place/city][公积金|/gov/subject][怎么办|/gov/question]{}GreedyTagger
+天津公积金异地买房提取流程 天津公积金可以异地买房吗	{}	[天津|/place/city][公积金|/gov/subject][异地|/gov/condition][提取|/gov/service][流程|/gov/question][天津|/place/city][公积金|/gov/subject][异地|/gov/condition]{}GreedyTagger
+天津公积金托管	{}	[天津|/place/city][公积金|/gov/subject][托管|/gov/service]{}GreedyTagger
+天津公积金提前还款手续	{}	[天津|/place/city][公积金|/gov/subject][还款|/gov/service][手续|/gov/item]{}GreedyTagger
+天津公积金提前还款有限制吗	{}	[天津|/place/city][公积金|/gov/subject][还款|/gov/service][有限制吗|/gov/question]{}GreedyTagger
+天津公积金提前还款流程	{}	[天津|/place/city][公积金|/gov/subject][还款|/gov/service][流程|/gov/question]{}GreedyTagger
+天津公积金提前还款额及利息计算	{}	[天津|/place/city][公积金|/gov/subject][还款|/gov/service][利息|/gov/service][计算|/gov/service]{}GreedyTagger
+天津公积金提前还贷方式和流程	{}	[天津|/place/city][公积金|/gov/subject][还贷|/gov/service][流程|/gov/question]{}GreedyTagger
+天津公积金提前还贷流程	{}	[天津|/place/city][公积金|/gov/subject][还贷|/gov/service][流程|/gov/question]{}GreedyTagger
+天津公积金提前部分还贷流程	{}	[天津|/place/city][公积金|/gov/subject][部分还贷|/gov/service][流程|/gov/question]{}GreedyTagger
+天津公积金提取	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津公积金提取一手房材料有哪些	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][一手房|/gov/item][有哪些|/gov/question]{}GreedyTagger
+天津公积金提取之住房公积金提取程序是怎样的	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][住房公积金|/gov/subject][提取程序|/gov/service][是怎样的|/gov/question]{}GreedyTagger
+天津公积金提取二手房材料有哪些	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][二手房|/gov/item][有哪些|/gov/question]{}GreedyTagger
+天津公积金提取到账时间	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][到账时间|/gov/question]{}GreedyTagger
+天津公积金提取新政	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][新政|/gov/question]{}GreedyTagger
+天津公积金提取时间是什么时候	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津公积金提取时限全部情况汇总	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][时限|/gov/question]{}GreedyTagger
+天津公积金提取材料	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津公积金提取条件	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][条件|/gov/question]{}GreedyTagger
+天津公积金提取条件是什么	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][条件|/gov/question]{}GreedyTagger
+天津公积金提取流程	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][流程|/gov/question]{}GreedyTagger
+天津公积金提取网点-东丽管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][东丽|/place/district][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-北辰管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][北辰|/place/district][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-南开管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][南开|/place/district][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-塘沽管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-大港管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-宁河管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][宁河|/place/district][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-宝坻管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][宝坻|/place/district][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-开发管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-汉沽管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-河东管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][河东|/place/district][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-河东管理部空港经办管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][河东|/place/district][管理部|/org/gov][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-河北管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][河北|/place/district][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-河西管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][河西|/place/district][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-油田分中心管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-津南管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][津南|/place/district][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-红桥管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][红桥|/place/district][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-蓟县管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-西青管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][西青|/place/district][管理部|/org/gov]{}GreedyTagger
+天津公积金提取网点-静海管理部	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][网点|/gov/question][静海|/place/district][管理部|/org/gov]{}GreedyTagger
+天津公积金新增个人账户办理指南	{}	[天津|/place/city][公积金|/gov/subject][个人|/gov/role][办理指南|/gov/service]{}GreedyTagger
+天津公积金新政:夫妻最高贷80万 二套首付30%	{}	[天津|/place/city][公积金|/gov/subject][新政|/gov/question][最高|/gov/qualifier][80|/DIGIT][首付|/gov/service][30|/DIGIT]{}GreedyTagger
+天津公积金新政策	{}	[天津|/place/city][公积金|/gov/subject][新政策|/gov/question]{}GreedyTagger
+天津公积金明细查询图解	{}	[天津|/place/city][公积金|/gov/subject][查询|/intent][图解|/gov/question]{}GreedyTagger
+天津公积金查询个人账户	{}	[天津|/place/city][公积金|/gov/subject][查询|/intent][个人|/gov/role]{}GreedyTagger
+天津公积金查询方法汇总	{}	[天津|/place/city][公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津公积金查询电话	{}	[天津|/place/city][公积金|/gov/subject][查询|/intent][电话|/gov/service]{}GreedyTagger
+天津公积金查询电话操作指南	{}	[天津|/place/city][公积金|/gov/subject][查询|/intent][电话|/gov/service][指南|/gov/service]{}GreedyTagger
+天津公积金用途有哪些？你所不知道的11大福利	{}	[天津|/place/city][公积金|/gov/subject][有哪些|/gov/question]{}GreedyTagger[11|/DIGIT]{}GreedyTagger
+天津公积金租房提取所需材料	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][所需材料|/gov/service]{}GreedyTagger
+天津公积金租房提取时限	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][时限|/gov/question]{}GreedyTagger
+天津公积金租房提取流程	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][流程|/gov/question]{}GreedyTagger
+天津公积金积分入户相关问题及解答	{}	[天津|/place/city][公积金|/gov/subject][积分|/gov/service][入户|/gov/condition][问题及解答|/gov/service]{}GreedyTagger
+天津公积金管理中心上班时间	{}	[天津|/place/city][公积金管理中心|/org/gov][上班时间|/dow]{}GreedyTagger
+天津公积金管理中心地址	{}	[天津|/place/city][公积金管理中心|/org/gov][地址|/gov/service]{}GreedyTagger
+天津公积金管理中心提示：公积金通存通兑周末可提取	{}	[天津|/place/city][公积金管理中心|/org/gov][公积金|/gov/subject][通存通兑|/gov/service][周末|/dow][提取|/gov/service]{}GreedyTagger
+天津公积金组合贷款	{}	[天津|/place/city][公积金|/gov/subject][组合贷款|/gov/service]{}GreedyTagger
+天津公积金缴存	{}	[天津|/place/city][公积金|/gov/subject][缴存|/gov/service]{}GreedyTagger
+天津公积金缴存基数	{}	[天津|/place/city][公积金|/gov/subject][缴存|/gov/service][基数|/gov/service]{}GreedyTagger
+天津公积金缴存方式	{}	[天津|/place/city][公积金|/gov/subject][缴存方式|/gov/service]{}GreedyTagger
+天津公积金缴存比例	{}	[天津|/place/city][公积金|/gov/subject][缴存比例|/gov/service]{}GreedyTagger
+天津公积金缴存比例	{}	[天津|/place/city][公积金|/gov/subject][缴存比例|/gov/service]{}GreedyTagger
+天津公积金缴存比例 历年住房公积金缴存比例及缴存基数政策表	{}	[天津|/place/city][公积金|/gov/subject][缴存比例|/gov/service][年|/time][住房公积金|/gov/subject][缴存比例|/gov/service][缴存|/gov/service][基数|/gov/service]{}GreedyTagger
+天津公积金缴存比例怎么算	{}	[天津|/place/city][公积金|/gov/subject][缴存比例|/gov/service]{}GreedyTagger
+天津公积金缴存登记与开户	{}	[天津|/place/city][公积金|/gov/subject][缴存|/gov/service][登记|/gov/service][开户|/gov/service]{}GreedyTagger
+天津公积金缴存银行网点	{}	[天津|/place/city][公积金|/gov/subject][缴存|/gov/service][银行网点|/gov/service]{}GreedyTagger
+天津公积金网上查询查询注意事项	{}	[天津|/place/city][公积金|/gov/subject][查询|/intent][查询|/intent][注意事项|/gov/question]{}GreedyTagger
+天津公积金网点 天津公积金提取地点	{}	[天津|/place/city][公积金|/gov/subject][网点|/gov/question][天津|/place/city][公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津公积金营业网点通存通兑 天津部分网点全周营业（名单）	{}	[天津|/place/city][公积金|/gov/subject][网点|/gov/question][通存通兑|/gov/service][天津|/place/city][网点|/gov/question]{}GreedyTagger
+天津公积金规定 离津工作不能取	{}	[天津|/place/city][公积金|/gov/subject][规定|/gov/question][离津|/gov/condition]{}GreedyTagger
+天津公积金购房提取时限	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][时限|/gov/question]{}GreedyTagger
+天津公积金购房提取流程	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][流程|/gov/question]{}GreedyTagger
+天津公积金贷款买二手房具体流程	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][二手房|/gov/item][流程|/gov/question]{}GreedyTagger
+天津公积金贷款买限价房条件	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][限价房|/gov/item][条件|/gov/question]{}GreedyTagger
+天津公积金贷款什么时候放款？	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][放款|/gov/service]{}GreedyTagger
+天津公积金贷款利息究竟有多低	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][利息|/gov/service]{}GreedyTagger
+天津公积金贷款利率	{}	[天津|/place/city][公积金|/gov/subject][贷款利率|/gov/service]{}GreedyTagger
+天津公积金贷款利率 天津公积金按揭利率比较	{}	[天津|/place/city][公积金|/gov/subject][贷款利率|/gov/service][天津|/place/city][公积金|/gov/subject][按揭利率|/gov/question]{}GreedyTagger
+天津公积金贷款办理商贷转公积金贷款需要准备的资料	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][办理|/gov/service][公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+天津公积金贷款大修自有住房所需材料	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][大修|/gov/condition][自有住房|/gov/item][所需材料|/gov/service]{}GreedyTagger
+天津公积金贷款建造、翻建自有住房所需材料	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][建造|/gov/condition][翻建|/gov/condition][自有住房|/gov/item][所需材料|/gov/service]{}GreedyTagger
+天津公积金贷款提前还贷的条件及办理流程	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][还贷|/gov/service][条件|/gov/question][办理流程|/gov/service]{}GreedyTagger
+天津公积金贷款政策	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+天津公积金贷款政策调整	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][调整|/gov/service]{}GreedyTagger
+天津公积金贷款政策调整 首套房首付降至20％	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][调整|/gov/service][首套房|/gov/item][首付|/gov/service][20|/DIGIT]{}GreedyTagger
+天津公积金贷款最长能贷多少年	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][多少年|/gov/question]{}GreedyTagger
+天津公积金贷款期限	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][期限|/gov/question]{}GreedyTagger
+天津公积金贷款条件	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][条件|/gov/question]{}GreedyTagger
+天津公积金贷款流程图	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][流程图|/gov/question]{}GreedyTagger
+天津公积金贷款温馨提示	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+天津公积金贷款网上预约入口	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][预约|/gov/service]{}GreedyTagger
+天津公积金贷款购买公有现住房所需材料	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][公有现住房|/gov/item][所需材料|/gov/service]{}GreedyTagger
+天津公积金贷款购买经济适用房贷款材料	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][经济适用房|/gov/item][贷款|/gov/service]{}GreedyTagger
+天津公积金贷款购买网上交易私产住房所需材料	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][所需材料|/gov/service]{}GreedyTagger
+天津公积金贷款购买集资建造住房所需材料	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][集资建造住房|/gov/item][所需材料|/gov/service]{}GreedyTagger
+天津公积金贷款购买集资建造住房资料	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][集资建造住房|/gov/item]{}GreedyTagger
+天津公积金贷款还款方便吗	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][还款|/gov/service]{}GreedyTagger
+天津公积金贷款银行网点	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][银行网点|/gov/service]{}GreedyTagger
+天津公积金贷款额度是多少	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][额度|/gov/question][是多少|/gov/question]{}GreedyTagger
+天津公积金贷款额度最高能贷多少	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][额度|/gov/question][最高|/gov/qualifier]{}GreedyTagger
+天津公积金贷款额度计算	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][额度|/gov/question][计算|/gov/service]{}GreedyTagger
+天津公积金贷款额度计算公式详解	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][额度|/gov/question][计算|/gov/service]{}GreedyTagger
+天津公积金贷款首付有哪些要求	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][首付|/gov/service][有哪些|/gov/question]{}GreedyTagger
+天津公积金转移手续如何办理	{}	[天津|/place/city][公积金|/gov/subject][转移|/gov/service][手续|/gov/item][如何办理|/gov/service]{}GreedyTagger
+天津公积金还款凭证电子打印操作指南	{}	[天津|/place/city][公积金|/gov/subject][还款|/gov/service][凭证|/gov/item][指南|/gov/service]{}GreedyTagger
+天津公积金部分提取条件	{}	[天津|/place/city][公积金|/gov/subject][部分提取|/gov/service][条件|/gov/question]{}GreedyTagger
+天津公积金销户提取流程图	{}	[天津|/place/city][公积金|/gov/subject][销户|/gov/service][提取|/gov/service][流程图|/gov/question]{}GreedyTagger
+天津公积金问答:组合贷如何委托提取	{}	[天津|/place/city][公积金|/gov/subject][问答|/gov/question][委托提取|/gov/service]{}GreedyTagger
+天津兴业银行公积金业务办理网点	{}	[天津|/place/city][兴业银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+天津其他住房公积金提取流程	{}	[天津|/place/city][住房公积金|/gov/subject][提取|/gov/service][流程|/gov/question]{}GreedyTagger
+天津农业银行公积金业务办理网点	{}	[天津|/place/city][农业银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+天津办理公积金贷款流程	{}	[天津|/place/city][办理|/gov/service][公积金|/gov/subject][贷款|/gov/service][流程|/gov/question]{}GreedyTagger
+天津北京银行公积金业务办理网点	{}	[天津|/place/city][北京银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+天津北辰住房公积金查询	{}	[天津|/place/city][北辰|/place/district][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津华夏银行公积金业务办理网点	{}	[天津|/place/city][华夏银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+天津单位设立公积金账户缴存办理指南	{}	[天津|/place/city][单位|/gov/role][公积金|/gov/subject][缴存|/gov/service][办理指南|/gov/service]{}GreedyTagger
+天津南开住房公积金查询	{}	[天津|/place/city][南开|/place/district][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津各大银行公积金业务办理网点汇总	{}	[天津|/place/city][银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+天津和平住房公积金查询	{}	[天津|/place/city][和平|/place/district][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津商业贷款可转换成公积金贷款	{}	[天津|/place/city][贷款|/gov/service][公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+天津商业贷款转公积金贷款	{}	[天津|/place/city][贷款|/gov/service][公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+天津商业贷款转公积金贷款条件及注意事项	{}	[天津|/place/city][贷款|/gov/service][公积金|/gov/subject][贷款|/gov/service][条件|/gov/question][注意事项|/gov/question]{}GreedyTagger
+天津商贷转公积金贷款的流程和相关注意事项	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service][流程|/gov/question][注意事项|/gov/question]{}GreedyTagger
+天津塘沽住房公积金查询	{}	[天津|/place/city][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津大修住房公积金提取	{}	[天津|/place/city][大修|/gov/condition][住房公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津完全丧失劳动能力并与单位终止劳动关系公积金提取	{}	[天津|/place/city][单位|/gov/role][关系|/gov/service][公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津宝坻住房公积金查询	{}	[天津|/place/city][宝坻|/place/district][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津工商银行公积金业务办理网点	{}	[天津|/place/city][工商银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+天津市一手房住房公积金贷款办理流程	{}	[天津市|/place/province][一手房|/gov/item][住房公积金|/gov/subject][贷款|/gov/service][办理流程|/gov/service]{}GreedyTagger
+天津市一手房住房公积金贷款政策	{}	[天津市|/place/province][一手房|/gov/item][住房公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+天津市个人住房公积金贷款新政实施	{}	[天津市|/place/province][个人住房公积金|/gov/subject][贷款|/gov/service][新政|/gov/question]{}GreedyTagger
+天津市个人住房公积金贷款首付款比例政策	{}	[天津市|/place/province][个人住房公积金|/gov/subject][贷款|/gov/service][首付|/gov/service][比例|/gov/service]{}GreedyTagger
+天津市住房公积金个人信息查询	{}	[天津市|/place/province][住房公积金|/gov/subject][个人|/gov/role][查询|/intent]{}GreedyTagger
+天津市住房公积金单位卡业务	{}	[天津市|/place/province][住房公积金单位卡业务|/gov/regulation]{}GreedyTagger
+天津市住房公积金委托提取	{}	[天津市|/place/province][住房公积金|/gov/subject][委托提取|/gov/service]{}GreedyTagger
+天津市住房公积金客户服务热线12329或96266使用说明	{}	[天津市|/place/province][住房公积金|/gov/subject][12329|/DIGIT][96266|/DIGIT][使用|/gov/service]{}GreedyTagger
+天津市住房公积金客户服务(网站)系统登录界面(图)	{}	[天津市|/place/province][住房公积金|/gov/subject]{}GreedyTagger
+天津市住房公积金提取业务办理指南	{}	[天津市|/place/province][住房公积金|/gov/subject][提取|/gov/service][办理指南|/gov/service]{}GreedyTagger
+天津市住房公积金提取管理办法	{}	[天津市|/place/province][住房公积金|/gov/subject][提取管理办法|/gov/service]{}GreedyTagger
+天津市住房公积金提取管理办法解读	{}	[天津市|/place/province][住房公积金|/gov/subject][提取管理办法|/gov/service][解读|/gov/service]{}GreedyTagger
+天津市住房公积金汇缴缴存	{}	[天津市|/place/province][住房公积金汇缴缴存|/gov/regulation]{}GreedyTagger
+天津市住房公积金管理中心和平管理部	{}	[天津市|/place/province][住房公积金管理中心|/org/gov][和平|/place/district][管理部|/org/gov]{}GreedyTagger
+天津市住房公积金管理中心手机网站说明	{}	[天津市|/place/province][住房公积金管理中心|/org/gov][手机网站|/gov/service]{}GreedyTagger
+天津市住房公积金管理中心河东管理部	{}	[天津市|/place/province][住房公积金管理中心|/org/gov][河东|/place/district][管理部|/org/gov]{}GreedyTagger
+天津市住房公积金管理中心河东管理部空港经办网点	{}	[天津市|/place/province][住房公积金管理中心|/org/gov][河东|/place/district][管理部|/org/gov][网点|/gov/question]{}GreedyTagger
+天津市住房公积金缴存基数	{}	[天津市|/place/province][住房公积金|/gov/subject][缴存|/gov/service][基数|/gov/service]{}GreedyTagger
+天津市住房公积金网上缴存业务	{}	[天津市|/place/province][住房公积金|/gov/subject][缴存|/gov/service]{}GreedyTagger
+天津市住房公积金网站查询及业务操作	{}	[天津市|/place/province][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津市住房公积金贷款利率是多少	{}	[天津市|/place/province][住房公积金|/gov/subject][贷款利率|/gov/service][是多少|/gov/question]{}GreedyTagger
+天津市住房公积金贷款办理流程图	{}	[天津市|/place/province][住房公积金|/gov/subject][贷款|/gov/service][办理流程|/gov/service][图|tok]{}GreedyTagger
+天津市住房公积金贷款期限及额度	{}	[天津市|/place/province][住房公积金|/gov/subject][贷款|/gov/service][期限|/gov/question][额度|/gov/question]{}GreedyTagger
+天津市住房公积金销户提取	{}	[天津市|/place/province][住房公积金|/gov/subject][销户|/gov/service][提取|/gov/service]{}GreedyTagger
+天津市住房公积金集中封存业务	{}	[天津市|/place/province][住房公积金|/gov/subject][封存|/gov/service]{}GreedyTagger
+天津市住房公积金集中封存管理办法	{}	[天津市|/place/province][住房公积金|/gov/subject][封存|/gov/service]{}GreedyTagger
+天津市公积金个人缴存新开户	{}	[天津市|/place/province][公积金|/gov/subject][个人|/gov/role][缴存|/gov/service][开户|/gov/service]{}GreedyTagger
+天津市公积金中心详解公积金提取、转移等问题	{}	[天津市|/place/province][公积金中心|/org/gov][公积金|/gov/subject][提取|/gov/service][转移|/gov/service][问题|/gov/service]{}GreedyTagger
+天津市公积金代办手续	{}	[天津市|/place/province][公积金|/gov/subject][手续|/gov/item]{}GreedyTagger
+天津市公积金余额以及住房公积金查询	{}	[天津市|/place/province][公积金|/gov/subject][余额|/gov/service][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津市公积金年度个人缴存调整	{}	[天津市|/place/province][公积金|/gov/subject][年|/time][个人|/gov/role][缴存|/gov/service][调整|/gov/service]{}GreedyTagger
+天津市公积金提取银行网点	{}	[天津市|/place/province][公积金|/gov/subject][提取|/gov/service][银行网点|/gov/service]{}GreedyTagger
+天津市公积金新政热点解读	{}	[天津市|/place/province][公积金|/gov/subject][新政|/gov/question][解读|/gov/service]{}GreedyTagger
+天津市公积金新政策内容简介	{}	[天津市|/place/province][公积金|/gov/subject][新政策|/gov/question]{}GreedyTagger
+天津市公积金的提取和使用	{}	[天津市|/place/province][公积金|/gov/subject][提取|/gov/service][使用|/gov/service]{}GreedyTagger
+天津市公积金管理政策解答	{}	[天津市|/place/province][公积金|/gov/subject][解答|/gov/service]{}GreedyTagger
+天津市公积金贷款对象	{}	[天津市|/place/province][公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+天津市公积金贷款新政解读	{}	[天津市|/place/province][公积金|/gov/subject][贷款|/gov/service][新政|/gov/question][解读|/gov/service]{}GreedyTagger
+天津市公积金贷款条件	{}	[天津市|/place/province][公积金|/gov/subject][贷款|/gov/service][条件|/gov/question]{}GreedyTagger
+天津市公积金贷款条件及方法介绍	{}	[天津市|/place/province][公积金|/gov/subject][贷款|/gov/service][条件|/gov/question]{}GreedyTagger
+天津市公积金贷款的还款方式	{}	[天津市|/place/province][公积金|/gov/subject][贷款|/gov/service][还款|/gov/service]{}GreedyTagger
+天津市公积金贷款额度	{}	[天津市|/place/province][公积金|/gov/subject][贷款|/gov/service][额度|/gov/question]{}GreedyTagger
+天津市关于调整2014年住房公积金缴存额的通知	{}	[天津市|/place/province][调整|/gov/service][2014年|/year][住房公积金|/gov/subject][缴存额|/gov/service]{}GreedyTagger
+天津市单位住房公积金变更登记	{}	[天津市|/place/province][单位|/gov/role][住房公积金|/gov/subject][变更|/gov/service][登记|/gov/service]{}GreedyTagger
+天津市单位住房公积金缴存登记	{}	[天津市|/place/province][单位|/gov/role][住房公积金|/gov/subject][缴存|/gov/service][登记|/gov/service]{}GreedyTagger
+天津市单位住房公积金账户注销登记	{}	[天津市|/place/province][单位|/gov/role][住房公积金|/gov/subject][注销|/gov/service][登记|/gov/service]{}GreedyTagger
+天津市即将退休，提取公积金需准备的材料	{}	[天津市|/place/province][退休|/gov/condition][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+天津市夫妻提取公积金流程案例详解	{}	[天津市|/place/province][提取|/gov/service][公积金|/gov/subject][流程|/gov/question]{}GreedyTagger
+天津市居住证积分—公积金申报指南	{}	[天津市|/place/province][居住证积分|/gov/subject][公积金|/gov/subject][指南|/gov/service]{}GreedyTagger
+天津市户口异地工作不办理公积金销户	{}	[天津市|/place/province][异地|/gov/condition][办理|/gov/service][公积金|/gov/subject][销户|/gov/service]{}GreedyTagger
+天津市民不购房如何提取公积金	{}	[天津市|/place/province][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+天津市民户口迁出提取公积金指南	{}	[天津市|/place/province][户口迁出|/gov/condition][提取|/gov/service][公积金|/gov/subject][指南|/gov/service]{}GreedyTagger
+天津市疾病特困人员公积金提取通知	{}	[天津市|/place/province][特困人员|/gov/role][公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津市租房如何提取公积金	{}	[天津市|/place/province][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+天津市租房提取住房公积金申请条件	{}	[天津市|/place/province][提取|/gov/service][住房公积金|/gov/subject][条件|/gov/question]{}GreedyTagger
+天津市职工或单位办理公积金转移的情况	{}	[天津市|/place/province][职工|/gov/role][单位|/gov/role][办理|/gov/service][公积金|/gov/subject][转移|/gov/service]{}GreedyTagger
+天津市购买二手房的公积金贷款办理流程	{}	[天津市|/place/province][二手房|/gov/item][公积金|/gov/subject][贷款|/gov/service][办理流程|/gov/service]{}GreedyTagger
+天津建行公积金提取	{}	[天津|/place/city][建行|/org/bank][公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津开发区职工将按全市统一政策提取公积金	{}	[天津|/place/city][开发区|/place/district][职工|/gov/role][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+天津异地户籍职工辞职可申请提取公积金	{}	[天津|/place/city][异地|/gov/condition][职工|/gov/role][辞职|/gov/condition][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+天津：异地户籍职工辞职可申请提取公积金	{}	[天津|/place/city][异地|/gov/condition][职工|/gov/role][辞职|/gov/condition][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+天津异地购房公积金可以提取购房(网友经验)	{}	[天津|/place/city][异地|/gov/condition][公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津怎么还公积金贷款	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+天津招商银行公积金业务办理网点	{}	[天津|/place/city][招商银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+天津提取公积金不再需要还款凭证	{}	[天津|/place/city][提取|/gov/service][公积金|/gov/subject][还款|/gov/service][凭证|/gov/item]{}GreedyTagger
+天津提取公积金材料是什么	{}	[天津|/place/city][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+天津提取公积金条件放宽 连续足额缴存满3个月即可	{}	[天津|/place/city][提取|/gov/service][公积金|/gov/subject][条件|/gov/question][缴存|/gov/service][3|/DIGIT][月|/time]{}GreedyTagger
+天津本市购房提取公积金材料	{}	[天津|/place/city][本市|/gov/condition][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+天津武清住房公积金查询	{}	[天津|/place/city][武清|/place/district][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津民生银行公积金业务办理网点	{}	[天津|/place/city][民生银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+天津汉沽住房公积金查询	{}	[天津|/place/city][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津河东住房公积金查询	{}	[天津|/place/city][河东|/place/district][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津河北区住房公积金查询	{}	[天津|/place/city][河北区|/place/district][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津河西区住房公积金查询	{}	[天津|/place/city][河西区|/place/district][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津津南住房公积金查询	{}	[天津|/place/city][津南|/place/district][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津渤海银行公积金业务办理网点	{}	[天津|/place/city][渤海银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+天津滨海住房公积金查询	{}	[天津滨海|/place/airport][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津盛京银行公积金业务办理网点	{}	[天津|/place/city][银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+天津离休退休公积金提取	{}	[天津|/place/city][退休|/gov/condition][公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津离职公积金提取	{}	[天津|/place/city][离职|/gov/role][公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津离职后住房公积金提取办法	{}	[天津|/place/city][离职|/gov/role][住房公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津租房公积金如何提取	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津租房公积金提取条件	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service][条件|/gov/question]{}GreedyTagger
+天津租房可提取公积金三种情况	{}	[天津|/place/city][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+天津租房怎样提取住房公积金	{}	[天津|/place/city][提取|/gov/service][住房公积金|/gov/subject]{}GreedyTagger
+天津租房提取公积金政策热点解读	{}	[天津|/place/city][提取|/gov/service][公积金|/gov/subject][解读|/gov/service]{}GreedyTagger
+天津租房提取公积金材料	{}	[天津|/place/city][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+天津租房提取公积金条件放宽 缴存满3个月就能提取	{}	[天津|/place/city][提取|/gov/service][公积金|/gov/subject][条件|/gov/question][缴存|/gov/service][3|/DIGIT][月|/time][提取|/gov/service]{}GreedyTagger
+天津积分入户社保计算时间表（含社会保险和公积金）	{}	[天津|/place/city][积分|/gov/service][入户|/gov/condition][社保|/gov/subject][计算|/gov/service][公积金|/gov/subject]{}GreedyTagger
+天津突发事件造成家庭生活严重困难公积金提取	{}	[天津|/place/city][公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津红桥住房公积金查询	{}	[天津|/place/city][红桥|/place/district][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津网友分享公积金怎么贷款最划算	{}	[天津|/place/city][公积金|/gov/subject][贷款|/gov/service]{}GreedyTagger
+天津网友提取公积金经验	{}	[天津|/place/city][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+天津自建住房公积金提取	{}	[天津|/place/city][住房公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津西青住房公积金查询	{}	[天津|/place/city][西青|/place/district][住房公积金|/gov/subject][查询|/intent]{}GreedyTagger
+天津购房提取公积金指南	{}	[天津|/place/city][提取|/gov/service][公积金|/gov/subject][指南|/gov/service]{}GreedyTagger
+天津进城务工人员因与单位解除劳动关系公积金提取	{}	[天津|/place/city][单位|/gov/role][关系|/gov/service][公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+天津退休人员提取公积金所需资料	{}	[天津|/place/city][退休|/gov/condition][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+天津退休人员提取公积金需要什么材料	{}	[天津|/place/city][退休|/gov/condition][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+天津银行公积金业务办理网点	{}	[天津银行|/org/bank][公积金|/gov/subject][办理网点|/gov/service]{}GreedyTagger
+失业后能不能提取公积金?	{}	[失业|/gov/condition][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+如何办理公积金个人信息变更?	{}	[如何办理|/gov/service][公积金|/gov/subject][个人|/gov/role][变更|/gov/service]{}GreedyTagger
+如何结算住房公积金？	{}	[结算|/gov/service][住房公积金|/gov/subject]{}GreedyTagger
+家庭突发事件可以提取公积金	{}	[提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+就近办理住房公积金转移 缴费会增加吗	{}	[办理|/gov/service][住房公积金|/gov/subject][转移|/gov/service][缴费|/gov/service]{}GreedyTagger
+建设银行公积金联名卡密码	{}	[建设银行|/org/bank][公积金|/gov/subject][联名卡|/gov/item]{}GreedyTagger
+建设银行银行如何查询公积金账户呢	{}	[建设银行|/org/bank][银行|/org/bank][查询|/intent][公积金|/gov/subject]{}GreedyTagger
+异地购房如何提取公积金（经验）	{}	[异地|/gov/condition][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+提公积金无需单位开申请	{}	[公积金|/gov/subject][单位|/gov/role]{}GreedyTagger
+提取公积金是不是一定要复印件？	{}	[提取|/gov/service][公积金|/gov/subject][复印件|/gov/item]{}GreedyTagger
+提取公积金用于建造、翻建、大修自住住房的时限	{}	[提取|/gov/service][公积金|/gov/subject][建造|/gov/condition][翻建|/gov/condition][大修|/gov/condition][自住住房|/gov/item][时限|/gov/question]{}GreedyTagger
+教你公积金如何还房贷	{}	[公积金|/gov/subject][房贷|/gov/service]{}GreedyTagger
+未激活公积金卡影响缴存吗	{}	[激活|/gov/service][公积金|/gov/subject][缴存|/gov/service]{}GreedyTagger
+现在天津住房公积金可以用手机预约啦	{}	[天津|/place/city][住房公积金|/gov/subject][手机预约|/gov/service]{}GreedyTagger
+离职后住房公积金怎么提取	{}	[离职|/gov/role][住房公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+离退休人员住房公积金提取指南	{}	[离退休人员|/gov/role][住房公积金|/gov/subject][提取|/gov/service][指南|/gov/service]{}GreedyTagger
+租房提取公积金流程	{}	[提取|/gov/service][公积金|/gov/subject][流程|/gov/question]{}GreedyTagger
+租房提取公积金的条件有哪些 什么是租房公积金	{}	[提取|/gov/service][公积金|/gov/subject][条件|/gov/question][有哪些|/gov/question][什么是|/gov/question][公积金|/gov/subject]{}GreedyTagger
+租赁公共租赁住房怎样提取住房公积金 如何确定提取金额	{}	[租赁住房|/gov/item][提取|/gov/service][住房公积金|/gov/subject][提取|/gov/service][金额|/gov/question]{}GreedyTagger
+缴存基数与个人实际缴存公积金是什么关系？	{}	[缴存|/gov/service][基数|/gov/service][个人|/gov/role][缴存|/gov/service][公积金|/gov/subject][关系|/gov/service]{}GreedyTagger
+网友常见公积金提取条件解答（一）	{}	[公积金|/gov/subject][提取|/gov/service][条件|/gov/question][解答|/gov/service]{}GreedyTagger
+网友常见公积金提取条件解答（二）	{}	[公积金|/gov/subject][提取|/gov/service][条件|/gov/question][解答|/gov/service]{}GreedyTagger
+职工使用公积金(组合)贷款在本市行政区域内购买自有住房的 如何提取住房公积金	{}	[职工|/gov/role][使用|/gov/service][公积金|/gov/subject][组合贷款|/gov/service][本市|/gov/condition][自有住房|/gov/item][提取|/gov/service][住房公积金|/gov/subject]{}GreedyTagger
+职工使用公积金(组合)贷款建造、翻建、大修自有住房的 如何提取住房公积金	{}	[职工|/gov/role][使用|/gov/service][公积金|/gov/subject][组合贷款|/gov/service][建造|/gov/condition][翻建|/gov/condition][大修|/gov/condition][自有住房|/gov/item][提取|/gov/service][住房公积金|/gov/subject]{}GreedyTagger
+职工使用商业银行个人住房贷款在本市行政区域内购买自有住房的 如何提取住房公积金	{}	[职工|/gov/role][使用|/gov/service][银行|/org/bank][个人|/gov/role][住房贷款|/gov/service][本市|/gov/condition][自有住房|/gov/item][提取|/gov/service][住房公积金|/gov/subject]{}GreedyTagger
+职工使用商业银行个人住房贷款建造、翻建、大修自有住房的 如何提取住房公积金	{}	[职工|/gov/role][使用|/gov/service][银行|/org/bank][个人|/gov/role][住房贷款|/gov/service][建造|/gov/condition][翻建|/gov/condition][大修|/gov/condition][自有住房|/gov/item][提取|/gov/service][住房公积金|/gov/subject]{}GreedyTagger
+职工在市场租赁住房用于自住能否申请提取住房公积金 如何办理	{}	[职工|/gov/role][租赁住房|/gov/item][提取|/gov/service][住房公积金|/gov/subject][如何办理|/gov/service]{}GreedyTagger
+职工工作调动办理住房公积金转移应携带哪些材料?	{}	[职工|/gov/role][工作调动|/gov/condition][办理|/gov/service][住房公积金|/gov/subject][转移|/gov/service]{}GreedyTagger
+职工按月偿还住房贷款后何时提取住房公积金 提取资金划入哪个资金账户	{}	[职工|/gov/role][月|/time][偿还|/gov/service][住房贷款|/gov/service][提取|/gov/service][住房公积金|/gov/subject][提取|/gov/service]{}GreedyTagger
+职工未使用住房贷款在本市行政区域内购买自有住房的 如何提取住房公积金	{}	[职工|/gov/role][使用|/gov/service][住房贷款|/gov/service][本市|/gov/condition][自有住房|/gov/item][提取|/gov/service][住房公积金|/gov/subject]{}GreedyTagger
+职工未使用住房贷款建造、翻建、大修自有住房的 如何提取住房公积金	{}	[职工|/gov/role][使用|/gov/service][住房贷款|/gov/service][建造|/gov/condition][翻建|/gov/condition][大修|/gov/condition][自有住房|/gov/item][提取|/gov/service][住房公积金|/gov/subject]{}GreedyTagger
+能使用租房补贴、住房公积金交纳公租房租金吗？	{}	[使用|/gov/service][补贴|/gov/service][住房公积金|/gov/subject][公租房|/gov/item][租金|/gov/item]{}GreedyTagger
+被纳入本市城镇居民最低生活保障范围的职工支付房租提取住房公积金需要提供哪些证明文件?	{}	[本市|/gov/condition][最低生活保障|/gov/service][范围|/gov/service][职工|/gov/role][提取|/gov/service][住房公积金|/gov/subject][证明文件|/gov/item]{}GreedyTagger
+试用期大学生是否应该缴存公积金？	{}	[试用期|/gov/qualifier][大学生|/gov/role][缴存|/gov/service][公积金|/gov/subject]{}GreedyTagger
+详解租房提取公积金的办理流程	{}	[提取|/gov/service][公积金|/gov/subject][办理流程|/gov/service]{}GreedyTagger
+请问购买二手房提取公积金 需提供哪些资料	{}	[二手房|/gov/item][提取|/gov/service][公积金|/gov/subject]{}GreedyTagger
+“连续逐月缴存住房公积金满1年”的含义	{}	[连续逐月缴存住房公积金满1年|/WordsQuot][含义|/gov/question]{}GreedyTagger
+连缴3个月可提取公积金付房租 无需提供发票税票	{}	[连缴3个月|/gov/condition][提取|/gov/service][公积金|/gov/subject][发票|/gov/item][税票|/gov/item]{}GreedyTagger
+集中封存户内职工如何办理住房公积金提取手续?	{}	[封存|/gov/service][职工|/gov/role][如何办理|/gov/service][住房公积金|/gov/subject][提取|/gov/service][手续|/gov/item]{}GreedyTagger
+首次提取住房公积金贷款需要哪些手续	{}	[首次|/gov/qualifier][提取|/gov/service][住房公积金|/gov/subject][贷款|/gov/service][手续|/gov/item]{}GreedyTagger

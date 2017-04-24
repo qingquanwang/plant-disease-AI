@@ -3,6 +3,8 @@
 import argparse
 import pprint
 import os,sys
+from os.path import realpath, join, dirname
+sys.path.insert(0, join(dirname(realpath(__file__)), '../'))
 from plantDiseaseAI.backend.preprocessor import *
 from plantDiseaseAI.backend.tagger import *
 from plantDiseaseAI.backend.Tagging import *
