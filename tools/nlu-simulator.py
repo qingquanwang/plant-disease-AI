@@ -21,10 +21,10 @@ if __name__ == '__main__':
                                    --s semanticsFile
                 ''', formatter_class = argparse.RawTextHelpFormatter)
     parser.add_argument('--d', type=str,
-                        default='./data/test/name.dic',
+                        default='../data/test/name.dic',
                         help='dictionary file path')
     parser.add_argument('--r', type=str,
-                        default='./data/test/RuleEngine/rule0',
+                        default='../data/test/RuleEngine/rule0',
                         help='rule file path')
     parser.add_argument('--t', type=str,
                         default='greedy,ruleTagger',
@@ -36,7 +36,7 @@ if __name__ == '__main__':
                         default='zhBook',
                         help='zhBook')
     parser.add_argument('--s', type=str,
-                        default='./data/test/Semantics/wx-test-semantics.json',
+                        default='../data/test/Semantics/wx-test-semantics.json',
                         help='semantics file')
     args = parser.parse_args()
 

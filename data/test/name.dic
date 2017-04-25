@@ -97,10 +97,10 @@
 失业险	/gov/subject	gov-subject-insurance-shiye
 河南省	/place/province	/place/province-11
 济南遥墙	/place/airport	place-airport-95
-在津就业	/gov/condition	/gov/condition-53
+在津就业	/gov/condition	/gov/condition-52
 银川河东	/place/airport	place-airport-139
 二手房	/gov/item	/gov/item-19
-非津籍	/gov/role	gov-rule-waidi
+非津籍	/gov/role	gov-role-waidi
 元宵节	/holiday	/holiday-4
 揭阳	/place/city	place-city-155
 伊春	/place/city	place-city-34
@@ -135,7 +135,7 @@
 上饶	/place/city	place-city-8
 社保计算	/gov/service	/gov/service-123
 海南	/place/province	/place/province-8
-断缴	/gov/condition	/gov/condition-47
+断缴	/gov/condition	/gov/condition-55
 留学回国	/gov/role	gov-role-liuxue
 玉溪	/place/city	place-city-255
 交通银行	/org/bank	/org/bank-6
@@ -206,7 +206,7 @@
 馆陶	/place/city	place-city-364
 松原	/place/city	place-city-184
 离退休	/gov/role	gov-role-retire
-农民工	/gov/role	gov-rule-gongmingong
+农民工	/gov/role	gov-role-gongmingong
 景德镇	/place/city	place-city-177
 景德镇	/place/airport	place-airport-78
 呼和浩特白塔	/place/airport	place-airport-38
@@ -260,7 +260,7 @@
 清明	/holiday	/holiday-0
 管理部	/org/gov	/org/gov-8
 自有住房	/gov/item	/gov/item-18
-军转干	/gov/role	gov-rule-soldier
+军转干	/gov/role	gov-role-soldier
 甘肃	/place/province	/place/province-4
 玉林	/place/city	place-city-254
 漠河	/place/city	place-city-242
@@ -367,10 +367,10 @@
 日	/time	/time-1
 操作手册	/gov/service	/gov/service-116
 湘潭	/place/city	place-city-235
-提前办	/gov/condition	/gov/condition-50
+提前办	/gov/condition	/gov/condition-49
 扬中	/place/city	place-city-149
 西双版纳嘎洒	/place/airport	place-airport-122
-征兵	/gov/condition	/gov/condition-55
+征兵	/gov/condition	/gov/condition-54
 2年社保	/gov/condition	/gov/condition-3
 淮安涟水	/place/airport	place-airport-99
 公积金	/gov/subject	gov-subject-gjj
@@ -404,7 +404,7 @@
 香港	/place/airport	place-airport-152
 通辽	/place/city	place-city-320
 通辽	/place/airport	place-airport-133
-下岗分流人员	/gov/role	gov-rule-xiagang
+下岗分流人员	/gov/role	gov-role-xiagang
 吉林省	/place/province	/place/province-16
 沛县	/place/city	place-city-206
 天津市工伤保险浮动费率管理暂行办法	/gov/regulation	/gov/regulation-14
@@ -482,7 +482,7 @@
 住房公积金网站查询及业务操作	/gov/regulation	/gov/regulation-6
 广安	/place/city	place-city-125
 茂名	/place/city	place-city-287
-定点	/gov/condition	/gov/condition-48
+定点	/gov/condition	/gov/condition-47
 桐城	/place/city	place-city-191
 济南	/place/city	place-city-217
 2015年度	/year	year-2015
@@ -512,6 +512,7 @@
 黄山屯溪	/place/airport	place-airport-154
 齐齐哈尔	/place/city	place-city-380
 双鸭山	/place/city	place-city-64
+研究生以上学历	/gov/role	gov-role-master-Higher
 苏州	/place/city	place-city-286
 新乡	/place/city	place-city-161
 永州	/place/city	place-city-199
@@ -522,8 +523,8 @@
 住房公积金单位卡业务	/gov/regulation	/gov/regulation-9
 变更	/gov/service	/gov/service-48
 激活网点	/gov/service	/gov/service-33
-集体户口	/gov/role	gov-rule-jitihukou
-外地户口	/gov/role	gov-rule-jitihukou
+集体户口	/gov/role	gov-role-jitihukou
+外地户口	/gov/role	gov-role-jitihukou
 汕头	/place/city	place-city-201
 龙岩冠豸山	/place/airport	place-airport-159
 组合贷款	/gov/service	/gov/service-75
@@ -550,7 +551,7 @@
 葫芦岛	/place/city	place-city-295
 钦州	/place/city	place-city-335
 崇左	/place/city	place-city-118
-集体户口子女	/gov/role	gov-rule-jitihukouKids
+集体户口子女	/gov/role	gov-role-jitihukouKids
 非住房	/gov/item	/gov/item-17
 江门	/place/city	place-city-203
 范围	/gov/service	/gov/service-11
@@ -626,7 +627,7 @@
 太原	/place/city	place-city-93
 海南省	/place/province	/place/province-8
 租金	/gov/item	/gov/item-2
-不买房	/gov/condition	/gov/condition-51
+不买房	/gov/condition	/gov/condition-50
 发票	/gov/item	/gov/item-0
 西安咸阳	/place/airport	place-airport-124
 单位住房公积金账户注销登记	/gov/regulation	/gov/regulation-5
@@ -774,12 +775,12 @@
 公有现住房	/gov/item	/gov/item-5
 短信	/gov/service	/gov/service-69
 阜阳	/place/city	place-city-348
-收养子女	/gov/role	gov-rule-shouyang
+收养子女	/gov/role	gov-role-shouyang
 偿还	/gov/service	/gov/service-101
 岳阳	/place/city	place-city-117
 延吉	/place/city	place-city-129
 东丽	/place/district	/place/district-7
-买房	/gov/condition	/gov/condition-52
+买房	/gov/condition	/gov/condition-51
 计算器	/gov/question	/gov/question-12
 代取	/gov/service	/gov/service-109
 日土	/place/city	place-city-167
@@ -938,7 +939,7 @@
 标准	/gov/service	/gov/service-4
 抚州	/place/city	place-city-152
 浙江	/place/province	/place/province-30
-非津户籍	/gov/role	gov-rule-waidi
+非津户籍	/gov/role	gov-role-waidi
 图解	/gov/question	/gov/question-25
 地址一览	/gov/service	/gov/service-24
 2015年	/year	year-2015
@@ -946,7 +947,7 @@
 广东	/place/province	/place/province-5
 缴存	/gov/service	/gov/service-99
 福州长乐	/place/airport	place-airport-113
-军人	/gov/role	gov-rule-soldier
+军人	/gov/role	gov-role-soldier
 办理指南	/gov/service	/gov/service-14
 办理指南	/gov/question	/gov/question-31
 手机预约	/gov/service	/gov/service-64
@@ -960,7 +961,7 @@
 章丘	/place/city	place-city-276
 大同	/place/city	place-city-86
 宁国	/place/city	place-city-99
-大专学历	/gov/role	gov-rule-dazhuan-Higher
+大专学历	/gov/role	gov-role-dazhuan-Higher
 毕节	/place/city	place-city-198
 威海大水泊	/place/airport	place-airport-53
 贵州省	/place/province	/place/province-7
@@ -1018,7 +1019,7 @@
 工作调动	/gov/condition	/gov/condition-19
 沈阳桃仙	/place/airport	place-airport-91
 神农架	/place/city	place-city-272
-农村	/gov/condition	/gov/condition-49
+农村	/gov/condition	/gov/condition-48
 鄂尔多斯	/place/city	place-city-330
 鄂尔多斯	/place/airport	place-airport-136
 办理流程	/gov/service	/gov/service-35
@@ -1091,7 +1092,7 @@
 琼中	/place/city	place-city-257
 哈密	/place/airport	place-airport-40
 保险小额理赔服务指引(试行)	/gov/regulation	/gov/regulation-16
-应届毕业生	/gov/role	gov-rule-graduate
+应届毕业生	/gov/role	gov-role-graduate
 眉山	/place/city	place-city-269
 租赁住房	/gov/item	/gov/item-9
 白沙	/place/city	place-city-264
@@ -1100,7 +1101,6 @@
 克拉玛依	/place/airport	place-airport-22
 唐山三女河	/place/airport	place-airport-42
 汉中	/place/airport	place-airport-89
-究生以上学历	/gov/role	gov-rule-master-Higher
 礼拜二	/dow	dow-tue
 无业	/gov/role	gov-role-wuye
 迪庆	/place/city	place-city-318
@@ -1110,7 +1110,7 @@
 武夷山	/place/airport	place-airport-86
 浙江省	/place/province	/place/province-30
 工作日	/dow	dow-weekday
-就业	/gov/condition	/gov/condition-54
+就业	/gov/condition	/gov/condition-53
 秦皇岛	/place/city	place-city-275
 办法有哪些	/gov/question	/gov/question-46
 上限	/gov/qualifier	/gov/qualifier-2
