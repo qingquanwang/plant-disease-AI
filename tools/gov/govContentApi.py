@@ -63,7 +63,7 @@ class GovTitleExtracter(object):
     def loadContent(self, contentFile):
         with open(contentFile, 'r') as fd:
             for line in fd.readlines():
-                (docId, url, title, description) = line.strip('\n').split('\t')
+                (docId, url, title, description) = line.decode('utf-8').strip('\n').split('\t')
                 self._content[docId] = {}
                 self._content[docId]['url'] = url
                 self._content[docId]['title'] = title
@@ -100,6 +100,9 @@ class GovTitleExtracter(object):
         scores = {}
         self.scoreDocAttr(set0, attrs, scores)
         # scoring based on overlap of attrs
+        sorted_docIds = sorted(list(set0), cmp = lambda x, y :cmp(scores[x], scores[y]), reverse=False)
+        for docId in sorted_docIds:
+            print 'docId: ' + self._content[docId]['title'].encode('utf-8') + '\t' + str(scores[docId])
         pp.pprint(scores)
 
 
@@ -135,9 +138,9 @@ if __name__ == '__main__':
     parser.add_argument('--i', type=str,
                         default='./gov-index',
                         help='index file')
-    parser.add_argument('--i', type=str,
+    parser.add_argument('--c', type=str,
                         default='./gov_q',
-                        help='index file')
+                        help='content file')
 
     args = parser.parse_args()
     dic = DictManager()
@@ -160,7 +163,7 @@ if __name__ == '__main__':
     indexer = GovTitleExtracter()
     indexer.getIndexId(dic)
     indexer.loadIndex(args.i)
-    indexer.loadContent('./gov_q')
+    indexer.loadContent(args.c)
     #pp.pprint(indexer._indexes)
 
 
