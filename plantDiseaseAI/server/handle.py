@@ -16,7 +16,7 @@ from plantDiseaseAI.backend.nlr import *
 from plantDiseaseAI.backend.Dialog import *
 from plantDiseaseAI.backend.Interaction import *
 from plantDiseaseAI.backend.semantic import *
-# from tools.gov.GovTitleExtracter import GovTitleExtracter
+from tools.gov.govTitleExtracter import GovTitleExtracter
 
 
 class Handle(object):
