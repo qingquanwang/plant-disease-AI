@@ -31,16 +31,16 @@ if __name__ == '__main__':
                 description='dialog simulator', usage='''
                 ./dialog-simulator.py -d dicFile -t template_file
                         -s state-definition -i currentTask -w "k1:v1,v2|k2"v3,v4"
-                问天气: python dialog-simulator.py --s data/state-def-wx.json --d data/test/name.dic
+                问天气: python dialog-simulator.py --s ../data/state-def-wx.json --d ../data/test/name.dic
                 ''', formatter_class = argparse.RawTextHelpFormatter)
     parser.add_argument('--d', type=str,
-                        default='./data/build/name.dic',
+                        default='../data/build/name.dic',
                         help='dictionary file path')
     parser.add_argument('--t', type=str,
-                        default='./data/reply-template',
+                        default='../data/reply-template',
                         help='reply template file path')
     parser.add_argument('--s', type=str,
-                        default='./data/state-def.json',
+                        default='../data/state-def.json',
                         help='state definition file path')
     parser.add_argument('--i', type=str,
                         default='Welcome',
@@ -49,7 +49,7 @@ if __name__ == '__main__':
                         default='',
                         help='whiteboard variables')
     parser.add_argument('--ss', type=str,
-                        default='./data/test/Semantics/wx-test-semantics.json',
+                        default='../data/test/Semantics/wx-test-semantics.json',
                         help='semantics file')
     parser.add_argument('--ii', type=str,
                         help='test dialog file')
@@ -60,9 +60,11 @@ if __name__ == '__main__':
     nlu = NLU(dic)
     nlu.appendTagger(GreedyTagger())
     tagger = RuleTagger()
-    ruleFile = './data/test/RuleEngine/rule0'
+    ruleFile = '../data/test/RuleEngine/rule0'
     tagger.loadRules(ruleFile)
     nlu.appendTagger(tagger)
+    nlu.setPreprocessor('govTitle')
+    nlu.appendRewriter(RemoveTokRewriter())
 
     nlr = NLR()
     nlr.load_template(args.t)
@@ -70,10 +72,16 @@ if __name__ == '__main__':
     semantic = SemanticBase()
     semantic.loadSemanticRules(args.ss)
 
+    indexer = GovTitleExtracter()
+    indexer.getIndexId(dic)
+    indexer.loadIndex('./gov/gov-index')
+    indexer.loadContent('./gov/gov_q')
+
     dialog = DialogManager()
     dialog.addModule("NLU", nlu)
     dialog.addModule("NLR", nlr)
     dialog.addModule("SEMANTIC", semantic)
+    dialog.addModule("GOV", indexer)
     dialog.loadHandler(args.s)
 
     session = WhiteBoard()

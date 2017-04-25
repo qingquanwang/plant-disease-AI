@@ -28,7 +28,7 @@ class Task(object):
 
 class DialogManager(object):
 
-    KEY_QUIT = 'quit'
+    KEY_QUIT = ['quit', 'q']
     KEY_DEBUG = 'debug'
 
     def __init__(self):
@@ -52,7 +52,7 @@ class DialogManager(object):
     def checkInput(self, state, userInput, actions):
         # 处理全局功能按键
         if state._status == 'WaitTextInput':
-            if userInput._input == DialogManager.KEY_QUIT:
+            if userInput._input in DialogManager.KEY_QUIT:
                 state.reset()
                 state.setStartState('Welcome')
                 state._session = WhiteBoard()

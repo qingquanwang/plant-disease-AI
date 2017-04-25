@@ -79,7 +79,7 @@ class BaseQAHandler(BaseHandler):
             self._nlr = modules[nlrName]
         else:
             self._nlr = None
-        # set SEMANTIC modle
+        # set SEMANTIC module
         semantic_name = 'SEMANTIC'
         if 'semantic' in params:
             semantic_name = params['semantic']

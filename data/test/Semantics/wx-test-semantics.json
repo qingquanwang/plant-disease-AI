@@ -121,5 +121,54 @@
                 "domain=${domain}:required:override"
             ]
         }
+    ],
+    "Gov": [
+        {
+            "Name": "GovRule0",
+            "topK": "3",
+            "threshold": "0.5",
+            "sources": "",
+            "conditionType": "annotation",
+            "extractionType": "annotation",
+            "conditions": [
+                "${domain}==gov"
+            ],
+            "extractions": [
+                "domain=${domain}:required:override",
+                "gov.subject=${slots.subject}:required:override",
+                "gov.qtype=${qtype}:required:override",
+                "gov.role=${slots.role}:optional:override",
+                "gov.service=${slots.service}:optional:override",
+                "gov.condition=${slots.condition}:optional:override",
+                "gov.question=${slots.question}:optional:override",
+                "gov.item=${slots.item}:optional:override",
+                "gov.regulation=${slots.regulation}:optional:override",
+                "gov.district=${slots.district}:optional:override",
+                "gov.org=${slots.org}:optional:override"
+            ]
+        },
+        {
+            "Name": "GovRule1",
+            "topK": "3",
+            "threshold": "0.5",
+            "sources": "",
+            "conditionType": "sequence",
+            "extractionType": "sequence",
+            "conditions": [
+                "</gov/subject>:ordered"
+            ],
+            "extractions": [
+                "domain=gov:required:override",
+                "gov.subject=</gov/subject>.text:optional:override",
+                "gov.service=</gov/service>.text:optional:override",
+                "gov.role=</gov/role>.text:optional:override",
+                "gov.condition=</gov/condition>.text:optional:override",
+                "gov.item=</gov/item>.text:optional:override",
+                "gov.regulation=</gov/regulation>.text:optional:override",
+                "gov.question=</gov/question>.text:optional:override",
+                "gov.district=</gov/district>.text:optional:override",
+                "gov.org=</org/gov>.text:optional:override"
+            ]
+        }
     ]
 }

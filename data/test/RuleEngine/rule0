@@ -4,8 +4,6 @@ internal date = [
    { ["明日" "明天"]}`dateType="tomorrow"`
 ]#date
 
-internal city = { {</place/city>}#city }
-
 internal airport = [
     { @city ["机场" "飞机场"] }
     { {</place/province>}? </place/airport> ["机场" "飞机场"]? }
@@ -41,8 +39,66 @@ binhai = [
     {'bh'}
 ]`domain="binhai"`
 
-gov = [
-    ^{ [</place/province> </place/city>]?  </gov/inquire> }
-]`domain="gov"`
 
 year = { </year> {"年"}? }`domain="year"`
+
+internal city = [
+    { </place/city>#city {"市"}? {</place/district>#district}? }
+    { </place/province>#prov }
+]#loc
+
+internal timing = [
+    { </year> }#year
+    { </dow> }#dow
+    { </holiday> }#holiday
+]
+
+internal subject = [
+    { </gov/subject>#subject }
+    { </gov/role>#role </gov/subject>#subject }
+]
+
+internal org = [
+    { </org/gov> }
+    { </org/bank> }
+]#org
+
+internal service = [
+    { </gov/service> }+
+]#service
+
+internal role = [
+    { </gov/role> }
+]#role
+
+internal regulation = [
+    { </gov/regulation> }
+]#regulation
+
+internal condition = [
+    { </gov/condition> }
+    { </gov/role>#role </gov/condition> }
+]#condition
+
+internal qualifier = [
+    { </gov/qualifier> }
+]#qualifier
+
+internal item = [
+    { </gov/item> }
+]#item
+
+internal question = [
+    { </gov/question> }
+]#question
+
+gov = [
+    { {@city {@org}? }? @subject ~{@service {@question}?} }`qtype="subject_service"`
+    { {{@timing}? @city {@org}? }? @subject {@question}? } `qtype="subject"`
+    { {{@timing}? @city {@org}? }? ^{@subject @condition} {@question}? } `qtype="subject_condition"`
+    ~{ @subject @condition @service }`qtype="subject_condition_service"`
+    { @timing {@city}? @subject @service {@question}? }`qtype="subject_service"`
+    { {@timing}? {@city}? @org {@service}? {@question}? }`qtype="org"`
+]`domain="gov"`
+
+
