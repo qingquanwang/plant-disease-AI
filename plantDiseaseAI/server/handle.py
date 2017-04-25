@@ -16,6 +16,7 @@ from plantDiseaseAI.backend.nlr import *
 from plantDiseaseAI.backend.Dialog import *
 from plantDiseaseAI.backend.Interaction import *
 from plantDiseaseAI.backend.semantic import *
+# from tools.gov.GovTitleExtracter import GovTitleExtracter
 
 
 class Handle(object):
@@ -33,6 +34,8 @@ class Handle(object):
             ruleFile = '../../data/test/RuleEngine/rule0'
             tagger.loadRules(ruleFile)
             nlu.appendTagger(tagger)
+            nlu.setPreprocessor('govTitle')
+            nlu.appendRewriter(RemoveTokRewriter())
 
             nlr = NLR()
             nlr.load_template('../../data/reply-template')
@@ -40,10 +43,16 @@ class Handle(object):
             semantic = SemanticBase()
             semantic.loadSemanticRules('../../data/test/Semantics/wx-test-semantics.json')
 
+            indexer = GovTitleExtracter()
+            indexer.getIndexId(dic)
+            indexer.loadIndex('../../tools/gov/gov-index')
+            indexer.loadContent('../../tools/gov/gov_q')
+
             dialog = DialogManager()
             dialog.addModule("NLU", nlu)
             dialog.addModule("NLR", nlr)
             dialog.addModule("SEMANTIC", semantic)
+            dialog.addModule("GOV", indexer)
             dialog.loadHandler('../../data/state-def-wx.json')
             Handle.dialog = dialog
         else:
