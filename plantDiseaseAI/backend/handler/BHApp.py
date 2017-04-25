@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from plantDiseaseAI.backend.handler.basicHandler import *
 from plantDiseaseAI.utils.binhai.bh_manager import *
-from tools.gov.govTitleExtracter import *
 
 
 class DisplayBHHandler(BaseQAHandler):
