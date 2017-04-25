@@ -64,7 +64,7 @@ if __name__ == '__main__':
     tagger.loadRules(ruleFile)
     nlu.appendTagger(tagger)
     nlu.setPreprocessor('govTitle')
-    nlu.appendRewriter(RemoveTokRewriter())
+    # nlu.appendRewriter(RemoveTokRewriter())
 
     nlr = NLR()
     nlr.load_template(args.t)
